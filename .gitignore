@@ -20,7 +20,6 @@
 !.pylintrc
 !.travis*
 !.tx
-!.husky
 !.changeset
 !.knip.json
 *.log

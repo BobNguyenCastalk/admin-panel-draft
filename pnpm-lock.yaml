@@ -496,9 +496,6 @@ importers:
       fsevents:
         specifier: ^1.2.9
         version: 1.2.13
-      husky:
-        specifier: ^8.0.3
-        version: 8.0.3
       jest:
         specifier: ^27.5.1
         version: 27.5.1(ts-node@10.9.2(@swc/core@1.11.13(@swc/helpers@0.5.15))(@types/node@20.17.28)(typescript@5.8.2))
@@ -5122,11 +5119,6 @@ packages:
   human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
-
-  husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
-    hasBin: true
 
   hyphenate-style-name@1.1.0:
     resolution: {integrity: sha512-WDC/ui2VVRrz3jOVi+XtjqkDjiVjTtFaAGiW37k6b+ohyQ5wYDOGkvCZa8+H0nx3gyvv0+BST9xuOgIyGQ00gw==}
@@ -13580,9 +13572,6 @@ snapshots:
   human-signals@1.1.1: {}
 
   human-signals@2.1.0:
-    optional: true
-
-  husky@8.0.3:
     optional: true
 
   hyphenate-style-name@1.1.0: {}
