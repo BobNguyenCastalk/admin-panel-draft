@@ -1,5 +1,5 @@
 {
-  "name": "saleor-dashboard",
+  "name": "admin-panel-draft",
   "version": "3.21.0-dev",
   "main": "src/index.tsx",
   "repository": {
