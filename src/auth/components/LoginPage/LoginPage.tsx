@@ -1,5 +1,4 @@
 import { UserContextError } from "@dashboard/auth/types";
-import { passwordResetUrl } from "@dashboard/auth/urls";
 import { ButtonWithLoader } from "@dashboard/components/ButtonWithLoader/ButtonWithLoader";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { AvailableExternalAuthenticationsQuery } from "@dashboard/graphql";
@@ -9,7 +8,6 @@ import { EyeIcon } from "@saleor/macaw-ui";
 import { Box, Button, Divider, Input, Text } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { Link } from "react-router-dom";
 
 import useStyles from "../styles";
 import LoginForm, { LoginFormData } from "./form";
@@ -37,6 +35,9 @@ const LoginPage: React.FC<LoginCardProps> = props => {
   const intl = useIntl();
   const [showPassword, setShowPassword] = useState(false);
   const [optimisticLoaderAuthId, setOptimisticLoaderAuthId] = useState<null | string>(null);
+
+  // TODO: remove string related to id 3tbL7x
+  // TODO : add bottom margin to the password input
 
   return (
     <LoginForm onSubmit={onSubmit}>
@@ -99,15 +100,6 @@ const LoginPage: React.FC<LoginCardProps> = props => {
             }
             required
           />
-          <Link to={passwordResetUrl}>
-            <Text className={classes.link} fontSize={3} data-test-id="reset-password-link">
-              <FormattedMessage
-                id="3tbL7x"
-                defaultMessage="Forgot password?"
-                description="description"
-              />
-            </Text>
-          </Link>
 
           <div className={classes.buttonContainer}>
             <ButtonWithLoader

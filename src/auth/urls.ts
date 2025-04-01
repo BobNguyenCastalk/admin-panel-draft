@@ -1,14 +1,9 @@
 import { stringifyQs } from "@dashboard/utils/urls";
 
-export const passwordResetPath = "/reset-password/";
-export const passwordResetUrl = passwordResetPath;
-
-export const passwordResetSuccessPath = "/reset-password/success/";
-export const passwordResetSuccessUrl = passwordResetSuccessPath;
-
 export const newPasswordPath = "/new-password/";
-
 export const loginCallbackPath = "/login/callback/";
+
+// TODO: remove password reset and new password related paths
 
 export interface NewPasswordUrlQueryParams {
   email: string;
