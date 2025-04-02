@@ -23,7 +23,6 @@ import { maybe } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
-import { productTypeListUrl } from "@dashboard/productTypes/urls";
 import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
 import React from "react";
@@ -54,17 +53,6 @@ export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
           title: intl.formatMessage(sectionNames.attributes),
           url: attributeListUrl(),
           testId: "configuration-menu-attributes",
-        },
-        {
-          description: intl.formatMessage({
-            id: "n0RwMK",
-            defaultMessage: "Define types of products you sell",
-          }),
-          icon: <ProductTypes />,
-          permissions: [PermissionEnum.MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES],
-          title: intl.formatMessage(sectionNames.productTypes),
-          url: productTypeListUrl(),
-          testId: "configuration-menu-product-types",
         },
       ],
     },

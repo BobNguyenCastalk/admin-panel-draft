@@ -8,7 +8,6 @@ import {
   ProductErrorFragment,
 } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
-import { productTypeUrl } from "@dashboard/productTypes/urls";
 import { FetchMoreProps } from "@dashboard/types";
 import { getFormErrors, getProductErrorMessage } from "@dashboard/utils/errors";
 import { Box, Option, Text } from "@saleor/macaw-ui-next";
@@ -132,9 +131,7 @@ export const ProductOrganization: React.FC<ProductOrganizationProps> = props => 
               </Text>
               {productType?.id ? (
                 <Text size={2}>
-                  <Link href={productTypeUrl(productType?.id) ?? ""}>
-                    {productType?.name ?? "..."}
-                  </Link>
+                  <Link href={""}>{productType?.name ?? "..."}</Link>
                 </Text>
               ) : (
                 <Text size={2}>{productType?.name ?? "..."}</Text>
