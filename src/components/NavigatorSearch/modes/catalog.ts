@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { categoryUrl } from "@dashboard/categories/urls";
 import { SearchCatalogQuery } from "@dashboard/graphql";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { fuzzySearch } from "@dashboard/misc";
@@ -17,35 +16,6 @@ export function searchInCatalog(
   navigate: UseNavigatorResult,
   catalog: SearchCatalogQuery,
 ): QuickSearchAction[] {
-  const categories: QuickSearchActionInput[] = (
-    mapEdgesToItems(catalog?.categories) || []
-  ).map<QuickSearchActionInput>(category => ({
-    caption: intl.formatMessage(messages.category),
-    label: category.name,
-    searchValue: category.name,
-    onClick: () => {
-      navigate(categoryUrl(category.id));
-
-      return false;
-    },
-    text: category.name,
-    type: "catalog",
-    thumbnail: category.backgroundImage,
-    extraInfo: category.level === 0 ? intl.formatMessage(messages.root) : undefined,
-  }));
-  const collections: QuickSearchActionInput[] = (
-    mapEdgesToItems(catalog?.collections) || []
-  ).map<QuickSearchActionInput>(collection => ({
-    caption: intl.formatMessage(messages.collection),
-    label: collection.name,
-    searchValue: collection.name,
-    onClick: () => {
-      return false;
-    },
-    text: collection.name,
-    type: "catalog",
-    thumbnail: collection.backgroundImage,
-  }));
   const products: QuickSearchActionInput[] = (
     mapEdgesToItems(catalog?.products) || []
   ).map<QuickSearchActionInput>(product => ({
@@ -79,7 +49,7 @@ export function searchInCatalog(
     thumbnail: variant.product.thumbnail,
   }));
 
-  const searchableItems = [...categories, ...collections, ...products, ...variants];
+  const searchableItems = [...products, ...variants];
   const searchResults = fuzzySearch(searchableItems, search, ["searchValue"], 0.8);
 
   return searchResults;

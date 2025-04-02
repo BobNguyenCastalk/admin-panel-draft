@@ -1,5 +1,4 @@
 import { MutationFunction } from "@apollo/client";
-import { categoryAddUrl } from "@dashboard/categories/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { fuzzySearch } from "@dashboard/misc";
 import { permissionGroupAddUrl } from "@dashboard/permissionGroups/urls";
@@ -23,14 +22,6 @@ export function searchInCommands(
   setMode: (mode: QuickSearchMode) => void,
 ): QuickSearchActionInput[] {
   const actions: Command[] = [
-    {
-      label: intl.formatMessage(messages.createCategory),
-      onClick: () => {
-        navigate(categoryAddUrl());
-
-        return false;
-      },
-    },
     {
       label: intl.formatMessage(messages.createProduct),
       onClick: () => {

@@ -24,7 +24,6 @@ import AuthProvider from "./auth/AuthProvider";
 import LoginLoading from "./auth/components/LoginLoading/LoginLoading";
 import SectionRoute from "./auth/components/SectionRoute";
 import { useAuthRedirection } from "./auth/hooks/useAuthRedirection";
-import CategorySection from "./categories";
 import ChannelsSection from "./channels";
 import { channelsSection } from "./channels/urls";
 import AppLayout from "./components/AppLayout";
@@ -164,11 +163,6 @@ const Routes: React.FC = () => {
           >
             <Switch>
               <SectionRoute exact path="/" component={WelcomePage} />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_PRODUCTS]}
-                path="/categories"
-                component={CategorySection}
-              />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_PLUGINS]}
                 path="/plugins"

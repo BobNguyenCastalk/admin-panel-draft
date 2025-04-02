@@ -12,7 +12,6 @@ import useNotifier from "@dashboard/hooks/useNotifier";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { categoryUrl } from "../../../categories/urls";
 import { extractMutationErrors, maybe } from "../../../misc";
 import MenuDetailsPage, { MenuDetailsSubmitData } from "../../components/MenuDetailsPage";
 import { findNode, getNode } from "../../components/MenuDetailsPage/tree";
@@ -71,10 +70,6 @@ const MenuDetails: React.FC<MenuDetailsProps> = ({ id, params }) => {
     );
   const handleItemClick = (id: string, type: MenuItemType) => {
     switch (type) {
-      case "category":
-        navigate(categoryUrl(id));
-        break;
-
       case "link":
         window.open(id, "blank");
         break;

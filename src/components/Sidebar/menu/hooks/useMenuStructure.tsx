@@ -1,5 +1,4 @@
 import { useUser } from "@dashboard/auth";
-import { categoryListUrl } from "@dashboard/categories/urls";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { getConfigMenuItemsPermissions } from "@dashboard/configuration/utils";
 import { useFlag } from "@dashboard/featureFlags";
@@ -43,15 +42,7 @@ export function useMenuStructure() {
       type: "item",
     },
     {
-      children: [
-        {
-          label: intl.formatMessage(sectionNames.categories),
-          id: "categories",
-          url: categoryListUrl(),
-          permissions: [PermissionEnum.MANAGE_PRODUCTS],
-          type: "item",
-        },
-      ],
+      children: [],
       icon: renderIcon(<ProductsIcon />),
       url: productListUrl(),
       label: intl.formatMessage(commonMessages.products),

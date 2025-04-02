@@ -1,5 +1,4 @@
 import { attributeListUrl } from "@dashboard/attributes/urls";
-import { categoryListUrl } from "@dashboard/categories/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
@@ -28,10 +27,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.attributes),
       url: attributeListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.categories),
-      url: categoryListUrl(),
     },
     {
       label: intl.formatMessage(sectionNames.home),
