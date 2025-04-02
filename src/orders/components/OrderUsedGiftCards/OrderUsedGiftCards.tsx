@@ -1,5 +1,4 @@
 import Link from "@dashboard/components/Link";
-import { giftCardPath } from "@dashboard/giftCards/urls";
 import { OrderDetailsFragment } from "@dashboard/graphql";
 import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
@@ -21,7 +20,7 @@ export const OrderUsedGiftCards = ({ giftCards }: OrderUsedGiftCardsProps) => {
           const hasComma = showComma(giftCards.length, index);
 
           return (
-            <Link key={id} href={giftCardPath(id)}>
+            <Link key={id} href={null}>
               <Box as="span" marginRight={hasComma ? 1 : 0}>
                 {last4CodeChars}
                 {hasComma && ", "}

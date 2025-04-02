@@ -51,8 +51,6 @@ import { CustomAppSections } from "./custom-apps/urls";
 import { CustomerSection } from "./customers";
 import DiscountSection from "./discounts";
 import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvider";
-import GiftCardSection from "./giftCards";
-import { giftCardsSectionUrlName } from "./giftCards/urls";
 import { apolloClient, saleorClient } from "./graphql/client";
 import { useLocationState } from "./hooks/useLocationState";
 import { commonMessages } from "./intl";
@@ -190,11 +188,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_USERS]}
                 path="/customers"
                 component={CustomerSection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_GIFT_CARD]}
-                path={giftCardsSectionUrlName}
-                component={GiftCardSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_DISCOUNTS]}

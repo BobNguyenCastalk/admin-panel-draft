@@ -9,9 +9,6 @@ import {
   _SearchProductOperandsDocument,
   _SearchProductOperandsQuery,
   _SearchProductOperandsQueryVariables,
-  ChannelCurrenciesDocument,
-  ChannelCurrenciesQuery,
-  ChannelCurrenciesQueryVariables,
 } from "@dashboard/graphql";
 import { useState } from "react";
 
@@ -52,15 +49,6 @@ export const useInitialGiftCardsState = () => {
             first: usedBy.length,
             customersIds: usedBy,
           },
-        }),
-      );
-    }
-
-    if (currency.length > 0) {
-      queriesToRun.push(
-        client.query<ChannelCurrenciesQuery, ChannelCurrenciesQueryVariables>({
-          query: ChannelCurrenciesDocument,
-          variables: {},
         }),
       );
     }

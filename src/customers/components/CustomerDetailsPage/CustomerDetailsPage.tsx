@@ -11,7 +11,6 @@ import { MetadataFormData } from "@dashboard/components/Metadata/types";
 import RequirePermissions from "@dashboard/components/RequirePermissions";
 import { Savebar } from "@dashboard/components/Savebar";
 import { customerAddressesUrl, customerListPath } from "@dashboard/customers/urls";
-import CustomerGiftCardsCard from "@dashboard/giftCards/components/GiftCardCustomerCard/CustomerGiftCardsCard";
 import { AccountErrorFragment, CustomerDetailsQuery, PermissionEnum } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
@@ -120,9 +119,6 @@ const CustomerDetailsPage: React.FC<CustomerDetailsPageProps> = ({
               <CardSpacer />
               <CustomerStats customer={customer} />
               <CardSpacer />
-              <RequirePermissions requiredPermissions={[PermissionEnum.MANAGE_GIFT_CARD]}>
-                <CustomerGiftCardsCard />
-              </RequirePermissions>
             </DetailPageLayout.RightSidebar>
             <Savebar>
               <Savebar.DeleteButton onClick={onDelete} />

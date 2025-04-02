@@ -31,9 +31,6 @@ import {
   _GetProductTypesChoicesDocument,
   _GetProductTypesChoicesQuery,
   _GetProductTypesChoicesQueryVariables,
-  ChannelCurrenciesDocument,
-  ChannelCurrenciesQuery,
-  ChannelCurrenciesQueryVariables,
 } from "@dashboard/graphql";
 import { IntlShape } from "react-intl";
 
@@ -135,23 +132,7 @@ export class CurrencyHandler implements Handler {
   ) {}
 
   fetch = async () => {
-    const { data } = await this.client.query<
-      ChannelCurrenciesQuery,
-      ChannelCurrenciesQueryVariables
-    >({
-      query: ChannelCurrenciesDocument,
-      variables: {},
-    });
-
-    return data.shop.channelCurrencies
-      .map(currency => ({
-        label: currency,
-        value: currency,
-        slug: currency,
-      }))
-      .filter(({ label }) => {
-        return label.toLowerCase().includes(this.query.toLowerCase());
-      });
+    return [];
   };
 }
 

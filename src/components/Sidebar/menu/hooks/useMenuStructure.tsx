@@ -6,7 +6,6 @@ import { getConfigMenuItemsPermissions } from "@dashboard/configuration/utils";
 import { customerListUrl } from "@dashboard/customers/urls";
 import { saleListUrl, voucherListUrl } from "@dashboard/discounts/urls";
 import { useFlag } from "@dashboard/featureFlags";
-import { giftCardListUrl } from "@dashboard/giftCards/urls";
 import { PermissionEnum } from "@dashboard/graphql";
 import { ConfigurationIcon } from "@dashboard/icons/Configuration";
 import { ContentsIcon } from "@dashboard/icons/Contents";
@@ -61,13 +60,6 @@ export function useMenuStructure() {
           id: "collections",
           url: collectionListUrl(),
           permissions: [PermissionEnum.MANAGE_PRODUCTS],
-          type: "item",
-        },
-        {
-          label: intl.formatMessage(sectionNames.giftCards),
-          id: "giftCards",
-          url: giftCardListUrl(),
-          permissions: [PermissionEnum.MANAGE_GIFT_CARD],
           type: "item",
         },
       ],
