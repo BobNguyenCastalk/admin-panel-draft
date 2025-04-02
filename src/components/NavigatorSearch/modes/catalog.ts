@@ -2,7 +2,6 @@
 import { SearchCatalogQuery } from "@dashboard/graphql";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { fuzzySearch } from "@dashboard/misc";
-import { productUrl, productVariantEditUrl } from "@dashboard/products/urls";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { IntlShape } from "react-intl";
 
@@ -16,22 +15,6 @@ export function searchInCatalog(
   navigate: UseNavigatorResult,
   catalog: SearchCatalogQuery,
 ): QuickSearchAction[] {
-  const products: QuickSearchActionInput[] = (
-    mapEdgesToItems(catalog?.products) || []
-  ).map<QuickSearchActionInput>(product => ({
-    caption: intl.formatMessage(messages.product),
-    extraInfo: product.category.name,
-    label: product.name,
-    searchValue: product.name,
-    onClick: () => {
-      navigate(productUrl(product.id));
-
-      return false;
-    },
-    text: product.name,
-    type: "catalog",
-    thumbnail: product.thumbnail,
-  }));
   const variants: QuickSearchActionInput[] = (
     mapEdgesToItems(catalog?.productVariants) || []
   ).map<QuickSearchActionInput>(variant => ({
@@ -40,8 +23,6 @@ export function searchInCatalog(
     label: getProductVariantLabel(variant),
     searchValue: `${variant.product.name} ${variant.name} ${variant.sku}`,
     onClick: () => {
-      navigate(productVariantEditUrl(variant.product.id, variant.id));
-
       return false;
     },
     text: variant.name,
@@ -49,7 +30,7 @@ export function searchInCatalog(
     thumbnail: variant.product.thumbnail,
   }));
 
-  const searchableItems = [...products, ...variants];
+  const searchableItems = [...variants];
   const searchResults = fuzzySearch(searchableItems, search, ["searchValue"], 0.8);
 
   return searchResults;

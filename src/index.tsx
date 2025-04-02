@@ -53,7 +53,6 @@ import { navigationSection } from "./navigation/urls";
 import { NotFound } from "./NotFound";
 import PermissionGroupSection from "./permissionGroups";
 import PluginsSection from "./plugins";
-import ProductSection from "./products";
 import errorTracker from "./services/errorTracking";
 import SiteSettingsSection from "./siteSettings";
 import StaffSection from "./staff";
@@ -166,11 +165,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_PLUGINS]}
                 path="/plugins"
                 component={PluginsSection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_PRODUCTS]}
-                path="/products"
-                component={ProductSection}
               />
               <SectionRoute path="/staff" component={StaffSection} />
               <SectionRoute

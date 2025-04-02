@@ -1,9 +1,5 @@
 import { SaveFilterTabDialogFormData } from "@dashboard/components/SaveFilterTabDialog";
 import useNavigator from "@dashboard/hooks/useNavigator";
-import {
-  getActiveTabIndexAfterTabDelete,
-  getNextUniqueTabName,
-} from "@dashboard/products/views/ProductList/utils";
 import { GetFilterTabsOutput, StorageUtils } from "@dashboard/utils/filters";
 import { prepareQs } from "@dashboard/utils/filters/qs";
 import { stringify } from "qs";
@@ -67,7 +63,7 @@ export const useFilterPresets = <T extends { activeTab?: string; action?: string
       // When deleting a tab that is not the current one, only remove the action param from the query
       delete currentParams.action;
       // When deleting a tab that is before the current one, decrease the activeTab param by 1
-      currentParams.activeTab = getActiveTabIndexAfterTabDelete(selectedPreset, presetIdToDelete);
+      // currentParams.activeTab = getActiveTabIndexAfterTabDelete(selectedPreset, presetIdToDelete);
       navigate(
         baseUrl.endsWith("?")
           ? baseUrl + stringify(currentParams)
@@ -78,13 +74,13 @@ export const useFilterPresets = <T extends { activeTab?: string; action?: string
   const onPresetSave = (data: SaveFilterTabDialogFormData) => {
     const { parsedQs } = prepareQs(location.search);
 
-    storageUtils.saveFilterTab(
-      getNextUniqueTabName(
-        data.name,
-        presets.map(tab => tab.name),
-      ),
-      stringify(parsedQs),
-    );
+    // storageUtils.saveFilterTab(
+    //   getNextUniqueTabName(
+    //     data.name,
+    //     presets.map(tab => tab.name),
+    //   ),
+    //   stringify(parsedQs),
+    // );
     onPresetChange(presets.length + 1);
   };
   const onPresetUpdate = (tabName: string) => {

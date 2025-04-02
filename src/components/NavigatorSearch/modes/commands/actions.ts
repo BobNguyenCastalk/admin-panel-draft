@@ -2,7 +2,6 @@ import { MutationFunction } from "@apollo/client";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { fuzzySearch } from "@dashboard/misc";
 import { permissionGroupAddUrl } from "@dashboard/permissionGroups/urls";
-import { productAddUrl } from "@dashboard/products/urls";
 import { IntlShape } from "react-intl";
 
 import { QuickSearchActionInput, QuickSearchMode } from "../../types";
@@ -22,14 +21,6 @@ export function searchInCommands(
   setMode: (mode: QuickSearchMode) => void,
 ): QuickSearchActionInput[] {
   const actions: Command[] = [
-    {
-      label: intl.formatMessage(messages.createProduct),
-      onClick: () => {
-        navigate(productAddUrl());
-
-        return false;
-      },
-    },
     {
       label: intl.formatMessage(messages.createPermissionGroup),
       onClick: () => {

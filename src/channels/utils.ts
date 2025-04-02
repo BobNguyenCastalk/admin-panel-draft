@@ -4,14 +4,12 @@ import {
   CollectionDetailsFragment,
   ProductDetailsVariantFragment,
   ProductFragment,
-  ProductVariantDetailsQuery,
   SaleDetailsFragment,
   SaleType,
   ShippingMethodTypeFragment,
   VoucherDetailsFragment,
 } from "@dashboard/graphql";
 import { RequireOnlyOne } from "@dashboard/misc";
-import { validatePrice } from "@dashboard/products/utils/validation";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
 import uniqBy from "lodash/uniqBy";
 
@@ -136,9 +134,7 @@ export const createSaleChannels = (data?: ChannelFragment[]) =>
     fixedValue: "",
   }));
 
-export const createVariantChannels = (
-  data?: ProductVariantDetailsQuery["productVariant"],
-): ChannelPriceData[] => {
+export const createVariantChannels = (data?: any): ChannelPriceData[] => {
   if (data) {
     return data?.channelListings?.map(listing => ({
       costPrice: listing.costPrice?.amount.toString() || "",
@@ -383,12 +379,6 @@ export const getChannelsCurrencyChoices = (
         ),
       )
     : [];
-
-export const validateSalePrice = (data: any, channel: ChannelSalanyeFormData) =>
-  validatePrice(data.type === SaleType.PERCENTAGE ? channel.percentageValue : channel.fixedValue);
-
-export const validateVoucherPrice = (requirementsPicker: any, channel: ChannelVoucherData) =>
-  validatePrice(channel.discountValue);
 
 type BareChannel = { id: string };
 type BareChannelListing = { channel: BareChannel };

@@ -5,7 +5,6 @@ import { fuzzySearch } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
-import { productListUrl } from "@dashboard/products/urls";
 import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
 import { languageListUrl } from "@dashboard/translations/urls";
@@ -42,10 +41,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.plugins),
       url: pluginListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.products),
-      url: productListUrl(),
     },
     {
       label: intl.formatMessage(sectionNames.siteSettings),

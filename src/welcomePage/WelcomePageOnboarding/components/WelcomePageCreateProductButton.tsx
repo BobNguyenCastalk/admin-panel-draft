@@ -1,7 +1,6 @@
 import { useUser } from "@dashboard/auth";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { PermissionEnum } from "@dashboard/graphql";
-import { productListUrl } from "@dashboard/products/urls";
 import { Button, Tooltip } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";
@@ -41,7 +40,7 @@ export const WelcomePageCreateProductButton = ({ onClick }: PrimaryActionProps) 
   }
 
   return (
-    <Link to={productListUrl()} onClick={onClick}>
+    <Link to={null} onClick={onClick}>
       <Button variant="primary">
         <FormattedMessage defaultMessage="Go to all products" id="XZpRr8" description="btn label" />
       </Button>

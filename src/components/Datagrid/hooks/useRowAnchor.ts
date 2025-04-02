@@ -1,6 +1,5 @@
 import { getAppMountUri } from "@dashboard/config";
 import useDebounce from "@dashboard/hooks/useDebounce";
-import { getCellAction } from "@dashboard/products/components/ProductListDatagrid/datagrid";
 import { DataEditorProps, GridMouseEventArgs, Item } from "@glideapps/glide-data-grid";
 import { useCallback, useRef } from "react";
 
@@ -30,10 +29,10 @@ export const useRowAnchor = ({
         return;
       }
 
-      const action = getCellAction(availableColumns, args.location[0]);
+      // const action = getCellAction(availableColumns, args.location[0]);
       const href = getRowAnchorUrl(args.location);
 
-      if (!href || action) {
+      if (!href) {
         return;
       }
 
