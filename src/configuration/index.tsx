@@ -26,10 +26,8 @@ import { pageTypeListUrl } from "@dashboard/pageTypes/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { productTypeListUrl } from "@dashboard/productTypes/urls";
-import { shippingZonesListUrl } from "@dashboard/shipping/urls";
 import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
-import { warehouseSection } from "@dashboard/warehouses/urls";
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
 
@@ -106,36 +104,6 @@ export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
           title: intl.formatMessage(sectionNames.permissionGroups),
           url: permissionGroupListUrl(),
           testId: "configuration-menu-permission-groups",
-        },
-      ],
-    },
-    {
-      label: intl.formatMessage({
-        id: "gTr0qE",
-        defaultMessage: "Shipping Settings",
-      }),
-      menuItems: [
-        {
-          description: intl.formatMessage({
-            id: "zxs6G3",
-            defaultMessage: "Manage how you ship out orders",
-          }),
-          icon: <ShippingMethods />,
-          permissions: [PermissionEnum.MANAGE_SHIPPING],
-          title: intl.formatMessage(sectionNames.shipping),
-          url: shippingZonesListUrl(),
-          testId: "configurationMenuShipping",
-        },
-        {
-          description: intl.formatMessage({
-            id: "5RmuD+",
-            defaultMessage: "Manage and update your warehouse information",
-          }),
-          icon: <Warehouses />,
-          permissions: [PermissionEnum.MANAGE_PRODUCTS],
-          title: intl.formatMessage(sectionNames.warehouses),
-          url: warehouseSection,
-          testId: "configuration-menu-warehouses",
         },
       ],
     },

@@ -15,7 +15,6 @@ import {
   OrderUpdateMutation,
   OrderUpdateMutationVariables,
   useCustomerAddressesQuery,
-  useWarehouseListQuery,
 } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import OrderCannotCancelOrderDialog from "@dashboard/orders/components/OrderCannotCancelOrderDialog";
@@ -138,12 +137,6 @@ export const OrderUnconfirmedDetails: React.FC<OrderUnconfirmedDetailsProps> = (
     variables: {
       ...DEFAULT_INITIAL_SEARCH_DATA,
       channel: order.channel.slug,
-    },
-  });
-  const warehouses = useWarehouseListQuery({
-    displayLoader: true,
-    variables: {
-      first: 30,
     },
   });
   const { data: customerAddresses, loading: customerAddressesLoading } = useCustomerAddressesQuery({
@@ -413,7 +406,7 @@ export const OrderUnconfirmedDetails: React.FC<OrderUnconfirmedDetailsProps> = (
         confirmButtonState={orderFulfillmentCancel.opts.status}
         errors={orderFulfillmentCancel.opts.data?.orderFulfillmentCancel.errors || []}
         open={params.action === "cancel-fulfillment"}
-        warehouses={mapEdgesToItems(warehouses?.data?.warehouses)}
+        warehouses={[]}
         onConfirm={variables =>
           orderFulfillmentCancel.mutate({
             id: params.id,

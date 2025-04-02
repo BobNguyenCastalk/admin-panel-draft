@@ -9,7 +9,6 @@ import {
   ProductDetailsVariantFragment,
   ProductFragment,
   RefreshLimitsQuery,
-  useWarehouseListQuery,
 } from "@dashboard/graphql";
 import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import EditIcon from "@dashboard/icons/Edit";
@@ -59,20 +58,12 @@ export const ProductVariants: React.FC<ProductVariantsProps> = ({
 }) => {
   const intl = useIntl();
 
-  // https://github.com/saleor/saleor-dashboard/issues/4165
-  const { data: warehousesData } = useWarehouseListQuery({
-    variables: {
-      first: 50,
-    },
-  });
-  const warehouses = mapEdgesToItems(warehousesData?.warehouses);
-
   // Normally this should be in LS handled by useListSettings hook
   // https://github.com/saleor/saleor-dashboard/issues/4164
 
   const initialSettings = React.useMemo(
     () =>
-      channels && warehouses && variantAttributes
+      channels && variantAttributes
         ? [
             "name",
             "sku",
@@ -80,7 +71,6 @@ export const ProductVariants: React.FC<ProductVariantsProps> = ({
               `availableInChannel:${channel.id}`,
               `channel:${channel.id}`,
             ]),
-            ...warehouses.map(warehouse => `warehouse:${warehouse.id}`),
             ...(variantAttributes
               ?.filter(
                 attribute =>
@@ -90,7 +80,7 @@ export const ProductVariants: React.FC<ProductVariantsProps> = ({
               .map(attribute => `attribute:${attribute.id}`) ?? []),
           ]
         : undefined,
-    [channels, variantAttributes, warehouses],
+    [channels, variantAttributes],
   );
   const [columnSettings, setColumnSettings] = useStateFromProps<string[] | undefined>(
     initialSettings,
@@ -126,11 +116,6 @@ export const ProductVariants: React.FC<ProductVariantsProps> = ({
     selectedColumns: columnSettings,
     attributes: variantAttributes,
   });
-  const warehouseCategory = useWarehouseAdapter({
-    selectedColumns: columnSettings,
-    intl,
-    warehouses,
-  });
   const memoizedStaticColumns = React.useMemo(() => variantsStaticColumnsAdapter(intl), [intl]);
   const {
     handlers,
@@ -143,7 +128,7 @@ export const ProductVariants: React.FC<ProductVariantsProps> = ({
   } = useColumns({
     gridName: "variants",
     staticColumns: memoizedStaticColumns,
-    columnCategories: [channelCategory, availabilityCategory, attributeCategory, warehouseCategory],
+    columnCategories: [channelCategory, availabilityCategory, attributeCategory],
     selectedColumns: columnSettings ?? [],
     onSave: handleColumnChange,
   });

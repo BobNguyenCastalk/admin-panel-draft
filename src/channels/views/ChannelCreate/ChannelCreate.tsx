@@ -20,8 +20,6 @@ import { useIntl } from "react-intl";
 
 import ChannelDetailsPage from "../../pages/ChannelDetailsPage";
 import { channelPath } from "../../urls";
-import { useShippingZones } from "../ChannelDetails/useShippingZones";
-import { useWarehouses } from "../ChannelDetails/useWarehouses";
 import { useSaveChannel } from "./useSaveChannel";
 
 export const ChannelCreateView = () => {
@@ -101,20 +99,6 @@ export const ChannelCreateView = () => {
 
     return saveChannel(input, warehousesToDisplay);
   };
-  const {
-    shippingZonesCountData,
-    shippingZonesCountLoading,
-    fetchMoreShippingZones,
-    searchShippingZones,
-    searchShippingZonesResult,
-  } = useShippingZones();
-  const {
-    warehousesCountData,
-    warehousesCountLoading,
-    fetchMoreWarehouses,
-    searchWarehouses,
-    searchWarehousesResult,
-  } = useWarehouses();
   const currencyCodeChoices = currencyCodes.data.map(currencyData => ({
     label: intl.formatMessage(
       {
@@ -140,7 +124,7 @@ export const ChannelCreateView = () => {
         })}
       />
       <>
-        <ChannelDetailsPage
+        {/* <ChannelDetailsPage
           allShippingZonesCount={shippingZonesCountData?.shippingZones?.totalCount}
           searchShippingZones={searchShippingZones}
           searchShippingZonesData={searchShippingZonesResult.data}
@@ -163,7 +147,7 @@ export const ChannelCreateView = () => {
           onSubmit={handleSubmit}
           saveButtonBarState={createChannelOpts.status}
           countries={shop?.countries || []}
-        />
+        /> */}
       </>
     </>
   );

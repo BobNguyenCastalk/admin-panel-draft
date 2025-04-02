@@ -20,7 +20,6 @@ import {
   useProductCountQuery,
   useProductExportMutation,
   useProductListQuery,
-  useWarehouseListQuery,
 } from "@dashboard/graphql";
 import useBackgroundTask from "@dashboard/hooks/useBackgroundTask";
 import { useFilterHandlers } from "@dashboard/hooks/useFilterHandlers";
@@ -97,12 +96,6 @@ export const ProductList: React.FC<ProductListProps> = ({ params }) => {
     skip: params.action !== "export",
   });
 
-  const warehouses = useWarehouseListQuery({
-    variables: {
-      first: 100,
-    },
-    skip: params.action !== "export",
-  });
   const { availableChannels } = useAppChannel(false);
   const limitOpts = useShopLimitsQuery({
     variables: {
@@ -349,7 +342,7 @@ export const ProductList: React.FC<ProductListProps> = ({ params }) => {
       <ProductExportDialog
         attributes={mapEdgesToItems(searchAttributes?.result?.data?.search) || []}
         hasMore={searchAttributes.result.data?.search.pageInfo.hasNextPage}
-        loading={searchAttributes.result.loading || countAllProducts.loading || warehouses.loading}
+        loading={searchAttributes.result.loading || countAllProducts.loading}
         onFetch={searchAttributes.search}
         onFetchMore={searchAttributes.loadMore}
         open={params.action === "export"}
@@ -360,7 +353,7 @@ export const ProductList: React.FC<ProductListProps> = ({ params }) => {
           filter: data?.products?.totalCount,
         }}
         selectedProducts={selectedRowIds.length}
-        warehouses={mapEdgesToItems(warehouses?.data?.warehouses) || []}
+        warehouses={[]}
         channels={availableChannels}
         onClose={closeModal}
         onSubmit={data => {

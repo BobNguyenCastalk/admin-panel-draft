@@ -37,16 +37,12 @@ import {
   SaleListDocument,
   SaleListQuery,
   SaleListQueryVariables,
-  ShippingZonesDocument,
   StaffListDocument,
   StaffListQuery,
   StaffListQueryVariables,
   VoucherListDocument,
   VoucherListQuery,
   VoucherListQueryVariables,
-  WarehouseListDocument,
-  WarehouseListQuery,
-  WarehouseListQueryVariables,
 } from "@dashboard/graphql";
 import { DocumentNode } from "graphql";
 
@@ -72,8 +68,7 @@ export type TData =
   | RootCategoriesQuery
   | SaleListQuery
   | StaffListQuery
-  | VoucherListQuery
-  | WarehouseListQuery;
+  | VoucherListQuery;
 
 export type TVariables =
   | ProductListQueryVariables
@@ -93,8 +88,7 @@ export type TVariables =
   | RootCategoriesQueryVariables
   | SaleListQueryVariables
   | StaffListQueryVariables
-  | VoucherListQueryVariables
-  | WarehouseListQueryVariables;
+  | VoucherListQueryVariables;
 
 interface Document {
   document: DocumentNode;
@@ -156,17 +150,6 @@ export const DocumentMap: Record<string, Document> = {
     variables: DefaultVariables,
     displayedAttribute: "name",
   },
-  SHIPPING_PRICE: {
-    document: ShippingZonesDocument,
-    variables: DefaultVariables,
-    collection: "shippingZones",
-    displayedAttribute: "name",
-  },
-  SHIPPING_ZONE: {
-    document: ShippingZonesDocument,
-    variables: DefaultVariables,
-    displayedAttribute: "name",
-  },
   STAFF: {
     document: StaffListDocument,
     variables: DefaultVariables,
@@ -177,11 +160,6 @@ export const DocumentMap: Record<string, Document> = {
     document: VoucherListDocument,
     variables: DefaultVariables,
     displayedAttribute: "code",
-  },
-  WAREHOUSE: {
-    document: WarehouseListDocument,
-    variables: DefaultVariables,
-    displayedAttribute: "name",
   },
 };
 

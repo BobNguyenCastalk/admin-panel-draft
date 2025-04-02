@@ -43,7 +43,6 @@ import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeV
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
-import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import React, { useMemo } from "react";
 import { useIntl } from "react-intl";
@@ -321,7 +320,7 @@ export const ProductCreateView: React.FC<ProductCreateProps> = ({ params }) => {
         })}
         productTypes={productTypes}
         onSubmit={handleSubmit}
-        onWarehouseConfigure={() => navigate(warehouseAddPath)}
+        onWarehouseConfigure={() => null}
         saveButtonBarState={productCreateOpts.status}
         fetchMoreCategories={fetchMoreCategories}
         fetchMoreCollections={fetchMoreCollections}

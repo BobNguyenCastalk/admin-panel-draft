@@ -64,13 +64,10 @@ import PluginsSection from "./plugins";
 import ProductSection from "./products";
 import ProductTypesSection from "./productTypes";
 import errorTracker from "./services/errorTracking";
-import ShippingSection from "./shipping";
 import SiteSettingsSection from "./siteSettings";
 import StaffSection from "./staff";
 import { paletteOverrides, themeOverrides } from "./themeOverrides";
 import TranslationsSection from "./translations";
-import WarehouseSection from "./warehouses";
-import { warehouseSection } from "./warehouses/urls";
 import { WelcomePage } from "./welcomePage";
 
 if (GTM_ID) {
@@ -235,11 +232,6 @@ const Routes: React.FC = () => {
                 component={SiteSettingsSection}
               />
               <SectionRoute
-                permissions={[PermissionEnum.MANAGE_SHIPPING]}
-                path="/shipping"
-                component={ShippingSection}
-              />
-              <SectionRoute
                 permissions={[PermissionEnum.MANAGE_TRANSLATIONS]}
                 path="/translations"
                 component={TranslationsSection}
@@ -257,11 +249,6 @@ const Routes: React.FC = () => {
                 path={attributeSection}
                 component={AttributeSection}
                 matchPermission="any"
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_PRODUCTS]}
-                path={warehouseSection}
-                component={WarehouseSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_CHANNELS]}

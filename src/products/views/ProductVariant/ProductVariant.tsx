@@ -44,7 +44,6 @@ import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeV
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
-import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import React, { useEffect, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
@@ -289,7 +288,7 @@ export const ProductVariant: React.FC<ProductUpdateProps> = ({ variantId, produc
         onSubmit={handleSubmit}
         fetchMoreWarehouses={fetchMoreWarehouses}
         searchWarehousesResult={searchWarehousesResult}
-        onWarehouseConfigure={() => navigate(warehouseAddPath)}
+        onWarehouseConfigure={() => null}
         onVariantPreorderDeactivate={handleDeactivateVariantPreorder}
         variantDeactivatePreoderButtonState={deactivatePreoderOpts.status}
         onVariantReorder={handleVariantReorder}

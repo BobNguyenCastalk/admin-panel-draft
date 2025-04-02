@@ -29,8 +29,6 @@ import { useIntl } from "react-intl";
 
 import ChannelDetailsPage from "../../pages/ChannelDetailsPage";
 import { channelsListUrl, channelUrl, ChannelUrlDialog, ChannelUrlQueryParams } from "../../urls";
-import { useShippingZones } from "./useShippingZones";
-import { useWarehouses } from "./useWarehouses";
 
 interface ChannelDetailsProps {
   id: string;
@@ -186,25 +184,7 @@ export const ChannelDetails: React.FC<ChannelDetailsProps> = ({ id, params }) =>
     deleteChannel({ variables: data });
   };
 
-  const {
-    shippingZonesCountData,
-    shippingZonesCountLoading,
-    channelShippingZonesData,
-    channelsShippingZonesLoading,
-    fetchMoreShippingZones,
-    searchShippingZones,
-    searchShippingZonesResult,
-  } = useShippingZones(id);
-  const {
-    warehousesCountData,
-    warehousesCountLoading,
-    fetchMoreWarehouses,
-    searchWarehouses,
-    searchWarehousesResult,
-  } = useWarehouses();
-
   const channelWarehouses = data?.channel?.warehouses || [];
-  const channelShippingZones = mapEdgesToItems(channelShippingZonesData?.shippingZones);
 
   return (
     <>
@@ -215,7 +195,7 @@ export const ChannelDetails: React.FC<ChannelDetailsProps> = ({ id, params }) =>
           description: "window title",
         })}
       />
-      <ChannelDetailsPage
+      {/* <ChannelDetailsPage
         channelShippingZones={channelShippingZones}
         allShippingZonesCount={shippingZonesCountData?.shippingZones?.totalCount}
         searchShippingZones={searchShippingZones}
@@ -249,7 +229,7 @@ export const ChannelDetails: React.FC<ChannelDetailsProps> = ({ id, params }) =>
         }
         saveButtonBarState={updateChannelOpts.status}
         countries={shop?.countries || []}
-      />
+      /> */}
       <ChannelDeleteDialog
         channelSlug={data?.channel?.slug}
         currency={data?.channel?.currencyCode}

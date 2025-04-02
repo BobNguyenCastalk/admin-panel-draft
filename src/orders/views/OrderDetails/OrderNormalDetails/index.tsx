@@ -16,7 +16,6 @@ import {
   OrderUpdateMutation,
   OrderUpdateMutationVariables,
   useCustomerAddressesQuery,
-  useWarehouseListQuery,
 } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import {
@@ -138,13 +137,6 @@ export const OrderNormalDetails: React.FC<OrderNormalDetailsProps> = ({
   const order = data?.order;
   const shop = data?.shop;
   const navigate = useNavigator();
-  const { data: warehousesData } = useWarehouseListQuery({
-    displayLoader: true,
-    variables: {
-      first: 30,
-    },
-  });
-  const warehouses = mapEdgesToItems(warehousesData?.warehouses);
   const { data: customerAddresses, loading: customerAddressesLoading } = useCustomerAddressesQuery({
     variables: {
       id: order?.user?.id,
@@ -393,7 +385,7 @@ export const OrderNormalDetails: React.FC<OrderNormalDetailsProps> = ({
         confirmButtonState={orderFulfillmentCancel.opts.status}
         errors={orderFulfillmentCancel.opts.data?.orderFulfillmentCancel.errors || []}
         open={params.action === "cancel-fulfillment"}
-        warehouses={warehouses || []}
+        warehouses={[]}
         onConfirm={variables =>
           orderFulfillmentCancel.mutate({
             id: params.id,

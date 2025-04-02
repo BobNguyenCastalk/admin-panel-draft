@@ -12,11 +12,9 @@ import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { productListUrl } from "@dashboard/products/urls";
 import { productTypeListUrl } from "@dashboard/productTypes/urls";
-import { shippingZonesListUrl } from "@dashboard/shipping/urls";
 import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
 import { languageListUrl } from "@dashboard/translations/urls";
-import { warehouseListUrl } from "@dashboard/warehouses/urls";
 import { IntlShape } from "react-intl";
 
 import { QuickSearchActionInput } from "../../types";
@@ -84,10 +82,6 @@ function searchInViews(
       url: saleListUrl(),
     },
     {
-      label: intl.formatMessage(sectionNames.shipping),
-      url: shippingZonesListUrl(),
-    },
-    {
       label: intl.formatMessage(sectionNames.siteSettings),
       url: siteSettingsUrl(),
     },
@@ -102,10 +96,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.vouchers),
       url: voucherListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.warehouses),
-      url: warehouseListUrl(),
     },
   ];
 

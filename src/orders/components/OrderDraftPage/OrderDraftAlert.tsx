@@ -1,5 +1,4 @@
 import { ChannelUsabilityDataQuery, OrderDetailsFragment } from "@dashboard/graphql";
-import { shippingZonesListPath } from "@dashboard/shipping/urls";
 import { Alert, AlertProps } from "@saleor/macaw-ui";
 import { sprinkles } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
@@ -68,7 +67,7 @@ const OrderDraftAlert: React.FC<OrderDraftAlertProps> = props => {
           country: order?.shippingAddress?.country.country,
           configLink: (
             <Link
-              to={shippingZonesListPath}
+              to={""}
               target="_blank"
               className={sprinkles({
                 textDecoration: "underline",
