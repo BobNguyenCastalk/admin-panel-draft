@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { AppExtensionMountEnum } from "@dashboard/graphql";
-import { orderDraftListUrl, orderListUrl } from "@dashboard/orders/urls";
 import { matchPath } from "react-router";
 
 import { SidebarMenuItem } from "./types";
@@ -14,13 +13,6 @@ export function isMenuActive(location: string, menuItem: SidebarMenuItem) {
   const menuItemUrl = menuItem.url.split("?")[0];
 
   if (isMenuItemExtension(menuItem)) {
-    return false;
-  }
-
-  if (
-    activeUrl === orderDraftListUrl().split("?")[0] &&
-    menuItemUrl === orderListUrl().split("?")[0]
-  ) {
     return false;
   }
 

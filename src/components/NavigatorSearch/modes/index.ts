@@ -1,5 +1,4 @@
 import { MutationFunction } from "@apollo/client";
-import { OrderDraftCreateMutation } from "@dashboard/graphql";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { IntlShape } from "react-intl";
 
@@ -9,7 +8,6 @@ import getCommandModeActions from "./commands";
 import getCustomersModeActions from "./customers";
 import getDefaultModeActions from "./default";
 import getHelpModeActions from "./help";
-import getOrdersModeActions from "./orders";
 import { ActionQueries } from "./types";
 
 function getModeActions(
@@ -18,7 +16,7 @@ function getModeActions(
   intl: IntlShape,
   queries: ActionQueries,
   cbs: {
-    createOrder: MutationFunction<OrderDraftCreateMutation, {}>;
+    createOrder: MutationFunction<any, {}>;
     navigate: UseNavigatorResult;
     setMode: (mode: QuickSearchMode) => void;
   },
@@ -32,8 +30,6 @@ function getModeActions(
       return getCustomersModeActions(intl, cbs.navigate, queries.customers);
     case "help":
       return getHelpModeActions(query, intl, cbs.setMode);
-    case "orders":
-      return getOrdersModeActions(intl, cbs.navigate, queries.orders);
     default:
       return getDefaultModeActions(query, intl, cbs.navigate, cbs.createOrder, cbs.setMode);
   }

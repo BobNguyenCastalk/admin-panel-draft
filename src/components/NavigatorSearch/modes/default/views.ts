@@ -5,7 +5,6 @@ import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
-import { orderDraftListUrl, orderListUrl } from "@dashboard/orders/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { productListUrl } from "@dashboard/products/urls";
@@ -40,20 +39,12 @@ function searchInViews(
       url: customerListUrl(),
     },
     {
-      label: intl.formatMessage(sectionNames.draftOrders),
-      url: orderDraftListUrl(),
-    },
-    {
       label: intl.formatMessage(sectionNames.home),
       url: "/",
     },
     {
       label: intl.formatMessage(sectionNames.navigation),
       url: menuListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.orders),
-      url: orderListUrl(),
     },
     {
       label: intl.formatMessage(sectionNames.permissionGroups),

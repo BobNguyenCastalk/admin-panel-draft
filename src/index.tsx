@@ -53,7 +53,6 @@ import { commonMessages } from "./intl";
 import NavigationSection from "./navigation";
 import { navigationSection } from "./navigation/urls";
 import { NotFound } from "./NotFound";
-import OrdersSection from "./orders";
 import PermissionGroupSection from "./permissionGroups";
 import PluginsSection from "./plugins";
 import ProductSection from "./products";
@@ -180,11 +179,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_PLUGINS]}
                 path="/plugins"
                 component={PluginsSection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_ORDERS]}
-                path="/orders"
-                component={OrdersSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_PRODUCTS]}

@@ -1,17 +1,14 @@
 // @ts-strict-ignore
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import { useOrderDraftCreateMutation } from "@dashboard/graphql";
 import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
 import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
 import useNavigator from "@dashboard/hooks/useNavigator";
-import { orderUrl } from "@dashboard/orders/urls";
 import useCustomerSearch from "@dashboard/searches/useCustomerSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { RefObject, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
 import getModeActions from "./modes";
-import { isQueryValidOrderNumber } from "./modes/orders";
 import { getMode } from "./modes/utils";
 import useSearchCatalog from "./queries/useCatalogSearch";
 import { useQuickOrderSearch } from "./queries/useQuickOrderSearch";
@@ -33,13 +30,6 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
     skip: !query,
   });
   const [{ data: catalog }, searchCatalog] = useSearchCatalog(10);
-  const [createOrder] = useOrderDraftCreateMutation({
-    onCompleted: result => {
-      if (result.draftOrderCreate.errors.length === 0) {
-        navigate(orderUrl(result.draftOrderCreate.order.id));
-      }
-    },
-  });
 
   useModalDialogOpen(open, {
     onClose: () => {
@@ -84,10 +74,6 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
       }
     }
 
-    if (mode === "orders" && isQueryValidOrderNumber(value)) {
-      getOrderData(value);
-    }
-
     if (mode === "catalog") {
       searchCatalog(value);
     }
@@ -113,7 +99,7 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
         orders: mapEdgesToItems(orderData?.orders) || [],
       },
       {
-        createOrder,
+        createOrder: () => null,
         navigate,
         setMode,
       },

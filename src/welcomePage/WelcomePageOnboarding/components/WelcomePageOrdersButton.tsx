@@ -1,7 +1,6 @@
 import { useUser } from "@dashboard/auth";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { PermissionEnum } from "@dashboard/graphql";
-import { orderListUrl } from "@dashboard/orders/urls";
 import { Button, Tooltip } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";
@@ -37,7 +36,7 @@ export const WelcomePageOrdersButton = ({ onClick }: PrimaryActionProps) => {
   }
 
   return (
-    <Link to={orderListUrl()} onClick={onClick}>
+    <Link to={null} onClick={onClick}>
       <Button variant="primary">
         <FormattedMessage defaultMessage="Go to orders" id="kv3FWU" description="btn label" />
       </Button>

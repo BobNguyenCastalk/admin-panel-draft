@@ -1,6 +1,5 @@
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
 import Hr from "@dashboard/components/Hr";
-import Label from "@dashboard/orders/components/OrderHistory/Label";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
@@ -122,11 +121,7 @@ export const ChannelsAvailabilityContentWrapper: React.FC<ChannelsAvailabilityCo
             <ControlledCheckbox
               checked={hasAllSelected}
               name="allChannels"
-              label={
-                toggleAllLabel || (
-                  <Label text={intl.formatMessage(messages.selectAllChannelsLabel)} />
-                )
-              }
+              label={toggleAllLabel}
               onChange={toggleAll}
             />
             <Hr />

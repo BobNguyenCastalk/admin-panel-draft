@@ -15,7 +15,6 @@ import { OrdersIcon } from "@dashboard/icons/Orders";
 import { ProductsIcon } from "@dashboard/icons/Products";
 import { TranslationsIcon } from "@dashboard/icons/Translations";
 import { commonMessages, sectionNames } from "@dashboard/intl";
-import { orderDraftListUrl, orderListUrl } from "@dashboard/orders/urls";
 import { productListUrl } from "@dashboard/products/urls";
 import { languageListUrl } from "@dashboard/translations/urls";
 import { Box } from "@saleor/macaw-ui-next";
@@ -59,23 +58,6 @@ export function useMenuStructure() {
       label: intl.formatMessage(commonMessages.products),
       permissions: [PermissionEnum.MANAGE_GIFT_CARD, PermissionEnum.MANAGE_PRODUCTS],
       id: "products",
-      type: "itemGroup",
-    },
-    {
-      children: [
-        {
-          label: intl.formatMessage(commonMessages.drafts),
-          permissions: [PermissionEnum.MANAGE_ORDERS],
-          id: "order-drafts",
-          url: orderDraftListUrl(),
-          type: "item",
-        },
-      ],
-      icon: renderIcon(<OrdersIcon />),
-      label: intl.formatMessage(sectionNames.orders),
-      permissions: [PermissionEnum.MANAGE_ORDERS],
-      id: "orders",
-      url: orderListUrl(),
       type: "itemGroup",
     },
     {

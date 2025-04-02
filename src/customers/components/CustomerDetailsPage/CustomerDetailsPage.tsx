@@ -16,7 +16,6 @@ import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
-import { orderListUrl } from "@dashboard/orders/urls";
 import { mapEdgesToItems, mapMetadataItemToInput } from "@dashboard/utils/maps";
 import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import React from "react";
@@ -100,12 +99,7 @@ const CustomerDetailsPage: React.FC<CustomerDetailsPageProps> = ({
               <CustomerInfo data={data} disabled={disabled} errors={errors} onChange={change} />
               <CardSpacer />
               <RequirePermissions requiredPermissions={[PermissionEnum.MANAGE_ORDERS]}>
-                <CustomerOrders
-                  orders={mapEdgesToItems(customer?.orders)}
-                  viewAllHref={orderListUrl({
-                    customer: customer?.email,
-                  })}
-                />
+                <CustomerOrders orders={mapEdgesToItems(customer?.orders)} viewAllHref={null} />
                 <CardSpacer />
               </RequirePermissions>
               <Metadata data={data} onChange={changeMetadata} />

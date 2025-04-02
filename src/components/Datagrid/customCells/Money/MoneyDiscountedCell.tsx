@@ -1,11 +1,5 @@
 // @ts-strict-ignore
 import { Locale } from "@dashboard/components/Locale";
-import OrderDiscountCommonModal from "@dashboard/orders/components/OrderDiscountCommonModal/OrderDiscountCommonModal";
-import {
-  ORDER_LINE_DISCOUNT,
-  OrderDiscountCommonInput,
-} from "@dashboard/orders/components/OrderDiscountCommonModal/types";
-import { useOrderLineDiscountContext } from "@dashboard/products/components/OrderDiscountProviders/OrderLineDiscountProvider";
 import { CustomCell, CustomRenderer, GridCellKind } from "@glideapps/glide-data-grid";
 import React, { useCallback } from "react";
 
@@ -27,33 +21,9 @@ const ROW_HEIGHT = cellHeight + DATAGRID_BORDER_WIDTH;
 export type MoneyDiscuntedCell = CustomCell<MoneyDiscountedCellProps>;
 
 const MoneyDiscountedCellEditor = ({ onFinishedEditing, value }) => {
-  const getDiscountProviderValues = useOrderLineDiscountContext();
   const editedLineId = value.data.lineItemId;
-  const discountProviderValues = editedLineId ? getDiscountProviderValues(editedLineId) : null;
-  const handleDiscountConfirm = useCallback(
-    async (discount: OrderDiscountCommonInput) => {
-      await discountProviderValues.addOrderLineDiscount(discount);
-      onFinishedEditing(undefined);
-    },
-    [discountProviderValues, onFinishedEditing],
-  );
-  const handleDiscountRemove = useCallback(async () => {
-    await discountProviderValues.removeOrderLineDiscount();
-    onFinishedEditing(undefined);
-  }, [discountProviderValues, onFinishedEditing]);
 
-  return (
-    <OrderDiscountCommonModal
-      onClose={() => onFinishedEditing(undefined)}
-      modalType={ORDER_LINE_DISCOUNT}
-      maxPrice={discountProviderValues.unitUndiscountedPrice}
-      onConfirm={handleDiscountConfirm}
-      onRemove={handleDiscountRemove}
-      existingDiscount={discountProviderValues.orderLineDiscount}
-      confirmStatus={discountProviderValues.orderLineDiscountUpdateStatus}
-      removeStatus={discountProviderValues.orderLineDiscountRemoveStatus}
-    />
-  );
+  return null;
 };
 
 // TODO: add new design

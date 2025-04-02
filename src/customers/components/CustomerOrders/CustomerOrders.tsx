@@ -4,8 +4,6 @@ import Money from "@dashboard/components/Money";
 import ResponsiveTable from "@dashboard/components/ResponsiveTable";
 import TableRowLink from "@dashboard/components/TableRowLink";
 import { CustomerDetailsQuery } from "@dashboard/graphql";
-import { OrderPaymentStatusPill } from "@dashboard/orders/components/OrderPaymentSummaryCard/components/OrderPaymentStatusPill";
-import { orderUrl } from "@dashboard/orders/urls";
 import { RelayToFlat } from "@dashboard/types";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Button, Skeleton, sprinkles } from "@saleor/macaw-ui-next";
@@ -88,7 +86,7 @@ const CustomerOrders: React.FC<CustomerOrdersProps> = props => {
                       })
                     : undefined
                 }
-                href={order && orderUrl(order.id)}
+                href={null}
                 key={order ? order.id : "skeleton"}
               >
                 <TableCell>{order?.number ? "#" + order.number : <Skeleton />}</TableCell>
@@ -96,7 +94,7 @@ const CustomerOrders: React.FC<CustomerOrdersProps> = props => {
                   {order?.created ? <DateTime date={order.created} plain /> : <Skeleton />}
                 </TableCell>
                 <TableCell>
-                  {order ? <OrderPaymentStatusPill order={order} /> : <Skeleton />}
+                  <Skeleton />
                 </TableCell>
                 <TableCell className={textRightStyle} align="right">
                   {order?.total.gross ? <Money money={order.total.gross} /> : <Skeleton />}
