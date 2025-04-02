@@ -9,7 +9,6 @@ import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
 import { orderDraftListUrl, orderListUrl } from "@dashboard/orders/urls";
-import { pageListUrl } from "@dashboard/pages/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { productListUrl } from "@dashboard/products/urls";
@@ -72,7 +71,7 @@ function searchInViews(
     },
     {
       label: intl.formatMessage(sectionNames.content),
-      url: pageListUrl(),
+      url: null,
     },
     {
       label: intl.formatMessage(sectionNames.permissionGroups),

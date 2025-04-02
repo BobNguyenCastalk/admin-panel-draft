@@ -24,7 +24,6 @@ import { ProductsIcon } from "@dashboard/icons/Products";
 import { TranslationsIcon } from "@dashboard/icons/Translations";
 import { commonMessages, sectionNames } from "@dashboard/intl";
 import { orderDraftListUrl, orderListUrl } from "@dashboard/orders/urls";
-import { pageListPath } from "@dashboard/pages/urls";
 import { productListUrl } from "@dashboard/products/urls";
 import { languageListUrl } from "@dashboard/translations/urls";
 import { Box } from "@saleor/macaw-ui-next";
@@ -179,17 +178,6 @@ export function useMenuStructure() {
       url: saleListUrl(),
       id: "discounts",
       type: "itemGroup",
-    },
-    {
-      children: !isEmpty(extensions.NAVIGATION_PAGES)
-        ? [...mapToExtensionsItems(extensions.NAVIGATION_PAGES, appExtensionsHeaderItem)]
-        : undefined,
-      icon: renderIcon(<ContentsIcon />),
-      label: intl.formatMessage(sectionNames.content),
-      permissions: [PermissionEnum.MANAGE_PAGES],
-      id: "pages",
-      url: pageListPath,
-      type: !isEmpty(extensions.NAVIGATION_PAGES) ? "itemGroup" : "item",
     },
     {
       children: !isEmpty(extensions.NAVIGATION_TRANSLATIONS)

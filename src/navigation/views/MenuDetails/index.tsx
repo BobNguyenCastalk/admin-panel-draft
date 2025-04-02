@@ -15,7 +15,6 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { categoryUrl } from "../../../categories/urls";
 import { collectionUrl } from "../../../collections/urls";
 import { extractMutationErrors, maybe } from "../../../misc";
-import { pageUrl } from "../../../pages/urls";
 import MenuDetailsPage, { MenuDetailsSubmitData } from "../../components/MenuDetailsPage";
 import { findNode, getNode } from "../../components/MenuDetailsPage/tree";
 import MenuItemDialog, {
@@ -79,10 +78,6 @@ const MenuDetails: React.FC<MenuDetailsProps> = ({ id, params }) => {
 
       case "collection":
         navigate(collectionUrl(id));
-        break;
-
-      case "page":
-        navigate(pageUrl(id));
         break;
 
       case "link":

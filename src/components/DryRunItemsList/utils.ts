@@ -32,9 +32,6 @@ import {
   OrderListDocument,
   OrderListQuery,
   OrderListQueryVariables,
-  PageListDocument,
-  PageListQuery,
-  PageListQueryVariables,
   ProductListDocument,
   ProductListQuery,
   ProductListQueryVariables,
@@ -79,7 +76,6 @@ export type TData =
   | ListCustomersQuery
   | MenuListQuery
   | OrderListQuery
-  | PageListQuery
   | ProductListQuery
   | ProductVariantListQuery
   | RootCategoriesQuery
@@ -104,7 +100,6 @@ export type TVariables =
   | OrderFulfillDataQueryVariables
   | MenuListQueryVariables
   | OrderListQueryVariables
-  | PageListQueryVariables
   | ProductListQueryVariables
   | ProductVariantListQueryVariables
   | RootCategoriesQueryVariables
@@ -167,11 +162,6 @@ export const DocumentMap: Record<string, Document> = {
     document: OrderListDocument,
     variables: DefaultVariables,
     displayedAttribute: "number",
-  },
-  PAGE: {
-    document: PageListDocument,
-    variables: DefaultVariables,
-    displayedAttribute: "title",
   },
   PRODUCT: {
     document: ProductListDocument,
