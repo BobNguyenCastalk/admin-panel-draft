@@ -21,7 +21,6 @@ import Warehouses from "@dashboard/icons/Warehouses";
 import { sectionNames } from "@dashboard/intl";
 import { maybe } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
-import { pageTypeListUrl } from "@dashboard/pageTypes/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { productTypeListUrl } from "@dashboard/productTypes/urls";
@@ -122,28 +121,6 @@ export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
           title: intl.formatMessage(sectionNames.channels),
           url: channelsListUrl(),
           testId: "configuration-menu-channels",
-        },
-      ],
-    },
-    {
-      label: intl.formatMessage({
-        id: "HjXnIf",
-        defaultMessage: "Content Management",
-      }),
-      menuItems: [
-        {
-          description: intl.formatMessage({
-            id: "JPH/uP",
-            defaultMessage: "Define types of content pages used in your store",
-          }),
-          icon: <PageTypes />,
-          permissions: [
-            PermissionEnum.MANAGE_PAGES,
-            PermissionEnum.MANAGE_PAGE_TYPES_AND_ATTRIBUTES,
-          ],
-          title: intl.formatMessage(sectionNames.pageTypes),
-          url: pageTypeListUrl(),
-          testId: "configuration-menu-page-types",
         },
       ],
     },

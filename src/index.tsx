@@ -55,7 +55,6 @@ import NavigationSection from "./navigation";
 import { navigationSection } from "./navigation/urls";
 import { NotFound } from "./NotFound";
 import OrdersSection from "./orders";
-import PageTypesSection from "./pageTypes";
 import PermissionGroupSection from "./permissionGroups";
 import PluginsSection from "./plugins";
 import ProductSection from "./products";
@@ -182,15 +181,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_DISCOUNTS]}
                 path="/discounts"
                 component={DiscountSection}
-              />
-              <SectionRoute
-                permissions={[
-                  PermissionEnum.MANAGE_PAGES,
-                  PermissionEnum.MANAGE_PAGE_TYPES_AND_ATTRIBUTES,
-                ]}
-                path="/page-types"
-                component={PageTypesSection}
-                matchPermission="any"
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_PLUGINS]}
