@@ -1,9 +1,4 @@
 // @ts-strict-ignore
-import {
-  extensionMountPoints,
-  mapToMenuItemsForOrderListActions,
-  useExtensions,
-} from "@dashboard/apps/hooks/useExtensions";
 import { useUserAccessibleChannels } from "@dashboard/auth/hooks/useUserAccessibleChannels";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
 import { LimitsInfo } from "@dashboard/components/AppLayout/LimitsInfo";
@@ -74,11 +69,6 @@ const OrderListPage: React.FC<OrderListPageProps> = ({
   const hasAccessibleChannels = userAccessibleChannels.length > 0;
   const limitsReached = isLimitReached(limits, "orders");
   const [isFilterPresetOpen, setFilterPresetOpen] = useState(false);
-  const { ORDER_OVERVIEW_CREATE, ORDER_OVERVIEW_MORE_ACTIONS } = useExtensions(
-    extensionMountPoints.ORDER_LIST,
-  );
-  const extensionMenuItems = mapToMenuItemsForOrderListActions(ORDER_OVERVIEW_MORE_ACTIONS);
-  const extensionCreateButtonItems = mapToMenuItemsForOrderListActions(ORDER_OVERVIEW_CREATE);
   const context = useDevModeContext();
   const { valueProvider } = useConditionalFilterContext();
 
@@ -149,39 +139,23 @@ const OrderListPage: React.FC<OrderListPageProps> = ({
                     }),
                     onSelect: onSettingsOpen,
                   },
-                  ...extensionMenuItems,
                 ]}
               />
             )}
 
             <Tooltip>
               <Tooltip.Trigger>
-                {extensionCreateButtonItems.length > 0 ? (
-                  <ButtonWithDropdown
-                    onClick={onAdd}
-                    testId={"create-order-button"}
-                    options={extensionCreateButtonItems}
-                    disabled={limitsReached || !hasAccessibleChannels}
-                  >
-                    <FormattedMessage
-                      id="LshEVn"
-                      defaultMessage="Create order"
-                      description="button"
-                    />
-                  </ButtonWithDropdown>
-                ) : (
-                  <Button
-                    data-test-id="create-order-button"
-                    onClick={onAdd}
-                    disabled={limitsReached || !hasAccessibleChannels}
-                  >
-                    <FormattedMessage
-                      id="LshEVn"
-                      defaultMessage="Create order"
-                      description="button"
-                    />
-                  </Button>
-                )}
+                <Button
+                  data-test-id="create-order-button"
+                  onClick={onAdd}
+                  disabled={limitsReached || !hasAccessibleChannels}
+                >
+                  <FormattedMessage
+                    id="LshEVn"
+                    defaultMessage="Create order"
+                    description="button"
+                  />
+                </Button>
               </Tooltip.Trigger>
               <Tooltip.Content>
                 {!hasAccessibleChannels && (

@@ -1,4 +1,3 @@
-import DeactivatedText from "@dashboard/apps/components/DeactivatedText";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ListPageLayout } from "@dashboard/components/Layouts";
@@ -80,11 +79,6 @@ const CustomAppListPage: React.FC<CustomAppListPageProps> = ({
                       <span data-tc="name" className={classes.appName}>
                         {app.name}
                       </span>
-                      {!app.isActive && (
-                        <div className={classes.statusWrapper}>
-                          <DeactivatedText />
-                        </div>
-                      )}
                     </TableCell>
                     <TableCell className={classes.colAction}>
                       <TableButtonWrapper>

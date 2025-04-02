@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { AppPaths } from "@dashboard/apps/urls";
 import Link from "@dashboard/components/Link";
 import { TimelineEvent } from "@dashboard/components/Timeline";
 import { customerPath } from "@dashboard/customers/urls";
@@ -33,10 +32,6 @@ const getUserOrApp = (event: GiftCardEventType): string | null => {
 const getUserOrAppUrl = (event: GiftCardEventType): string => {
   if (event.user) {
     return staffMemberDetailsUrl(event.user.id);
-  }
-
-  if (event.app) {
-    return AppPaths.resolveAppPath(event.app.id);
   }
 
   return null;
@@ -95,9 +90,7 @@ const getEventMessage = (event: GiftCardEventType, intl: IntlShape) => {
             buyer: content =>
               !!user && (
                 <Link
-                  href={
-                    event.user ? customerPath(event.user.id) : AppPaths.resolveAppPath(event.app.id)
-                  }
+                  href={event.user ? customerPath(event.user.id) : null}
                 >{`${content} ${user}`}</Link>
               ),
           })

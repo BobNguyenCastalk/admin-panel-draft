@@ -1,11 +1,5 @@
 // @ts-strict-ignore
 import { LazyQueryResult } from "@apollo/client/react";
-import {
-  extensionMountPoints,
-  mapToMenuItems,
-  mapToMenuItemsForProductOverviewActions,
-  useExtensions,
-} from "@dashboard/apps/hooks/useExtensions";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
 import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
@@ -115,14 +109,6 @@ export const ProductListPage: React.FC<ProductListPageProps> = props => {
   const navigate = useNavigator();
   const [isFilterPresetOpen, setFilterPresetOpen] = useState(false);
   const limitReached = isLimitReached(limits, "productVariants");
-  const { PRODUCT_OVERVIEW_CREATE, PRODUCT_OVERVIEW_MORE_ACTIONS } = useExtensions(
-    extensionMountPoints.PRODUCT_LIST,
-  );
-  const extensionMenuItems = mapToMenuItemsForProductOverviewActions(
-    PRODUCT_OVERVIEW_MORE_ACTIONS,
-    selectedProductIds,
-  );
-  const extensionCreateButtonItems = mapToMenuItems(PRODUCT_OVERVIEW_CREATE);
   const [storedProductListViewType, setProductListViewType] = useLocalStorage<ProductListViewType>(
     "productListViewType",
     DEFAULT_PRODUCT_LIST_VIEW_TYPE,
@@ -189,30 +175,11 @@ export const ProductListPage: React.FC<ProductListPageProps> = props => {
                   onSelect: onExport,
                   testId: "export",
                 },
-                ...extensionMenuItems,
               ]}
             />
-            {extensionCreateButtonItems.length > 0 ? (
-              <ButtonWithDropdown
-                onClick={onAdd}
-                testId={"add-product"}
-                options={extensionCreateButtonItems}
-              >
-                <FormattedMessage
-                  id="JFmOfi"
-                  defaultMessage="Create Product"
-                  description="button"
-                />
-              </ButtonWithDropdown>
-            ) : (
-              <Button data-test-id="add-product" onClick={onAdd}>
-                <FormattedMessage
-                  id="JFmOfi"
-                  defaultMessage="Create Product"
-                  description="button"
-                />
-              </Button>
-            )}
+            <Button data-test-id="add-product" onClick={onAdd}>
+              <FormattedMessage id="JFmOfi" defaultMessage="Create Product" description="button" />
+            </Button>
           </Box>
         </Box>
       </TopNav>

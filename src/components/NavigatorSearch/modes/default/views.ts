@@ -1,4 +1,3 @@
-import { AppUrls } from "@dashboard/apps/urls";
 import { attributeListUrl } from "@dashboard/attributes/urls";
 import { categoryListUrl } from "@dashboard/categories/urls";
 import { collectionListUrl } from "@dashboard/collections/urls";
@@ -34,10 +33,6 @@ function searchInViews(
 ): QuickSearchActionInput[] {
   const views: View[] = [
     {
-      label: intl.formatMessage(sectionNames.apps),
-      url: AppUrls.resolveAppListUrl(),
-    },
-    {
       label: intl.formatMessage(sectionNames.attributes),
       url: attributeListUrl(),
     },
@@ -68,10 +63,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.orders),
       url: orderListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.content),
-      url: null,
     },
     {
       label: intl.formatMessage(sectionNames.permissionGroups),

@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { AppUrls } from "@dashboard/apps/urls";
 import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { AppAvatarFragment, StaffMemberAvatarFragment } from "@dashboard/graphql";
 import { getUserInitials, getUserName } from "@dashboard/misc";
@@ -18,7 +17,7 @@ export const EventCreatedBy: React.FC<EventCreatedByProps> = ({ createdBy }) => 
   }
 
   if (createdBy.__typename === "App") {
-    return <Link to={AppUrls.resolveAppUrl(createdBy.id)}>{createdBy.name}</Link>;
+    return <Link to={null}>{createdBy.name}</Link>;
   }
 
   return (

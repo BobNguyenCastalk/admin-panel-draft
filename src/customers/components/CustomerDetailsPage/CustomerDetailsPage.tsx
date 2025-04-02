@@ -1,9 +1,4 @@
 // @ts-strict-ignore
-import {
-  extensionMountPoints,
-  mapToMenuItemsForCustomerDetails,
-  useExtensions,
-} from "@dashboard/apps/hooks/useExtensions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { Backlink } from "@dashboard/components/Backlink";
 import CardMenu from "@dashboard/components/CardMenu/CardMenu";
@@ -76,11 +71,6 @@ const CustomerDetailsPage: React.FC<CustomerDetailsPageProps> = ({
       : [],
   };
   const { makeChangeHandler: makeMetadataChangeHandler } = useMetadataChangeTrigger();
-  const { CUSTOMER_DETAILS_MORE_ACTIONS } = useExtensions(extensionMountPoints.CUSTOMER_DETAILS);
-  const extensionMenuItems = mapToMenuItemsForCustomerDetails(
-    CUSTOMER_DETAILS_MORE_ACTIONS,
-    customerId,
-  );
 
   const customerBackLink = useBackLinkWithState({
     path: customerListPath,
@@ -93,9 +83,9 @@ const CustomerDetailsPage: React.FC<CustomerDetailsPageProps> = ({
 
         return (
           <DetailPageLayout>
-            <TopNav href={customerBackLink} title={getUserName(customer, true)}>
+            {/* <TopNav href={customerBackLink} title={getUserName(customer, true)}>
               {extensionMenuItems.length > 0 && <CardMenu menuItems={extensionMenuItems} />}
-            </TopNav>
+            </TopNav> */}
             <DetailPageLayout.Content>
               <Backlink href={customerBackLink}>
                 {intl.formatMessage(sectionNames.customers)}

@@ -1,10 +1,5 @@
 // @ts-strict-ignore
 import {
-  extensionMountPoints,
-  mapToMenuItemsForProductDetails,
-  useExtensions,
-} from "@dashboard/apps/hooks/useExtensions";
-import {
   getReferenceAttributeEntityTypeFromAttribute,
   mergeAttributeValues,
 } from "@dashboard/attributes/utils/data";
@@ -199,7 +194,6 @@ export const ProductUpdatePage: React.FC<ProductUpdatePageProps> = ({
     handlers.selectAttributeReferenceMetadata(assignReferencesAttributeId, attributeValues);
     onCloseDialog();
   };
-  const { PRODUCT_DETAILS_MORE_ACTIONS } = useExtensions(extensionMountPoints.PRODUCT_DETAILS);
   const productErrors = React.useMemo(
     () =>
       errors.filter(
@@ -213,10 +207,6 @@ export const ProductUpdatePage: React.FC<ProductUpdatePageProps> = ({
         ["ProductChannelListingError", "ProductError"].includes(err.__typename),
       ) as Array<ProductErrorFragment | ProductChannelListingErrorFragment>,
     [errors, channelsErrors],
-  );
-  const extensionMenuItems = mapToMenuItemsForProductDetails(
-    PRODUCT_DETAILS_MORE_ACTIONS,
-    productId,
   );
   const context = useDevModeContext();
   const openPlaygroundURL = () => {
@@ -287,7 +277,6 @@ export const ProductUpdatePage: React.FC<ProductUpdatePageProps> = ({
             <TopNav href={backLinkProductUrl} title={header}>
               <TopNav.Menu
                 items={[
-                  ...extensionMenuItems,
                   {
                     label: intl.formatMessage(messages.openGraphiQL),
                     onSelect: openPlaygroundURL,

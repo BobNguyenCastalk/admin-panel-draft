@@ -1,10 +1,4 @@
 // @ts-strict-ignore
-import {
-  extensionMountPoints,
-  mapToMenuItems,
-  mapToMenuItemsForCustomerOverviewActions,
-  useExtensions,
-} from "@dashboard/apps/hooks/useExtensions";
 import { useUserPermissions } from "@dashboard/auth/hooks/useUserPermissions";
 import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
@@ -58,14 +52,6 @@ const CustomerListPage: React.FC<CustomerListPageProps> = ({
   const structure = createFilterStructure(intl, filterOpts, userPermissions);
   const [isFilterPresetOpen, setFilterPresetOpen] = useState(false);
   const { enabled: isCustomersFiltersEnabled } = useFlag("new_filters");
-  const { CUSTOMER_OVERVIEW_CREATE, CUSTOMER_OVERVIEW_MORE_ACTIONS } = useExtensions(
-    extensionMountPoints.CUSTOMER_LIST,
-  );
-  const extensionMenuItems = mapToMenuItemsForCustomerOverviewActions(
-    CUSTOMER_OVERVIEW_MORE_ACTIONS,
-    selectedCustomerIds,
-  );
-  const extensionCreateButtonItems = mapToMenuItems(CUSTOMER_OVERVIEW_CREATE);
 
   return (
     <>
@@ -98,28 +84,9 @@ const CustomerListPage: React.FC<CustomerListPageProps> = ({
             />
           </Box>
           <Box display="flex" alignItems="center" gap={2}>
-            {extensionMenuItems.length > 0 && <TopNav.Menu items={extensionMenuItems} />}
-            {extensionCreateButtonItems.length > 0 ? (
-              <ButtonWithDropdown
-                options={extensionCreateButtonItems}
-                data-test-id="create-customer"
-                onClick={() => navigate(customerAddUrl)}
-              >
-                <FormattedMessage
-                  id="QLVddq"
-                  defaultMessage="Create customer"
-                  description="button"
-                />
-              </ButtonWithDropdown>
-            ) : (
-              <Button data-test-id="create-customer" onClick={() => navigate(customerAddUrl)}>
-                <FormattedMessage
-                  id="QLVddq"
-                  defaultMessage="Create customer"
-                  description="button"
-                />
-              </Button>
-            )}
+            <Button data-test-id="create-customer" onClick={() => navigate(customerAddUrl)}>
+              <FormattedMessage id="QLVddq" defaultMessage="Create customer" description="button" />
+            </Button>
           </Box>
         </Box>
       </TopNav>

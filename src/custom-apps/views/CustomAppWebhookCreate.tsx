@@ -1,9 +1,5 @@
 import { WindowTitle } from "@dashboard/components/WindowTitle";
-import {
-  useAppQuery,
-  useWebhookCreateMutation,
-  WebhookEventTypeAsyncEnum,
-} from "@dashboard/graphql";
+import { useWebhookCreateMutation, WebhookEventTypeAsyncEnum } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
@@ -23,9 +19,6 @@ export const CustomAppWebhookCreate: React.FC<CustomAppWebhookCreateProps> = ({ 
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
-  const { data } = useAppQuery({
-    variables: { id: appId, hasManagedAppsPermission: true },
-  });
   const availableEvents = useAvailableEvents();
   const [webhookCreate, webhookCreateOpts] = useWebhookCreateMutation({
     onCompleted: data => {
@@ -71,7 +64,7 @@ export const CustomAppWebhookCreate: React.FC<CustomAppWebhookCreateProps> = ({ 
       />
       <WebhookDetailsPage
         appId={appId}
-        appName={data?.app?.name ?? ""}
+        appName={""}
         disabled={false}
         errors={webhookCreateOpts.data?.webhookCreate?.errors ?? []}
         onSubmit={handleSubmit}

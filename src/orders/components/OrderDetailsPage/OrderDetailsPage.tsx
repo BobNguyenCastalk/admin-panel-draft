@@ -1,10 +1,5 @@
 // @ts-strict-ignore
 import { FetchResult } from "@apollo/client";
-import {
-  extensionMountPoints,
-  mapToMenuItemsForOrderDetails,
-  useExtensions,
-} from "@dashboard/apps/hooks/useExtensions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import CardMenu from "@dashboard/components/CardMenu";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
@@ -170,8 +165,6 @@ const OrderDetailsPage: React.FC<OrderDetailsPageProps> = props => {
       shouldExist: hasAnyItemsReplaceable(order),
     },
   ]);
-  const { ORDER_DETAILS_MORE_ACTIONS } = useExtensions(extensionMountPoints.ORDER_DETAILS);
-  const extensionMenuItems = mapToMenuItemsForOrderDetails(ORDER_DETAILS_MORE_ACTIONS, order?.id);
   const context = useDevModeContext();
   const openPlaygroundURL = () => {
     context.setDevModeContent(defaultGraphiQLQuery);
@@ -194,7 +187,6 @@ const OrderDetailsPage: React.FC<OrderDetailsPageProps> = props => {
               <CardMenu
                 menuItems={[
                   ...selectCardMenuItems,
-                  ...extensionMenuItems,
                   {
                     label: intl.formatMessage(messages.openGraphiQL),
                     onSelect: openPlaygroundURL,

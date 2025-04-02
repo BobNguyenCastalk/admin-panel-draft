@@ -1,4 +1,3 @@
-import { AppUrls } from "@dashboard/apps/urls";
 import { TaxCalculationStrategy, useTaxStrategyChoicesQuery } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { Box, Button, ExternalLinkIcon, Option, Text } from "@saleor/macaw-ui-next";
@@ -17,10 +16,6 @@ const legacyPluginTaxChoice = {
 
 export const useTaxStrategyChoices = () => {
   const { data, loading } = useTaxStrategyChoicesQuery();
-  const navigate = useNavigator();
-  const navigateToAppScreen = (id: string) => {
-    navigate(AppUrls.resolveAppDetailsUrl(id));
-  };
 
   const taxAppsChoices =
     data?.shop.availableTaxApps.map(app => ({
@@ -34,7 +29,7 @@ export const useTaxStrategyChoices = () => {
         />
       ),
       endAdornment: (
-        <Button onClick={() => navigateToAppScreen(app.id)} variant="tertiary">
+        <Button onClick={() => null} variant="tertiary">
           <Box display="flex" alignItems="center" gap={1}>
             {app.identifier && (
               <Text

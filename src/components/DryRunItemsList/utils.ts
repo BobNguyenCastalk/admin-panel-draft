@@ -1,8 +1,5 @@
 // @ts-strict-ignore
 import {
-  AppsListDocument,
-  AppsListQuery,
-  AppsListQueryVariables,
   AttributeListDocument,
   AttributeListQuery,
   AttributeListQueryVariables,
@@ -116,11 +113,6 @@ interface Document {
 }
 
 export const DocumentMap: Record<string, Document> = {
-  APP: {
-    document: AppsListDocument,
-    variables: DefaultVariables,
-    displayedAttribute: "name",
-  },
   ATTRIBUTE: {
     document: AttributeListDocument,
     variables: DefaultVariables,
