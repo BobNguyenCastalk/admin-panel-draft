@@ -4,7 +4,6 @@ import { useUser } from "@dashboard/auth";
 import { channelsListUrl } from "@dashboard/channels/urls";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { APP_VERSION as dashboardVersion } from "@dashboard/config";
-import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { PermissionEnum } from "@dashboard/graphql";
 import useShop from "@dashboard/hooks/useShop";
 import Attributes from "@dashboard/icons/Attributes";
@@ -188,16 +187,6 @@ export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
           title: intl.formatMessage(sectionNames.plugins),
           url: pluginListUrl(),
           testId: "configuration-plugins-pages",
-        },
-        {
-          description: intl.formatMessage({
-            id: "Zz67wc",
-            defaultMessage: "View and update your webhooks and events.",
-          }),
-          icon: <Miscellaneous />,
-          title: intl.formatMessage(sectionNames.webhooksAndEvents),
-          url: CustomAppUrls.resolveAppListUrl(),
-          testId: "configuration-menu-webhooks-and-events",
         },
       ],
     },
