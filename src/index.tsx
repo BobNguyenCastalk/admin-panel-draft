@@ -45,7 +45,6 @@ import ConfigurationSection from "./configuration";
 import { getConfigMenuItemsPermissions } from "./configuration/utils";
 import AppStateProvider from "./containers/AppState";
 import BackgroundTasksProvider from "./containers/BackgroundTasks";
-import { CustomerSection } from "./customers";
 import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvider";
 import { apolloClient, saleorClient } from "./graphql/client";
 import { useLocationState } from "./hooks/useLocationState";
@@ -169,11 +168,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_PRODUCTS]}
                 path="/categories"
                 component={CategorySection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_USERS]}
-                path="/customers"
-                component={CustomerSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_PLUGINS]}

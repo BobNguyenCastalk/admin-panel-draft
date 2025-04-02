@@ -1,7 +1,5 @@
 import { MutationFunction } from "@apollo/client";
 import { categoryAddUrl } from "@dashboard/categories/urls";
-import { customerAddUrl } from "@dashboard/customers/urls";
-import { OrderDraftCreateMutation } from "@dashboard/graphql";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { fuzzySearch } from "@dashboard/misc";
 import { permissionGroupAddUrl } from "@dashboard/permissionGroups/urls";
@@ -21,7 +19,7 @@ export function searchInCommands(
   search: string,
   intl: IntlShape,
   navigate: UseNavigatorResult,
-  createOrder: MutationFunction<OrderDraftCreateMutation, {}>,
+  createOrder: MutationFunction<any, {}>,
   setMode: (mode: QuickSearchMode) => void,
 ): QuickSearchActionInput[] {
   const actions: Command[] = [
@@ -45,14 +43,6 @@ export function searchInCommands(
       label: intl.formatMessage(messages.createPermissionGroup),
       onClick: () => {
         navigate(permissionGroupAddUrl);
-
-        return false;
-      },
-    },
-    {
-      label: intl.formatMessage(messages.createCustomer),
-      onClick: () => {
-        navigate(customerAddUrl);
 
         return false;
       },
@@ -88,7 +78,7 @@ function getCommandModeActions(
   query: string,
   intl: IntlShape,
   navigate: UseNavigatorResult,
-  createOrder: MutationFunction<OrderDraftCreateMutation, {}>,
+  createOrder: MutationFunction<any, {}>,
   setMode: (mode: QuickSearchMode) => void,
 ): QuickSearchActionInput[] {
   return [...searchInCommands(query, intl, navigate, createOrder, setMode)].slice(0, maxActions);

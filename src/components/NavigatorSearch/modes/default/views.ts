@@ -1,6 +1,5 @@
 import { attributeListUrl } from "@dashboard/attributes/urls";
 import { categoryListUrl } from "@dashboard/categories/urls";
-import { customerListUrl } from "@dashboard/customers/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
@@ -33,10 +32,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.categories),
       url: categoryListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.customers),
-      url: customerListUrl(),
     },
     {
       label: intl.formatMessage(sectionNames.home),

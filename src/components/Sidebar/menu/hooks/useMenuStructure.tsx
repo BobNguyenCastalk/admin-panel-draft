@@ -2,7 +2,6 @@ import { useUser } from "@dashboard/auth";
 import { categoryListUrl } from "@dashboard/categories/urls";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { getConfigMenuItemsPermissions } from "@dashboard/configuration/utils";
-import { customerListUrl } from "@dashboard/customers/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import { PermissionEnum } from "@dashboard/graphql";
 import { ConfigurationIcon } from "@dashboard/icons/Configuration";
@@ -59,23 +58,6 @@ export function useMenuStructure() {
       permissions: [PermissionEnum.MANAGE_GIFT_CARD, PermissionEnum.MANAGE_PRODUCTS],
       id: "products",
       type: "itemGroup",
-    },
-    {
-      children: [
-        {
-          label: intl.formatMessage(sectionNames.customers),
-          permissions: [PermissionEnum.MANAGE_USERS],
-          id: "customers",
-          url: customerListUrl(),
-          type: "item",
-        },
-      ],
-      icon: renderIcon(<CustomersIcon />),
-      label: intl.formatMessage(sectionNames.customers),
-      permissions: [PermissionEnum.MANAGE_USERS],
-      id: "customers",
-      url: customerListUrl(),
-      type: "item",
     },
     {
       children: undefined,
