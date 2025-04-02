@@ -3,7 +3,6 @@ import { Combobox } from "@dashboard/components/Combobox";
 import { TaxClassBaseFragment } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { sectionNames } from "@dashboard/intl";
-import { taxesMessages } from "@dashboard/taxes/messages";
 import { FetchMoreProps } from "@dashboard/types";
 import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
@@ -42,7 +41,7 @@ const ShippingMethodTaxes: React.FC<ShippingMethodTaxesProps> = props => {
           autoComplete="off"
           data-test-id="taxes"
           disabled={disabled}
-          label={intl.formatMessage(taxesMessages.taxClass)}
+          label={""}
           options={taxClasses.map(choice => ({
             label: choice.name,
             value: choice.id,

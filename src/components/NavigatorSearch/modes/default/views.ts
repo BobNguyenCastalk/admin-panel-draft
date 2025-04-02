@@ -15,7 +15,6 @@ import { productTypeListUrl } from "@dashboard/productTypes/urls";
 import { shippingZonesListUrl } from "@dashboard/shipping/urls";
 import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
-import { taxConfigurationListUrl } from "@dashboard/taxes/urls";
 import { languageListUrl } from "@dashboard/translations/urls";
 import { warehouseListUrl } from "@dashboard/warehouses/urls";
 import { IntlShape } from "react-intl";
@@ -95,10 +94,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.staff),
       url: staffListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.taxes),
-      url: taxConfigurationListUrl(),
     },
     {
       label: intl.formatMessage(sectionNames.translations),

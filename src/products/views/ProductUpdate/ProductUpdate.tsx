@@ -23,7 +23,6 @@ import useCategorySearch from "@dashboard/searches/useCategorySearch";
 import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
 import usePageSearch from "@dashboard/searches/usePageSearch";
 import useProductSearch from "@dashboard/searches/useProductSearch";
-import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import { getProductErrorMessage } from "@dashboard/utils/errors";
 import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeValueSearchHandler";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
@@ -215,7 +214,6 @@ export const ProductUpdate: React.FC<ProductUpdateProps> = ({ id, params }) => {
     loading: !!searchAttributeValuesOpts.loading,
     onFetchMore: loadMoreAttributeValues,
   };
-  const { taxClasses, fetchMoreTaxClasses } = useTaxClassFetchMore();
 
   if (product === null) {
     return <NotFoundPage onBack={handleBack} />;
@@ -244,8 +242,8 @@ export const ProductUpdate: React.FC<ProductUpdateProps> = ({ id, params }) => {
         media={data?.product?.media}
         header={product?.name}
         product={product}
-        taxClasses={taxClasses ?? []}
-        fetchMoreTaxClasses={fetchMoreTaxClasses}
+        taxClasses={[]}
+        fetchMoreTaxClasses={null}
         variants={product?.variants}
         onDelete={() => openModal("remove")}
         onImageReorder={handleImageReorder}

@@ -18,7 +18,6 @@ import ProductTypes from "@dashboard/icons/ProductTypes";
 import ShippingMethods from "@dashboard/icons/ShippingMethods";
 import SiteSettings from "@dashboard/icons/SiteSettings";
 import StaffMembers from "@dashboard/icons/StaffMembers";
-import Taxes from "@dashboard/icons/Taxes";
 import Warehouses from "@dashboard/icons/Warehouses";
 import { sectionNames } from "@dashboard/intl";
 import { maybe } from "@dashboard/misc";
@@ -30,7 +29,6 @@ import { productTypeListUrl } from "@dashboard/productTypes/urls";
 import { shippingZonesListUrl } from "@dashboard/shipping/urls";
 import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
-import { taxConfigurationListUrl } from "@dashboard/taxes/urls";
 import { warehouseSection } from "@dashboard/warehouses/urls";
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
@@ -79,18 +77,7 @@ export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
         id: "jFrdB5",
         defaultMessage: "Product Settings",
       }),
-      menuItems: [
-        {
-          description: intl.formatMessage({
-            id: "EIULpW",
-            defaultMessage: "Manage how your store charges tax",
-          }),
-          icon: <Taxes />,
-          title: intl.formatMessage(sectionNames.taxes),
-          url: taxConfigurationListUrl(),
-          testId: "configuration-menu-taxes",
-        },
-      ],
+      menuItems: [],
     },
     {
       label: intl.formatMessage({

@@ -3,7 +3,6 @@ import { Combobox } from "@dashboard/components/Combobox";
 import { TaxClassBaseFragment } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { sectionNames } from "@dashboard/intl";
-import { taxesMessages } from "@dashboard/taxes/messages";
 import { FetchMoreProps } from "@dashboard/types";
 import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
@@ -45,7 +44,7 @@ const ProductTaxes: React.FC<ProductTaxesProps> = props => {
                 : null
             }
             name="taxClassId"
-            label={intl.formatMessage(taxesMessages.taxClass)}
+            label={""}
             onChange={onChange}
             fetchMore={onFetchMore}
           />

@@ -28,7 +28,6 @@ import { getStringOrPlaceholder, maybe } from "@dashboard/misc";
 import useProductTypeDelete from "@dashboard/productTypes/hooks/useProductTypeDelete";
 import useProductTypeOperations from "@dashboard/productTypes/hooks/useProductTypeOperations";
 import useAvailableProductAttributeSearch from "@dashboard/searches/useAvailableProductAttributeSearch";
-import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import { ReorderEvent } from "@dashboard/types";
 import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
@@ -135,7 +134,6 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
     displayLoader: true,
     variables: { id },
   });
-  const { taxClasses, fetchMoreTaxClasses } = useTaxClassFetchMore();
   const productType = data?.productType;
 
   const productTypeDeleteData = useProductTypeDelete({
@@ -274,7 +272,7 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
         pageTitle={maybe(() => data.productType.name)}
         productType={maybe(() => data.productType)}
         saveButtonBarState={updateProductTypeOpts.status || updateProductAttributesOpts.status}
-        taxClasses={taxClasses ?? []}
+        taxClasses={[]}
         selectedVariantAttributes={selectedVariantAttributes}
         setSelectedVariantAttributes={setSelectedVariantAttributes}
         onAttributeAdd={type =>
@@ -349,7 +347,7 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
             </Button>
           ),
         }}
-        onFetchMoreTaxClasses={fetchMoreTaxClasses}
+        onFetchMoreTaxClasses={null}
       />
       {!dataLoading && (
         <>

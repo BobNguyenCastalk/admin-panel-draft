@@ -9,7 +9,6 @@ import {
 } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
-import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
 import React from "react";
 import { useIntl } from "react-intl";
@@ -38,7 +37,6 @@ export const ProductTypeCreate: React.FC<ProductTypeCreateProps> = ({ params }) 
   const { data, loading } = useProductTypeCreateDataQuery({
     displayLoader: true,
   });
-  const { taxClasses, fetchMoreTaxClasses } = useTaxClassFetchMore();
   const [createProductType, createProductTypeOpts] = useProductTypeCreateMutation({
     onCompleted: data => {
       if (data.productTypeCreate.errors.length === 0) {
@@ -97,8 +95,8 @@ export const ProductTypeCreate: React.FC<ProductTypeCreateProps> = ({ params }) 
           description: "header",
         })}
         saveButtonBarState={createProductTypeOpts.status}
-        taxClasses={taxClasses ?? []}
-        onFetchMoreTaxClasses={fetchMoreTaxClasses}
+        taxClasses={[]}
+        onFetchMoreTaxClasses={null}
         kind={params.kind}
         onChangeKind={handleChangeKind}
         onSubmit={handleSubmit}

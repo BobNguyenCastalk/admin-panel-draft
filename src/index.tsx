@@ -69,7 +69,6 @@ import errorTracker from "./services/errorTracking";
 import ShippingSection from "./shipping";
 import SiteSettingsSection from "./siteSettings";
 import StaffSection from "./staff";
-import TaxesSection from "./taxes";
 import { paletteOverrides, themeOverrides } from "./themeOverrides";
 import TranslationsSection from "./translations";
 import WarehouseSection from "./warehouses";
@@ -242,7 +241,6 @@ const Routes: React.FC = () => {
                 path="/site-settings"
                 component={SiteSettingsSection}
               />
-              <SectionRoute path="/taxes" component={TaxesSection} />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_SHIPPING]}
                 path="/shipping"

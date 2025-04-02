@@ -38,7 +38,6 @@ import usePageSearch from "@dashboard/searches/usePageSearch";
 import useProductSearch from "@dashboard/searches/useProductSearch";
 import useProductTypeSearch from "@dashboard/searches/useProductTypeSearch";
 import useWarehouseSearch from "@dashboard/searches/useWarehouseSearch";
-import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import { getProductErrorMessage } from "@dashboard/utils/errors";
 import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeValueSearchHandler";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
@@ -118,7 +117,6 @@ export const ProductCreateView: React.FC<ProductCreateProps> = ({ params }) => {
   } = useAttributeValueSearchHandler(DEFAULT_INITIAL_SEARCH_DATA);
   const [updateMetadata] = useUpdateMetadataMutation({});
   const [updatePrivateMetadata] = useUpdatePrivateMetadataMutation({});
-  const { taxClasses, fetchMoreTaxClasses } = useTaxClassFetchMore();
   const { data: selectedProductType } = useProductTypeQuery({
     variables: {
       id: selectedProductTypeId,
@@ -328,8 +326,8 @@ export const ProductCreateView: React.FC<ProductCreateProps> = ({ params }) => {
         fetchMoreCategories={fetchMoreCategories}
         fetchMoreCollections={fetchMoreCollections}
         fetchMoreProductTypes={fetchMoreProductTypes}
-        taxClasses={taxClasses ?? []}
-        fetchMoreTaxClasses={fetchMoreTaxClasses}
+        taxClasses={[]}
+        fetchMoreTaxClasses={null}
         weightUnit={shop?.defaultWeightUnit}
         openChannelsModal={handleChannelsModalOpen}
         onChannelsChange={setCurrentChannels}
