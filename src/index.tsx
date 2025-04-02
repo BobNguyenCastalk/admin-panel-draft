@@ -4,7 +4,6 @@ import "./index.css";
 import { ApolloProvider } from "@apollo/client";
 import DemoBanner from "@dashboard/components/DemoBanner";
 import { history, Route, Router } from "@dashboard/components/Router";
-import { extensionsSection } from "@dashboard/extensions/urls";
 import { PermissionEnum } from "@dashboard/graphql";
 import useAppState from "@dashboard/hooks/useAppState";
 import { ThemeProvider } from "@dashboard/theme";
@@ -277,11 +276,6 @@ const Routes: React.FC = () => {
                   permissions={[]}
                   path={AppSections.appsSection}
                   component={AppsSectionRoot}
-                />
-                <SectionRoute
-                  permissions={[]}
-                  path={extensionsSection}
-                  component={ExtensionsSection}
                 />
                 <SectionRoute
                   permissions={[PermissionEnum.MANAGE_PRODUCTS]}

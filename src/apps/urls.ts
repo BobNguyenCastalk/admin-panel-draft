@@ -1,5 +1,4 @@
 import { getApiUrl } from "@dashboard/config";
-import { ExtensionsPaths } from "@dashboard/extensions/urls";
 import { FlagList } from "@dashboard/featureFlags";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { ThemeType } from "@saleor/app-sdk/app-bridge";
@@ -51,9 +50,7 @@ export const AppPaths = {
 
 export const AppUrls = {
   resolveAppListUrl: (params?: AppListUrlQueryParams, isExtensionsEnabled = false) =>
-    isExtensionsEnabled
-      ? ExtensionsPaths.installedExtensions
-      : AppPaths.appListPath + "?" + stringifyQs(params),
+    AppPaths.appListPath + "?" + stringifyQs(params),
   resolveAppUrl: (id: string, params?: AppDetailsUrlQueryParams) =>
     AppPaths.resolveAppPath(encodeURIComponent(id)) + "?" + stringifyQs(params),
   resolveAppDetailsUrl: (id: string, params?: AppDetailsUrlQueryParams) =>

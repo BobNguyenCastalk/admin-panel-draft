@@ -3,8 +3,6 @@ import AppDeleteDialog from "@dashboard/apps/components/AppDeleteDialog";
 import { appMessages } from "@dashboard/apps/messages";
 import { EXTENSION_LIST_QUERY } from "@dashboard/apps/queries";
 import NotFoundPage from "@dashboard/components/NotFoundPage";
-import { ExtensionsPaths } from "@dashboard/extensions/urls";
-import { useFlag } from "@dashboard/featureFlags";
 import {
   useAppActivateMutation,
   useAppDeactivateMutation,
@@ -33,7 +31,6 @@ interface Props {
 export const AppManageView: React.FC<Props> = ({ id, params }) => {
   const client = useApolloClient();
   const { hasManagedAppsPermission } = useHasManagedAppsPermission();
-  const { enabled: isExtensionEnabled } = useFlag("extensions");
   const { data, loading, refetch } = useAppQuery({
     displayLoader: true,
     variables: { id, hasManagedAppsPermission },
@@ -106,7 +103,7 @@ export const AppManageView: React.FC<Props> = ({ id, params }) => {
         refetch();
         refetchExtensionList();
         removeAppNotify();
-        navigate(isExtensionEnabled ? ExtensionsPaths.installedExtensions : AppPaths.appListPath);
+        navigate(AppPaths.appListPath);
       }
     },
   });

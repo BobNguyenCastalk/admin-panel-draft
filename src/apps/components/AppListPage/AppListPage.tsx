@@ -1,7 +1,5 @@
 import { AppUrls } from "@dashboard/apps/urls";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { RequestExtensionsButton } from "@dashboard/extensions/components/RequestExtensionsButton";
-import { headerTitles } from "@dashboard/extensions/messages";
 import { useFlag } from "@dashboard/featureFlags";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
 import useNavigator from "@dashboard/hooks/useNavigator";
@@ -76,13 +74,8 @@ export const AppListPage: React.FC<AppListPageProps> = props => {
 
   return (
     <>
-      <TopNav
-        title={intl.formatMessage(
-          isExtensionsEnabled ? headerTitles.installedExtensions : sectionNames.apps,
-        )}
-      >
+      <TopNav title={intl.formatMessage(sectionNames.apps)}>
         <Box display="flex" gap={4} alignItems="center">
-          {isExtensionsEnabled && <RequestExtensionsButton />}
           {hasManagedAppsPermission && (
             <InstallWithManifestFormButton onSubmitted={navigateToAppInstallPage} />
           )}
