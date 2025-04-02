@@ -3,7 +3,6 @@ import { categoryListUrl } from "@dashboard/categories/urls";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { getConfigMenuItemsPermissions } from "@dashboard/configuration/utils";
 import { customerListUrl } from "@dashboard/customers/urls";
-import { saleListUrl, voucherListUrl } from "@dashboard/discounts/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import { PermissionEnum } from "@dashboard/graphql";
 import { ConfigurationIcon } from "@dashboard/icons/Configuration";
@@ -95,22 +94,6 @@ export function useMenuStructure() {
       id: "customers",
       url: customerListUrl(),
       type: "item",
-    },
-    {
-      children: [
-        {
-          label: intl.formatMessage(sectionNames.vouchers),
-          id: "vouchers",
-          url: voucherListUrl(),
-          type: "item",
-        },
-      ],
-      icon: renderIcon(<DiscountsIcon />),
-      label: intl.formatMessage(commonMessages.discounts),
-      permissions: [PermissionEnum.MANAGE_DISCOUNTS],
-      url: saleListUrl(),
-      id: "discounts",
-      type: "itemGroup",
     },
     {
       children: undefined,

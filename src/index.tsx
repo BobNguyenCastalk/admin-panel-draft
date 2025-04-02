@@ -46,7 +46,6 @@ import { getConfigMenuItemsPermissions } from "./configuration/utils";
 import AppStateProvider from "./containers/AppState";
 import BackgroundTasksProvider from "./containers/BackgroundTasks";
 import { CustomerSection } from "./customers";
-import DiscountSection from "./discounts";
 import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvider";
 import { apolloClient, saleorClient } from "./graphql/client";
 import { useLocationState } from "./hooks/useLocationState";
@@ -176,11 +175,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_USERS]}
                 path="/customers"
                 component={CustomerSection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_DISCOUNTS]}
-                path="/discounts"
-                component={DiscountSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_PLUGINS]}

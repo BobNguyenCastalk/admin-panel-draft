@@ -1,9 +1,4 @@
 import {
-  ChannelSaleFormData,
-  SaleDetailsPageFormData,
-} from "@dashboard/discounts/components/SaleDetailsPage";
-import { RequirementsPicker } from "@dashboard/discounts/types";
-import {
   ChannelDetailsFragment,
   ChannelFragment,
   CollectionDetailsFragment,
@@ -13,7 +8,6 @@ import {
   SaleDetailsFragment,
   SaleType,
   ShippingMethodTypeFragment,
-  ShippingZoneQuery,
   VoucherDetailsFragment,
 } from "@dashboard/graphql";
 import { RequireOnlyOne } from "@dashboard/misc";
@@ -216,7 +210,7 @@ export const createChannelsDataWithPrice = (
 };
 
 export const createShippingChannels = (
-  data?: NonNullable<ShippingZoneQuery["shippingZone"]>["channels"],
+  data?: NonNullable<any>["channels"],
 ): ChannelShippingData[] =>
   data?.map(channel => ({
     currency: channel.currencyCode,
@@ -270,7 +264,7 @@ export const createChannelsDataFromVoucher = (voucherData?: VoucherDetailsFragme
     name: option.channel.name,
   })) || [];
 
-export const createChannelsDataFromSale = (saleData?: SaleDetailsFragment): ChannelSaleFormData[] =>
+export const createChannelsDataFromSale = (saleData?: SaleDetailsFragment): any[] =>
   saleData?.channelListings?.map(option => ({
     currency: option.channel.currencyCode || "",
     discountValue: option.discountValue.toString() || "",
@@ -345,9 +339,7 @@ export const createSortedChannelsData = (data?: ChannelFragment[]) =>
     channel.name.localeCompare(nextChannel.name),
   );
 
-export const createSortedShippingChannels = (
-  data?: NonNullable<ShippingZoneQuery["shippingZone"]>["channels"],
-) =>
+export const createSortedShippingChannels = (data?: NonNullable<any>["channels"]) =>
   createShippingChannels(data)?.sort((channel, nextChannel) =>
     channel.name.localeCompare(nextChannel.name),
   );
@@ -374,9 +366,7 @@ export const createSortedChannelsDataFromVoucher = (data?: VoucherDetailsFragmen
     channel.name.localeCompare(nextChannel.name),
   );
 
-export const createSortedChannelsDataFromSale = (
-  data?: SaleDetailsFragment,
-): ChannelSaleFormData[] =>
+export const createSortedChannelsDataFromSale = (data?: SaleDetailsFragment): any[] =>
   createChannelsDataFromSale(data)?.sort((channel, nextChannel) =>
     channel.name.localeCompare(nextChannel.name),
   );
@@ -394,15 +384,11 @@ export const getChannelsCurrencyChoices = (
       )
     : [];
 
-export const validateSalePrice = (data: SaleDetailsPageFormData, channel: ChannelSaleFormData) =>
+export const validateSalePrice = (data: any, channel: ChannelSalanyeFormData) =>
   validatePrice(data.type === SaleType.PERCENTAGE ? channel.percentageValue : channel.fixedValue);
 
-export const validateVoucherPrice = (
-  requirementsPicker: RequirementsPicker,
-  channel: ChannelVoucherData,
-) =>
-  validatePrice(channel.discountValue) ||
-  (requirementsPicker === RequirementsPicker.ORDER && validatePrice(channel.minSpent));
+export const validateVoucherPrice = (requirementsPicker: any, channel: ChannelVoucherData) =>
+  validatePrice(channel.discountValue);
 
 type BareChannel = { id: string };
 type BareChannelListing = { channel: BareChannel };

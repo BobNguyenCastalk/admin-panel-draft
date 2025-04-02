@@ -1,7 +1,6 @@
 import { attributeListUrl } from "@dashboard/attributes/urls";
 import { categoryListUrl } from "@dashboard/categories/urls";
 import { customerListUrl } from "@dashboard/customers/urls";
-import { saleListUrl, voucherListUrl } from "@dashboard/discounts/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
@@ -73,10 +72,6 @@ function searchInViews(
       url: productListUrl(),
     },
     {
-      label: intl.formatMessage(sectionNames.sales),
-      url: saleListUrl(),
-    },
-    {
       label: intl.formatMessage(sectionNames.siteSettings),
       url: siteSettingsUrl(),
     },
@@ -87,10 +82,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.translations),
       url: languageListUrl,
-    },
-    {
-      label: intl.formatMessage(sectionNames.vouchers),
-      url: voucherListUrl(),
     },
   ];
 
