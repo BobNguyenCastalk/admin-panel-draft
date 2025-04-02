@@ -1,6 +1,5 @@
 import { useUser } from "@dashboard/auth";
 import { categoryListUrl } from "@dashboard/categories/urls";
-import { collectionListUrl } from "@dashboard/collections/urls";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { getConfigMenuItemsPermissions } from "@dashboard/configuration/utils";
 import { customerListUrl } from "@dashboard/customers/urls";
@@ -52,13 +51,6 @@ export function useMenuStructure() {
           label: intl.formatMessage(sectionNames.categories),
           id: "categories",
           url: categoryListUrl(),
-          permissions: [PermissionEnum.MANAGE_PRODUCTS],
-          type: "item",
-        },
-        {
-          label: intl.formatMessage(sectionNames.collections),
-          id: "collections",
-          url: collectionListUrl(),
           permissions: [PermissionEnum.MANAGE_PRODUCTS],
           type: "item",
         },

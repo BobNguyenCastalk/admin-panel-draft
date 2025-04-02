@@ -8,9 +8,6 @@ import {
   CheckoutListDocument,
   CheckoutListQuery,
   CheckoutListQueryVariables,
-  CollectionListDocument,
-  CollectionListQuery,
-  CollectionListQueryVariables,
   CustomerAddressesQuery,
   CustomerAddressesQueryVariables,
   CustomerDetailsQuery,
@@ -113,11 +110,6 @@ export const DocumentMap: Record<string, Document> = {
     document: CheckoutListDocument,
     variables: DefaultVariables,
     displayedAttribute: "id",
-  },
-  COLLECTION: {
-    document: CollectionListDocument,
-    variables: DefaultVariables,
-    displayedAttribute: "name",
   },
   CUSTOMER: {
     document: ListCustomersDocument,

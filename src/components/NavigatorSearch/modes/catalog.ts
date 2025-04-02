@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { categoryUrl } from "@dashboard/categories/urls";
-import { collectionUrl } from "@dashboard/collections/urls";
 import { SearchCatalogQuery } from "@dashboard/graphql";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { fuzzySearch } from "@dashboard/misc";
@@ -41,8 +40,6 @@ export function searchInCatalog(
     label: collection.name,
     searchValue: collection.name,
     onClick: () => {
-      navigate(collectionUrl(collection.id));
-
       return false;
     },
     text: collection.name,

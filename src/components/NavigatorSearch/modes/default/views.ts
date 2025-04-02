@@ -1,6 +1,5 @@
 import { attributeListUrl } from "@dashboard/attributes/urls";
 import { categoryListUrl } from "@dashboard/categories/urls";
-import { collectionListUrl } from "@dashboard/collections/urls";
 import { customerListUrl } from "@dashboard/customers/urls";
 import { saleListUrl, voucherListUrl } from "@dashboard/discounts/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
@@ -36,10 +35,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.categories),
       url: categoryListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.collections),
-      url: collectionListUrl(),
     },
     {
       label: intl.formatMessage(sectionNames.customers),

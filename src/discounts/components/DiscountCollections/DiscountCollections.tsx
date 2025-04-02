@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { collectionUrl } from "@dashboard/collections/urls";
 import { Button } from "@dashboard/components/Button";
 import { DashboardCard } from "@dashboard/components/Card";
 import Checkbox from "@dashboard/components/Checkbox";
@@ -95,7 +94,7 @@ const DiscountCollections: React.FC<DiscountCollectionsProps> = props => {
                   selected={isSelected}
                   hover={!!collection}
                   key={collection ? collection.id : "skeleton"}
-                  href={collection && collectionUrl(collection.id)}
+                  href={null}
                   className={classes.tableRow}
                 >
                   <TableCell padding="checkbox">

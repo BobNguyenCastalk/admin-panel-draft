@@ -1,6 +1,5 @@
 import { MutationFunction } from "@apollo/client";
 import { categoryAddUrl } from "@dashboard/categories/urls";
-import { collectionAddUrl } from "@dashboard/collections/urls";
 import { customerAddUrl } from "@dashboard/customers/urls";
 import { voucherAddUrl } from "@dashboard/discounts/urls";
 import { OrderDraftCreateMutation } from "@dashboard/graphql";
@@ -31,14 +30,6 @@ export function searchInCommands(
       label: intl.formatMessage(messages.createCategory),
       onClick: () => {
         navigate(categoryAddUrl());
-
-        return false;
-      },
-    },
-    {
-      label: intl.formatMessage(messages.createCollection),
-      onClick: () => {
-        navigate(collectionAddUrl());
 
         return false;
       },

@@ -27,7 +27,6 @@ import { useAuthRedirection } from "./auth/hooks/useAuthRedirection";
 import CategorySection from "./categories";
 import ChannelsSection from "./channels";
 import { channelsSection } from "./channels/urls";
-import CollectionSection from "./collections";
 import AppLayout from "./components/AppLayout";
 import useAppChannel, { AppChannelProvider } from "./components/AppLayout/AppChannelContext";
 import { DateProvider } from "./components/Date";
@@ -175,11 +174,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_PRODUCTS]}
                 path="/categories"
                 component={CategorySection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_PRODUCTS]}
-                path="/collections"
-                component={CollectionSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_USERS]}
