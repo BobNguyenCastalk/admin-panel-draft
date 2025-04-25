@@ -25,6 +25,7 @@
       "@types/*": ["src/types/*"],
       "@constants/*": ["src/constants/*"],
       "@graphql/*": ["src/graphql/*"],
+      "@hooks/*": ["src/business/hooks/*"],
       "@test/*": ["testUtils/*"]
     }
   },
