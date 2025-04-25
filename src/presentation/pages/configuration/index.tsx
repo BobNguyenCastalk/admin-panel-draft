@@ -3,7 +3,6 @@ import { pluginListUrl } from "@dashboard/business/utils/plugins/urls";
 import { channelsListUrl } from "@dashboard/channels/urls";
 import { APP_VERSION as dashboardVersion } from "@dashboard/config";
 import { PermissionEnum } from "@dashboard/graphql";
-import useShop from "@dashboard/hooks/useShop";
 import Channels from "@dashboard/icons/Channels";
 import Navigation from "@dashboard/icons/Navigation";
 import PermissionGroups from "@dashboard/icons/PermissionGroups";
@@ -118,10 +117,9 @@ export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
 export const configurationMenuUrl = "/configuration/";
 
 export const ConfigurationSection: React.FC = () => {
-  const shop = useShop();
   const versions = {
     dashboardVersion,
-    coreVersion: shop?.version ?? "",
+    coreVersion: "",
   };
   const user = useUser();
   const intl = useIntl();

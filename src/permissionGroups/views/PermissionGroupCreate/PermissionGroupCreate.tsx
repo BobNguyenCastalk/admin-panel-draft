@@ -1,7 +1,6 @@
 import { usePermissionGroupCreateMutation } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
 import { extractMutationErrors } from "@dashboard/misc";
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
 import { useUser } from "@dashboard/presentation/pages/auth";
@@ -24,7 +23,6 @@ export const PermissionGroupCreate: React.FC = () => {
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
-  const shop = useShop();
   const user = useUser();
   const { availableChannels } = useAppChannel(false);
   const hasUserRestrictedAccessToChannels = checkIfUserHasRestictedAccessToChannels(user.user);

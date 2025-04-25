@@ -9739,29 +9739,6 @@ export type ChannelListQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type ChannelListQuery = { __typename: 'Query', channels: Array<{ __typename: 'Channel', id: string, name: string }> | null };
 
-export type ShopInfoQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type ShopInfoQuery = { __typename: 'Query', shop: { __typename: 'Shop', defaultWeightUnit: WeightUnitsEnum | null, name: string, trackInventoryByDefault: boolean | null, version: string, countries: Array<{ __typename: 'CountryDisplay', country: string, code: string }>, defaultCountry: { __typename: 'CountryDisplay', country: string, code: string } | null, domain: { __typename: 'Domain', host: string, url: string }, languages: Array<{ __typename: 'LanguageDisplay', code: LanguageCodeEnum, language: string }>, permissions: Array<{ __typename: 'Permission', code: PermissionEnum, name: string }> } };
-
-export type ShopCountriesQueryVariables = Exact<{
-  filter?: InputMaybe<CountryFilterInput>;
-}>;
-
-
-export type ShopCountriesQuery = { __typename: 'Query', shop: { __typename: 'Shop', countries: Array<{ __typename: 'CountryDisplay', code: string, country: string }> } };
-
-export type RefreshLimitsQueryVariables = Exact<{
-  channels: Scalars['Boolean'];
-  orders: Scalars['Boolean'];
-  productVariants: Scalars['Boolean'];
-  staffUsers: Scalars['Boolean'];
-  warehouses: Scalars['Boolean'];
-}>;
-
-
-export type RefreshLimitsQuery = { __typename: 'Query', shop: { __typename: 'Shop', limits: { __typename: 'LimitInfo', currentUsage: { __typename: 'Limits', channels?: number | null, orders?: number | null, productVariants?: number | null, staffUsers?: number | null, warehouses?: number | null }, allowedUsage: { __typename: 'Limits', channels?: number | null, orders?: number | null, productVariants?: number | null, staffUsers?: number | null, warehouses?: number | null } } } };
-
 export type StaffMemberAddMutationVariables = Exact<{
   input: StaffCreateInput;
 }>;

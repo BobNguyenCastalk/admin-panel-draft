@@ -10,7 +10,6 @@ import {
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
 import { WindowTitle } from "@presentation/shared//WindowTitle";
@@ -26,7 +25,6 @@ export const ChannelCreateView = () => {
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
-  const shop = useShop();
   const handleError = (error: ChannelErrorFragment) => {
     notify({
       status: "error",

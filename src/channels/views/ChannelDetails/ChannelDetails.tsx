@@ -18,7 +18,6 @@ import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/uti
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import { getDefaultNotifierSuccessErrorData } from "@dashboard/hooks/useNotifier/utils";
-import useShop from "@dashboard/hooks/useShop";
 import { extractMutationErrors } from "@dashboard/misc";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
@@ -39,7 +38,6 @@ export const ChannelDetails: React.FC<ChannelDetailsProps> = ({ id, params }) =>
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
-  const shop = useShop();
   const channelsListData = useChannelsQuery({ displayLoader: true });
 
   const [openModal, closeModal] = createDialogActionHandlers<
@@ -195,41 +193,6 @@ export const ChannelDetails: React.FC<ChannelDetailsProps> = ({ id, params }) =>
           description: "window title",
         })}
       />
-      {/* <ChannelDetailsPage
-        channelShippingZones={channelShippingZones}
-        allShippingZonesCount={shippingZonesCountData?.shippingZones?.totalCount}
-        searchShippingZones={searchShippingZones}
-        searchShippingZonesData={searchShippingZonesResult.data}
-        fetchMoreShippingZones={getSearchFetchMoreProps(
-          searchShippingZonesResult,
-          fetchMoreShippingZones,
-        )}
-        channelWarehouses={channelWarehouses}
-        allWarehousesCount={warehousesCountData?.warehouses?.totalCount}
-        searchWarehouses={searchWarehouses}
-        searchWarehousesData={searchWarehousesResult.data}
-        fetchMoreWarehouses={getSearchFetchMoreProps(searchWarehousesResult, fetchMoreWarehouses)}
-        channel={data?.channel}
-        disabled={
-          updateChannelOpts.loading ||
-          reorderChannelWarehousesOpts.loading ||
-          loading ||
-          shippingZonesCountLoading ||
-          warehousesCountLoading ||
-          channelsShippingZonesLoading
-        }
-        disabledStatus={activateChannelOpts.loading || deactivateChannelOpts.loading}
-        errors={updateChannelOpts?.data?.channelUpdate?.errors || []}
-        onDelete={() => openModal("remove")}
-        onSubmit={handleSubmit}
-        updateChannelStatus={() =>
-          data?.channel?.isActive
-            ? deactivateChannel({ variables: { id } })
-            : activateChannel({ variables: { id } })
-        }
-        saveButtonBarState={updateChannelOpts.status}
-        countries={shop?.countries || []}
-      /> */}
       <ChannelDeleteDialog
         channelSlug={data?.channel?.slug}
         currency={data?.channel?.currencyCode}

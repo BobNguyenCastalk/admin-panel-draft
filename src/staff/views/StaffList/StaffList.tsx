@@ -24,7 +24,6 @@ import { useConditionalFilterContext } from "@presentation/shared//ConditionalFi
 import { createStaffMembersQueryVariables } from "@presentation/shared//ConditionalFilter/queryVariables";
 import DeleteFilterTabDialog from "@presentation/shared//DeleteFilterTabDialog";
 import SaveFilterTabDialog from "@presentation/shared//SaveFilterTabDialog";
-import { useShopLimitsQuery } from "@presentation/shared//Shop/queries";
 import React from "react";
 import { useIntl } from "react-intl";
 import urlJoin from "url-join";
@@ -78,11 +77,6 @@ export const StaffList: React.FC<StaffListProps> = ({ params }) => {
   const { data: staffQueryData, loading } = useStaffListQuery({
     displayLoader: true,
     variables: isStaffMembersFilteringEnabled ? newQueryVariables : queryVariables,
-  });
-  const limitOpts = useShopLimitsQuery({
-    variables: {
-      staffUsers: true,
-    },
   });
   const [addStaffMember, addStaffMemberData] = useStaffMemberAddMutation({
     onCompleted: data => {
@@ -169,8 +163,7 @@ export const StaffList: React.FC<StaffListProps> = ({ params }) => {
         hasPresetsChanged={hasPresetsChanged}
         onFilterPresetPresetSave={() => openModal("save-search")}
         filterPresets={presets.map(preset => preset.name)}
-        disabled={loading || addStaffMemberData.loading || limitOpts.loading}
-        limits={limitOpts.data?.shop?.limits}
+        disabled={loading || addStaffMemberData.loading}
         settings={settings}
         sort={getSortParams(params)}
         staffMembers={mapEdgesToItems(staffQueryData?.staffUsers) ?? []}

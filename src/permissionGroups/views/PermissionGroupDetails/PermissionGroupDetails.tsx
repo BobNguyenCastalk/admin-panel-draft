@@ -10,7 +10,6 @@ import useStaffMemberSearch from "@dashboard/graphql/searches/useStaffMemberSear
 import useBulkActions from "@dashboard/hooks/useBulkActions";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
 import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
@@ -55,7 +54,6 @@ type Members = NonNullable<NonNullable<PermissionGroupDetailsQuery["permissionGr
 
 export const PermissionGroupDetails: React.FC<PermissionGroupDetailsProps> = ({ id, params }) => {
   const navigate = useNavigator();
-  const shop = useShop();
   const notify = useNotifier();
   const intl = useIntl();
   const user = useUser();
@@ -139,7 +137,7 @@ export const PermissionGroupDetails: React.FC<PermissionGroupDetailsProps> = ({ 
     )
     .map(perm => perm.code);
   const userPermissions = user?.user?.userPermissions?.map(p => p.code) || [];
-  const permissions = (shop?.permissions || []).map(perm => ({
+  const permissions = [].map(perm => ({
     ...perm,
     disabled: !userPermissions.includes(perm.code),
     lastSource: lastSourcesOfPermission.includes(perm.code),

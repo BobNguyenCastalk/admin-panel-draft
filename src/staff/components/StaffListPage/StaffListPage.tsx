@@ -1,10 +1,8 @@
 import { useFlag } from "@dashboard/featureFlags";
-import { RefreshLimitsQuery } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { StaffMembers } from "@dashboard/staff/types";
 import { StaffListUrlSortField } from "@dashboard/staff/urls";
 import { FilterPagePropsWithPresets, ListProps, SortPage } from "@dashboard/types";
-import { hasLimits, isLimitReached } from "@dashboard/utils/limits";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { useContextualLink } from "@presentation/shared//AppLayout/ContextualLinks/useContextualLink";
 import { ListFilters } from "@presentation/shared//AppLayout/ListFilters";
@@ -12,7 +10,6 @@ import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import { DashboardCard } from "@presentation/shared//Card";
 import { FilterPresetsSelect } from "@presentation/shared//FilterPresetsSelect";
 import { ListPageLayout } from "@presentation/shared//Layouts";
-import LimitReachedAlert from "@presentation/shared//LimitReachedAlert";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -24,7 +21,6 @@ export interface StaffListPageProps
   extends ListProps,
     FilterPagePropsWithPresets<StaffFilterKeys, StaffListFilterOpts>,
     SortPage<StaffListUrlSortField> {
-  limits: RefreshLimitsQuery["shop"]["limits"] | undefined;
   staffMembers: StaffMembers;
   onAdd: () => void;
 }
@@ -51,7 +47,6 @@ const StaffListPage: React.FC<StaffListPageProps> = ({
   const intl = useIntl();
   const [isFilterPresetOpen, setFilterPresetOpen] = useState(false);
   const structure = createFilterStructure(intl, filterOpts);
-  const reachedLimit = isLimitReached(limits, "staffUsers");
   const { enabled: isStaffMembersFilteringEnabled } = useFlag("new_filters");
 
   return (
@@ -88,12 +83,7 @@ const StaffListPage: React.FC<StaffListPageProps> = ({
             />
           </Box>
           <Box>
-            <Button
-              data-test-id="invite-staff-member"
-              disabled={reachedLimit}
-              variant="primary"
-              onClick={onAdd}
-            >
+            <Button data-test-id="invite-staff-member" variant="primary" onClick={onAdd}>
               <FormattedMessage
                 id="4JcNaA"
                 defaultMessage="Invite staff member"
@@ -103,35 +93,6 @@ const StaffListPage: React.FC<StaffListPageProps> = ({
           </Box>
         </Box>
       </TopNav>
-      {hasLimits(limits, "staffUsers") && (
-        <Box gridColumn="8" marginLeft={6} marginBottom={reachedLimit ? 0 : 3}>
-          {intl.formatMessage(
-            {
-              id: "9xlPgt",
-              defaultMessage: "{count}/{max} members",
-              description: "used staff users counter",
-            },
-            {
-              count: limits?.currentUsage?.staffUsers ?? 0,
-              max: limits?.allowedUsage?.staffUsers ?? 0,
-            },
-          )}
-        </Box>
-      )}
-      {reachedLimit && (
-        <LimitReachedAlert
-          title={intl.formatMessage({
-            id: "pA8Mlv",
-            defaultMessage: "Staff Member limit reached",
-            description: "alert",
-          })}
-        >
-          <FormattedMessage
-            id="OaA0f9"
-            defaultMessage="You have reached your staff member limit, you will be no longer able to add staff members to your store. If you would like to up your limit, contact your administration staff about raising your limits."
-          />
-        </LimitReachedAlert>
-      )}
       <DashboardCard>
         {isStaffMembersFilteringEnabled ? (
           <ListFilters<StaffFilterKeys>

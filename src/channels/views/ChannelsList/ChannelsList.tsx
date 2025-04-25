@@ -9,7 +9,6 @@ import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import { useShopLimitsQuery } from "@presentation/shared//Shop/queries";
 import React from "react";
 import { useIntl } from "react-intl";
 
@@ -26,11 +25,7 @@ export const ChannelsList: React.FC<ChannelsListProps> = ({ params }) => {
   const notify = useNotifier();
   const intl = useIntl();
   const { data, refetch } = useChannelsQuery({ displayLoader: true });
-  const limitOpts = useShopLimitsQuery({
-    variables: {
-      channels: true,
-    },
-  });
+
   const selectedChannel = data?.channels?.find(channel => channel.id === params?.id);
   const [openModal, closeModal] = createDialogActionHandlers<
     ChannelsListUrlDialog,
@@ -48,7 +43,6 @@ export const ChannelsList: React.FC<ChannelsListProps> = ({ params }) => {
         }),
       });
       refetch();
-      limitOpts.refetch();
       closeModal();
     } else {
       errors.map(error =>
@@ -78,7 +72,6 @@ export const ChannelsList: React.FC<ChannelsListProps> = ({ params }) => {
     <>
       <ChannelsListPage
         channelsList={data?.channels}
-        limits={limitOpts.data?.shop.limits}
         onRemove={id =>
           openModal("remove", {
             id,

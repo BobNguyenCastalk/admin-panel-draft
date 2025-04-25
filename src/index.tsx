@@ -25,7 +25,6 @@ import { NavigatorSearchProvider } from "@presentation/shared/NavigatorSearch/Na
 import { ProductAnalytics } from "@presentation/shared/ProductAnalytics";
 import { history, Route, Router } from "@presentation/shared/Router";
 import { SavebarRefProvider } from "@presentation/shared/Savebar/SavebarRefContext";
-import { ShopProvider } from "@presentation/shared/Shop";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
 import { SaleorProvider } from "@saleor/sdk";
@@ -94,21 +93,19 @@ const App: React.FC = () => (
                     <AppStateProvider>
                       <AuthProvider>
                         <ProductAnalytics>
-                          <ShopProvider>
-                            <AppChannelProvider>
-                              <ExitFormDialogProvider>
-                                <DevModeProvider>
-                                  <NavigatorSearchProvider>
-                                    <SavebarRefProvider>
-                                      <FeatureFlagsProviderWithUser>
-                                        <Routes />
-                                      </FeatureFlagsProviderWithUser>
-                                    </SavebarRefProvider>
-                                  </NavigatorSearchProvider>
-                                </DevModeProvider>
-                              </ExitFormDialogProvider>
-                            </AppChannelProvider>
-                          </ShopProvider>
+                          <AppChannelProvider>
+                            <ExitFormDialogProvider>
+                              <DevModeProvider>
+                                <NavigatorSearchProvider>
+                                  <SavebarRefProvider>
+                                    <FeatureFlagsProviderWithUser>
+                                      <Routes />
+                                    </FeatureFlagsProviderWithUser>
+                                  </SavebarRefProvider>
+                                </NavigatorSearchProvider>
+                              </DevModeProvider>
+                            </ExitFormDialogProvider>
+                          </AppChannelProvider>
                         </ProductAnalytics>
                       </AuthProvider>
                     </AppStateProvider>

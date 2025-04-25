@@ -1,17 +1,14 @@
 // @ts-strict-ignore
 import { channelAddUrl, channelUrl } from "@dashboard/channels/urls";
-import { ChannelDetailsFragment, RefreshLimitsQuery } from "@dashboard/graphql";
+import { ChannelDetailsFragment } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { renderCollection, stopPropagation } from "@dashboard/misc";
-import { hasLimits, isLimitReached } from "@dashboard/utils/limits";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
-import { LimitsInfo } from "@presentation/shared//AppLayout/LimitsInfo";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import { Button } from "@presentation/shared//Button";
 import { DashboardCard } from "@presentation/shared//Card";
 import { ListPageLayout } from "@presentation/shared//Layouts";
-import LimitReachedAlert from "@presentation/shared//LimitReachedAlert";
 import ResponsiveTable from "@presentation/shared//ResponsiveTable";
 import { TableButtonWrapper } from "@presentation/shared//TableButtonWrapper/TableButtonWrapper";
 import TableCellHeader from "@presentation/shared//TableCellHeader";
@@ -25,62 +22,22 @@ import { useStyles } from "./styles";
 
 export interface ChannelsListPageProps {
   channelsList: ChannelDetailsFragment[] | undefined;
-  limits: RefreshLimitsQuery["shop"]["limits"];
   onRemove: (id: string) => void;
 }
 
 const numberOfColumns = 2;
 
-export const ChannelsListPage: React.FC<ChannelsListPageProps> = ({
-  channelsList,
-  limits,
-  onRemove,
-}) => {
+export const ChannelsListPage: React.FC<ChannelsListPageProps> = ({ channelsList, onRemove }) => {
   const intl = useIntl();
   const classes = useStyles({});
-  const limitReached = isLimitReached(limits, "channels");
 
   return (
     <ListPageLayout>
       <TopNav href={configurationMenuUrl} title={intl.formatMessage(sectionNames.channels)}>
-        <Button
-          disabled={limitReached}
-          href={channelAddUrl}
-          variant="primary"
-          data-test-id="add-channel"
-        >
+        <Button href={channelAddUrl} variant="primary" data-test-id="add-channel">
           <FormattedMessage id="OGm8wO" defaultMessage="Create Channel" description="button" />
         </Button>
-        {hasLimits(limits, "channels") && (
-          <LimitsInfo
-            text={intl.formatMessage(
-              {
-                id: "rZMT44",
-                defaultMessage: "{count}/{max} channels used",
-                description: "created channels counter",
-              },
-              {
-                count: limits.currentUsage.channels,
-                max: limits.allowedUsage.channels,
-              },
-            )}
-          />
-        )}
       </TopNav>
-      {limitReached && (
-        <LimitReachedAlert
-          title={intl.formatMessage({
-            id: "PTW56s",
-            defaultMessage: "Channel limit reached",
-            description: "alert",
-          })}
-        >
-          <FormattedMessage
-            id="ZMy18J"
-            defaultMessage="You have reached your channel limit, you will be no longer able to add channels to your store. If you would like to up your limit, contact your administration staff about raising your limits."
-          />
-        </LimitReachedAlert>
-      )}
       <DashboardCard>
         <ResponsiveTable>
           <TableHead>
