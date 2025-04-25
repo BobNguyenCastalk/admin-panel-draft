@@ -13,7 +13,6 @@ import { OrdersIcon } from "@dashboard/icons/Orders";
 import { ProductsIcon } from "@dashboard/icons/Products";
 import { TranslationsIcon } from "@dashboard/icons/Translations";
 import { commonMessages, sectionNames } from "@dashboard/intl";
-import { languageListUrl } from "@dashboard/translations/urls";
 import { Box } from "@saleor/macaw-ui-next";
 import isEmpty from "lodash/isEmpty";
 import React from "react";
@@ -38,15 +37,6 @@ export function useMenuStructure() {
       label: intl.formatMessage(sectionNames.home),
       id: "home",
       url: "/",
-      type: "item",
-    },
-    {
-      children: undefined,
-      icon: renderIcon(<TranslationsIcon />),
-      label: intl.formatMessage(sectionNames.translations),
-      permissions: [PermissionEnum.MANAGE_TRANSLATIONS],
-      id: "translations",
-      url: languageListUrl,
       type: "item",
     },
     {

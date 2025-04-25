@@ -59,7 +59,6 @@ import errorTracker from "./services/errorTracking";
 import SiteSettingsSection from "./siteSettings";
 import StaffSection from "./staff";
 import { paletteOverrides, themeOverrides } from "./themeOverrides";
-import TranslationsSection from "./translations";
 import { WelcomePage } from "./welcomePage";
 
 if (GTM_ID) {
@@ -178,11 +177,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_SETTINGS]}
                 path="/site-settings"
                 component={SiteSettingsSection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_TRANSLATIONS]}
-                path="/translations"
-                component={TranslationsSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_MENUS]}

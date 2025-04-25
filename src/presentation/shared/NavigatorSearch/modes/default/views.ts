@@ -7,7 +7,6 @@ import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
-import { languageListUrl } from "@dashboard/translations/urls";
 import { IntlShape } from "react-intl";
 
 import { QuickSearchActionInput } from "../../types";
@@ -49,10 +48,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.staff),
       url: staffListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.translations),
-      url: languageListUrl,
     },
   ];
 
