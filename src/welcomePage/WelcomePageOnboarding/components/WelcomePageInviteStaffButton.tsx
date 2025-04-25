@@ -1,7 +1,7 @@
 import { useUser } from "@dashboard/auth";
-import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { PermissionEnum } from "@dashboard/graphql";
 import { staffListUrl } from "@dashboard/staff/urls";
+import { hasPermissions } from "@presentation/shared//RequirePermissions";
 import { Button, Tooltip } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";

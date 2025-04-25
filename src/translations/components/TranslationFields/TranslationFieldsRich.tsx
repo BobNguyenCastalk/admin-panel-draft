@@ -1,10 +1,10 @@
 // @ts-strict-ignore
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import RichTextEditor from "@dashboard/components/RichTextEditor";
-import RichTextEditorContent from "@dashboard/components/RichTextEditor/RichTextEditorContent";
-import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { OutputData } from "@editorjs/editorjs";
+import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import RichTextEditor from "@presentation/shared//RichTextEditor";
+import RichTextEditorContent from "@presentation/shared//RichTextEditor/RichTextEditorContent";
+import { RichTextEditorLoading } from "@presentation/shared//RichTextEditor/RichTextEditorLoading";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

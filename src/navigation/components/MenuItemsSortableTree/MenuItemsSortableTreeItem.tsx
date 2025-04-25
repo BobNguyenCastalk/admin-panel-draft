@@ -1,8 +1,8 @@
-import { TreeItemComponentProps } from "@dashboard/components/SortableTree/types";
 import { buttonMessages } from "@dashboard/intl";
 import { MenuItemType } from "@dashboard/navigation/components/MenuItemDialog";
 import { RecursiveMenuItem } from "@dashboard/navigation/types";
 import { UniqueIdentifier } from "@dnd-kit/core";
+import { TreeItemComponentProps } from "@presentation/shared//SortableTree/types";
 import { Box, Button, EditIcon, GripIcon, Text, TrashBinIcon } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";

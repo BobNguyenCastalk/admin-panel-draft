@@ -1,5 +1,4 @@
 import { FetchResult } from "@apollo/client";
-import { AttributeInput, AttributeInputData } from "@dashboard/components/Attributes";
 import {
   AttributeEntityTypeEnum,
   AttributeErrorFragment,
@@ -23,6 +22,7 @@ import { RelayToFlat } from "@dashboard/types";
 import { mapEdgesToItems, mapNodeToChoice, mapPagesToChoices } from "@dashboard/utils/maps";
 import { RichTextContextValues } from "@dashboard/utils/richText/context";
 import { GetRichTextValues, RichTextGetters } from "@dashboard/utils/richText/useMultipleRichText";
+import { AttributeInput, AttributeInputData } from "@presentation/shared//Attributes";
 
 import { AttributePageFormData } from "../components/AttributePage";
 

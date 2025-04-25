@@ -1,6 +1,4 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
-import { Button } from "@dashboard/components/Button";
 import {
   useMenuBulkDeleteMutation,
   useMenuCreateMutation,
@@ -22,6 +20,8 @@ import { ListViews } from "@dashboard/types";
 import createSortHandler from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
+import ActionDialog from "@presentation/shared//ActionDialog";
+import { Button } from "@presentation/shared//Button";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

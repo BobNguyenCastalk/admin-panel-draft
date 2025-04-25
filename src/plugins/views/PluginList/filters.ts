@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { FilterElement, FilterElementRegular } from "@dashboard/components/Filter";
 import { PluginConfigurationType, PluginFilterInput } from "@dashboard/graphql";
 import { ChannelsWithLoadMoreProps } from "@dashboard/hooks/useChannelsSearch";
 import { maybe, parseBoolean } from "@dashboard/misc";
@@ -8,6 +7,7 @@ import {
   PluginListFilterOpts,
 } from "@dashboard/plugins/components/PluginsListPage";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
+import { FilterElement, FilterElementRegular } from "@presentation/shared//Filter";
 
 import {
   createFilterTabUtils,

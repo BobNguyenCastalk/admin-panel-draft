@@ -1,4 +1,4 @@
-import { useAnalytics } from "@dashboard/components/ProductAnalytics/useAnalytics";
+import { useAnalytics } from "@presentation/shared//ProductAnalytics/useAnalytics";
 import { Button } from "@saleor/macaw-ui-next";
 import React, { ReactNode } from "react";
 import { FormattedMessage, IntlShape, useIntl } from "react-intl";

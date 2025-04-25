@@ -1,12 +1,4 @@
 // @ts-strict-ignore
-import { Button } from "@dashboard/components/Button";
-import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
-import TableHead from "@dashboard/components/TableHead";
-import TableRowLink from "@dashboard/components/TableRowLink";
-import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { PermissionGroupMemberFragment } from "@dashboard/graphql";
 import { commonStatusMessages } from "@dashboard/intl";
 import { getUserInitials, getUserName, renderCollection, stopPropagation } from "@dashboard/misc";
@@ -15,6 +7,14 @@ import { MembersListUrlSortField } from "@dashboard/permissionGroups/urls";
 import { ListActions, SortPage } from "@dashboard/types";
 import { getArrowDirection } from "@dashboard/utils/sort";
 import { TableBody, TableCell } from "@material-ui/core";
+import { Button } from "@presentation/shared//Button";
+import { DashboardCard } from "@presentation/shared//Card";
+import Checkbox from "@presentation/shared//Checkbox";
+import ResponsiveTable from "@presentation/shared//ResponsiveTable";
+import TableCellHeader from "@presentation/shared//TableCellHeader";
+import TableHead from "@presentation/shared//TableHead";
+import TableRowLink from "@presentation/shared//TableRowLink";
+import { UserAvatar } from "@presentation/shared//UserAvatar";
 import { DeleteIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
 import { Box, Skeleton, Text, vars } from "@saleor/macaw-ui-next";
 import clsx from "clsx";

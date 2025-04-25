@@ -1,8 +1,4 @@
 import { NumericUnits } from "@dashboard/attributes/components/AttributeDetails/NumericUnits";
-import { DashboardCard } from "@dashboard/components/Card";
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import { Select } from "@dashboard/components/Select";
 import {
   AttributeEntityTypeEnum,
   AttributeErrorFragment,
@@ -13,6 +9,10 @@ import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getAttributeErrorMessage from "@dashboard/utils/errors/attribute";
 import { TextField } from "@material-ui/core";
+import { DashboardCard } from "@presentation/shared//Card";
+import ControlledCheckbox from "@presentation/shared//ControlledCheckbox";
+import FormSpacer from "@presentation/shared//FormSpacer";
+import { Select } from "@presentation/shared//Select";
 import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
 import { defineMessages, useIntl } from "react-intl";

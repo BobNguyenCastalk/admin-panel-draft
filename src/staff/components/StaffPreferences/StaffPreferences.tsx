@@ -1,8 +1,8 @@
-import { DashboardCard } from "@dashboard/components/Card";
-import { Combobox } from "@dashboard/components/Combobox";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import { Locale, localeNames } from "@dashboard/components/Locale";
 import { capitalize } from "@dashboard/misc";
+import { DashboardCard } from "@presentation/shared//Card";
+import { Combobox } from "@presentation/shared//Combobox";
+import FormSpacer from "@presentation/shared//FormSpacer";
+import { Locale, localeNames } from "@presentation/shared//Locale";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

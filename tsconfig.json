@@ -20,6 +20,7 @@
       "@assets/*": ["assets/*"],
       "@locale/*": ["locale/*"],
       "@dashboard/*": ["src/*"],
+      "@presentation/*": ["src/presentation/*"],
       "@test/*": ["testUtils/*"]
     }
   },

@@ -1,13 +1,13 @@
 import { ATTRIBUTE_TYPES_WITH_CONFIGURABLE_FACED_NAVIGATION } from "@dashboard/attributes/utils/data";
-import { DashboardCard } from "@dashboard/components/Card";
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
-import ControlledSwitch from "@dashboard/components/ControlledSwitch";
-import FormSpacer from "@dashboard/components/FormSpacer";
 import { AttributeErrorFragment, AttributeTypeEnum } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getAttributeErrorMessage from "@dashboard/utils/errors/attribute";
 import { TextField } from "@material-ui/core";
+import { DashboardCard } from "@presentation/shared//Card";
+import ControlledCheckbox from "@presentation/shared//ControlledCheckbox";
+import ControlledSwitch from "@presentation/shared//ControlledSwitch";
+import FormSpacer from "@presentation/shared//FormSpacer";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";

@@ -1,5 +1,5 @@
-import { DashboardCard } from "@dashboard/components/Card";
 import { TOTAL_STEPS_COUNT } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext/initialOnboardingState";
+import { DashboardCard } from "@presentation/shared//Card";
 import { Accordion, Box, Button, ChervonDownIcon, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";

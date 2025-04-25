@@ -1,6 +1,6 @@
-import { DashboardCard } from "@dashboard/components/Card";
-import { DateTime } from "@dashboard/components/Date";
 import { renderCollection } from "@dashboard/misc";
+import { DashboardCard } from "@presentation/shared//Card";
+import { DateTime } from "@presentation/shared//Date";
 import { Box, List, Skeleton, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

@@ -1,4 +1,4 @@
-import { Route } from "@dashboard/components/Router";
+import { Route } from "@presentation/shared/Router";
 import { parse as parseQs } from "qs";
 import React, { useContext } from "react";
 import { RouteComponentProps, Switch } from "react-router-dom";

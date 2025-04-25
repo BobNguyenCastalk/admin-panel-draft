@@ -1,7 +1,7 @@
-import { FilterElement, FilterElementRegular } from "@dashboard/components/Filter";
 import { StaffMemberStatus, StaffUserInput } from "@dashboard/graphql";
 import { findValueInEnum } from "@dashboard/misc";
 import { StaffFilterKeys, StaffListFilterOpts } from "@dashboard/staff/components/StaffListPage";
+import { FilterElement, FilterElementRegular } from "@presentation/shared//Filter";
 
 import {
   createFilterTabUtils,

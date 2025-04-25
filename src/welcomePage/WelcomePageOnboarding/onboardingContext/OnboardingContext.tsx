@@ -1,8 +1,8 @@
-import { useAnalytics } from "@dashboard/components/ProductAnalytics/useAnalytics";
 import {
   handleStateChangeAfterStepCompleted,
   handleStateChangeAfterToggle,
 } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext/utils";
+import { useAnalytics } from "@presentation/shared//ProductAnalytics/useAnalytics";
 import React, { useRef } from "react";
 
 import { useNewUserCheck } from "../hooks/useNewUserCheck";

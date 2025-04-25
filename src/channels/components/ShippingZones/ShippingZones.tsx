@@ -1,8 +1,8 @@
 import { ChannelShippingZones } from "@dashboard/channels/pages/ChannelDetailsPage/types";
-import { DashboardCard } from "@dashboard/components/Card";
 import { SearchShippingZonesQuery } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
+import { DashboardCard } from "@presentation/shared//Card";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

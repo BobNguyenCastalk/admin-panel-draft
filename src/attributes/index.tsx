@@ -1,13 +1,13 @@
-import { ConditionalAttributesFilterProvider } from "@dashboard/components/ConditionalFilter";
-import { Route } from "@dashboard/components/Router";
 import { sectionNames } from "@dashboard/intl";
 import { asSortParams } from "@dashboard/utils/sort";
+import { ConditionalAttributesFilterProvider } from "@presentation/shared//ConditionalFilter";
+import { Route } from "@presentation/shared//Router";
+import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { parse as parseQs } from "qs";
 import React from "react";
 import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
-import { WindowTitle } from "../components/WindowTitle";
 import {
   attributeAddPath,
   AttributeAddUrlQueryParams,

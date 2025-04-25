@@ -3,10 +3,6 @@ import {
   getFilterVariables,
   storageUtils,
 } from "@dashboard/attributes/views/AttributeList/filters";
-import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
-import { creatAttributesQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog from "@dashboard/components/SaveFilterTabDialog";
 import { useFlag } from "@dashboard/featureFlags";
 import { useAttributeBulkDeleteMutation, useAttributeListQuery } from "@dashboard/graphql";
 import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
@@ -25,6 +21,10 @@ import createFilterHandlers from "@dashboard/utils/handlers/filterHandlers";
 import createSortHandler from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
+import { useConditionalFilterContext } from "@presentation/shared//ConditionalFilter";
+import { creatAttributesQueryVariables } from "@presentation/shared//ConditionalFilter/queryVariables";
+import DeleteFilterTabDialog from "@presentation/shared//DeleteFilterTabDialog";
+import SaveFilterTabDialog from "@presentation/shared//SaveFilterTabDialog";
 import isEqual from "lodash/isEqual";
 import React, { useCallback } from "react";
 import { useIntl } from "react-intl";

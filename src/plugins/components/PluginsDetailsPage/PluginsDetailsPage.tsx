@@ -1,11 +1,4 @@
 // @ts-strict-ignore
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import Grid from "@dashboard/components/Grid";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Savebar } from "@dashboard/components/Savebar";
 import {
   ConfigurationItemInput,
   PluginConfigurationExtendedFragment,
@@ -17,6 +10,13 @@ import useNavigator from "@dashboard/hooks/useNavigator";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { isSecretField } from "@dashboard/plugins/utils";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import CardSpacer from "@presentation/shared//CardSpacer";
+import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import Form from "@presentation/shared//Form";
+import Grid from "@presentation/shared//Grid";
+import { DetailPageLayout } from "@presentation/shared//Layouts";
+import { Savebar } from "@presentation/shared//Savebar";
 import React from "react";
 import { useIntl } from "react-intl";
 

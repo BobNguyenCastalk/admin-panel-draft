@@ -1,11 +1,11 @@
 // @ts-strict-ignore
-import { DashboardCard } from "@dashboard/components/Card";
 import { PermissionGroupErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
 import { getFieldError, getFormErrors } from "@dashboard/utils/errors";
 import getPermissionGroupErrorMessage from "@dashboard/utils/errors/permissionGroups";
 import { TextField } from "@material-ui/core";
+import { DashboardCard } from "@presentation/shared//Card";
 import React from "react";
 import { useIntl } from "react-intl";
 

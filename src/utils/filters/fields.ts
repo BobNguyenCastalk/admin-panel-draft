@@ -1,5 +1,5 @@
-import { FieldType, FilterElementGeneric } from "@dashboard/components/Filter";
 import { FetchMoreProps, KeyValue, MinMax, SearchPageProps } from "@dashboard/types";
+import { FieldType, FilterElementGeneric } from "@presentation/shared//Filter";
 import { Option } from "@saleor/macaw-ui-next";
 
 export function createPriceField<K extends string = string>(

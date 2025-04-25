@@ -1,6 +1,4 @@
 import { useUser } from "@dashboard/auth";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
-import { Button } from "@dashboard/components/Button";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
   PermissionGroupDetailsQuery,
@@ -23,6 +21,8 @@ import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHa
 import createSortHandler from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
+import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";
+import { Button } from "@presentation/shared//Button";
 import React from "react";
 import { useIntl } from "react-intl";
 

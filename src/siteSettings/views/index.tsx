@@ -1,4 +1,3 @@
-import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   CountryCode,
   useShopSettingsUpdateMutation,
@@ -6,6 +5,7 @@ import {
 } from "@dashboard/graphql";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import { commonMessages, sectionNames } from "@dashboard/intl";
+import { WindowTitle } from "@presentation/shared//WindowTitle";
 import React from "react";
 import { useIntl } from "react-intl";
 

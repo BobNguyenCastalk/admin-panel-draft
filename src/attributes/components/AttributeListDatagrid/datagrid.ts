@@ -1,12 +1,12 @@
 import { AttributeListUrlSortField } from "@dashboard/attributes/urls";
-import { PLACEHOLDER } from "@dashboard/components/Datagrid/const";
-import { readonlyTextCell } from "@dashboard/components/Datagrid/customCells/cells";
-import { AvailableColumn } from "@dashboard/components/Datagrid/types";
 import { AttributeFragment } from "@dashboard/graphql";
 import { translateBoolean } from "@dashboard/intl";
 import { Sort } from "@dashboard/types";
 import { getColumnSortDirectionIcon } from "@dashboard/utils/columns/getColumnSortDirectionIcon";
 import { GridCell, Item } from "@glideapps/glide-data-grid";
+import { PLACEHOLDER } from "@presentation/shared//Datagrid/const";
+import { readonlyTextCell } from "@presentation/shared//Datagrid/customCells/cells";
+import { AvailableColumn } from "@presentation/shared//Datagrid/types";
 import { IntlShape } from "react-intl";
 
 import { columnsMessages } from "./messages";

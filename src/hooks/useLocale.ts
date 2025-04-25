@@ -1,4 +1,4 @@
-import { LocaleContext } from "@dashboard/components/Locale";
+import { LocaleContext } from "@presentation/shared//Locale";
 import { useContext } from "react";
 
 function useLocale() {

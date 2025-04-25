@@ -1,16 +1,16 @@
 // @ts-strict-ignore
-import { Backlink } from "@dashboard/components/Backlink";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import Grid from "@dashboard/components/Grid";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Savebar } from "@dashboard/components/Savebar";
 import { MenuDetailsFragment, MenuErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { menuListUrl } from "@dashboard/navigation/urls";
+import { Backlink } from "@presentation/shared//Backlink";
+import CardSpacer from "@presentation/shared//CardSpacer";
+import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import Form from "@presentation/shared//Form";
+import Grid from "@presentation/shared//Grid";
+import { DetailPageLayout } from "@presentation/shared//Layouts";
+import { Savebar } from "@presentation/shared//Savebar";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

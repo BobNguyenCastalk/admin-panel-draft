@@ -1,9 +1,9 @@
 import { UserContextError } from "@dashboard/auth/types";
-import { ButtonWithLoader } from "@dashboard/components/ButtonWithLoader/ButtonWithLoader";
-import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { AvailableExternalAuthenticationsQuery } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
+import { ButtonWithLoader } from "@presentation/shared//ButtonWithLoader/ButtonWithLoader";
+import { FormSpacer } from "@presentation/shared//FormSpacer";
 import { EyeIcon } from "@saleor/macaw-ui";
 import { Box, Button, Divider, Input, Text } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";

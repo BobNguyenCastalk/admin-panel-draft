@@ -2,9 +2,9 @@ import {
   AttributeFilterKeys,
   AttributeListFilterOpts,
 } from "@dashboard/attributes/components/AttributeListPage";
-import { FilterElement } from "@dashboard/components/Filter";
 import { AttributeFilterInput } from "@dashboard/graphql";
 import { parseBoolean } from "@dashboard/misc";
+import { FilterElement } from "@presentation/shared//Filter";
 
 import {
   createFilterTabUtils,

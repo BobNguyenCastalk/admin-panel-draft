@@ -1,13 +1,13 @@
 import { getAttributeValueErrorMessage } from "@dashboard/attributes/errors";
-import BackButton from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import { DashboardModal } from "@dashboard/components/Modal";
 import { AttributeErrorFragment, AttributeInputTypeEnum } from "@dashboard/graphql";
 import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
 import { buttonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { TextField } from "@material-ui/core";
+import BackButton from "@presentation/shared//BackButton";
+import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import Form from "@presentation/shared//Form";
+import { DashboardModal } from "@presentation/shared//Modal";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

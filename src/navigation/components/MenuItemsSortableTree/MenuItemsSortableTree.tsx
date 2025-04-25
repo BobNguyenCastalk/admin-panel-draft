@@ -1,6 +1,6 @@
-import { SortableTree } from "@dashboard/components/SortableTree";
 import { MenuTreeItem, RecursiveMenuItem } from "@dashboard/navigation/types";
 import { UniqueIdentifier } from "@dnd-kit/core";
+import { SortableTree } from "@presentation/shared//SortableTree";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";

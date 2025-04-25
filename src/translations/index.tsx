@@ -1,13 +1,13 @@
 // @ts-strict-ignore
-import { Route } from "@dashboard/components/Router";
 import { LanguageCodeEnum } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
+import { Route } from "@presentation/shared//Router";
+import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { parse as parseQs } from "qs";
 import React from "react";
 import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
-import { WindowTitle } from "../components/WindowTitle";
 import {
   languageEntitiesPath,
   languageEntityPath,

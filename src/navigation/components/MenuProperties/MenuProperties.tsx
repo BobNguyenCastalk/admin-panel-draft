@@ -1,9 +1,9 @@
-import { DashboardCard } from "@dashboard/components/Card";
 import { MenuErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getMenuErrorMessage from "@dashboard/utils/errors/menu";
 import { TextField } from "@material-ui/core";
+import { DashboardCard } from "@presentation/shared//Card";
 import React from "react";
 import { useIntl } from "react-intl";
 

@@ -1,12 +1,12 @@
-import BackButton from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import { DashboardModal } from "@dashboard/components/Modal";
 import { MenuErrorFragment } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getMenuErrorMessage from "@dashboard/utils/errors/menu";
 import { TextField } from "@material-ui/core";
+import BackButton from "@presentation/shared//BackButton";
+import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import Form from "@presentation/shared//Form";
+import { DashboardModal } from "@presentation/shared//Modal";
 import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

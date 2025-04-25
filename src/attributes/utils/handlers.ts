@@ -1,5 +1,4 @@
 import { FetchResult } from "@apollo/client";
-import { AttributeInput, AttributeInputData } from "@dashboard/components/Attributes";
 import {
   AttributeEntityTypeEnum,
   AttributeInputTypeEnum,
@@ -21,6 +20,7 @@ import {
 import { AttributeValuesMetadata } from "@dashboard/products/utils/data";
 import { FetchMoreProps, ReorderEvent } from "@dashboard/types";
 import { move, toggle } from "@dashboard/utils/lists";
+import { AttributeInput, AttributeInputData } from "@presentation/shared//Attributes";
 import isEqual from "lodash/isEqual";
 import uniqBy from "lodash/uniqBy";
 

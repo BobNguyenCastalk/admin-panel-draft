@@ -1,9 +1,9 @@
 import { inputTypeMessages } from "@dashboard/attributes/components/AttributeDetails/messages";
 import { AttributeValueEditDialogFormData } from "@dashboard/attributes/utils/data";
-import { ColorPicker, ColorPickerProps } from "@dashboard/components/ColorPicker";
-import FileUploadField from "@dashboard/components/FileUploadField";
-import { SimpleRadioGroupField } from "@dashboard/components/SimpleRadioGroupField";
 import { UseFormResult } from "@dashboard/hooks/useForm";
+import { ColorPicker, ColorPickerProps } from "@presentation/shared//ColorPicker";
+import FileUploadField from "@presentation/shared//FileUploadField";
+import { SimpleRadioGroupField } from "@presentation/shared//SimpleRadioGroupField";
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";

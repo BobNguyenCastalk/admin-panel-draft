@@ -1,8 +1,4 @@
 // @ts-strict-ignore
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog, {
-  SaveFilterTabDialogFormData,
-} from "@dashboard/components/SaveFilterTabDialog";
 import { usePluginsQuery } from "@dashboard/graphql";
 import { useChannelsSearchWithLoadMore } from "@dashboard/hooks/useChannelsSearchWithLoadMore";
 import useListSettings from "@dashboard/hooks/useListSettings";
@@ -19,6 +15,10 @@ import createFilterHandlers from "@dashboard/utils/handlers/filterHandlers";
 import createSortHandler from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
+import DeleteFilterTabDialog from "@presentation/shared//DeleteFilterTabDialog";
+import SaveFilterTabDialog, {
+  SaveFilterTabDialogFormData,
+} from "@presentation/shared//SaveFilterTabDialog";
 import React from "react";
 
 import PluginsListPage from "../../components/PluginsListPage/PluginsListPage";

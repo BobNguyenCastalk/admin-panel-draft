@@ -1,11 +1,11 @@
+import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { toggle } from "@dashboard/utils/lists";
 import {
   CheckIfSaveIsDisabledFnType,
   FormId,
   useExitFormDialog,
   UseExitFormDialogResult,
-} from "@dashboard/components/Form";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
-import { toggle } from "@dashboard/utils/lists";
+} from "@presentation/shared//Form";
 import isEqual from "lodash/isEqual";
 import omit from "lodash/omit";
 import React, { useEffect, useState } from "react";

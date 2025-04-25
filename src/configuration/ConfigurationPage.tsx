@@ -1,17 +1,17 @@
 // @ts-strict-ignore
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { UserFragment } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import { DetailPageLayout } from "@presentation/shared//Layouts";
+import VersionInfo from "@presentation/shared/VersionInfo";
 import { makeStyles, NavigationCard } from "@saleor/macaw-ui";
 import { Box, Text, vars } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
-import VersionInfo from "../components/VersionInfo";
 import { MenuSection } from "./types";
 import { hasUserMenuItemPermissions } from "./utils";
 

@@ -1,5 +1,5 @@
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
-import Money from "@dashboard/components/Money";
+import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";
+import Money from "@presentation/shared//Money";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

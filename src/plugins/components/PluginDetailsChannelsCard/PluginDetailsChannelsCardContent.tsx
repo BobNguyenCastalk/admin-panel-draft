@@ -1,8 +1,8 @@
 // @ts-strict-ignore
-import { DashboardCard } from "@dashboard/components/Card";
-import CollectionWithDividers from "@dashboard/components/CollectionWithDividers";
 import { PluginsDetailsFragment } from "@dashboard/graphql";
 import { isPluginGlobal } from "@dashboard/plugins/views/utils";
+import { DashboardCard } from "@presentation/shared//Card";
+import CollectionWithDividers from "@presentation/shared//CollectionWithDividers";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import React from "react";

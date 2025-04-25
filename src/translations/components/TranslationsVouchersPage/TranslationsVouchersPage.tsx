@@ -1,7 +1,4 @@
 // @ts-strict-ignore
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import LanguageSwitch from "@dashboard/components/LanguageSwitch";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { LanguageCodeEnum, VoucherTranslationFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
@@ -11,6 +8,9 @@ import {
   languageEntityUrl,
   TranslatableEntities,
 } from "@dashboard/translations/urls";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import LanguageSwitch from "@presentation/shared//LanguageSwitch";
+import { DetailPageLayout } from "@presentation/shared//Layouts";
 import React from "react";
 import { useIntl } from "react-intl";
 

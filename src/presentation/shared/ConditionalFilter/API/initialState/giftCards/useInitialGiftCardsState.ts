@@ -1,0 +1,76 @@
+import { useApolloClient } from "@apollo/client";
+import {
+  _SearchCustomersOperandsDocument,
+  _SearchCustomersOperandsQuery,
+  _SearchCustomersOperandsQueryVariables,
+  _SearchProductOperandsDocument,
+  _SearchProductOperandsQuery,
+  _SearchProductOperandsQueryVariables,
+} from "@dashboard/graphql";
+import { createInitialGiftCardsState } from "@presentation/shared//ConditionalFilter/API/initialState/helpers";
+import { InitialGiftCardsAPIResponse } from "@presentation/shared//ConditionalFilter/API/initialState/types";
+import { GiftCardsFetchingParams } from "@presentation/shared//ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
+import { useState } from "react";
+
+import { InitialGiftCardsStateResponse } from "./InitialGiftCardsState";
+
+export interface InitialGiftCardsAPIState {
+  data: InitialGiftCardsStateResponse;
+  loading: boolean;
+  fetchQueries: (params: GiftCardsFetchingParams) => Promise<void>;
+}
+
+export const useInitialGiftCardsState = () => {
+  const client = useApolloClient();
+  const [data, setData] = useState<InitialGiftCardsStateResponse>(
+    InitialGiftCardsStateResponse.empty(),
+  );
+  const [loading, setLoading] = useState(true);
+  const queriesToRun: Array<Promise<InitialGiftCardsAPIResponse>> = [];
+
+  const fetchQueries = async ({ usedBy, products, currency, tags }: GiftCardsFetchingParams) => {
+    if (products.length > 0) {
+      queriesToRun.push(
+        client.query<_SearchProductOperandsQuery, _SearchProductOperandsQueryVariables>({
+          query: _SearchProductOperandsDocument,
+          variables: {
+            first: products.length,
+            productsIds: products,
+          },
+        }),
+      );
+    }
+
+    if (usedBy.length > 0) {
+      queriesToRun.push(
+        client.query<_SearchCustomersOperandsQuery, _SearchCustomersOperandsQueryVariables>({
+          query: _SearchCustomersOperandsDocument,
+          variables: {
+            first: usedBy.length,
+            customersIds: usedBy,
+          },
+        }),
+      );
+    }
+
+    const data = await Promise.all(queriesToRun);
+    const initialState = createInitialGiftCardsState(data, tags);
+
+    setData(
+      new InitialGiftCardsStateResponse(
+        initialState.currency,
+        initialState.products,
+        initialState.isActive,
+        initialState.tags,
+        initialState.usedBy,
+      ),
+    );
+    setLoading(false);
+  };
+
+  return {
+    data,
+    loading,
+    fetchQueries,
+  };
+};

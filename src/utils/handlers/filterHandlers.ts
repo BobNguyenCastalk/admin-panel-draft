@@ -1,6 +1,6 @@
-import { IFilter } from "@dashboard/components/Filter";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { ActiveTab, Pagination, Search, Sort } from "@dashboard/types";
+import { IFilter } from "@presentation/shared//Filter";
 
 import { GetFilterQueryParam, getFilterQueryParams } from "../filters";
 

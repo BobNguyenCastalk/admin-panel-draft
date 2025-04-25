@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { getChannelsCurrencyChoices } from "@dashboard/channels/utils";
-import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import {
   ChannelDeleteMutation,
   useChannelDeleteMutation,
@@ -10,6 +9,7 @@ import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { useShopLimitsQuery } from "@presentation/shared//Shop/queries";
 import React from "react";
 import { useIntl } from "react-intl";
 

@@ -1,5 +1,5 @@
-import { Route } from "@dashboard/components/Router";
 import { PermissionEnum } from "@dashboard/graphql";
+import { Route } from "@presentation/shared//Router";
 import React from "react";
 import { RouteProps } from "react-router-dom";
 

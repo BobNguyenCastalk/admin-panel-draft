@@ -9,18 +9,18 @@ import {
   PaymentChargeStatusEnum,
 } from "@dashboard/graphql";
 import { Node, SlugNode } from "@dashboard/types";
+import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
+import {
+  hueToPillColorDark,
+  hueToPillColorLight,
+} from "@presentation/shared/Datagrid/customCells/PillCell";
+import { DotStatus } from "@presentation/shared/StatusDot/StatusDot";
 import { ThemeType } from "@saleor/macaw-ui";
 import { DefaultTheme, ThemeTokensValues } from "@saleor/macaw-ui-next";
 import Fuse from "fuse.js";
 import moment from "moment-timezone";
 import { IntlShape } from "react-intl";
 
-import { ConfirmButtonTransitionState } from "./components/ConfirmButton";
-import {
-  hueToPillColorDark,
-  hueToPillColorLight,
-} from "./components/Datagrid/customCells/PillCell";
-import { DotStatus } from "./components/StatusDot/StatusDot";
 import { AddressType, AddressTypeInput } from "./customers/types";
 import {
   commonStatusMessages,

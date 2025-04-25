@@ -1,11 +1,11 @@
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { Button } from "@dashboard/components/Button";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { MenuFragment } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { menuListUrl, MenuListUrlSortField } from "@dashboard/navigation/urls";
 import { ListActions, PageListProps, SortPage } from "@dashboard/types";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import { Button } from "@presentation/shared//Button";
+import { ListPageLayout } from "@presentation/shared//Layouts";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

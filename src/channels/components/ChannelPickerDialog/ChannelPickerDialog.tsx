@@ -1,8 +1,8 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
-import { Combobox } from "@dashboard/components/Combobox";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import useChoiceSearch from "@dashboard/hooks/useChoiceSearch";
 import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
+import ActionDialog from "@presentation/shared//ActionDialog";
+import { Combobox } from "@presentation/shared//Combobox";
+import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
 import { Option } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { useIntl } from "react-intl";

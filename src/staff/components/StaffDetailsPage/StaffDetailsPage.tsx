@@ -1,12 +1,4 @@
 // @ts-strict-ignore
-import AccountPermissionGroups from "@dashboard/components/AccountPermissionGroups";
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Savebar } from "@dashboard/components/Savebar";
 import {
   SearchPermissionGroupsQuery,
   StaffErrorFragment,
@@ -22,6 +14,14 @@ import UserStatus from "@dashboard/staff/components/UserStatus";
 import { staffListPath } from "@dashboard/staff/urls";
 import { getMemberPermissionGroups, isMemberActive } from "@dashboard/staff/utils";
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
+import AccountPermissionGroups from "@presentation/shared//AccountPermissionGroups";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import { DashboardCard } from "@presentation/shared//Card";
+import CardSpacer from "@presentation/shared//CardSpacer";
+import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import Form from "@presentation/shared//Form";
+import { DetailPageLayout } from "@presentation/shared//Layouts";
+import { Savebar } from "@presentation/shared//Savebar";
 import { Option, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

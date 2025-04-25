@@ -1,4 +1,4 @@
-import { IFilter } from "@dashboard/components/Filter";
+import { IFilter } from "@presentation/shared//Filter";
 import clone from "lodash/clone";
 
 export function getExistingKeys(o: {}): string[] {

@@ -1,10 +1,10 @@
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { DashboardCard } from "@dashboard/components/Card";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { PermissionGroupFragment } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import { DashboardCard } from "@presentation/shared//Card";
+import { ListPageLayout } from "@presentation/shared//Layouts";
 import { Button } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

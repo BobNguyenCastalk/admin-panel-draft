@@ -1,5 +1,4 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
-import { IMessageContext } from "@dashboard/components/messages";
 import { DEMO_MODE } from "@dashboard/config";
 import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
 import useLocalStorage from "@dashboard/hooks/useLocalStorage";
@@ -12,6 +11,7 @@ import {
   saveCredentials,
 } from "@dashboard/utils/credentialsManagement";
 import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
+import { IMessageContext } from "@presentation/shared//messages";
 import { GetExternalAccessTokenData, LoginData, useAuth, useAuthState } from "@saleor/sdk";
 import isEmpty from "lodash/isEmpty";
 import { useEffect, useRef, useState } from "react";

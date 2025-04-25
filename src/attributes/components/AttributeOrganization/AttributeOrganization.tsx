@@ -1,6 +1,6 @@
-import { DashboardCard } from "@dashboard/components/Card";
-import RadioGroupField from "@dashboard/components/RadioGroupField";
 import { AttributeTypeEnum } from "@dashboard/graphql";
+import { DashboardCard } from "@presentation/shared//Card";
+import RadioGroupField from "@presentation/shared//RadioGroupField";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";

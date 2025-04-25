@@ -1,5 +1,4 @@
 import { FetchResult } from "@apollo/client";
-import { MetadataFormData } from "@dashboard/components/Metadata/types";
 import {
   MetadataErrorFragment,
   MetadataInput,
@@ -10,6 +9,7 @@ import {
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { arrayDiff } from "@dashboard/utils/arrays";
+import { MetadataFormData } from "@presentation/shared//Metadata/types";
 
 import { filterMetadataArray } from "./filterMetadataArray";
 import { areMetadataArraysEqual } from "./metadataUpdateHelpers";

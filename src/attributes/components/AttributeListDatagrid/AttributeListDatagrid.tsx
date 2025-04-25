@@ -1,17 +1,17 @@
 import { AttributeListUrlSortField, attributeUrl } from "@dashboard/attributes/urls";
-import { ColumnPicker } from "@dashboard/components/Datagrid/ColumnPicker/ColumnPicker";
-import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@dashboard/components/Datagrid/Datagrid";
-import {
-  DatagridChangeStateContext,
-  useDatagridChangeState,
-} from "@dashboard/components/Datagrid/hooks/useDatagridChange";
-import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
 import { AttributeFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { ListProps, SortPage } from "@dashboard/types";
 import { Item } from "@glideapps/glide-data-grid";
+import { ColumnPicker } from "@presentation/shared//Datagrid/ColumnPicker/ColumnPicker";
+import { useColumns } from "@presentation/shared//Datagrid/ColumnPicker/useColumns";
+import Datagrid from "@presentation/shared//Datagrid/Datagrid";
+import {
+  DatagridChangeStateContext,
+  useDatagridChangeState,
+} from "@presentation/shared//Datagrid/hooks/useDatagridChange";
+import { TablePaginationWithContext } from "@presentation/shared//TablePagination";
 import { Box } from "@saleor/macaw-ui-next";
 import React, { useCallback, useMemo } from "react";
 import { useIntl } from "react-intl";

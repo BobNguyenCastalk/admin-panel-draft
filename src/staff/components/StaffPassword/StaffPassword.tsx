@@ -1,5 +1,5 @@
-import { Button } from "@dashboard/components/Button";
-import { DashboardCard } from "@dashboard/components/Card";
+import { Button } from "@presentation/shared//Button";
+import { DashboardCard } from "@presentation/shared//Card";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

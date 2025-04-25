@@ -1,4 +1,4 @@
-import { DashboardCard } from "@dashboard/components/Card";
+import { DashboardCard } from "@presentation/shared//Card";
 import * as React from "react";
 
 export type WelcomePageInfoTileProps = {

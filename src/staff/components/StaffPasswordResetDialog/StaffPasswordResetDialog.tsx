@@ -1,8 +1,4 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import { DashboardModal } from "@dashboard/components/Modal";
 import { AccountErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
@@ -11,6 +7,10 @@ import { DialogProps } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getAccountErrorMessage from "@dashboard/utils/errors/account";
 import { TextField } from "@material-ui/core";
+import BackButton from "@presentation/shared//BackButton";
+import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import Form from "@presentation/shared//Form";
+import { DashboardModal } from "@presentation/shared//Modal";
 import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

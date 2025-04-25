@@ -1,5 +1,5 @@
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
 import { useWelcomePageNotificationsQuery } from "@dashboard/graphql";
+import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";
 
 export const useWelcomePageStocksAnalytics = () => {
   const { channel } = useAppChannel();

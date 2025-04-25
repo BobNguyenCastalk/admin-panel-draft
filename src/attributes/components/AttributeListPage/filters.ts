@@ -1,7 +1,7 @@
-import { IFilter } from "@dashboard/components/Filter";
 import { commonMessages } from "@dashboard/intl";
 import { FilterOpts } from "@dashboard/types";
 import { createBooleanField } from "@dashboard/utils/filters/fields";
+import { IFilter } from "@presentation/shared//Filter";
 import { defineMessages, IntlShape } from "react-intl";
 
 export enum AttributeFilterKeys {

@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
 import {
   useMenuDeleteMutation,
   useMenuDetailsQuery,
@@ -9,6 +8,7 @@ import {
 } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
+import ActionDialog from "@presentation/shared//ActionDialog";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

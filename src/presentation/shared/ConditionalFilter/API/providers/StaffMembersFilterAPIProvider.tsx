@@ -1,0 +1,45 @@
+import { StaffMemberStatus } from "@dashboard/graphql";
+import { useIntl } from "react-intl";
+
+import { FilterContainer, FilterElement } from "../../FilterElement";
+import { FilterAPIProvider } from "../FilterAPIProvider";
+import { EnumValuesHandler } from "../Handler";
+
+const getFilterElement = (value: FilterContainer, index: number): FilterElement => {
+  const possibleFilterElement = value[index];
+
+  if (typeof possibleFilterElement !== "string" && !Array.isArray(possibleFilterElement)) {
+    return possibleFilterElement;
+  }
+
+  throw new Error("Unknown filter element used to create API handler");
+};
+
+export const useStaffMembersFilterAPIProvider = (): FilterAPIProvider => {
+  const intl = useIntl();
+
+  const fetchRightOptions = async (position: string, value: FilterContainer) => {
+    const index = parseInt(position, 10);
+    const filterElement = getFilterElement(value, index);
+
+    const rowType = filterElement.rowType();
+
+    if (!rowType) {
+      return [];
+    }
+
+    if (rowType === "staffMemberStatus") {
+      return new EnumValuesHandler(StaffMemberStatus, "staffMemberStatus", intl).fetch();
+    }
+
+    return [];
+  };
+  const fetchLeftOptions = async () => {
+    return [];
+  };
+
+  return {
+    fetchRightOptions,
+    fetchLeftOptions,
+  };
+};

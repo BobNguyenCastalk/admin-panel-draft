@@ -1,5 +1,5 @@
-import { Route } from "@dashboard/components/Router";
 import { asSortParams } from "@dashboard/utils/sort";
+import { Route } from "@presentation/shared//Router";
 import { parse as parseQs } from "qs";
 import React from "react";
 import { RouteComponentProps, Switch } from "react-router-dom";

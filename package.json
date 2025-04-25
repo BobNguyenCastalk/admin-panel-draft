@@ -229,6 +229,7 @@
       "\\.(css)$": "identity-obj-proxy",
       "@assets(.*)$": "<rootDir>/assets/$1",
       "@locale(.*)$": "<rootDir>/locale/$1",
+      "@presentation(.*)$": "<rootDir>/src/presentation/$1",
       "@dashboard(.*)$": "<rootDir>/src/$1",
       "@test/(.*)$": "<rootDir>/testUtils/$1",
       "^@material-ui/core$": "<rootDir>/node_modules/@material-ui/core",

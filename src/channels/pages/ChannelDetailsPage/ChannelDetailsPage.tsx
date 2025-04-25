@@ -4,13 +4,6 @@ import ShippingZones from "@dashboard/channels/components/ShippingZones";
 import Warehouses from "@dashboard/channels/components/Warehouses";
 import { channelsListUrl } from "@dashboard/channels/urls";
 import { validateChannelFormData } from "@dashboard/channels/validation";
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import RequirePermissions from "@dashboard/components/RequirePermissions";
-import { Savebar } from "@dashboard/components/Savebar";
 import {
   AllocationStrategyEnum,
   ChannelDetailsFragment,
@@ -34,6 +27,13 @@ import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import CardSpacer from "@presentation/shared//CardSpacer";
+import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import Form from "@presentation/shared//Form";
+import { DetailPageLayout } from "@presentation/shared//Layouts";
+import RequirePermissions from "@presentation/shared//RequirePermissions";
+import { Savebar } from "@presentation/shared//Savebar";
 import { Option } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { useIntl } from "react-intl";

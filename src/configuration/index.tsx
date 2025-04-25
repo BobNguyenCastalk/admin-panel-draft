@@ -2,7 +2,6 @@
 import { attributeListUrl } from "@dashboard/attributes/urls";
 import { useUser } from "@dashboard/auth";
 import { channelsListUrl } from "@dashboard/channels/urls";
-import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { APP_VERSION as dashboardVersion } from "@dashboard/config";
 import { PermissionEnum } from "@dashboard/graphql";
 import useShop from "@dashboard/hooks/useShop";
@@ -25,6 +24,7 @@ import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
+import { WindowTitle } from "@presentation/shared//WindowTitle";
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
 

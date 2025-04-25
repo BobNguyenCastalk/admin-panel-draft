@@ -1,9 +1,9 @@
 // @ts-strict-ignore
-import { DashboardCard } from "@dashboard/components/Card";
-import ChannelsAvailabilityMenuContent from "@dashboard/components/ChannelsAvailabilityMenuContent";
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { isPluginGlobal } from "@dashboard/plugins/views/utils";
 import { Popper } from "@material-ui/core";
+import { DashboardCard } from "@presentation/shared//Card";
+import ChannelsAvailabilityMenuContent from "@presentation/shared//ChannelsAvailabilityMenuContent";
 import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
 

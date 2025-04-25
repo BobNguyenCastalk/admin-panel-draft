@@ -1,5 +1,5 @@
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { buttonMessages } from "@dashboard/intl";
+import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
 import { Button, makeStyles } from "@saleor/macaw-ui";
 import React from "react";
 import { FormattedMessage } from "react-intl";

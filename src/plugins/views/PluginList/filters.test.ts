@@ -1,4 +1,3 @@
-import { FieldType } from "@dashboard/components/Filter";
 import { PluginConfigurationType } from "@dashboard/graphql";
 import {
   createFilterStructure,
@@ -7,6 +6,7 @@ import {
 import { PluginListUrlFilters } from "@dashboard/plugins/urls";
 import { getFilterQueryParams } from "@dashboard/utils/filters";
 import { stringifyQs } from "@dashboard/utils/urls";
+import { FieldType } from "@presentation/shared//Filter";
 import { getExistingKeys } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";

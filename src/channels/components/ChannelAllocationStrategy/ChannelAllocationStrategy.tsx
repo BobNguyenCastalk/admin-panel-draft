@@ -1,8 +1,8 @@
-import { DashboardCard } from "@dashboard/components/Card";
-import PreviewPill from "@dashboard/components/PreviewPill";
-import RadioGroupField from "@dashboard/components/RadioGroupField";
 import { AllocationStrategyEnum, StockSettingsInput } from "@dashboard/graphql";
 import HelpOutline from "@material-ui/icons/HelpOutline";
+import { DashboardCard } from "@presentation/shared//Card";
+import PreviewPill from "@presentation/shared//PreviewPill";
+import RadioGroupField from "@presentation/shared//RadioGroupField";
 import { Text, Tooltip } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";

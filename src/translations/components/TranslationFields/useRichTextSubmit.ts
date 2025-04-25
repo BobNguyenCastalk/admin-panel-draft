@@ -1,5 +1,5 @@
-import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
+import { useExitFormDialog } from "@dashboard/presentation/shared/Form/useExitFormDialog";
 import useRichText from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import React from "react";

@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { DashboardCard } from "@dashboard/components/Card";
 import { useProductVariantListQuery } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import {
@@ -16,6 +15,7 @@ import {
   Popper,
 } from "@material-ui/core";
 import ArrowDropDown from "@material-ui/icons/ArrowDropDown";
+import { DashboardCard } from "@presentation/shared//Card";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import clsx from "clsx";

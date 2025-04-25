@@ -1,9 +1,9 @@
 import { AttributePageFormData } from "@dashboard/attributes/components/AttributePage";
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
-import { Select } from "@dashboard/components/Select";
 import { MeasurementUnitsEnum } from "@dashboard/graphql";
 import { UseFormResult } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
+import ControlledCheckbox from "@presentation/shared//ControlledCheckbox";
+import { Select } from "@presentation/shared//Select";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Option } from "@saleor/macaw-ui-next";
 import React, { useEffect, useMemo, useState } from "react";

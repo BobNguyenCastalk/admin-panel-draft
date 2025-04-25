@@ -1,9 +1,8 @@
 import { FetchResult, MutationResult } from "@apollo/client";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { UserPermissionFragment } from "@dashboard/graphql";
+import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import { FilterElement, IFilter } from "@presentation/shared/Filter";
 import { Option } from "@saleor/macaw-ui-next";
-
-import { FilterElement, IFilter } from "./components/Filter";
 
 export interface UserError {
   field: string | null;

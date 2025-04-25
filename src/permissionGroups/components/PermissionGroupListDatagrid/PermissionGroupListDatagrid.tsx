@@ -1,11 +1,3 @@
-import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@dashboard/components/Datagrid/Datagrid";
-import {
-  DatagridChangeStateContext,
-  useDatagridChangeState,
-} from "@dashboard/components/Datagrid/hooks/useDatagridChange";
-import { useEmptyColumn } from "@dashboard/components/Datagrid/hooks/useEmptyColumn";
-import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
 import { PermissionGroupFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
 import useNavigator from "@dashboard/hooks/useNavigator";
@@ -16,6 +8,14 @@ import {
 import { canBeSorted } from "@dashboard/permissionGroups/views/PermissionGroupList/sort";
 import { ListProps, SortPage } from "@dashboard/types";
 import { Item } from "@glideapps/glide-data-grid";
+import { useColumns } from "@presentation/shared//Datagrid/ColumnPicker/useColumns";
+import Datagrid from "@presentation/shared//Datagrid/Datagrid";
+import {
+  DatagridChangeStateContext,
+  useDatagridChangeState,
+} from "@presentation/shared//Datagrid/hooks/useDatagridChange";
+import { useEmptyColumn } from "@presentation/shared//Datagrid/hooks/useEmptyColumn";
+import { TablePaginationWithContext } from "@presentation/shared//TablePagination";
 import { Box } from "@saleor/macaw-ui-next";
 import React, { useCallback, useMemo } from "react";
 import { useIntl } from "react-intl";

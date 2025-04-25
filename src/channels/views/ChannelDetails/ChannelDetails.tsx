@@ -3,7 +3,6 @@ import ChannelDeleteDialog from "@dashboard/channels/components/ChannelDeleteDia
 import { FormData } from "@dashboard/channels/components/ChannelForm/ChannelForm";
 import { getChannelsCurrencyChoices } from "@dashboard/channels/utils";
 import { useChannelWarehousesReorder } from "@dashboard/channels/views/ChannelDetails/useChannelWarehouseReorder";
-import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   ChannelDeleteMutation,
   ChannelErrorFragment,
@@ -24,6 +23,7 @@ import { extractMutationErrors } from "@dashboard/misc";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
+import { WindowTitle } from "@presentation/shared//WindowTitle";
 import React from "react";
 import { useIntl } from "react-intl";
 

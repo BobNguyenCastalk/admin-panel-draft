@@ -209,6 +209,7 @@ export default defineConfig(({ command, mode }) => {
       alias: {
         "@assets": path.resolve(__dirname, "./assets"),
         "@locale": path.resolve(__dirname, "./locale"),
+        "@presentation": path.resolve(__dirname, "./src/presentation"),
         "@dashboard": path.resolve(__dirname, "./src"),
         src: path.resolve(__dirname, "./src"),
         /*

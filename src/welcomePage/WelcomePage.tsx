@@ -1,7 +1,7 @@
 import { useUser } from "@dashboard/auth";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
-import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { PermissionEnum } from "@dashboard/graphql";
+import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";
+import { hasPermissions } from "@presentation/shared//RequirePermissions";
 import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
 

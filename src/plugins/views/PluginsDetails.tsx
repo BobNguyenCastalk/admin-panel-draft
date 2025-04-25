@@ -1,6 +1,4 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
-import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   ConfigurationItemFragment,
   ConfigurationItemInput,
@@ -13,6 +11,8 @@ import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import ActionDialog from "@presentation/shared//ActionDialog";
+import { WindowTitle } from "@presentation/shared//WindowTitle";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

@@ -1,9 +1,3 @@
-import { Button } from "@dashboard/components/Button";
-import { DashboardCard } from "@dashboard/components/Card";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import { SortableTableBody, SortableTableRow } from "@dashboard/components/SortableTable";
-import TablePagination from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
 import {
   AttributeInputTypeEnum,
   AttributeValueFragment,
@@ -12,6 +6,12 @@ import {
 import { renderCollection, stopPropagation } from "@dashboard/misc";
 import { ListProps, PaginateListProps, RelayToFlat, ReorderAction } from "@dashboard/types";
 import { TableCell, TableFooter, TableHead } from "@material-ui/core";
+import { Button } from "@presentation/shared//Button";
+import { DashboardCard } from "@presentation/shared//Card";
+import ResponsiveTable from "@presentation/shared//ResponsiveTable";
+import { SortableTableBody, SortableTableRow } from "@presentation/shared//SortableTable";
+import TablePagination from "@presentation/shared//TablePagination";
+import TableRowLink from "@presentation/shared//TableRowLink";
 import { IconButton, makeStyles } from "@saleor/macaw-ui";
 import { Box, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
 import React from "react";

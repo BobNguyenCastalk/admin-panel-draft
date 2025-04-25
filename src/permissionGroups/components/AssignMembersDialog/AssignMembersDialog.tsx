@@ -1,17 +1,17 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
-import { DashboardModal } from "@dashboard/components/Modal";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
-import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { SearchStaffMembersQuery } from "@dashboard/graphql";
 import useSearchQuery from "@dashboard/hooks/useSearchQuery";
 import { buttonMessages } from "@dashboard/intl";
 import { getUserInitials, getUserName, renderCollection } from "@dashboard/misc";
 import { DialogProps, FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
 import { Checkbox, CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
+import BackButton from "@presentation/shared//BackButton";
+import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import { InfiniteScroll } from "@presentation/shared//InfiniteScroll";
+import { DashboardModal } from "@presentation/shared//Modal";
+import ResponsiveTable from "@presentation/shared//ResponsiveTable";
+import TableRowLink from "@presentation/shared//TableRowLink";
+import { UserAvatar } from "@presentation/shared//UserAvatar";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import React from "react";

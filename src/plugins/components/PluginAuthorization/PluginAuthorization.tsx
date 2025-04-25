@@ -1,9 +1,9 @@
-import { Button } from "@dashboard/components/Button";
-import { DashboardCard } from "@dashboard/components/Card";
-import Hr from "@dashboard/components/Hr";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
 import { isSecretField } from "@dashboard/plugins/utils";
+import { Button } from "@presentation/shared//Button";
+import { DashboardCard } from "@presentation/shared//Card";
+import Hr from "@presentation/shared//Hr";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";

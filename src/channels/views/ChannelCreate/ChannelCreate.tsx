@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { FormData } from "@dashboard/channels/components/ChannelForm/ChannelForm";
-import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   ChannelCreateInput,
   ChannelCreateMutation,
@@ -14,6 +13,7 @@ import useNotifier from "@dashboard/hooks/useNotifier";
 import useShop from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
+import { WindowTitle } from "@presentation/shared//WindowTitle";
 import currencyCodes from "currency-codes";
 import React from "react";
 import { useIntl } from "react-intl";

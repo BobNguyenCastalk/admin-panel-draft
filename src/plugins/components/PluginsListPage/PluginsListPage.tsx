@@ -1,15 +1,15 @@
 // @ts-strict-ignore
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { DashboardCard } from "@dashboard/components/Card";
-import { ExternalLinkNext } from "@dashboard/components/ExternalLink";
-import FilterBar from "@dashboard/components/FilterBar";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { getStatusColor } from "@dashboard/misc";
 import { PluginListUrlSortField } from "@dashboard/plugins/urls";
 import { FilterPageProps, PageListProps, SortPage, TabPageProps } from "@dashboard/types";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import { DashboardCard } from "@presentation/shared//Card";
+import { ExternalLinkNext } from "@presentation/shared//ExternalLink";
+import FilterBar from "@presentation/shared//FilterBar";
+import { ListPageLayout } from "@presentation/shared//Layouts";
 import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

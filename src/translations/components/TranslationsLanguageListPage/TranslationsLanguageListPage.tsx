@@ -1,5 +1,5 @@
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { LanguageFragment } from "@dashboard/graphql";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import React from "react";
 import { useIntl } from "react-intl";
 

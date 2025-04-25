@@ -1,8 +1,8 @@
-import { Combobox } from "@dashboard/components/Combobox";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import CardAddItemsFooter from "@dashboard/products/components/ProductStocks/components/CardAddItemsFooter";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
 import { ClickAwayListener } from "@material-ui/core";
+import { Combobox } from "@presentation/shared//Combobox";
 import { Box } from "@saleor/macaw-ui-next";
 import React, { useEffect, useRef, useState } from "react";
 import { defineMessages, useIntl } from "react-intl";

@@ -3,9 +3,6 @@ import {
   ChannelShippingZones,
   ChannelWarehouses,
 } from "@dashboard/channels/pages/ChannelDetailsPage/types";
-import { DashboardCard } from "@dashboard/components/Card";
-import { Combobox } from "@dashboard/components/Combobox";
-import FormSpacer from "@dashboard/components/FormSpacer";
 import {
   ChannelErrorFragment,
   CountryCode,
@@ -18,6 +15,9 @@ import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
+import { DashboardCard } from "@presentation/shared//Card";
+import { Combobox } from "@presentation/shared//Combobox";
+import FormSpacer from "@presentation/shared//FormSpacer";
 import { Box, Button, CopyIcon, Input, Option, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

@@ -1,7 +1,4 @@
 // @ts-strict-ignore
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import LanguageSwitch from "@dashboard/components/LanguageSwitch";
 import { LanguageCodeEnum, ProductVariantTranslationFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
@@ -15,6 +12,9 @@ import {
   TranslatableEntities,
 } from "@dashboard/translations/urls";
 import { mapAttributeValuesToTranslationFields } from "@dashboard/translations/utils";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import CardSpacer from "@presentation/shared//CardSpacer";
+import LanguageSwitch from "@presentation/shared//LanguageSwitch";
 import React from "react";
 import { useIntl } from "react-intl";
 

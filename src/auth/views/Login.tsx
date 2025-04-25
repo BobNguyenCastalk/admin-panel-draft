@@ -1,5 +1,6 @@
 import { useAvailableExternalAuthenticationsLazyQuery } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
+import { useBoundStore } from "@dashboard/stores";
 import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
 import React, { useEffect } from "react";
 import urlJoin from "url-join";
@@ -41,6 +42,7 @@ const LoginView: React.FC<LoginViewProps> = ({ params }) => {
 
     return errors;
   };
+
   const handleRequestExternalAuthentication = async (pluginId: string) => {
     setFallbackUri(location.pathname);
 

@@ -1,9 +1,4 @@
 // @ts-strict-ignore
-import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import LanguageSwitch from "@dashboard/components/LanguageSwitch";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { ListSettingsUpdate } from "@dashboard/components/TablePagination";
 import { AttributeTranslationDetailsFragment, LanguageCodeEnum } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
@@ -14,6 +9,11 @@ import {
   TranslatableEntities,
 } from "@dashboard/translations/urls";
 import { ListSettings } from "@dashboard/types";
+import { TopNav } from "@presentation/shared//AppLayout/TopNav";
+import CardSpacer from "@presentation/shared//CardSpacer";
+import LanguageSwitch from "@presentation/shared//LanguageSwitch";
+import { DetailPageLayout } from "@presentation/shared//Layouts";
+import { ListSettingsUpdate } from "@presentation/shared//TablePagination";
 import React from "react";
 import { useIntl } from "react-intl";
 

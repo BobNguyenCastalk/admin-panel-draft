@@ -1,4 +1,4 @@
-import { Combobox } from "@dashboard/components/Combobox";
+import { Combobox } from "@presentation/shared//Combobox";
 import React from "react";
 import { Control, Controller } from "react-hook-form";
 import { useIntl } from "react-intl";

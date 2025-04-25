@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { IFilter } from "@dashboard/components/Filter";
 import { PluginConfigurationType } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { AutocompleteFilterOpts, FilterOpts } from "@dashboard/types";
@@ -8,6 +7,7 @@ import {
   createBooleanField,
   createOptionsField,
 } from "@dashboard/utils/filters/fields";
+import { IFilter } from "@presentation/shared//Filter";
 import { defineMessages, IntlShape } from "react-intl";
 
 import {

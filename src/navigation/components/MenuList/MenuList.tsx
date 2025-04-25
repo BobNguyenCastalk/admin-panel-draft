@@ -1,19 +1,19 @@
 // @ts-strict-ignore
-import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import IconButtonTableCell from "@dashboard/components/IconButtonTableCell";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
-import TableHead from "@dashboard/components/TableHead";
-import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
 import { MenuFragment } from "@dashboard/graphql";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { MenuListUrlSortField, menuUrl } from "@dashboard/navigation/urls";
 import { ListActions, ListProps, SortPage } from "@dashboard/types";
 import { getArrowDirection } from "@dashboard/utils/sort";
 import { TableBody, TableCell, TableFooter } from "@material-ui/core";
+import { DashboardCard } from "@presentation/shared//Card";
+import Checkbox from "@presentation/shared//Checkbox";
+import IconButtonTableCell from "@presentation/shared//IconButtonTableCell";
+import ResponsiveTable from "@presentation/shared//ResponsiveTable";
+import { TableButtonWrapper } from "@presentation/shared//TableButtonWrapper/TableButtonWrapper";
+import TableCellHeader from "@presentation/shared//TableCellHeader";
+import TableHead from "@presentation/shared//TableHead";
+import { TablePaginationWithContext } from "@presentation/shared//TablePagination";
+import TableRowLink from "@presentation/shared//TableRowLink";
 import { DeleteIcon, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import React from "react";

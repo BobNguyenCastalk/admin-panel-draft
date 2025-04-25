@@ -1,10 +1,10 @@
 // @ts-strict-ignore
-import { DashboardCard } from "@dashboard/components/Card";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
 import { LanguageFragment } from "@dashboard/graphql";
 import { languageEntitiesUrl } from "@dashboard/translations/urls";
 import { TableBody, TableCell } from "@material-ui/core";
+import { DashboardCard } from "@presentation/shared//Card";
+import ResponsiveTable from "@presentation/shared//ResponsiveTable";
+import TableRowLink from "@presentation/shared//TableRowLink";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, vars } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
