@@ -214,6 +214,7 @@ export default defineConfig(({ command, mode }) => {
         "@dashboard": path.resolve(__dirname, "./src"),
         "@types": path.resolve(__dirname, "./src/types"),
         "@constants": path.resolve(__dirname, "./src/constants"),
+        "@graphql": path.resolve(__dirname, "./src/graphql"),
         src: path.resolve(__dirname, "./src"),
         /*
           Moment.js/react-moment does not fully suport ES modules.

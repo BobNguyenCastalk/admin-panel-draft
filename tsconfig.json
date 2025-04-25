@@ -24,6 +24,7 @@
       "@business/*": ["src/business/*"],
       "@types/*": ["src/types/*"],
       "@constants/*": ["src/constants/*"],
+      "@graphql/*": ["src/graphql/*"],
       "@test/*": ["testUtils/*"]
     }
   },

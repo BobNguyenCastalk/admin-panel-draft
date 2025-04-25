@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { gql } from "@apollo/client";
+import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
 import {
   SearchStaffMembersDocument,
   SearchStaffMembersQuery,
   SearchStaffMembersQueryVariables,
-} from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
+} from "@graphql";
 
 export const searchStaffMembers = gql`
   query SearchStaffMembers($after: String, $first: Int!, $query: String!) {
