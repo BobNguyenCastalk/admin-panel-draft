@@ -1,9 +1,9 @@
+import { pluginListUrl } from "@dashboard/business/utils/plugins/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
-import { pluginListUrl } from "@dashboard/plugins/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
 import { IntlShape } from "react-intl";
 

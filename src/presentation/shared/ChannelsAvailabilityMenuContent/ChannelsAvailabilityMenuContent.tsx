@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { CollectionFragment } from "@dashboard/graphql";
-import ScrollableContent from "@dashboard/plugins/components/PluginsList/PluginAvailabilityStatusPopup/ScrollableContent";
+import ScrollableContent from "@presentation/pages/plugins/components/PluginsList/PluginAvailabilityStatusPopup/ScrollableContent";
 import HorizontalSpacer from "@presentation/shared//HorizontalSpacer";
 import { PillColor } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";

@@ -1,7 +1,7 @@
-import { configurationMenuUrl } from "@dashboard/configuration";
 import { PermissionGroupFragment } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
+import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import { DashboardCard } from "@presentation/shared//Card";
 import { ListPageLayout } from "@presentation/shared//Layouts";

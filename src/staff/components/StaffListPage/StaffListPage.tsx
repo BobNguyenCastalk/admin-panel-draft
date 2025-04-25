@@ -1,4 +1,3 @@
-import { configurationMenuUrl } from "@dashboard/configuration";
 import { useFlag } from "@dashboard/featureFlags";
 import { RefreshLimitsQuery } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
@@ -6,6 +5,7 @@ import { StaffMembers } from "@dashboard/staff/types";
 import { StaffListUrlSortField } from "@dashboard/staff/urls";
 import { FilterPagePropsWithPresets, ListProps, SortPage } from "@dashboard/types";
 import { hasLimits, isLimitReached } from "@dashboard/utils/limits";
+import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { useContextualLink } from "@presentation/shared//AppLayout/ContextualLinks/useContextualLink";
 import { ListFilters } from "@presentation/shared//AppLayout/ListFilters";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";

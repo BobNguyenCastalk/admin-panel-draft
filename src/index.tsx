@@ -8,6 +8,8 @@ import { PermissionEnum } from "@dashboard/graphql";
 import useAppState from "@dashboard/hooks/useAppState";
 import { ThemeProvider } from "@dashboard/theme";
 import { OnboardingProvider } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
+import ConfigurationSection from "@presentation/pages/configuration";
+import PluginsSection from "@presentation/pages/plugins";
 import AppLayout from "@presentation/shared/AppLayout";
 import useAppChannel, {
   AppChannelProvider,
@@ -34,11 +36,10 @@ import TagManager from "react-gtm-module";
 import { useIntl } from "react-intl";
 import { Switch } from "react-router-dom";
 
+import { getConfigMenuItemsPermissions } from "./business/utils/configuration/utils";
 import ChannelsSection from "./channels";
 import { channelsSection } from "./channels/urls";
 import { DEMO_MODE, GTM_ID } from "./config";
-import ConfigurationSection from "./configuration";
-import { getConfigMenuItemsPermissions } from "./configuration/utils";
 import AppStateProvider from "./containers/AppState";
 import BackgroundTasksProvider from "./containers/BackgroundTasks";
 import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvider";
@@ -49,7 +50,6 @@ import NavigationSection from "./navigation";
 import { navigationSection } from "./navigation/urls";
 import { NotFound } from "./NotFound";
 import PermissionGroupSection from "./permissionGroups";
-import PluginsSection from "./plugins";
 import Auth from "./presentation/pages/auth";
 import LoginLoading from "./presentation/pages/auth/components/LoginLoading/LoginLoading";
 import SectionRoute from "./presentation/pages/auth/components/SectionRoute";

@@ -1,5 +1,4 @@
-import { configurationMenuUrl } from "@dashboard/configuration";
-import { getConfigMenuItemsPermissions } from "@dashboard/configuration/utils";
+import { getConfigMenuItemsPermissions } from "@dashboard/business/utils/configuration/utils";
 import { useFlag } from "@dashboard/featureFlags";
 import { PermissionEnum } from "@dashboard/graphql";
 import { ConfigurationIcon } from "@dashboard/icons/Configuration";
@@ -13,6 +12,7 @@ import { ProductsIcon } from "@dashboard/icons/Products";
 import { TranslationsIcon } from "@dashboard/icons/Translations";
 import { commonMessages, sectionNames } from "@dashboard/intl";
 import { useUser } from "@dashboard/presentation/pages/auth";
+import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { Box } from "@saleor/macaw-ui-next";
 import isEmpty from "lodash/isEmpty";
 import React from "react";

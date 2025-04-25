@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { channelAddUrl, channelUrl } from "@dashboard/channels/urls";
-import { configurationMenuUrl } from "@dashboard/configuration";
 import { ChannelDetailsFragment, RefreshLimitsQuery } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { renderCollection, stopPropagation } from "@dashboard/misc";
 import { hasLimits, isLimitReached } from "@dashboard/utils/limits";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
+import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { LimitsInfo } from "@presentation/shared//AppLayout/LimitsInfo";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import { Button } from "@presentation/shared//Button";

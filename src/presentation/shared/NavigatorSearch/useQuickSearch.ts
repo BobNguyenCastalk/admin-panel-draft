@@ -1,10 +1,7 @@
 // @ts-strict-ignore
-import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
 import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
 import useNavigator from "@dashboard/hooks/useNavigator";
-import useCustomerSearch from "@dashboard/searches/useCustomerSearch";
-import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { RefObject, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
@@ -20,15 +17,8 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
   const [mode, setMode] = useState<QuickSearchMode>("default");
   const intl = useIntl();
   const navigate = useNavigator();
-  const [{ data: orderData }, getOrderData] = useQuickOrderSearch();
+  const [{ data: orderData }, getOrderData] = useQuickOrderSearch(); // TODO: remove this
 
-  const { result: customers, search: searchCustomers } = useCustomerSearch({
-    variables: {
-      ...DEFAULT_INITIAL_SEARCH_DATA,
-      first: 10,
-    },
-    skip: !query,
-  });
   const [{ data: catalog }, searchCatalog] = useSearchCatalog(10);
 
   useModalDialogOpen(open, {
@@ -78,10 +68,6 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
       searchCatalog(value);
     }
 
-    if (mode === "customers") {
-      searchCustomers(value);
-    }
-
     setQuery(value);
   };
 
@@ -95,8 +81,6 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
       intl,
       {
         catalog,
-        customers: mapEdgesToItems(customers?.data?.search) || [],
-        orders: mapEdgesToItems(orderData?.orders) || [],
       },
       {
         createOrder: () => null,

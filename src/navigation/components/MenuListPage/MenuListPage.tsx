@@ -1,8 +1,8 @@
-import { configurationMenuUrl } from "@dashboard/configuration";
 import { MenuFragment } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { menuListUrl, MenuListUrlSortField } from "@dashboard/navigation/urls";
 import { ListActions, PageListProps, SortPage } from "@dashboard/types";
+import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import { Button } from "@presentation/shared//Button";
 import { ListPageLayout } from "@presentation/shared//Layouts";
