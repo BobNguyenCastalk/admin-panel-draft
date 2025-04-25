@@ -1,22 +1,15 @@
 // @ts-strict-ignore
-import { attributeListUrl } from "@dashboard/attributes/urls";
 import { useUser } from "@dashboard/auth";
 import { channelsListUrl } from "@dashboard/channels/urls";
 import { APP_VERSION as dashboardVersion } from "@dashboard/config";
 import { PermissionEnum } from "@dashboard/graphql";
 import useShop from "@dashboard/hooks/useShop";
-import Attributes from "@dashboard/icons/Attributes";
 import Channels from "@dashboard/icons/Channels";
-import Miscellaneous from "@dashboard/icons/Miscellaneous";
 import Navigation from "@dashboard/icons/Navigation";
-import PageTypes from "@dashboard/icons/PageTypes";
 import PermissionGroups from "@dashboard/icons/PermissionGroups";
 import Plugins from "@dashboard/icons/Plugins";
-import ProductTypes from "@dashboard/icons/ProductTypes";
-import ShippingMethods from "@dashboard/icons/ShippingMethods";
 import SiteSettings from "@dashboard/icons/SiteSettings";
 import StaffMembers from "@dashboard/icons/StaffMembers";
-import Warehouses from "@dashboard/icons/Warehouses";
 import { sectionNames } from "@dashboard/intl";
 import { maybe } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
@@ -33,29 +26,6 @@ import { MenuSection } from "./types";
 
 export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
   return [
-    {
-      label: intl.formatMessage({
-        id: "HP6m+q",
-        defaultMessage: "Attributes and Product Types",
-      }),
-      menuItems: [
-        {
-          description: intl.formatMessage({
-            id: "19/lwV",
-            defaultMessage: "Determine attributes used to create product types",
-          }),
-          icon: <Attributes />,
-          requireAllPermissions: true,
-          permissions: [
-            PermissionEnum.MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES,
-            PermissionEnum.MANAGE_PAGE_TYPES_AND_ATTRIBUTES,
-          ],
-          title: intl.formatMessage(sectionNames.attributes),
-          url: attributeListUrl(),
-          testId: "configuration-menu-attributes",
-        },
-      ],
-    },
     {
       label: intl.formatMessage({
         id: "jFrdB5",

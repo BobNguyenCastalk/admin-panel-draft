@@ -1,4 +1,3 @@
-import { attributeListUrl } from "@dashboard/attributes/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
@@ -21,10 +20,6 @@ function searchInViews(
   navigate: UseNavigatorResult,
 ): QuickSearchActionInput[] {
   const views: View[] = [
-    {
-      label: intl.formatMessage(sectionNames.attributes),
-      url: attributeListUrl(),
-    },
     {
       label: intl.formatMessage(sectionNames.home),
       url: "/",

@@ -32,8 +32,6 @@ import TagManager from "react-gtm-module";
 import { useIntl } from "react-intl";
 import { Switch } from "react-router-dom";
 
-import AttributeSection from "./attributes";
-import { attributeSection } from "./attributes/urls";
 import Auth from "./auth";
 import AuthProvider from "./auth/AuthProvider";
 import LoginLoading from "./auth/components/LoginLoading/LoginLoading";
@@ -182,15 +180,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_MENUS]}
                 path={navigationSection}
                 component={NavigationSection}
-              />
-              <SectionRoute
-                permissions={[
-                  PermissionEnum.MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES,
-                  PermissionEnum.MANAGE_PAGE_TYPES_AND_ATTRIBUTES,
-                ]}
-                path={attributeSection}
-                component={AttributeSection}
-                matchPermission="any"
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_CHANNELS]}
