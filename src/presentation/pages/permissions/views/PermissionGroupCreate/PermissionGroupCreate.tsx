@@ -1,3 +1,8 @@
+import { permissionGroupDetailsUrl } from "@business/utils/permissions/urls";
+import {
+  checkIfUserHasRestictedAccessToChannels,
+  getUserAccessibleChannelsOptions,
+} from "@business/utils/permissions/utils";
 import { usePermissionGroupCreateMutation } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
@@ -13,11 +18,6 @@ import {
   PermissionGroupCreateFormData,
   PermissionGroupCreatePage,
 } from "../../components/PermissionGroupCreatePage";
-import { permissionGroupDetailsUrl } from "../../urls";
-import {
-  checkIfUserHasRestictedAccessToChannels,
-  getUserAccessibleChannelsOptions,
-} from "../../utils";
 
 export const PermissionGroupCreate: React.FC = () => {
   const navigate = useNavigator();

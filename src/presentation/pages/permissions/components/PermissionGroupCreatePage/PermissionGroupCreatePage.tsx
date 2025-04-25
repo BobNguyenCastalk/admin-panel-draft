@@ -1,8 +1,8 @@
+import { permissionGroupListUrl } from "@business/utils/permissions/urls";
 import { ChannelFragment, PermissionEnum, PermissionGroupErrorFragment } from "@dashboard/graphql";
 import { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { buttonMessages, sectionNames } from "@dashboard/intl";
-import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getPermissionGroupErrorMessage from "@dashboard/utils/errors/permissionGroups";
 import AccountPermissions from "@presentation/shared//AccountPermissions";

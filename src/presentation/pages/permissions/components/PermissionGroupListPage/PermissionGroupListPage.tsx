@@ -1,6 +1,11 @@
+import {
+  permissionGroupAddUrl,
+  PermissionGroupListUrlSortField,
+} from "@business/utils/permissions/urls";
 import { PermissionGroupFragment } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
+import { PageListProps, SortPage } from "@dashboard/types";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import { DashboardCard } from "@presentation/shared//Card";
@@ -9,8 +14,6 @@ import { Button } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { PageListProps, SortPage } from "../../../types";
-import { permissionGroupAddUrl, PermissionGroupListUrlSortField } from "../../urls";
 import { PermissionGroupListDatagrid } from "../PermissionGroupListDatagrid";
 
 export interface PermissionGroupListPageProps

@@ -1,7 +1,6 @@
+import { MembersListUrlSortField } from "@business/utils/permissions/urls";
 import { StaffMemberFragment } from "@dashboard/graphql";
 import { getUserName } from "@dashboard/misc";
-
-import { MembersListUrlSortField } from "./urls";
 
 export const sortMembers =
   (sort: string, asc: boolean) => (a: StaffMemberFragment, b: StaffMemberFragment) => {

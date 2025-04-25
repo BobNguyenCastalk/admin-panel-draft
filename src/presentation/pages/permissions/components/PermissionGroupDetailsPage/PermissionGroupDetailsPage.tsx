@@ -1,3 +1,11 @@
+import { MembersListUrlSortField, permissionGroupListPath } from "@business/utils/permissions/urls";
+import {
+  checkIfUserHasRestictedAccessToChannels,
+  extractPermissionCodes,
+  getInitialChannels,
+  getUserAccessibleChannelsOptions,
+  isGroupFullAccess,
+} from "@business/utils/permissions/utils";
 import {
   ChannelFragment,
   PermissionEnum,
@@ -9,7 +17,6 @@ import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { buttonMessages } from "@dashboard/intl";
-import { MembersListUrlSortField, permissionGroupListPath } from "@dashboard/permissionGroups/urls";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { ListActions, SortPage } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
@@ -25,13 +32,6 @@ import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";
 
-import {
-  checkIfUserHasRestictedAccessToChannels,
-  extractPermissionCodes,
-  getInitialChannels,
-  getUserAccessibleChannelsOptions,
-  isGroupFullAccess,
-} from "../../utils";
 import PermissionGroupInfo from "../PermissionGroupInfo";
 import PermissionGroupMemberList from "../PermissionGroupMemberList";
 

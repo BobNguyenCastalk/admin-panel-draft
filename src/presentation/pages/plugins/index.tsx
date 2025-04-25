@@ -4,7 +4,7 @@ import {
   PluginListUrlSortField,
   pluginPath,
   PluginUrlQueryParams,
-} from "@business/utils/plugins/urls";
+} from "@dashboard/business/utils/plugins/urls";
 import { sectionNames } from "@dashboard/intl";
 import { asSortParams } from "@dashboard/utils/sort";
 import { Route } from "@presentation/shared//Router";

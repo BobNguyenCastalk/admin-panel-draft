@@ -1,9 +1,9 @@
 // @ts-strict-ignore
+import { sortMembers } from "@business/utils/permissions/sort";
+import { MembersListUrlSortField } from "@business/utils/permissions/urls";
 import { PermissionGroupMemberFragment } from "@dashboard/graphql";
 import { commonStatusMessages } from "@dashboard/intl";
 import { getUserInitials, getUserName, renderCollection, stopPropagation } from "@dashboard/misc";
-import { sortMembers } from "@dashboard/permissionGroups/sort";
-import { MembersListUrlSortField } from "@dashboard/permissionGroups/urls";
 import { ListActions, SortPage } from "@dashboard/types";
 import { getArrowDirection } from "@dashboard/utils/sort";
 import { TableBody, TableCell } from "@material-ui/core";

@@ -2034,6 +2034,222 @@ export function useFileUploadMutation(baseOptions?: ApolloReactHooks.MutationHoo
 export type FileUploadMutationHookResult = ReturnType<typeof useFileUploadMutation>;
 export type FileUploadMutationResult = Apollo.MutationResult<Types.FileUploadMutation>;
 export type FileUploadMutationOptions = Apollo.BaseMutationOptions<Types.FileUploadMutation, Types.FileUploadMutationVariables>;
+export const PermissionGroupDeleteDocument = gql`
+    mutation PermissionGroupDelete($id: ID!) {
+  permissionGroupDelete(id: $id) {
+    errors {
+      ...PermissionGroupError
+    }
+  }
+}
+    ${PermissionGroupErrorFragmentDoc}`;
+export type PermissionGroupDeleteMutationFn = Apollo.MutationFunction<Types.PermissionGroupDeleteMutation, Types.PermissionGroupDeleteMutationVariables>;
+
+/**
+ * __usePermissionGroupDeleteMutation__
+ *
+ * To run a mutation, you first call `usePermissionGroupDeleteMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `usePermissionGroupDeleteMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [permissionGroupDeleteMutation, { data, loading, error }] = usePermissionGroupDeleteMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function usePermissionGroupDeleteMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<Types.PermissionGroupDeleteMutation, Types.PermissionGroupDeleteMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<Types.PermissionGroupDeleteMutation, Types.PermissionGroupDeleteMutationVariables>(PermissionGroupDeleteDocument, options);
+      }
+export type PermissionGroupDeleteMutationHookResult = ReturnType<typeof usePermissionGroupDeleteMutation>;
+export type PermissionGroupDeleteMutationResult = Apollo.MutationResult<Types.PermissionGroupDeleteMutation>;
+export type PermissionGroupDeleteMutationOptions = Apollo.BaseMutationOptions<Types.PermissionGroupDeleteMutation, Types.PermissionGroupDeleteMutationVariables>;
+export const PermissionGroupCreateDocument = gql`
+    mutation PermissionGroupCreate($input: PermissionGroupCreateInput!) {
+  permissionGroupCreate(input: $input) {
+    errors {
+      ...PermissionGroupError
+    }
+    group {
+      ...PermissionGroupDetails
+    }
+  }
+}
+    ${PermissionGroupErrorFragmentDoc}
+${PermissionGroupDetailsFragmentDoc}`;
+export type PermissionGroupCreateMutationFn = Apollo.MutationFunction<Types.PermissionGroupCreateMutation, Types.PermissionGroupCreateMutationVariables>;
+
+/**
+ * __usePermissionGroupCreateMutation__
+ *
+ * To run a mutation, you first call `usePermissionGroupCreateMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `usePermissionGroupCreateMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [permissionGroupCreateMutation, { data, loading, error }] = usePermissionGroupCreateMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function usePermissionGroupCreateMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<Types.PermissionGroupCreateMutation, Types.PermissionGroupCreateMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<Types.PermissionGroupCreateMutation, Types.PermissionGroupCreateMutationVariables>(PermissionGroupCreateDocument, options);
+      }
+export type PermissionGroupCreateMutationHookResult = ReturnType<typeof usePermissionGroupCreateMutation>;
+export type PermissionGroupCreateMutationResult = Apollo.MutationResult<Types.PermissionGroupCreateMutation>;
+export type PermissionGroupCreateMutationOptions = Apollo.BaseMutationOptions<Types.PermissionGroupCreateMutation, Types.PermissionGroupCreateMutationVariables>;
+export const PermissionGroupUpdateDocument = gql`
+    mutation PermissionGroupUpdate($id: ID!, $input: PermissionGroupUpdateInput!) {
+  permissionGroupUpdate(id: $id, input: $input) {
+    errors {
+      ...PermissionGroupError
+    }
+    group {
+      ...PermissionGroupDetails
+    }
+  }
+}
+    ${PermissionGroupErrorFragmentDoc}
+${PermissionGroupDetailsFragmentDoc}`;
+export type PermissionGroupUpdateMutationFn = Apollo.MutationFunction<Types.PermissionGroupUpdateMutation, Types.PermissionGroupUpdateMutationVariables>;
+
+/**
+ * __usePermissionGroupUpdateMutation__
+ *
+ * To run a mutation, you first call `usePermissionGroupUpdateMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `usePermissionGroupUpdateMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [permissionGroupUpdateMutation, { data, loading, error }] = usePermissionGroupUpdateMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function usePermissionGroupUpdateMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<Types.PermissionGroupUpdateMutation, Types.PermissionGroupUpdateMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<Types.PermissionGroupUpdateMutation, Types.PermissionGroupUpdateMutationVariables>(PermissionGroupUpdateDocument, options);
+      }
+export type PermissionGroupUpdateMutationHookResult = ReturnType<typeof usePermissionGroupUpdateMutation>;
+export type PermissionGroupUpdateMutationResult = Apollo.MutationResult<Types.PermissionGroupUpdateMutation>;
+export type PermissionGroupUpdateMutationOptions = Apollo.BaseMutationOptions<Types.PermissionGroupUpdateMutation, Types.PermissionGroupUpdateMutationVariables>;
+export const PermissionGroupListDocument = gql`
+    query PermissionGroupList($after: String, $before: String, $first: Int, $last: Int, $filter: PermissionGroupFilterInput, $sort: PermissionGroupSortingInput) {
+  permissionGroups(
+    after: $after
+    before: $before
+    first: $first
+    last: $last
+    filter: $filter
+    sortBy: $sort
+  ) {
+    edges {
+      node {
+        ...PermissionGroup
+      }
+    }
+    pageInfo {
+      ...PageInfo
+    }
+  }
+}
+    ${PermissionGroupFragmentDoc}
+${PageInfoFragmentDoc}`;
+
+/**
+ * __usePermissionGroupListQuery__
+ *
+ * To run a query within a React component, call `usePermissionGroupListQuery` and pass it any options that fit your needs.
+ * When your component renders, `usePermissionGroupListQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = usePermissionGroupListQuery({
+ *   variables: {
+ *      after: // value for 'after'
+ *      before: // value for 'before'
+ *      first: // value for 'first'
+ *      last: // value for 'last'
+ *      filter: // value for 'filter'
+ *      sort: // value for 'sort'
+ *   },
+ * });
+ */
+export function usePermissionGroupListQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>(PermissionGroupListDocument, options);
+      }
+export function usePermissionGroupListLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>(PermissionGroupListDocument, options);
+        }
+export type PermissionGroupListQueryHookResult = ReturnType<typeof usePermissionGroupListQuery>;
+export type PermissionGroupListLazyQueryHookResult = ReturnType<typeof usePermissionGroupListLazyQuery>;
+export type PermissionGroupListQueryResult = Apollo.QueryResult<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>;
+export const PermissionGroupDetailsDocument = gql`
+    query PermissionGroupDetails($id: ID!, $userId: ID!) {
+  permissionGroup(id: $id) {
+    ...PermissionGroupDetails
+  }
+  user: me {
+    editableGroups {
+      id
+    }
+    userPermissions {
+      code
+      sourcePermissionGroups(userId: $userId) {
+        id
+      }
+    }
+  }
+}
+    ${PermissionGroupDetailsFragmentDoc}`;
+
+/**
+ * __usePermissionGroupDetailsQuery__
+ *
+ * To run a query within a React component, call `usePermissionGroupDetailsQuery` and pass it any options that fit your needs.
+ * When your component renders, `usePermissionGroupDetailsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = usePermissionGroupDetailsQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *      userId: // value for 'userId'
+ *   },
+ * });
+ */
+export function usePermissionGroupDetailsQuery(baseOptions: ApolloReactHooks.QueryHookOptions<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>(PermissionGroupDetailsDocument, options);
+      }
+export function usePermissionGroupDetailsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>(PermissionGroupDetailsDocument, options);
+        }
+export type PermissionGroupDetailsQueryHookResult = ReturnType<typeof usePermissionGroupDetailsQuery>;
+export type PermissionGroupDetailsLazyQueryHookResult = ReturnType<typeof usePermissionGroupDetailsLazyQuery>;
+export type PermissionGroupDetailsQueryResult = Apollo.QueryResult<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>;
 export const PluginUpdateDocument = gql`
     mutation PluginUpdate($channelId: ID, $id: ID!, $input: PluginUpdateInput!) {
   pluginUpdate(channelId: $channelId, id: $id, input: $input) {
@@ -2465,222 +2681,6 @@ export function useSearchVariantsWithProductDataLazyQuery(baseOptions?: ApolloRe
 export type SearchVariantsWithProductDataQueryHookResult = ReturnType<typeof useSearchVariantsWithProductDataQuery>;
 export type SearchVariantsWithProductDataLazyQueryHookResult = ReturnType<typeof useSearchVariantsWithProductDataLazyQuery>;
 export type SearchVariantsWithProductDataQueryResult = Apollo.QueryResult<Types.SearchVariantsWithProductDataQuery, Types.SearchVariantsWithProductDataQueryVariables>;
-export const PermissionGroupDeleteDocument = gql`
-    mutation PermissionGroupDelete($id: ID!) {
-  permissionGroupDelete(id: $id) {
-    errors {
-      ...PermissionGroupError
-    }
-  }
-}
-    ${PermissionGroupErrorFragmentDoc}`;
-export type PermissionGroupDeleteMutationFn = Apollo.MutationFunction<Types.PermissionGroupDeleteMutation, Types.PermissionGroupDeleteMutationVariables>;
-
-/**
- * __usePermissionGroupDeleteMutation__
- *
- * To run a mutation, you first call `usePermissionGroupDeleteMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `usePermissionGroupDeleteMutation` returns a tuple that includes:
- * - A mutate function that you can call at any time to execute the mutation
- * - An object with fields that represent the current status of the mutation's execution
- *
- * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
- *
- * @example
- * const [permissionGroupDeleteMutation, { data, loading, error }] = usePermissionGroupDeleteMutation({
- *   variables: {
- *      id: // value for 'id'
- *   },
- * });
- */
-export function usePermissionGroupDeleteMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<Types.PermissionGroupDeleteMutation, Types.PermissionGroupDeleteMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<Types.PermissionGroupDeleteMutation, Types.PermissionGroupDeleteMutationVariables>(PermissionGroupDeleteDocument, options);
-      }
-export type PermissionGroupDeleteMutationHookResult = ReturnType<typeof usePermissionGroupDeleteMutation>;
-export type PermissionGroupDeleteMutationResult = Apollo.MutationResult<Types.PermissionGroupDeleteMutation>;
-export type PermissionGroupDeleteMutationOptions = Apollo.BaseMutationOptions<Types.PermissionGroupDeleteMutation, Types.PermissionGroupDeleteMutationVariables>;
-export const PermissionGroupCreateDocument = gql`
-    mutation PermissionGroupCreate($input: PermissionGroupCreateInput!) {
-  permissionGroupCreate(input: $input) {
-    errors {
-      ...PermissionGroupError
-    }
-    group {
-      ...PermissionGroupDetails
-    }
-  }
-}
-    ${PermissionGroupErrorFragmentDoc}
-${PermissionGroupDetailsFragmentDoc}`;
-export type PermissionGroupCreateMutationFn = Apollo.MutationFunction<Types.PermissionGroupCreateMutation, Types.PermissionGroupCreateMutationVariables>;
-
-/**
- * __usePermissionGroupCreateMutation__
- *
- * To run a mutation, you first call `usePermissionGroupCreateMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `usePermissionGroupCreateMutation` returns a tuple that includes:
- * - A mutate function that you can call at any time to execute the mutation
- * - An object with fields that represent the current status of the mutation's execution
- *
- * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
- *
- * @example
- * const [permissionGroupCreateMutation, { data, loading, error }] = usePermissionGroupCreateMutation({
- *   variables: {
- *      input: // value for 'input'
- *   },
- * });
- */
-export function usePermissionGroupCreateMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<Types.PermissionGroupCreateMutation, Types.PermissionGroupCreateMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<Types.PermissionGroupCreateMutation, Types.PermissionGroupCreateMutationVariables>(PermissionGroupCreateDocument, options);
-      }
-export type PermissionGroupCreateMutationHookResult = ReturnType<typeof usePermissionGroupCreateMutation>;
-export type PermissionGroupCreateMutationResult = Apollo.MutationResult<Types.PermissionGroupCreateMutation>;
-export type PermissionGroupCreateMutationOptions = Apollo.BaseMutationOptions<Types.PermissionGroupCreateMutation, Types.PermissionGroupCreateMutationVariables>;
-export const PermissionGroupUpdateDocument = gql`
-    mutation PermissionGroupUpdate($id: ID!, $input: PermissionGroupUpdateInput!) {
-  permissionGroupUpdate(id: $id, input: $input) {
-    errors {
-      ...PermissionGroupError
-    }
-    group {
-      ...PermissionGroupDetails
-    }
-  }
-}
-    ${PermissionGroupErrorFragmentDoc}
-${PermissionGroupDetailsFragmentDoc}`;
-export type PermissionGroupUpdateMutationFn = Apollo.MutationFunction<Types.PermissionGroupUpdateMutation, Types.PermissionGroupUpdateMutationVariables>;
-
-/**
- * __usePermissionGroupUpdateMutation__
- *
- * To run a mutation, you first call `usePermissionGroupUpdateMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `usePermissionGroupUpdateMutation` returns a tuple that includes:
- * - A mutate function that you can call at any time to execute the mutation
- * - An object with fields that represent the current status of the mutation's execution
- *
- * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
- *
- * @example
- * const [permissionGroupUpdateMutation, { data, loading, error }] = usePermissionGroupUpdateMutation({
- *   variables: {
- *      id: // value for 'id'
- *      input: // value for 'input'
- *   },
- * });
- */
-export function usePermissionGroupUpdateMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<Types.PermissionGroupUpdateMutation, Types.PermissionGroupUpdateMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<Types.PermissionGroupUpdateMutation, Types.PermissionGroupUpdateMutationVariables>(PermissionGroupUpdateDocument, options);
-      }
-export type PermissionGroupUpdateMutationHookResult = ReturnType<typeof usePermissionGroupUpdateMutation>;
-export type PermissionGroupUpdateMutationResult = Apollo.MutationResult<Types.PermissionGroupUpdateMutation>;
-export type PermissionGroupUpdateMutationOptions = Apollo.BaseMutationOptions<Types.PermissionGroupUpdateMutation, Types.PermissionGroupUpdateMutationVariables>;
-export const PermissionGroupListDocument = gql`
-    query PermissionGroupList($after: String, $before: String, $first: Int, $last: Int, $filter: PermissionGroupFilterInput, $sort: PermissionGroupSortingInput) {
-  permissionGroups(
-    after: $after
-    before: $before
-    first: $first
-    last: $last
-    filter: $filter
-    sortBy: $sort
-  ) {
-    edges {
-      node {
-        ...PermissionGroup
-      }
-    }
-    pageInfo {
-      ...PageInfo
-    }
-  }
-}
-    ${PermissionGroupFragmentDoc}
-${PageInfoFragmentDoc}`;
-
-/**
- * __usePermissionGroupListQuery__
- *
- * To run a query within a React component, call `usePermissionGroupListQuery` and pass it any options that fit your needs.
- * When your component renders, `usePermissionGroupListQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = usePermissionGroupListQuery({
- *   variables: {
- *      after: // value for 'after'
- *      before: // value for 'before'
- *      first: // value for 'first'
- *      last: // value for 'last'
- *      filter: // value for 'filter'
- *      sort: // value for 'sort'
- *   },
- * });
- */
-export function usePermissionGroupListQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>(PermissionGroupListDocument, options);
-      }
-export function usePermissionGroupListLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>(PermissionGroupListDocument, options);
-        }
-export type PermissionGroupListQueryHookResult = ReturnType<typeof usePermissionGroupListQuery>;
-export type PermissionGroupListLazyQueryHookResult = ReturnType<typeof usePermissionGroupListLazyQuery>;
-export type PermissionGroupListQueryResult = Apollo.QueryResult<Types.PermissionGroupListQuery, Types.PermissionGroupListQueryVariables>;
-export const PermissionGroupDetailsDocument = gql`
-    query PermissionGroupDetails($id: ID!, $userId: ID!) {
-  permissionGroup(id: $id) {
-    ...PermissionGroupDetails
-  }
-  user: me {
-    editableGroups {
-      id
-    }
-    userPermissions {
-      code
-      sourcePermissionGroups(userId: $userId) {
-        id
-      }
-    }
-  }
-}
-    ${PermissionGroupDetailsFragmentDoc}`;
-
-/**
- * __usePermissionGroupDetailsQuery__
- *
- * To run a query within a React component, call `usePermissionGroupDetailsQuery` and pass it any options that fit your needs.
- * When your component renders, `usePermissionGroupDetailsQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = usePermissionGroupDetailsQuery({
- *   variables: {
- *      id: // value for 'id'
- *      userId: // value for 'userId'
- *   },
- * });
- */
-export function usePermissionGroupDetailsQuery(baseOptions: ApolloReactHooks.QueryHookOptions<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>(PermissionGroupDetailsDocument, options);
-      }
-export function usePermissionGroupDetailsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>(PermissionGroupDetailsDocument, options);
-        }
-export type PermissionGroupDetailsQueryHookResult = ReturnType<typeof usePermissionGroupDetailsQuery>;
-export type PermissionGroupDetailsLazyQueryHookResult = ReturnType<typeof usePermissionGroupDetailsLazyQuery>;
-export type PermissionGroupDetailsQueryResult = Apollo.QueryResult<Types.PermissionGroupDetailsQuery, Types.PermissionGroupDetailsQueryVariables>;
 export const AddressValidationRulesDocument = gql`
     query addressValidationRules($countryCode: CountryCode!) {
   addressValidationRules(countryCode: $countryCode) {
@@ -4128,116 +4128,3 @@ export function useUpdatePrivateMetadataMutation(baseOptions?: ApolloReactHooks.
 export type UpdatePrivateMetadataMutationHookResult = ReturnType<typeof useUpdatePrivateMetadataMutation>;
 export type UpdatePrivateMetadataMutationResult = Apollo.MutationResult<Types.UpdatePrivateMetadataMutation>;
 export type UpdatePrivateMetadataMutationOptions = Apollo.BaseMutationOptions<Types.UpdatePrivateMetadataMutation, Types.UpdatePrivateMetadataMutationVariables>;
-export const SaveOnBoardingStateDocument = gql`
-    mutation SaveOnBoardingState($id: ID!, $input: [MetadataInput!]!) {
-  updateMetadata(id: $id, input: $input) {
-    errors {
-      ...MetadataError
-    }
-  }
-}
-    ${MetadataErrorFragmentDoc}`;
-export type SaveOnBoardingStateMutationFn = Apollo.MutationFunction<Types.SaveOnBoardingStateMutation, Types.SaveOnBoardingStateMutationVariables>;
-
-/**
- * __useSaveOnBoardingStateMutation__
- *
- * To run a mutation, you first call `useSaveOnBoardingStateMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `useSaveOnBoardingStateMutation` returns a tuple that includes:
- * - A mutate function that you can call at any time to execute the mutation
- * - An object with fields that represent the current status of the mutation's execution
- *
- * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
- *
- * @example
- * const [saveOnBoardingStateMutation, { data, loading, error }] = useSaveOnBoardingStateMutation({
- *   variables: {
- *      id: // value for 'id'
- *      input: // value for 'input'
- *   },
- * });
- */
-export function useSaveOnBoardingStateMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<Types.SaveOnBoardingStateMutation, Types.SaveOnBoardingStateMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<Types.SaveOnBoardingStateMutation, Types.SaveOnBoardingStateMutationVariables>(SaveOnBoardingStateDocument, options);
-      }
-export type SaveOnBoardingStateMutationHookResult = ReturnType<typeof useSaveOnBoardingStateMutation>;
-export type SaveOnBoardingStateMutationResult = Apollo.MutationResult<Types.SaveOnBoardingStateMutation>;
-export type SaveOnBoardingStateMutationOptions = Apollo.BaseMutationOptions<Types.SaveOnBoardingStateMutation, Types.SaveOnBoardingStateMutationVariables>;
-export const WelcomePageAnalyticsDocument = gql`
-    query WelcomePageAnalytics($channel: String!, $hasPermissionToManageOrders: Boolean!) {
-  salesToday: ordersTotal(period: TODAY, channel: $channel) @include(if: $hasPermissionToManageOrders) {
-    gross {
-      amount
-      currency
-    }
-  }
-}
-    `;
-
-/**
- * __useWelcomePageAnalyticsQuery__
- *
- * To run a query within a React component, call `useWelcomePageAnalyticsQuery` and pass it any options that fit your needs.
- * When your component renders, `useWelcomePageAnalyticsQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useWelcomePageAnalyticsQuery({
- *   variables: {
- *      channel: // value for 'channel'
- *      hasPermissionToManageOrders: // value for 'hasPermissionToManageOrders'
- *   },
- * });
- */
-export function useWelcomePageAnalyticsQuery(baseOptions: ApolloReactHooks.QueryHookOptions<Types.WelcomePageAnalyticsQuery, Types.WelcomePageAnalyticsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<Types.WelcomePageAnalyticsQuery, Types.WelcomePageAnalyticsQueryVariables>(WelcomePageAnalyticsDocument, options);
-      }
-export function useWelcomePageAnalyticsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<Types.WelcomePageAnalyticsQuery, Types.WelcomePageAnalyticsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<Types.WelcomePageAnalyticsQuery, Types.WelcomePageAnalyticsQueryVariables>(WelcomePageAnalyticsDocument, options);
-        }
-export type WelcomePageAnalyticsQueryHookResult = ReturnType<typeof useWelcomePageAnalyticsQuery>;
-export type WelcomePageAnalyticsLazyQueryHookResult = ReturnType<typeof useWelcomePageAnalyticsLazyQuery>;
-export type WelcomePageAnalyticsQueryResult = Apollo.QueryResult<Types.WelcomePageAnalyticsQuery, Types.WelcomePageAnalyticsQueryVariables>;
-export const WelcomePageNotificationsDocument = gql`
-    query welcomePageNotifications($channel: String!) {
-  productsOutOfStock: products(
-    filter: {stockAvailability: OUT_OF_STOCK}
-    channel: $channel
-  ) {
-    totalCount
-  }
-}
-    `;
-
-/**
- * __useWelcomePageNotificationsQuery__
- *
- * To run a query within a React component, call `useWelcomePageNotificationsQuery` and pass it any options that fit your needs.
- * When your component renders, `useWelcomePageNotificationsQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useWelcomePageNotificationsQuery({
- *   variables: {
- *      channel: // value for 'channel'
- *   },
- * });
- */
-export function useWelcomePageNotificationsQuery(baseOptions: ApolloReactHooks.QueryHookOptions<Types.WelcomePageNotificationsQuery, Types.WelcomePageNotificationsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<Types.WelcomePageNotificationsQuery, Types.WelcomePageNotificationsQueryVariables>(WelcomePageNotificationsDocument, options);
-      }
-export function useWelcomePageNotificationsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<Types.WelcomePageNotificationsQuery, Types.WelcomePageNotificationsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<Types.WelcomePageNotificationsQuery, Types.WelcomePageNotificationsQueryVariables>(WelcomePageNotificationsDocument, options);
-        }
-export type WelcomePageNotificationsQueryHookResult = ReturnType<typeof useWelcomePageNotificationsQuery>;
-export type WelcomePageNotificationsLazyQueryHookResult = ReturnType<typeof useWelcomePageNotificationsLazyQuery>;
-export type WelcomePageNotificationsQueryResult = Apollo.QueryResult<Types.WelcomePageNotificationsQuery, Types.WelcomePageNotificationsQueryVariables>;

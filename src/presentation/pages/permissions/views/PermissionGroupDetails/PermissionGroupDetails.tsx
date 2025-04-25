@@ -1,3 +1,16 @@
+import {
+  permissionGroupDetailsUrl,
+  PermissionGroupDetailsUrlDialog,
+  PermissionGroupDetailsUrlQueryParams,
+  permissionGroupListUrl,
+} from "@business/utils/permissions/urls";
+import {
+  arePermissionsExceeded,
+  channelsDiff,
+  checkIfUserBelongToPermissionGroup,
+  permissionsDiff,
+  usersDiff,
+} from "@business/utils/permissions/utils";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
   PermissionGroupDetailsQuery,
@@ -13,13 +26,13 @@ import useNotifier from "@dashboard/hooks/useNotifier";
 import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
-import MembersErrorDialog from "@dashboard/permissionGroups/components/MembersErrorDialog";
-import PermissionGroupDeleteDialog from "@dashboard/permissionGroups/components/PermissionGroupDeleteDialog";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import createSortHandler from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
+import MembersErrorDialog from "@presentation/pages/permissions/components/MembersErrorDialog";
+import PermissionGroupDeleteDialog from "@presentation/pages/permissions/components/PermissionGroupDeleteDialog";
 import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";
 import { Button } from "@presentation/shared//Button";
 import React from "react";
@@ -31,19 +44,6 @@ import {
   PermissionGroupDetailsPageFormData,
 } from "../../components/PermissionGroupDetailsPage";
 import UnassignMembersDialog from "../../components/UnassignMembersDialog";
-import {
-  permissionGroupDetailsUrl,
-  PermissionGroupDetailsUrlDialog,
-  PermissionGroupDetailsUrlQueryParams,
-  permissionGroupListUrl,
-} from "../../urls";
-import {
-  arePermissionsExceeded,
-  channelsDiff,
-  checkIfUserBelongToPermissionGroup,
-  permissionsDiff,
-  usersDiff,
-} from "../../utils";
 
 interface PermissionGroupDetailsProps {
   id: string;

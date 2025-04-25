@@ -1,4 +1,4 @@
-import { PluginListUrlFilters } from "@dashboard/business/utils/plugins/urls";
+import { PluginListUrlFilters } from "@dashboard/business/utils/permissions/urls";
 import { PluginConfigurationType } from "@dashboard/graphql";
 import {
   createFilterStructure,

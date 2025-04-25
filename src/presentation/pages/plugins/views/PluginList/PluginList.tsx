@@ -3,7 +3,7 @@ import {
   pluginListUrl,
   PluginListUrlDialog,
   PluginListUrlQueryParams,
-} from "@business/utils/plugins/urls";
+} from "@dashboard/business/utils/plugins/urls";
 import { usePluginsQuery } from "@dashboard/graphql";
 import { useChannelsSearchWithLoadMore } from "@dashboard/hooks/useChannelsSearchWithLoadMore";
 import useListSettings from "@dashboard/hooks/useListSettings";

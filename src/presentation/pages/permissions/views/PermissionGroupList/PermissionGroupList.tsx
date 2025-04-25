@@ -1,3 +1,7 @@
+import {
+  permissionGroupListUrl,
+  PermissionGroupListUrlQueryParams,
+} from "@business/utils/permissions/urls";
 import { usePermissionGroupListQuery } from "@dashboard/graphql";
 import useListSettings from "@dashboard/hooks/useListSettings";
 import useNavigator from "@dashboard/hooks/useNavigator";
@@ -13,7 +17,6 @@ import { getSortParams } from "@dashboard/utils/sort";
 import React from "react";
 
 import PermissionGroupListPage from "../../components/PermissionGroupListPage";
-import { permissionGroupListUrl, PermissionGroupListUrlQueryParams } from "../../urls";
 import { getSortQueryVariables } from "./sort";
 
 interface PermissionGroupListProps {

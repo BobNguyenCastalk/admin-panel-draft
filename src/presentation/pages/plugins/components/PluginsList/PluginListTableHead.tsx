@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { PluginListUrlSortField } from "@dashboard/business/utils/plugins/urls";
+import { PluginListUrlSortField } from "@business/utils/plugins/urls";
 import { SortPage } from "@dashboard/types";
 import { getArrowDirection } from "@dashboard/utils/sort";
 import { TableHead } from "@material-ui/core";

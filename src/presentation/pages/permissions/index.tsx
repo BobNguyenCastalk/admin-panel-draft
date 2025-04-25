@@ -1,3 +1,12 @@
+import {
+  MembersListUrlSortField,
+  permissionGroupAddPath,
+  permissionGroupDetailsPath,
+  PermissionGroupDetailsUrlQueryParams,
+  permissionGroupListPath,
+  PermissionGroupListUrlQueryParams,
+  PermissionGroupListUrlSortField,
+} from "@business/utils/permissions/urls";
 import { sectionNames } from "@dashboard/intl";
 import { asSortParams } from "@dashboard/utils/sort";
 import { Route } from "@presentation/shared//Router";
@@ -7,15 +16,6 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
-import {
-  MembersListUrlSortField,
-  permissionGroupAddPath,
-  permissionGroupDetailsPath,
-  PermissionGroupDetailsUrlQueryParams,
-  permissionGroupListPath,
-  PermissionGroupListUrlQueryParams,
-  PermissionGroupListUrlSortField,
-} from "./urls";
 import { PermissionGroupCreate } from "./views/PermissionGroupCreate";
 import { PermissionGroupDetails as PermissionGroupDetailsComponent } from "./views/PermissionGroupDetails";
 import PermissionGroupListComponent from "./views/PermissionGroupList";

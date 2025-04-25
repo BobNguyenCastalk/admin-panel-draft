@@ -1,8 +1,8 @@
+import { permissionGroupListUrl } from "@business/utils/permissions/urls";
 import { pluginListUrl } from "@dashboard/business/utils/plugins/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
-import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
 import { IntlShape } from "react-intl";
 

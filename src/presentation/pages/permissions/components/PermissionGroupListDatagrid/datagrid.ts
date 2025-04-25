@@ -1,5 +1,5 @@
+import { PermissionGroupListUrlSortField } from "@business/utils/permissions/urls";
 import { PermissionGroupFragment } from "@dashboard/graphql";
-import { PermissionGroupListUrlSortField } from "@dashboard/permissionGroups/urls";
 import { Sort } from "@dashboard/types";
 import { getColumnSortDirectionIcon } from "@dashboard/utils/columns/getColumnSortDirectionIcon";
 import { GridCell, Item } from "@glideapps/glide-data-grid";

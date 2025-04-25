@@ -3,7 +3,7 @@ import {
   PluginListUrlFilters,
   PluginListUrlFiltersEnum,
   PluginListUrlQueryParams,
-} from "@business/utils/plugins/urls";
+} from "@dashboard/business/utils/plugins/urls";
 import { PluginConfigurationType, PluginFilterInput } from "@dashboard/graphql";
 import { ChannelsWithLoadMoreProps } from "@dashboard/hooks/useChannelsSearch";
 import { maybe, parseBoolean } from "@dashboard/misc";

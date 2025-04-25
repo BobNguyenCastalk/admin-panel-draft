@@ -1,6 +1,10 @@
 // @ts-strict-ignore
-import { pluginUrl, PluginUrlDialog, PluginUrlQueryParams } from "@business/utils/plugins/urls";
-import { isSecretField } from "@business/utils/plugins/utils";
+import {
+  pluginUrl,
+  PluginUrlDialog,
+  PluginUrlQueryParams,
+} from "@dashboard/business/utils/plugins/urls";
+import { isSecretField } from "@dashboard/business/utils/plugins/utils";
 import {
   ConfigurationItemFragment,
   ConfigurationItemInput,
