@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { channelAddUrl, channelUrl } from "@dashboard/channels/urls";
+import { channelAddUrl, channelUrl } from "@dashboard/business/utils/channels/urls";
 import { ChannelDetailsFragment } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { renderCollection, stopPropagation } from "@dashboard/misc";

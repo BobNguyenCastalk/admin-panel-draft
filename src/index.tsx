@@ -8,6 +8,7 @@ import { PermissionEnum } from "@dashboard/graphql";
 import useAppState from "@dashboard/hooks/useAppState";
 import PermissionGroupSection from "@dashboard/presentation/pages/permissions";
 import { ThemeProvider } from "@dashboard/theme";
+import ChannelsSection from "@presentation/pages/channels";
 import ConfigurationSection from "@presentation/pages/configuration";
 import PluginsSection from "@presentation/pages/plugins";
 import StaffSection from "@presentation/pages/staffs";
@@ -37,9 +38,8 @@ import TagManager from "react-gtm-module";
 import { useIntl } from "react-intl";
 import { Switch } from "react-router-dom";
 
+import { channelsSection } from "./business/utils/channels/urls";
 import { getConfigMenuItemsPermissions } from "./business/utils/configuration/utils";
-import ChannelsSection from "./channels";
-import { channelsSection } from "./channels/urls";
 import { DEMO_MODE, GTM_ID } from "./config";
 import AppStateProvider from "./containers/AppState";
 import BackgroundTasksProvider from "./containers/BackgroundTasks";

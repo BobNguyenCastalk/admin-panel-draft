@@ -1,7 +1,7 @@
 import { stringifyQs } from "@dashboard/utils/urls";
 import urlJoin from "url-join";
 
-import { Dialog, Filters, SingleAction, Sort } from "../types";
+import { Dialog, Filters, SingleAction, Sort } from "../../../types";
 
 export enum ChannelsListUrlFiltersEnum {
   query = "query",

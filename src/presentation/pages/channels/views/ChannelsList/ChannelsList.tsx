@@ -1,5 +1,10 @@
 // @ts-strict-ignore
-import { getChannelsCurrencyChoices } from "@dashboard/channels/utils";
+import {
+  channelsListUrl,
+  ChannelsListUrlDialog,
+  ChannelsListUrlQueryParams,
+} from "@business/utils/channels/urls";
+import { getChannelsCurrencyChoices } from "@dashboard/business/utils/channels/utils";
 import {
   ChannelDeleteMutation,
   useChannelDeleteMutation,
@@ -14,7 +19,6 @@ import { useIntl } from "react-intl";
 
 import ChannelDeleteDialog from "../../components/ChannelDeleteDialog";
 import ChannelsListPage from "../../pages/ChannelsListPage";
-import { channelsListUrl, ChannelsListUrlDialog, ChannelsListUrlQueryParams } from "../../urls";
 
 interface ChannelsListProps {
   params: ChannelsListUrlQueryParams;

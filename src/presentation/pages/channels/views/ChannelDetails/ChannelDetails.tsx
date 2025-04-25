@@ -1,8 +1,11 @@
 // @ts-strict-ignore
-import ChannelDeleteDialog from "@dashboard/channels/components/ChannelDeleteDialog";
-import { FormData } from "@dashboard/channels/components/ChannelForm/ChannelForm";
-import { getChannelsCurrencyChoices } from "@dashboard/channels/utils";
-import { useChannelWarehousesReorder } from "@dashboard/channels/views/ChannelDetails/useChannelWarehouseReorder";
+import {
+  channelsListUrl,
+  channelUrl,
+  ChannelUrlDialog,
+  ChannelUrlQueryParams,
+} from "@business/utils/channels/urls";
+import { getChannelsCurrencyChoices } from "@dashboard/business/utils/channels/utils";
 import {
   ChannelDeleteMutation,
   ChannelErrorFragment,
@@ -22,12 +25,14 @@ import { extractMutationErrors } from "@dashboard/misc";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
+import ChannelDeleteDialog from "@presentation/pages/channels/components/ChannelDeleteDialog";
+import { FormData } from "@presentation/pages/channels/components/ChannelForm/ChannelForm";
+import { useChannelWarehousesReorder } from "@presentation/pages/channels/views/ChannelDetails/useChannelWarehouseReorder";
 import { WindowTitle } from "@presentation/shared//WindowTitle";
 import React from "react";
 import { useIntl } from "react-intl";
 
 import ChannelDetailsPage from "../../pages/ChannelDetailsPage";
-import { channelsListUrl, channelUrl, ChannelUrlDialog, ChannelUrlQueryParams } from "../../urls";
 
 interface ChannelDetailsProps {
   id: string;

@@ -1,3 +1,10 @@
+import {
+  channelAddPath,
+  channelPath,
+  channelsListPath,
+  ChannelsListUrlQueryParams,
+  ChannelsListUrlSortField,
+} from "@business/utils/channels/urls";
 import { sectionNames } from "@dashboard/intl";
 import { asSortParams } from "@dashboard/utils/sort";
 import { Route } from "@presentation/shared//Router";
@@ -7,13 +14,6 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
-import {
-  channelAddPath,
-  channelPath,
-  channelsListPath,
-  ChannelsListUrlQueryParams,
-  ChannelsListUrlSortField,
-} from "./urls";
 import ChannelCreateComponent from "./views/ChannelCreate";
 import ChannelDetailsComponent from "./views/ChannelDetails";
 import ChannelsListComponent from "./views/ChannelsList";

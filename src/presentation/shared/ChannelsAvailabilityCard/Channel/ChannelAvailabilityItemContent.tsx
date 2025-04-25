@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { ChannelData } from "@dashboard/channels/utils";
+import { ChannelData } from "@dashboard/business/utils/channels/utils";
 import useCurrentDate from "@dashboard/hooks/useCurrentDate";
 import useDateLocalize from "@dashboard/hooks/useDateLocalize";
 import { getFormErrors, getProductErrorMessage } from "@dashboard/utils/errors";

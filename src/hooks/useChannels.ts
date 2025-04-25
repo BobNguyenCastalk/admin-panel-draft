@@ -1,5 +1,5 @@
-import { ChannelsAction } from "@dashboard/channels/urls";
-import { Channel } from "@dashboard/channels/utils";
+import { ChannelsAction } from "@dashboard/business/utils/channels/urls";
+import { Channel } from "@dashboard/business/utils/channels/utils";
 import useListActions from "@dashboard/hooks/useListActions";
 import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import { useExitFormDialog, WithFormId } from "@presentation/shared//Form";

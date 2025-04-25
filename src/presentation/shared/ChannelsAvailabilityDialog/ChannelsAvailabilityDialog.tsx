@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { Channel } from "@dashboard/channels/utils";
+import { Channel } from "@dashboard/business/utils/channels/utils";
 import ActionDialog from "@presentation/shared//ActionDialog";
 import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
 import React from "react";

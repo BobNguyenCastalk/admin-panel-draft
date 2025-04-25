@@ -1,4 +1,5 @@
 // @ts-strict-ignore
+import { channelPath } from "@business/utils/channels/urls";
 import { FormData } from "@dashboard/channels/components/ChannelForm/ChannelForm";
 import {
   ChannelCreateInput,
@@ -18,7 +19,6 @@ import React from "react";
 import { useIntl } from "react-intl";
 
 import ChannelDetailsPage from "../../pages/ChannelDetailsPage";
-import { channelPath } from "../../urls";
 import { useSaveChannel } from "./useSaveChannel";
 
 export const ChannelCreateView = () => {

@@ -1,9 +1,9 @@
 // @ts-strict-ignore
+import { channelsListUrl } from "@dashboard/business/utils/channels/urls";
+import { validateChannelFormData } from "@dashboard/business/utils/channels/validation";
 import ChannelAllocationStrategy from "@dashboard/channels/components/ChannelAllocationStrategy";
 import ShippingZones from "@dashboard/channels/components/ShippingZones";
 import Warehouses from "@dashboard/channels/components/Warehouses";
-import { channelsListUrl } from "@dashboard/channels/urls";
-import { validateChannelFormData } from "@dashboard/channels/validation";
 import {
   AllocationStrategyEnum,
   ChannelDetailsFragment,
