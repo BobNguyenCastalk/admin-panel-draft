@@ -22,6 +22,8 @@
       "@dashboard/*": ["src/*"],
       "@presentation/*": ["src/presentation/*"],
       "@business/*": ["src/business/*"],
+      "@types/*": ["src/types/*"],
+      "@constants/*": ["src/constants/*"],
       "@test/*": ["testUtils/*"]
     }
   },

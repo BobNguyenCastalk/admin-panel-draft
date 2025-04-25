@@ -8929,24 +8929,6 @@ export enum WeightUnitsEnum {
   TONNE = 'TONNE'
 }
 
-export type RequestPasswordResetMutationVariables = Exact<{
-  email: Scalars['String'];
-  redirectUrl: Scalars['String'];
-}>;
-
-
-export type RequestPasswordResetMutation = { __typename: 'Mutation', requestPasswordReset: { __typename: 'RequestPasswordReset', errors: Array<{ __typename: 'AccountError', code: AccountErrorCode, field: string | null, addressType: AddressTypeEnum | null, message: string | null }> } | null };
-
-export type AvailableExternalAuthenticationsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type AvailableExternalAuthenticationsQuery = { __typename: 'Query', shop: { __typename: 'Shop', availableExternalAuthentications: Array<{ __typename: 'ExternalAuthentication', id: string, name: string | null }> } };
-
-export type UserDetailsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type UserDetailsQuery = { __typename: 'Query', me: { __typename: 'User', id: string, email: string, firstName: string, lastName: string, isStaff: boolean, dateJoined: any, restrictedAccessToChannels: boolean, metadata: Array<{ __typename: 'MetadataItem', key: string, value: string }>, userPermissions: Array<{ __typename: 'UserPermission', code: PermissionEnum, name: string }> | null, avatar: { __typename: 'Image', url: string } | null, accessibleChannels: Array<{ __typename: 'Channel', id: string, isActive: boolean, name: string, slug: string, currencyCode: string, defaultCountry: { __typename: 'CountryDisplay', code: string, country: string }, stockSettings: { __typename: 'StockSettings', allocationStrategy: AllocationStrategyEnum } }> | null } | null };
-
 export type ChannelCreateMutationVariables = Exact<{
   input: ChannelCreateInput;
 }>;
@@ -9571,6 +9553,24 @@ export type WebhookFragment = { __typename: 'Webhook', id: string, name: string 
 export type WebhookDetailsFragment = { __typename: 'Webhook', secretKey: string | null, targetUrl: string, subscriptionQuery: string | null, customHeaders: any | null, id: string, name: string | null, isActive: boolean, syncEvents: Array<{ __typename: 'WebhookEventSync', eventType: WebhookEventTypeSyncEnum }>, asyncEvents: Array<{ __typename: 'WebhookEventAsync', eventType: WebhookEventTypeAsyncEnum }>, app: { __typename: 'App', id: string, name: string | null } };
 
 export type WeightFragment = { __typename: 'Weight', unit: WeightUnitsEnum, value: number };
+
+export type RequestPasswordResetMutationVariables = Exact<{
+  email: Scalars['String'];
+  redirectUrl: Scalars['String'];
+}>;
+
+
+export type RequestPasswordResetMutation = { __typename: 'Mutation', requestPasswordReset: { __typename: 'RequestPasswordReset', errors: Array<{ __typename: 'AccountError', code: AccountErrorCode, field: string | null, addressType: AddressTypeEnum | null, message: string | null }> } | null };
+
+export type AvailableExternalAuthenticationsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AvailableExternalAuthenticationsQuery = { __typename: 'Query', shop: { __typename: 'Shop', availableExternalAuthentications: Array<{ __typename: 'ExternalAuthentication', id: string, name: string | null }> } };
+
+export type UserDetailsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type UserDetailsQuery = { __typename: 'Query', me: { __typename: 'User', id: string, email: string, firstName: string, lastName: string, isStaff: boolean, dateJoined: any, restrictedAccessToChannels: boolean, metadata: Array<{ __typename: 'MetadataItem', key: string, value: string }>, userPermissions: Array<{ __typename: 'UserPermission', code: PermissionEnum, name: string }> | null, avatar: { __typename: 'Image', url: string } | null, accessibleChannels: Array<{ __typename: 'Channel', id: string, isActive: boolean, name: string, slug: string, currencyCode: string, defaultCountry: { __typename: 'CountryDisplay', code: string, country: string }, stockSettings: { __typename: 'StockSettings', allocationStrategy: AllocationStrategyEnum } }> | null } | null };
 
 export type MenuCreateMutationVariables = Exact<{
   input: MenuCreateInput;

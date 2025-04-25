@@ -1,18 +1,18 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
 import { parseAuthError } from "@business/utils/auth/errors";
-import {
-  ExternalLoginInput,
-  RequestExternalLoginInput,
-  RequestExternalLogoutInput,
-  UserContext,
-  UserContextError,
-} from "@business/utils/auth/types";
 import { displayDemoMessage } from "@business/utils/auth/utils";
 import { DEMO_MODE } from "@dashboard/config";
 import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
 import useLocalStorage from "@dashboard/hooks/useLocalStorage";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
+import {
+  ExternalLoginInput,
+  RequestExternalLoginInput,
+  RequestExternalLogoutInput,
+  UserContext,
+  UserContextError,
+} from "@dashboard/types/auth";
 import {
   checkIfCredentialsExist,
   isSupported as isCredentialsManagementAPISupported,

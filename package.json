@@ -231,6 +231,8 @@
       "@locale(.*)$": "<rootDir>/locale/$1",
       "@presentation(.*)$": "<rootDir>/src/presentation/$1",
       "@business(.*)$": "<rootDir>/src/business/$1",
+      "@types(.*)$": "<rootDir>/src/types/$1",
+      "@constants(.*)$": "<rootDir>/src/constants/$1",
       "@dashboard(.*)$": "<rootDir>/src/$1",
       "@test/(.*)$": "<rootDir>/testUtils/$1",
       "^@material-ui/core$": "<rootDir>/node_modules/@material-ui/core",

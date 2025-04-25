@@ -212,6 +212,8 @@ export default defineConfig(({ command, mode }) => {
         "@presentation": path.resolve(__dirname, "./src/presentation"),
         "@business": path.resolve(__dirname, "./src/business"),
         "@dashboard": path.resolve(__dirname, "./src"),
+        "@types": path.resolve(__dirname, "./src/types"),
+        "@constants": path.resolve(__dirname, "./src/constants"),
         src: path.resolve(__dirname, "./src"),
         /*
           Moment.js/react-moment does not fully suport ES modules.

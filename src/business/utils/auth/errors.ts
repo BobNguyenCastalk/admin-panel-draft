@@ -2,7 +2,7 @@ import { ApolloError } from "@apollo/client";
 import { findValueInEnum } from "@dashboard/misc";
 import { GraphQLError } from "graphql";
 
-import { UserContextError } from "./types";
+import { UserContextError } from "../../../types/auth";
 
 export enum JWTError {
   invalid = "InvalidTokenError",
