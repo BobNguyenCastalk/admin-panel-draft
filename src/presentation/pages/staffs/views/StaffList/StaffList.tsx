@@ -1,4 +1,10 @@
 import { newPasswordUrl } from "@business/utils/auth/urls";
+import {
+  staffListUrl,
+  StaffListUrlDialog,
+  StaffListUrlQueryParams,
+  staffMemberDetailsUrl,
+} from "@business/utils/staffs/urls";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { useFlag } from "@dashboard/featureFlags";
 import { useStaffListQuery, useStaffMemberAddMutation } from "@dashboard/graphql";
@@ -30,12 +36,6 @@ import urlJoin from "url-join";
 
 import StaffAddMemberDialog, { AddMemberFormData } from "../../components/StaffAddMemberDialog";
 import StaffListPage from "../../components/StaffListPage";
-import {
-  staffListUrl,
-  StaffListUrlDialog,
-  StaffListUrlQueryParams,
-  staffMemberDetailsUrl,
-} from "../../urls";
 import { getFilterOpts, getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
 import { getSortQueryVariables } from "./sort";
 

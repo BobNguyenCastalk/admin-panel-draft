@@ -1,8 +1,8 @@
+import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";
 import { commonStatusMessages } from "@dashboard/intl";
 import { getStatusColor, getUserName } from "@dashboard/misc";
-import { StaffMember, StaffMembers } from "@dashboard/staff/types";
-import { StaffListUrlSortField } from "@dashboard/staff/urls";
 import { Sort } from "@dashboard/types";
+import { StaffMember, StaffMembers } from "@dashboard/types/staffs";
 import { getColumnSortDirectionIcon } from "@dashboard/utils/columns/getColumnSortDirectionIcon";
 import { GridCell, Item } from "@glideapps/glide-data-grid";
 import {

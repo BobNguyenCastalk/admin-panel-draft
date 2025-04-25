@@ -1,4 +1,11 @@
 // @ts-strict-ignore
+import { useProfileOperations, useStaffUserOperations } from "@business/hooks/staffs";
+import {
+  staffListUrl,
+  staffMemberDetailsUrl,
+  StaffMemberDetailsUrlQueryParams,
+} from "@business/utils/staffs/urls";
+import { groupsDiff } from "@business/utils/staffs/utils";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
 import usePermissionGroupSearch from "@dashboard/graphql/searches/usePermissionGroupSearch";
@@ -17,9 +24,6 @@ import StaffDetailsPage, {
   StaffDetailsFormData,
 } from "../components/StaffDetailsPage/StaffDetailsPage";
 import StaffPasswordResetDialog from "../components/StaffPasswordResetDialog";
-import { useProfileOperations, useStaffUserOperations } from "../hooks";
-import { staffListUrl, staffMemberDetailsUrl, StaffMemberDetailsUrlQueryParams } from "../urls";
-import { groupsDiff } from "../utils";
 
 interface OrderListProps {
   id: string;

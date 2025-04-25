@@ -1,8 +1,8 @@
+import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import { sectionNames } from "@dashboard/intl";
-import { StaffMembers } from "@dashboard/staff/types";
-import { StaffListUrlSortField } from "@dashboard/staff/urls";
 import { FilterPagePropsWithPresets, ListProps, SortPage } from "@dashboard/types";
+import { StaffMembers } from "@dashboard/types/staffs";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { useContextualLink } from "@presentation/shared//AppLayout/ContextualLinks/useContextualLink";
 import { ListFilters } from "@presentation/shared//AppLayout/ListFilters";

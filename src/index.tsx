@@ -10,6 +10,7 @@ import PermissionGroupSection from "@dashboard/presentation/pages/permissions";
 import { ThemeProvider } from "@dashboard/theme";
 import ConfigurationSection from "@presentation/pages/configuration";
 import PluginsSection from "@presentation/pages/plugins";
+import StaffSection from "@presentation/pages/staffs";
 import { WelcomePage } from "@presentation/pages/welcome";
 import AppLayout from "@presentation/shared/AppLayout";
 import useAppChannel, {
@@ -51,7 +52,6 @@ import Auth from "./presentation/pages/auth";
 import LoginLoading from "./presentation/pages/auth/components/LoginLoading/LoginLoading";
 import SectionRoute from "./presentation/pages/auth/components/SectionRoute";
 import errorTracker from "./services/errorTracking";
-import StaffSection from "./staff";
 import { paletteOverrides, themeOverrides } from "./themeOverrides";
 
 if (GTM_ID) {

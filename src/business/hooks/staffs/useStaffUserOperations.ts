@@ -4,7 +4,7 @@ import useNotifier from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
-import { staffListUrl } from "../urls";
+import { staffListUrl } from "../../utils/staffs/urls";
 
 export const useStaffUserOperations = () => {
   const notify = useNotifier();

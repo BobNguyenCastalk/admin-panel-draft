@@ -1,5 +1,5 @@
+import { staffMemberDetailsUrl } from "@dashboard/business/utils/staffs/urls";
 import { useUser } from "@dashboard/presentation/pages/auth";
-import { staffMemberDetailsUrl } from "@dashboard/staff/urls";
 import { useTheme } from "@dashboard/theme";
 import { useTheme as useLegacyTheme } from "@saleor/macaw-ui";
 import {

@@ -1,8 +1,11 @@
+import {
+  StaffListUrlSortField,
+  staffMemberDetailsUrl,
+} from "@dashboard/business/utils/staffs/urls";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
 import useNavigator from "@dashboard/hooks/useNavigator";
-import { StaffMember, StaffMembers } from "@dashboard/staff/types";
-import { StaffListUrlSortField, staffMemberDetailsUrl } from "@dashboard/staff/urls";
 import { ListProps, SortPage } from "@dashboard/types";
+import { StaffMember, StaffMembers } from "@dashboard/types/staffs";
 import { Item } from "@glideapps/glide-data-grid";
 import { useColumns } from "@presentation/shared//Datagrid/ColumnPicker/useColumns";
 import Datagrid from "@presentation/shared//Datagrid/Datagrid";

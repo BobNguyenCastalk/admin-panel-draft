@@ -1,3 +1,10 @@
+import {
+  staffListPath,
+  StaffListUrlQueryParams,
+  StaffListUrlSortField,
+  staffMemberDetailsPath,
+  StaffMemberDetailsUrlQueryParams,
+} from "@business/utils/staffs/urls";
 import { sectionNames } from "@dashboard/intl";
 import { asSortParams } from "@dashboard/utils/sort";
 import { ConditionalStaffMembersFilterProvider } from "@presentation/shared//ConditionalFilter";
@@ -8,13 +15,6 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
-import {
-  staffListPath,
-  StaffListUrlQueryParams,
-  StaffListUrlSortField,
-  staffMemberDetailsPath,
-  StaffMemberDetailsUrlQueryParams,
-} from "./urls";
 import StaffDetailsComponent from "./views/StaffDetails";
 import StaffListComponent from "./views/StaffList";
 

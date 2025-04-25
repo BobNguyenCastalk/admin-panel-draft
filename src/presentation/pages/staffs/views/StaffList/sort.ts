@@ -1,5 +1,5 @@
+import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";
 import { UserSortField } from "@dashboard/graphql";
-import { StaffListUrlSortField } from "@dashboard/staff/urls";
 import { createGetSortQueryVariables } from "@dashboard/utils/sort";
 
 export function getSortQueryField(sort: StaffListUrlSortField): UserSortField | undefined {

@@ -9,7 +9,7 @@ import {
   Pagination,
   Sort,
   TabActionDialog,
-} from "../types";
+} from "../../../types";
 
 const staffSection = "/staff/";
 

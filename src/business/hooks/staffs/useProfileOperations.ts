@@ -9,7 +9,7 @@ import useNotifier from "@dashboard/hooks/useNotifier";
 import { commonMessages, errorMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
-import { staffMemberDetailsUrl } from "../urls";
+import { staffMemberDetailsUrl } from "../../utils/staffs/urls";
 
 interface UseUserMutationProps {
   refetch: () => void;
