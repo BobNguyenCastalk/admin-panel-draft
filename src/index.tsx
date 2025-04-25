@@ -7,9 +7,9 @@ import AuthProvider from "@business/providers/auth/AuthProvider";
 import { PermissionEnum } from "@dashboard/graphql";
 import useAppState from "@dashboard/hooks/useAppState";
 import { ThemeProvider } from "@dashboard/theme";
-import { OnboardingProvider } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import ConfigurationSection from "@presentation/pages/configuration";
 import PluginsSection from "@presentation/pages/plugins";
+import { WelcomePage } from "@presentation/pages/welcome";
 import AppLayout from "@presentation/shared/AppLayout";
 import useAppChannel, {
   AppChannelProvider,
@@ -56,7 +56,6 @@ import SectionRoute from "./presentation/pages/auth/components/SectionRoute";
 import errorTracker from "./services/errorTracking";
 import StaffSection from "./staff";
 import { paletteOverrides, themeOverrides } from "./themeOverrides";
-import { WelcomePage } from "./welcomePage";
 
 if (GTM_ID) {
   TagManager.initialize({ gtmId: GTM_ID });
@@ -102,9 +101,7 @@ const App: React.FC = () => (
                                   <NavigatorSearchProvider>
                                     <SavebarRefProvider>
                                       <FeatureFlagsProviderWithUser>
-                                        <OnboardingProvider>
-                                          <Routes />
-                                        </OnboardingProvider>
+                                        <Routes />
                                       </FeatureFlagsProviderWithUser>
                                     </SavebarRefProvider>
                                   </NavigatorSearchProvider>

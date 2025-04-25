@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import { FetcherOpts, FetcherParams } from "@graphiql/toolkit";
 import { useDashboardTheme } from "@presentation/shared//GraphiQL/styles";
 import { DashboardModal } from "@presentation/shared//Modal";
@@ -17,13 +16,8 @@ export const DevModePanel: React.FC = () => {
   const intl = useIntl();
   const subtitle = useContextualLink("dev_panel");
   const { rootStyle } = useDashboardTheme();
-  const { markOnboardingStepAsCompleted } = useOnboarding();
   const { isDevModeVisible, variables, devModeContent, setDevModeVisibility } = useDevModeContext();
   const fetcher = async (graphQLParams: FetcherParams, opts: FetcherOpts) => {
-    if (graphQLParams.operationName !== "IntrospectionQuery") {
-      markOnboardingStepAsCompleted("graphql-playground");
-    }
-
     const baseFetcher = getFetcher(opts);
 
     const result = await baseFetcher(graphQLParams, opts); // Call the base fetcher
