@@ -1,4 +1,5 @@
 // @ts-strict-ignore
+import { transformFormToAddressInput } from "@dashboard/business/misc";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import {
   AccountErrorCode,
@@ -6,7 +7,6 @@ import {
   AddressInput,
   AddressTypeEnum,
 } from "@dashboard/graphql";
-import { transformFormToAddressInput } from "@dashboard/misc";
 import { add, remove } from "@dashboard/utils/lists";
 import { useState } from "react";
 

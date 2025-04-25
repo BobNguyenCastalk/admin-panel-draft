@@ -8,9 +8,9 @@ import {
   QueryResult,
   useQuery as useBaseQuery,
 } from "@apollo/client";
+import { RequireAtLeastOne } from "@dashboard/business/misc";
 import { PrefixedPermissions } from "@dashboard/graphql/extendedTypes";
 import { PermissionEnum, UserPermissionFragment } from "@dashboard/graphql/types.generated";
-import { RequireAtLeastOne } from "@dashboard/misc";
 import { handleQueryAuthError, useUser } from "@dashboard/presentation/pages/auth";
 import { DocumentNode } from "graphql";
 import { useEffect } from "react";

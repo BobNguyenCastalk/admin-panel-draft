@@ -21,19 +21,19 @@ import Fuse from "fuse.js";
 import moment from "moment-timezone";
 import { IntlShape } from "react-intl";
 
-import { AddressType, AddressTypeInput } from "./customers/types";
 import {
   commonStatusMessages,
   errorMessages,
   orderStatusMessages,
   paymentStatusMessages,
-} from "./intl";
+} from "../constants/common/intl";
 import {
   MutationResultAdditionalProps,
   PartialMutationProviderOutput,
   StatusType,
   UserError,
-} from "./types";
+} from "../types";
+import { AddressType, AddressTypeInput } from "./customers/types";
 
 export type RequireAtLeastOne<T, Keys extends keyof T = keyof T> = Pick<T, Exclude<keyof T, Keys>> &
   { [K in Keys]-?: Required<Pick<T, K>> }[Keys];

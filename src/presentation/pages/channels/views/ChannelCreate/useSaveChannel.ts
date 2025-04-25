@@ -1,4 +1,5 @@
 import { MutationFunction } from "@apollo/client";
+import { extractMutationErrors } from "@dashboard/business/misc";
 import { ChannelWarehouses } from "@dashboard/channels/pages/ChannelDetailsPage/types";
 import {
   ChannelCreateInput,
@@ -7,7 +8,6 @@ import {
   Exact,
   ReorderInput,
 } from "@dashboard/graphql";
-import { extractMutationErrors } from "@dashboard/misc";
 import { useUser } from "@dashboard/presentation/pages/auth";
 
 import { calculateItemsOrderMoves } from "../ChannelDetails/handlers";

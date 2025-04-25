@@ -1,5 +1,5 @@
 import "@saleor/macaw-ui-next/style";
-import "./index.css";
+import "@assets/styles/index.css";
 
 import { ApolloProvider } from "@apollo/client";
 import { useAuthRedirection } from "@business/hooks/auth/useAuthRedirection";
@@ -40,17 +40,17 @@ import { Switch } from "react-router-dom";
 
 import { channelsSection } from "./business/utils/channels/urls";
 import { getConfigMenuItemsPermissions } from "./business/utils/configuration/utils";
-import { DEMO_MODE, GTM_ID } from "./config";
+import { DEMO_MODE, GTM_ID } from "./configs";
+import { commonMessages } from "./constants/common/intl";
 import AppStateProvider from "./containers/AppState";
 import BackgroundTasksProvider from "./containers/BackgroundTasks";
 import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvider";
 import { apolloClient, saleorClient } from "./graphql/client";
 import { useLocationState } from "./hooks/useLocationState";
-import { commonMessages } from "./intl";
-import { NotFound } from "./NotFound";
 import Auth from "./presentation/pages/auth";
 import LoginLoading from "./presentation/pages/auth/components/LoginLoading/LoginLoading";
 import SectionRoute from "./presentation/pages/auth/components/SectionRoute";
+import { NotFound } from "./presentation/shared/NotFound";
 import errorTracker from "./services/errorTracking";
 import { paletteOverrides, themeOverrides } from "./themeOverrides";
 

@@ -1,4 +1,5 @@
 // @ts-strict-ignore
+import { maybe } from "@dashboard/business/misc";
 import {
   pluginListUrl,
   PluginListUrlDialog,
@@ -13,7 +14,6 @@ import usePaginator, {
   createPaginationState,
   PaginatorContext,
 } from "@dashboard/hooks/usePaginator";
-import { maybe } from "@dashboard/misc";
 import { ListViews } from "@dashboard/types";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import createFilterHandlers from "@dashboard/utils/handlers/filterHandlers";

@@ -1,5 +1,5 @@
+import { findValueInEnum, parseBoolean } from "@dashboard/business/misc";
 import { OrderDirection } from "@dashboard/graphql";
-import { findValueInEnum, parseBoolean } from "@dashboard/misc";
 import { TableCellHeaderArrowDirection } from "@presentation/shared/TableCellHeader";
 
 import { Sort } from "../types";

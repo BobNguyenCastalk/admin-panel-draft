@@ -1,6 +1,6 @@
 // @ts-strict-ignore
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { FileFragment } from "@dashboard/graphql";
-import { commonMessages } from "@dashboard/intl";
 import { Box, Button, Skeleton, Text, TrashBinIcon } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

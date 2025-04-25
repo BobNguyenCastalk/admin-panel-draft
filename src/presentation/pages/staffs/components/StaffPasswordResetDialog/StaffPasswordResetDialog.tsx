@@ -1,8 +1,8 @@
 // @ts-strict-ignore
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import { AccountErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import { buttonMessages } from "@dashboard/intl";
 import { DialogProps } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getAccountErrorMessage from "@dashboard/utils/errors/account";

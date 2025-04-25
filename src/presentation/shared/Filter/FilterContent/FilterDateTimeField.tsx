@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { splitDateTime } from "@dashboard/misc";
+import { splitDateTime } from "@dashboard/business/misc";
 import { TextField } from "@material-ui/core";
 import { FieldType, FilterFieldBaseProps } from "@presentation/shared//Filter";
 import Arrow from "@presentation/shared//Filter/Arrow";

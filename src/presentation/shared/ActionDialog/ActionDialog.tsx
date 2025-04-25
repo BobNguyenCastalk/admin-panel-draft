@@ -1,4 +1,4 @@
-import { buttonMessages } from "@dashboard/intl";
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import { DialogProps } from "@dashboard/types";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
 import { Box } from "@saleor/macaw-ui-next";

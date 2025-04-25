@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { getUserInitials } from "@dashboard/misc";
+import { getUserInitials } from "@dashboard/business/misc";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { TextField } from "@material-ui/core";
 import { Button } from "@presentation/shared//Button";

@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import { buttonMessages } from "@dashboard/intl";
-import { getById } from "@dashboard/misc";
+import { getById } from "@dashboard/business/misc";
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
 import { Box, Spinner } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";

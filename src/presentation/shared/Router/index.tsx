@@ -1,4 +1,4 @@
-import { getAppMountUri } from "@dashboard/config";
+import { getAppMountUri } from "@dashboard/configs";
 import * as Sentry from "@sentry/react";
 import { createBrowserHistory } from "history";
 import React from "react";

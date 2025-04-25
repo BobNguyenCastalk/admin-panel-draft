@@ -5,7 +5,8 @@ import {
   StaffListUrlQueryParams,
   staffMemberDetailsUrl,
 } from "@business/utils/staffs/urls";
-import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
+import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/configs";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { useFlag } from "@dashboard/featureFlags";
 import { useStaffListQuery, useStaffMemberAddMutation } from "@dashboard/graphql";
 import usePermissionGroupSearch from "@dashboard/graphql/searches/usePermissionGroupSearch";
@@ -18,7 +19,6 @@ import usePaginator, {
   createPaginationState,
   PaginatorContext,
 } from "@dashboard/hooks/usePaginator";
-import { commonMessages } from "@dashboard/intl";
 import { ListViews } from "@dashboard/types";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import createFilterHandlers from "@dashboard/utils/handlers/filterHandlers";

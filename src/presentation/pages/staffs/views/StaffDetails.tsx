@@ -6,11 +6,11 @@ import {
   StaffMemberDetailsUrlQueryParams,
 } from "@business/utils/staffs/urls";
 import { groupsDiff } from "@business/utils/staffs/utils";
-import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
+import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/business/misc";
+import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/configs";
 import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
 import usePermissionGroupSearch from "@dashboard/graphql/searches/usePermissionGroupSearch";
 import useNavigator from "@dashboard/hooks/useNavigator";
-import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import ActionDialog from "@presentation/shared//ActionDialog";

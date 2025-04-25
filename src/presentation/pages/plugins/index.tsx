@@ -5,7 +5,7 @@ import {
   pluginPath,
   PluginUrlQueryParams,
 } from "@dashboard/business/utils/plugins/urls";
-import { sectionNames } from "@dashboard/intl";
+import { sectionNames } from "@dashboard/constants/common/intl";
 import { asSortParams } from "@dashboard/utils/sort";
 import { Route } from "@presentation/shared//Router";
 import { WindowTitle } from "@presentation/shared/WindowTitle";

@@ -1,3 +1,4 @@
+import { RequireOnlyOne } from "@dashboard/business/misc";
 import {
   ChannelDetailsFragment,
   ChannelFragment,
@@ -9,7 +10,6 @@ import {
   ShippingMethodTypeFragment,
   VoucherDetailsFragment,
 } from "@dashboard/graphql";
-import { RequireOnlyOne } from "@dashboard/misc";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
 import uniqBy from "lodash/uniqBy";
 

@@ -1,4 +1,4 @@
-import { getDotColor } from "@dashboard/misc";
+import { getDotColor } from "@dashboard/business/misc";
 import { Box, useTheme } from "@saleor/macaw-ui-next";
 import React from "react";
 

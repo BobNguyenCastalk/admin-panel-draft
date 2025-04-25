@@ -1,10 +1,12 @@
 // @ts-strict-ignore
+import { extractMutationErrors } from "@dashboard/business/misc";
 import {
   pluginUrl,
   PluginUrlDialog,
   PluginUrlQueryParams,
 } from "@dashboard/business/utils/plugins/urls";
 import { isSecretField } from "@dashboard/business/utils/plugins/utils";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import {
   ConfigurationItemFragment,
   ConfigurationItemInput,
@@ -14,8 +16,6 @@ import {
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import useStateFromProps from "@dashboard/hooks/useStateFromProps";
-import { commonMessages } from "@dashboard/intl";
-import { extractMutationErrors } from "@dashboard/misc";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import ActionDialog from "@presentation/shared//ActionDialog";
 import { WindowTitle } from "@presentation/shared//WindowTitle";

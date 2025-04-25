@@ -1,7 +1,7 @@
 // @ts-strict-ignore
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import { AccountErrorFragment, OrderErrorFragment } from "@dashboard/graphql";
-import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";

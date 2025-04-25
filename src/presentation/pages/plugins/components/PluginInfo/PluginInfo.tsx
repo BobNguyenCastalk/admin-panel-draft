@@ -1,5 +1,5 @@
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { PluginErrorCode, PluginErrorFragment } from "@dashboard/graphql";
-import { commonMessages } from "@dashboard/intl";
 import getPluginErrorMessage from "@dashboard/utils/errors/plugins";
 import { DashboardCard } from "@presentation/shared//Card";
 import ControlledCheckbox from "@presentation/shared//ControlledCheckbox";

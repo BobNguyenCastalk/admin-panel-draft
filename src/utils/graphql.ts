@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { getApiUrl } from "@dashboard/config";
+import { getApiUrl } from "@dashboard/configs";
 import LzString from "lz-string";
 
 export type EditorContent = Record<keyof typeof longKeysToShortKeys, string>;

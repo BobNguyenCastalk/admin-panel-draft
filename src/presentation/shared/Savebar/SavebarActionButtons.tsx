@@ -1,4 +1,4 @@
-import { buttonMessages } from "@dashboard/intl";
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import { Button, ButtonProps } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";

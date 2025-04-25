@@ -1,4 +1,4 @@
-import { getUserInitials, getUserName } from "@dashboard/misc";
+import { getUserInitials, getUserName } from "@dashboard/business/misc";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { UserAvatar } from "@presentation/shared//UserAvatar";
 import { Box, Text } from "@saleor/macaw-ui-next";

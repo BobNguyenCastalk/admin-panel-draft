@@ -1,4 +1,4 @@
-import { getAppDefaultUri, getAppMountUri } from "@dashboard/config";
+import { getAppDefaultUri, getAppMountUri } from "@dashboard/configs";
 import { stringify } from "qs";
 
 export function stringifyQs(

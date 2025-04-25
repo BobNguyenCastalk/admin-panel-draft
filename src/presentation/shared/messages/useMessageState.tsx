@@ -1,4 +1,4 @@
-import { DEFAULT_NOTIFICATION_SHOW_TIME } from "@dashboard/config";
+import { DEFAULT_NOTIFICATION_SHOW_TIME } from "@dashboard/configs";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { INotification, INotificationContext, ITimer } from ".";

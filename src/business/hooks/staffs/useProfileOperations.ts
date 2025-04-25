@@ -1,3 +1,4 @@
+import { commonMessages, errorMessages } from "@dashboard/constants/common/intl";
 import {
   useChangeUserPasswordMutation,
   useUserAccountUpdateMutation,
@@ -6,7 +7,6 @@ import {
 } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
-import { commonMessages, errorMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
 import { staffMemberDetailsUrl } from "../../utils/staffs/urls";

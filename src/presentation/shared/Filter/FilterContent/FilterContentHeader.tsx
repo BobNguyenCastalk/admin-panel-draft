@@ -1,4 +1,4 @@
-import { buttonMessages } from "@dashboard/intl";
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import { Button } from "@presentation/shared//Button";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text, vars } from "@saleor/macaw-ui-next";

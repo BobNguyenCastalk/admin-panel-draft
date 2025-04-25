@@ -1,4 +1,4 @@
-import { capitalize } from "@dashboard/misc";
+import { capitalize } from "@dashboard/business/misc";
 import { DashboardCard } from "@presentation/shared//Card";
 import { Combobox } from "@presentation/shared//Combobox";
 import FormSpacer from "@presentation/shared//FormSpacer";

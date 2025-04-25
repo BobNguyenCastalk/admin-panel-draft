@@ -11,7 +11,9 @@ import {
   permissionsDiff,
   usersDiff,
 } from "@business/utils/permissions/utils";
-import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
+import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/business/misc";
+import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/configs";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import {
   PermissionGroupDetailsQuery,
   PermissionGroupErrorFragment,
@@ -24,8 +26,6 @@ import useBulkActions from "@dashboard/hooks/useBulkActions";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import useStateFromProps from "@dashboard/hooks/useStateFromProps";
-import { commonMessages } from "@dashboard/intl";
-import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import createSortHandler from "@dashboard/utils/handlers/sortHandler";

@@ -1,4 +1,4 @@
-import { commonMessages } from "@dashboard/intl";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { Portal } from "@radix-ui/react-portal";
 import { ApiMessageData, Notification } from "@saleor/macaw-ui";
 import React from "react";

@@ -1,7 +1,7 @@
 // @ts-strict-ignore
+import { maybe, renderCollection } from "@dashboard/business/misc";
 import { SearchProductsQuery } from "@dashboard/graphql";
 import useSearchQuery from "@dashboard/hooks/useSearchQuery";
-import { maybe, renderCollection } from "@dashboard/misc";
 import { DialogProps, FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";

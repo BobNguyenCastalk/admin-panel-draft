@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { hasUserMenuItemPermissions } from "@business/utils/configuration/utils"; // TODO: to fix this
+import { sectionNames } from "@dashboard/constants/common/intl";
 import { UserFragment } from "@dashboard/graphql";
-import { sectionNames } from "@dashboard/intl";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";

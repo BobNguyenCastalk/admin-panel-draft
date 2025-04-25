@@ -1,4 +1,4 @@
-import { getAppMountUri } from "@dashboard/config";
+import { getAppMountUri } from "@dashboard/configs";
 import useDebounce from "@dashboard/hooks/useDebounce";
 import { DataEditorProps, GridMouseEventArgs, Item } from "@glideapps/glide-data-grid";
 import { useCallback, useRef } from "react";

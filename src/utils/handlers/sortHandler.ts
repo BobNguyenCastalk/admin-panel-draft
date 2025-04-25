@@ -1,4 +1,4 @@
-import { DEFAULT_INITIAL_PAGINATION_DATA } from "@dashboard/config";
+import { DEFAULT_INITIAL_PAGINATION_DATA } from "@dashboard/configs";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { Sort } from "@dashboard/types";
 

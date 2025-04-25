@@ -1,4 +1,4 @@
-import { defaultListSettings } from "@dashboard/config";
+import { defaultListSettings } from "@dashboard/configs";
 import { ListViews } from "@dashboard/types";
 import { renderHook } from "@testing-library/react-hooks";
 

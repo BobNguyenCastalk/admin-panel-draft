@@ -1,6 +1,6 @@
 import { isSecretField } from "@dashboard/business/utils/plugins/utils";
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
-import { buttonMessages } from "@dashboard/intl";
 import { Button } from "@presentation/shared//Button";
 import { DashboardCard } from "@presentation/shared//Card";
 import Hr from "@presentation/shared//Hr";

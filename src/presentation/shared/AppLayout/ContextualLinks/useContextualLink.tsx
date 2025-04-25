@@ -6,7 +6,7 @@ import {
   ORDER_MANAGEMENT_DOCS_URL,
   PRODUCT_CONFIGURATION_DOCS_URL,
   USER_PERMISSIONS_DOCS_URL,
-} from "@dashboard/links";
+} from "@dashboard/constants/common/links";
 import { useAnalytics } from "@presentation/shared//ProductAnalytics/useAnalytics";
 import * as React from "react";
 import { useIntl } from "react-intl";

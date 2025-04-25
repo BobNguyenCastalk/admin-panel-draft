@@ -1,4 +1,4 @@
-import { fuzzySearch } from "@dashboard/misc";
+import { fuzzySearch } from "@dashboard/business/misc";
 import { Option } from "@saleor/macaw-ui-next";
 import { useMemo, useState } from "react";
 

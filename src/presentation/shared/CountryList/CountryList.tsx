@@ -11,7 +11,7 @@ import clsx from "clsx";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 
-import { getStringOrPlaceholder, maybe, renderCollection } from "../../../misc";
+import { getStringOrPlaceholder, maybe, renderCollection } from "../../../business/misc";
 import { DashboardCard } from "../Card";
 
 export interface CountryListProps {

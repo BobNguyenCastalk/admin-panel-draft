@@ -1,4 +1,4 @@
-import { ENABLED_SERVICE_NAME_HEADER } from "@dashboard/config";
+import { ENABLED_SERVICE_NAME_HEADER } from "@dashboard/configs";
 import { createGraphiQLFetcher, FetcherOpts } from "@graphiql/toolkit";
 import { createFetch } from "@saleor/sdk";
 

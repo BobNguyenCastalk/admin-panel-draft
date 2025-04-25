@@ -3,7 +3,7 @@ import { IconButton, ICONBUTTON_SIZE, makeStyles } from "@saleor/macaw-ui";
 import clsx from "clsx";
 import React from "react";
 
-import { stopPropagation } from "../../../misc";
+import { stopPropagation } from "../../../business/misc";
 
 export interface IconButtonTableCellProps {
   children: React.ReactNode;

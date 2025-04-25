@@ -1,4 +1,4 @@
-import { buttonMessages, commonMessages } from "@dashboard/intl";
+import { buttonMessages, commonMessages } from "@dashboard/constants/common/intl";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import CheckIcon from "@material-ui/icons/Check";
 import { Button, ButtonProps, sprinkles } from "@saleor/macaw-ui-next";

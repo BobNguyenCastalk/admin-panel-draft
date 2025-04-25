@@ -1,6 +1,6 @@
+import { maybe } from "@dashboard/business/misc";
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
-import { buttonMessages } from "@dashboard/intl";
-import { maybe } from "@dashboard/misc";
 import { DialogProps } from "@dashboard/types";
 import { TextField } from "@material-ui/core";
 import BackButton from "@presentation/shared//BackButton";

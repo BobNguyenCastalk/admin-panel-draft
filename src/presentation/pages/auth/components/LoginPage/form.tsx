@@ -1,4 +1,4 @@
-import { DEMO_MODE } from "@dashboard/config";
+import { DEMO_MODE } from "@dashboard/configs";
 import useForm, { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
 import React from "react";

@@ -1,4 +1,4 @@
-import { commonMessages } from "@dashboard/intl";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import commonErrorMessages from "@dashboard/utils/errors/common";
 import { IMessage } from "@presentation/shared//messages";
 import { IntlShape } from "react-intl";

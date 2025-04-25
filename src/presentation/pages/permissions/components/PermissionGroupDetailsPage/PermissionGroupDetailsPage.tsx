@@ -6,6 +6,7 @@ import {
   getUserAccessibleChannelsOptions,
   isGroupFullAccess,
 } from "@business/utils/permissions/utils";
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import {
   ChannelFragment,
   PermissionEnum,
@@ -16,7 +17,6 @@ import {
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
-import { buttonMessages } from "@dashboard/intl";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { ListActions, SortPage } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";

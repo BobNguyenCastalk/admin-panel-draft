@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { isDarkTheme } from "@dashboard/misc";
+import { isDarkTheme } from "@dashboard/business/misc";
 import { alpha } from "@material-ui/core/styles";
 import ArrowLeft from "@material-ui/icons/ArrowLeft";
 import ArrowRight from "@material-ui/icons/ArrowRight";

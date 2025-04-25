@@ -1,3 +1,4 @@
+import { getFullName } from "@dashboard/business/misc";
 import {
   CountryFragment,
   CountryWithCodeFragment,
@@ -5,7 +6,6 @@ import {
   MetadataItemFragment,
   PageFragment,
 } from "@dashboard/graphql";
-import { getFullName } from "@dashboard/misc";
 import { Node, SlugNode, TagNode } from "@dashboard/types";
 import { Choice } from "@saleor/macaw-ui";
 import { Option } from "@saleor/macaw-ui-next";

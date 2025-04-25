@@ -1,10 +1,10 @@
 // @ts-strict-ignore
+import { joinDateTime, splitDateTime } from "@dashboard/business/misc";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import {
   PageErrorWithAttributesFragment,
   ProductErrorWithAttributesFragment,
 } from "@dashboard/graphql";
-import { commonMessages } from "@dashboard/intl";
-import { joinDateTime, splitDateTime } from "@dashboard/misc";
 import { getErrorMessage } from "@presentation/shared//Attributes/utils";
 import { Box, Input } from "@saleor/macaw-ui-next";
 import React from "react";

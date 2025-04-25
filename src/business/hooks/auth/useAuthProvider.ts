@@ -1,11 +1,11 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
 import { parseAuthError } from "@business/utils/auth/errors";
 import { displayDemoMessage } from "@business/utils/auth/utils";
-import { DEMO_MODE } from "@dashboard/config";
+import { DEMO_MODE } from "@dashboard/configs";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
 import useLocalStorage from "@dashboard/hooks/useLocalStorage";
 import useNavigator from "@dashboard/hooks/useNavigator";
-import { commonMessages } from "@dashboard/intl";
 import {
   ExternalLoginInput,
   RequestExternalLoginInput,

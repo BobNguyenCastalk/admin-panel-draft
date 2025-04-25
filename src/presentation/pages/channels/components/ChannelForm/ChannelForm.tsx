@@ -1,3 +1,4 @@
+import { commonMessages } from "@constants/common/intl";
 import { AutomaticallyCompleteCheckouts } from "@dashboard/channels/components/ChannelForm/AutomaticallyCompleteCheckouts";
 import {
   ChannelShippingZones,
@@ -12,7 +13,6 @@ import {
 } from "@dashboard/graphql";
 import useClipboard from "@dashboard/hooks/useClipboard";
 import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
-import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
 import { DashboardCard } from "@presentation/shared//Card";

@@ -1,6 +1,6 @@
 // @ts-strict-ignore
+import { sectionNames } from "@dashboard/constants/common/intl";
 import { PluginConfigurationType } from "@dashboard/graphql";
-import { sectionNames } from "@dashboard/intl";
 import { AutocompleteFilterOpts, FilterOpts } from "@dashboard/types";
 import {
   createAutocompleteField,

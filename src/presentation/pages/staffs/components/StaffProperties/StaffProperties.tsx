@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 import photoIcon from "@assets/images/photo-icon.svg";
+import { getUserInitials } from "@dashboard/business/misc";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { StaffErrorFragment, StaffMemberDetailsFragment, UserFragment } from "@dashboard/graphql";
-import { commonMessages } from "@dashboard/intl";
-import { getUserInitials } from "@dashboard/misc";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getStaffErrorMessage from "@dashboard/utils/errors/staff";
 import { TextField } from "@material-ui/core";

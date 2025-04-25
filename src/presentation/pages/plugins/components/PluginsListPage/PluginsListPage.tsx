@@ -1,8 +1,8 @@
 // @ts-strict-ignore
+import { getStatusColor } from "@dashboard/business/misc";
 import { PluginListUrlSortField } from "@dashboard/business/utils/plugins/urls";
+import { sectionNames } from "@dashboard/constants/common/intl";
 import { PluginBaseFragment } from "@dashboard/graphql";
-import { sectionNames } from "@dashboard/intl";
-import { getStatusColor } from "@dashboard/misc";
 import { FilterPageProps, PageListProps, SortPage, TabPageProps } from "@dashboard/types";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";

@@ -5,7 +5,7 @@ import {
   staffMemberDetailsPath,
   StaffMemberDetailsUrlQueryParams,
 } from "@business/utils/staffs/urls";
-import { sectionNames } from "@dashboard/intl";
+import { sectionNames } from "@dashboard/constants/common/intl";
 import { asSortParams } from "@dashboard/utils/sort";
 import { ConditionalStaffMembersFilterProvider } from "@presentation/shared//ConditionalFilter";
 import { Route } from "@presentation/shared//Router";

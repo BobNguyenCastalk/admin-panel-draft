@@ -1,4 +1,4 @@
-import { fuzzySearch } from "@dashboard/misc";
+import { fuzzySearch } from "@dashboard/business/misc";
 
 describe("fuzzySearch", () => {
   it("searches for a result in array of objects", () => {

@@ -1,6 +1,6 @@
 import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";
+import { sectionNames } from "@dashboard/constants/common/intl";
 import { useFlag } from "@dashboard/featureFlags";
-import { sectionNames } from "@dashboard/intl";
 import { FilterPagePropsWithPresets, ListProps, SortPage } from "@dashboard/types";
 import { StaffMembers } from "@dashboard/types/staffs";
 import { configurationMenuUrl } from "@presentation/pages/configuration";

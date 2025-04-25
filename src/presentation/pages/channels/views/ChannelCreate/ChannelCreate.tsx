@@ -1,6 +1,7 @@
 // @ts-strict-ignore
 import { channelPath } from "@business/utils/channels/urls";
 import { FormData } from "@dashboard/channels/components/ChannelForm/ChannelForm";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import {
   ChannelCreateInput,
   ChannelCreateMutation,
@@ -11,7 +12,6 @@ import {
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
-import { commonMessages } from "@dashboard/intl";
 import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
 import { WindowTitle } from "@presentation/shared//WindowTitle";
 import currencyCodes from "currency-codes";

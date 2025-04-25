@@ -1,4 +1,5 @@
 // @ts-strict-ignore
+import { maybe, parseBoolean } from "@dashboard/business/misc";
 import {
   PluginListUrlFilters,
   PluginListUrlFiltersEnum,
@@ -6,7 +7,6 @@ import {
 } from "@dashboard/business/utils/plugins/urls";
 import { PluginConfigurationType, PluginFilterInput } from "@dashboard/graphql";
 import { ChannelsWithLoadMoreProps } from "@dashboard/hooks/useChannelsSearch";
-import { maybe, parseBoolean } from "@dashboard/misc";
 import {
   createFilterTabUtils,
   createFilterUtils,

@@ -1,4 +1,4 @@
-import { findValueInEnum } from "@dashboard/misc";
+import { findValueInEnum } from "@dashboard/business/misc";
 import { ActiveTab } from "@dashboard/types";
 import {
   FilterElement,

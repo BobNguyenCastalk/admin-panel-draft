@@ -7,8 +7,8 @@ import {
   useMutation as useBaseMutation,
 } from "@apollo/client";
 import { isJwtError } from "@business/utils/auth/errors";
-import { commonMessages } from "@dashboard/intl";
-import { getMutationStatus } from "@dashboard/misc";
+import { getMutationStatus } from "@dashboard/business/misc";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import {
   handleNestedMutationErrors,
   showAllErrors,

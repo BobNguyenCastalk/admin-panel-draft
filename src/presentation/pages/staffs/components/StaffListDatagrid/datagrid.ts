@@ -1,6 +1,6 @@
+import { getStatusColor, getUserName } from "@dashboard/business/misc";
 import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";
-import { commonStatusMessages } from "@dashboard/intl";
-import { getStatusColor, getUserName } from "@dashboard/misc";
+import { commonStatusMessages } from "@dashboard/constants/common/intl";
 import { Sort } from "@dashboard/types";
 import { StaffMember, StaffMembers } from "@dashboard/types/staffs";
 import { getColumnSortDirectionIcon } from "@dashboard/utils/columns/getColumnSortDirectionIcon";

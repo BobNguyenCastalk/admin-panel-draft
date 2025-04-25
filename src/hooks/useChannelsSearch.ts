@@ -1,5 +1,5 @@
+import { fuzzySearch } from "@dashboard/business/misc";
 import { ChannelDetailsFragment } from "@dashboard/graphql";
-import { fuzzySearch } from "@dashboard/misc";
 import { FetchMoreProps, Search, SearchProps } from "@dashboard/types";
 import React from "react";
 

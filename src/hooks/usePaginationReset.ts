@@ -1,4 +1,4 @@
-import { DEFAULT_INITIAL_PAGINATION_DATA } from "@dashboard/config";
+import { DEFAULT_INITIAL_PAGINATION_DATA } from "@dashboard/configs";
 import { Pagination } from "@dashboard/types";
 import { useEffect } from "react";
 

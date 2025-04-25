@@ -1,6 +1,6 @@
+import { sectionNames } from "@constants/common/intl";
 import { ChannelShippingZones } from "@dashboard/channels/pages/ChannelDetailsPage/types";
 import { SearchShippingZonesQuery } from "@dashboard/graphql";
-import { sectionNames } from "@dashboard/intl";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { DashboardCard } from "@presentation/shared//Card";
 import { Text } from "@saleor/macaw-ui-next";

@@ -1,4 +1,4 @@
-import { DEFAULT_NOTIFICATION_SHOW_TIME } from "@dashboard/config";
+import { DEFAULT_NOTIFICATION_SHOW_TIME } from "@dashboard/configs";
 import { act, renderHook } from "@testing-library/react-hooks";
 
 import { useMessageState } from "./useMessageState";

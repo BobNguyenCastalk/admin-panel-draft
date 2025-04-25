@@ -1,8 +1,8 @@
 // @ts-strict-ignore
+import { getUserInitials, getUserName, renderCollection } from "@dashboard/business/misc";
+import { buttonMessages } from "@dashboard/constants/common/intl";
 import { SearchStaffMembersQuery } from "@dashboard/graphql";
 import useSearchQuery from "@dashboard/hooks/useSearchQuery";
-import { buttonMessages } from "@dashboard/intl";
-import { getUserInitials, getUserName, renderCollection } from "@dashboard/misc";
 import { DialogProps, FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
 import { Checkbox, CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 import BackButton from "@presentation/shared//BackButton";

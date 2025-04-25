@@ -1,4 +1,4 @@
-import { sectionNames } from "@dashboard/intl";
+import { sectionNames } from "@dashboard/constants/common/intl";
 import { DashboardCard } from "@presentation/shared//Card";
 import React from "react";
 import { useIntl } from "react-intl";

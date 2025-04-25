@@ -1,7 +1,7 @@
 import { ApolloError, ServerError } from "@apollo/client/core";
+import { getMutationErrors, parseLogMessage } from "@dashboard/business/misc";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { UseNotifierResult } from "@dashboard/hooks/useNotifier";
-import { commonMessages } from "@dashboard/intl";
-import { getMutationErrors, parseLogMessage } from "@dashboard/misc";
 import { IMessage, IMessageContext } from "@presentation/shared//messages";
 import { IntlShape } from "react-intl";
 

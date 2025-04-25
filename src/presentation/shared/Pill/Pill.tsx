@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { getStatusColor } from "@dashboard/misc";
+import { getStatusColor } from "@dashboard/business/misc";
 import { makeStyles, Pill as MacawuiPill, PillProps } from "@saleor/macaw-ui";
 import { useTheme } from "@saleor/macaw-ui-next";
 import clsx from "clsx";

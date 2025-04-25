@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { commonMessages } from "@dashboard/intl";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { Box, Input, Text } from "@saleor/macaw-ui-next";
 import moment from "moment";
 import React, { useEffect, useState } from "react";

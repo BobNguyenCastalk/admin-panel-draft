@@ -1,5 +1,5 @@
+import { fuzzySearch } from "@dashboard/business/misc";
 import { Channel } from "@dashboard/business/utils/channels/utils";
-import { fuzzySearch } from "@dashboard/misc";
 import { TextField } from "@material-ui/core";
 import { ControlledCheckbox } from "@presentation/shared//ControlledCheckbox";
 import Hr from "@presentation/shared//Hr";

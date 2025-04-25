@@ -1,4 +1,4 @@
-import { commonMessages } from "@dashboard/intl";
+import { commonMessages } from "@dashboard/constants/common/intl";
 import { TableCell } from "@material-ui/core";
 import {
   Pagination,

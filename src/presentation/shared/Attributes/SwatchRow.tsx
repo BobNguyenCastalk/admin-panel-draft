@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { getBySlug } from "@dashboard/misc";
+import { getBySlug } from "@dashboard/business/misc";
 import { BasicAttributeRow } from "@presentation/shared//Attributes/BasicAttributeRow";
 import { getErrorMessage, getSingleDisplayValue } from "@presentation/shared//Attributes/utils";
 import { Box } from "@saleor/macaw-ui-next";

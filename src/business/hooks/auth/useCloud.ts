@@ -1,4 +1,4 @@
-import { IS_CLOUD_INSTANCE } from "@dashboard/config";
+import { IS_CLOUD_INSTANCE } from "@dashboard/configs";
 import useLocalStorage from "@dashboard/hooks/useLocalStorage";
 
 const CLOUD_PLUGIN_ID = "cloud_auth.CloudAuthorizationPlugin";
