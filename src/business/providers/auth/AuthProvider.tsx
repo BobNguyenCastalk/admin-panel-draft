@@ -1,6 +1,6 @@
 import { useApolloClient } from "@apollo/client";
 import { useAuthProvider } from "@business/hooks/auth/useAuthProvider";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import { UserContext } from "@presentation/pages/auth";
 import React from "react";
 import { useIntl } from "react-intl";

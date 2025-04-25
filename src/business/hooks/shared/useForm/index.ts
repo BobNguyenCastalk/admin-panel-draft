@@ -1,5 +1,5 @@
+import useHandleFormSubmit from "@dashboard/business/hooks/shared/useHandleFormSubmit";
 import { toggle } from "@dashboard/business/utils/shared/lists";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
 import {
   CheckIfSaveIsDisabledFnType,
   FormId,

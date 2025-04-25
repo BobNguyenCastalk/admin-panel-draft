@@ -6,12 +6,12 @@ import {
   StaffMemberDetailsUrlQueryParams,
 } from "@business/utils/staffs/urls";
 import { groupsDiff } from "@business/utils/staffs/utils";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/business/misc";
 import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/configs";
 import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
 import usePermissionGroupSearch from "@dashboard/graphql/searches/usePermissionGroupSearch";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import ActionDialog from "@presentation/shared//ActionDialog";
 import NotFoundPage from "@presentation/shared//NotFoundPage";

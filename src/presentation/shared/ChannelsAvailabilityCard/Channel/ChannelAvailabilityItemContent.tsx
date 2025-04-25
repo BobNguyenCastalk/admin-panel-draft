@@ -1,8 +1,8 @@
 // @ts-strict-ignore
+import useCurrentDate from "@dashboard/business/hooks/shared/useCurrentDate";
+import useDateLocalize from "@dashboard/business/hooks/shared/useDateLocalize";
 import { ChannelData } from "@dashboard/business/utils/channels/utils";
 import { getFormErrors, getProductErrorMessage } from "@dashboard/business/utils/shared/errors";
-import useCurrentDate from "@dashboard/hooks/useCurrentDate";
-import useDateLocalize from "@dashboard/hooks/useDateLocalize";
 import { DateTimeTimezoneField } from "@presentation/shared//DateTimeTimezoneField";
 import { StopPropagation } from "@presentation/shared//StopPropagation";
 import { Box, Checkbox, Divider, RadioGroup, Text } from "@saleor/macaw-ui-next";

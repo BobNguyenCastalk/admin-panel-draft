@@ -1,7 +1,7 @@
 import { useApolloClient } from "@apollo/client";
 import { useAuthProvider } from "@business/hooks/auth/useAuthProvider";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import { useUserDetailsQuery } from "@dashboard/graphql";
-import useNotifier from "@dashboard/hooks/useNotifier";
 import { useAuth, useAuthState } from "@saleor/sdk";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { useIntl } from "react-intl";

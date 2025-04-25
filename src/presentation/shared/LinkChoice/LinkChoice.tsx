@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import ArrowDropdown from "@assets/icons/ArrowDropdown";
-import { FormChange } from "@dashboard/hooks/useForm";
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { ClickAwayListener, MenuItem, Paper, Popper } from "@material-ui/core";
 import { Option } from "@saleor/macaw-ui-next";
 import clsx from "clsx";

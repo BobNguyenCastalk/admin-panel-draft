@@ -1,7 +1,7 @@
 // @ts-strict-ignore
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 import { getById } from "@dashboard/business/misc";
 import { ChannelFragment, useBaseChannelsQuery } from "@dashboard/graphql";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { useSaleorConfig } from "@saleor/sdk";
 import React from "react";

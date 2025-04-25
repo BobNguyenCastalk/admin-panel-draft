@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { SubmitPromise } from "@dashboard/hooks/useForm";
+import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import { useEffect, useRef, useState } from "react";
 import { useHistory } from "react-router";
 import useRouter from "use-react-router";

@@ -1,9 +1,9 @@
+import { makeFetchAll } from "@dashboard/business/hooks/shared/makeFetchAll";
 import {
   WarehouseListDocument,
   WarehouseListQuery,
   WarehouseListQueryVariables,
 } from "@dashboard/graphql";
-import { makeFetchAll } from "@dashboard/hooks/makeFetchAll";
 
 export const useFetchAllWarehouses = makeFetchAll<WarehouseListQuery, WarehouseListQueryVariables>(
   WarehouseListDocument,

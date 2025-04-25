@@ -1,4 +1,4 @@
-import { ChangeEvent } from "@dashboard/hooks/useForm";
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { useForm } from "react-hook-form";
 import { IntlShape, MessageDescriptor } from "react-intl";

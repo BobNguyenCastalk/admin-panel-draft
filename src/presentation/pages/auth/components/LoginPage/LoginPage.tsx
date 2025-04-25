@@ -1,7 +1,7 @@
 import { commonMessages } from "@constants/common/intl";
 import { UserContextError } from "@dashboard/auth/types";
+import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import { AvailableExternalAuthenticationsQuery } from "@dashboard/graphql";
-import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { ButtonWithLoader } from "@presentation/shared//ButtonWithLoader/ButtonWithLoader";
 import { FormSpacer } from "@presentation/shared//FormSpacer";
 import { EyeIcon } from "@saleor/macaw-ui";

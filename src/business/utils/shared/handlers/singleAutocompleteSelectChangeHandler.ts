@@ -1,4 +1,4 @@
-import { FormChange } from "@dashboard/hooks/useForm";
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { Option } from "@saleor/macaw-ui-next";
 
 export interface SingleAutocompleteSelectedChangeHandlerProps {

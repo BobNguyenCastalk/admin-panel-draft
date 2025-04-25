@@ -1,7 +1,7 @@
 // @ts-strict-ignore
+import useModalDialogOpen from "@dashboard/business/hooks/shared/useModalDialogOpen";
+import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { maybe } from "@dashboard/business/misc";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
 import { DialogProps, FetchMoreProps } from "@dashboard/types";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";

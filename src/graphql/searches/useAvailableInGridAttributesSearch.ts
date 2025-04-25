@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { gql } from "@apollo/client";
+import makeSearch from "@dashboard/business/hooks/shared/makeSearch";
 import {
   SearchAvailableInGridAttributesDocument,
   SearchAvailableInGridAttributesQuery,
   SearchAvailableInGridAttributesQueryVariables,
 } from "@dashboard/graphql";
-import makeSearch from "@dashboard/hooks/makeSearch";
 
 export const availableInGridAttributes = gql`
   query SearchAvailableInGridAttributes($first: Int!, $after: String, $query: String!) {

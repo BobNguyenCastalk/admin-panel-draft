@@ -1,4 +1,4 @@
-import { UseDebounceFn } from "@dashboard/hooks/useDebounce";
+import { UseDebounceFn } from "@dashboard/business/hooks/shared/useDebounce";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { PersistedColumn, RawColumn } from "./persistedColumn";

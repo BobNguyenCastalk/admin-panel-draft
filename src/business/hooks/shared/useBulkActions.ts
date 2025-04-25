@@ -1,4 +1,4 @@
-import { Node } from "../types";
+import { Node } from "../../../types";
 import useListActions from "./useListActions";
 
 function useBulkActions(initial: string[] = []) {

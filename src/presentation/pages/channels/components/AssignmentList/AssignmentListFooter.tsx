@@ -1,5 +1,5 @@
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { mapNodeToChoice } from "@dashboard/business/utils/shared/maps";
-import { ChangeEvent } from "@dashboard/hooks/useForm";
 import CardAddItemsFooter from "@dashboard/products/components/ProductStocks/components/CardAddItemsFooter";
 import { ClickAwayListener } from "@material-ui/core";
 import { Combobox } from "@presentation/shared//Combobox";

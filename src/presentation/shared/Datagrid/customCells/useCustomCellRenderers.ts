@@ -1,4 +1,4 @@
-import useLocale from "@dashboard/hooks/useLocale";
+import useLocale from "@dashboard/business/hooks/shared/useLocale";
 import { useExtraCells } from "@glideapps/glide-data-grid-cells";
 import { dateCellRenderer } from "@presentation/shared//Datagrid/customCells/DateCell";
 import { useTheme } from "@saleor/macaw-ui-next";

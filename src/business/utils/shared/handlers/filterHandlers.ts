@@ -1,4 +1,4 @@
-import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
+import { UseNavigatorResult } from "@dashboard/business/hooks/shared/useNavigator";
 import { ActiveTab, Pagination, Search, Sort } from "@dashboard/types";
 import { IFilter } from "@presentation/shared//Filter";
 

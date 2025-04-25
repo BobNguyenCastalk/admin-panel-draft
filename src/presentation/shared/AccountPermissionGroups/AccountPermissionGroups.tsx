@@ -1,8 +1,8 @@
 // @ts-strict-ignore
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
 import getStaffErrorMessage from "@dashboard/business/utils/shared/errors/staff";
 import { SearchPermissionGroupsQuery, StaffErrorFragment } from "@dashboard/graphql";
-import { FormChange } from "@dashboard/hooks/useForm";
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
 import { Option, Text } from "@saleor/macaw-ui-next";
 import React from "react";

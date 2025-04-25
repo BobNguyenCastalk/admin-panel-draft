@@ -1,10 +1,10 @@
+import { FormsetChange } from "@dashboard/business/hooks/shared/useFormset";
 import { RichTextGetters } from "@dashboard/business/utils/shared/richText/useMultipleRichText";
 import {
   AttributeValueFragment,
   PageErrorWithAttributesFragment,
   ProductErrorWithAttributesFragment,
 } from "@dashboard/graphql";
-import { FormsetChange } from "@dashboard/hooks/useFormset";
 import { FetchMoreProps, ReorderEvent } from "@dashboard/types";
 
 import { AttributeInput } from "./Attributes";

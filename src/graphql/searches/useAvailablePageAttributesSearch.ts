@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { gql } from "@apollo/client";
+import makeSearch from "@dashboard/business/hooks/shared/makeSearch";
 import {
   SearchAvailablePageAttributesDocument,
   SearchAvailablePageAttributesQuery,
   SearchAvailablePageAttributesQueryVariables,
 } from "@dashboard/graphql";
-import makeSearch from "@dashboard/hooks/makeSearch";
 
 export default makeSearch<
   SearchAvailablePageAttributesQuery,

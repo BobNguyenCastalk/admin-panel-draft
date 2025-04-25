@@ -1,4 +1,4 @@
-import useLocale from "@dashboard/hooks/useLocale";
+import useLocale from "@dashboard/business/hooks/shared/useLocale";
 import React from "react";
 
 const EventTime: React.FC<{ date: string; showSeconds?: boolean }> = ({ date, showSeconds }) => {

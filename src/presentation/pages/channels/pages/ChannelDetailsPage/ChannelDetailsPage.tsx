@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import { SearchData } from "@dashboard/business/hooks/shared/makeTopLevelSearch";
+import { getParsedSearchData } from "@dashboard/business/hooks/shared/makeTopLevelSearch/utils";
+import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import useStateFromProps from "@dashboard/business/hooks/shared/useStateFromProps";
 import { channelsListUrl } from "@dashboard/business/utils/channels/urls";
 import { validateChannelFormData } from "@dashboard/business/utils/channels/validation";
 import createSingleAutocompleteSelectHandler from "@dashboard/business/utils/shared/handlers/singleAutocompleteSelectChangeHandler";
@@ -21,11 +26,6 @@ import {
   MarkAsPaidStrategyEnum,
   TransactionFlowStrategyEnum,
 } from "@dashboard/graphql/types.generated";
-import { SearchData } from "@dashboard/hooks/makeTopLevelSearch";
-import { getParsedSearchData } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import CardSpacer from "@presentation/shared//CardSpacer";

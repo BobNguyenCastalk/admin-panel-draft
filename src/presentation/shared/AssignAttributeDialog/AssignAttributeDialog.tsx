@@ -1,9 +1,9 @@
 // @ts-strict-ignore
+import useModalDialogErrors from "@dashboard/business/hooks/shared/useModalDialogErrors";
+import useModalDialogOpen from "@dashboard/business/hooks/shared/useModalDialogOpen";
+import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { maybe, renderCollection } from "@dashboard/business/misc";
 import { AvailableAttributeFragment } from "@dashboard/graphql";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
 import { FetchMoreProps } from "@dashboard/types";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 import Checkbox from "@presentation/shared//Checkbox";

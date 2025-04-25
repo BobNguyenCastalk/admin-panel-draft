@@ -1,4 +1,4 @@
-import useForm from "@dashboard/hooks/useForm";
+import useForm from "@dashboard/business/hooks/shared/useForm";
 import { TableCell, TextField } from "@material-ui/core";
 import { TextFieldProps } from "@material-ui/core/TextField";
 import { makeStyles } from "@saleor/macaw-ui";

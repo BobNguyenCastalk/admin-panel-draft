@@ -5,6 +5,10 @@ import {
   ChannelUrlDialog,
   ChannelUrlQueryParams,
 } from "@business/utils/channels/urls";
+import { getSearchFetchMoreProps } from "@dashboard/business/hooks/shared/makeTopLevelSearch/utils";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
+import { getDefaultNotifierSuccessErrorData } from "@dashboard/business/hooks/shared/useNotifier/utils";
 import { extractMutationErrors } from "@dashboard/business/misc";
 import { getChannelsCurrencyChoices } from "@dashboard/business/utils/channels/utils";
 import getChannelsErrorMessage from "@dashboard/business/utils/shared/errors/channels";
@@ -21,10 +25,6 @@ import {
   useChannelsQuery,
   useChannelUpdateMutation,
 } from "@dashboard/graphql";
-import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import { getDefaultNotifierSuccessErrorData } from "@dashboard/hooks/useNotifier/utils";
 import ChannelDeleteDialog from "@presentation/pages/channels/components/ChannelDeleteDialog";
 import { FormData } from "@presentation/pages/channels/components/ChannelForm/ChannelForm";
 import { useChannelWarehousesReorder } from "@presentation/pages/channels/views/ChannelDetails/useChannelWarehouseReorder";

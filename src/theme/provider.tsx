@@ -1,4 +1,4 @@
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 import { DefaultTheme, ThemeProvider as MacawThemeProvider } from "@saleor/macaw-ui-next";
 import React from "react";
 

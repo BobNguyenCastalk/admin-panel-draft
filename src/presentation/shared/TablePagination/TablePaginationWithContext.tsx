@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { usePaginatorContext } from "@dashboard/hooks/usePaginator";
+import { usePaginatorContext } from "@dashboard/business/hooks/shared/usePaginator";
 import React from "react";
 
 import TablePagination, { PaginationProps } from "./TablePagination";

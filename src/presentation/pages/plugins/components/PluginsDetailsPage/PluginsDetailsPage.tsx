@@ -1,4 +1,6 @@
 // @ts-strict-ignore
+import { ChangeEvent, SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { getStringOrPlaceholder } from "@dashboard/business/misc";
 import { pluginListUrl } from "@dashboard/business/utils/plugins/urls";
 import { isSecretField } from "@dashboard/business/utils/plugins/utils";
@@ -8,8 +10,6 @@ import {
   PluginErrorFragment,
   PluginsDetailsFragment,
 } from "@dashboard/graphql";
-import { ChangeEvent, SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import CardSpacer from "@presentation/shared//CardSpacer";
 import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";

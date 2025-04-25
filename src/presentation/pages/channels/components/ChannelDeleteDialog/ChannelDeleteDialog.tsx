@@ -1,5 +1,5 @@
 import { buttonMessages } from "@constants/common/intl";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import useStateFromProps from "@dashboard/business/hooks/shared/useStateFromProps";
 import ActionDialog from "@presentation/shared//ActionDialog";
 import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
 import { Select } from "@presentation/shared//Select";

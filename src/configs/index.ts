@@ -1,5 +1,5 @@
 import packageInfo from "../../package.json";
-import { SearchVariables } from "../hooks/makeSearch";
+import { SearchVariables } from "../business/hooks/shared/makeSearch";
 import { ListSettings, ListViews, Pagination } from "../types";
 
 export const getAppDefaultUri = () => "/";

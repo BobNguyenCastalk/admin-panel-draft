@@ -1,6 +1,8 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
 import { parseAuthError } from "@business/utils/auth/errors";
 import { displayDemoMessage } from "@business/utils/auth/utils";
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import {
   checkIfCredentialsExist,
   isSupported as isCredentialsManagementAPISupported,
@@ -11,8 +13,6 @@ import { getAppMountUriForRedirect } from "@dashboard/business/utils/shared/urls
 import { DEMO_MODE } from "@dashboard/configs";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import {
   ExternalLoginInput,
   RequestExternalLoginInput,

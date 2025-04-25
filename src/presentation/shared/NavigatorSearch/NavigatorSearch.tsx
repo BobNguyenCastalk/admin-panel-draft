@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import { Box, Divider } from "@saleor/macaw-ui-next";
 import Downshift, { GetItemPropsOptions } from "downshift";
 import hotkeys from "hotkeys-js";

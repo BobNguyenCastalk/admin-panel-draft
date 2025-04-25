@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { gql } from "@apollo/client";
+import makeTopLevelSearch from "@dashboard/business/hooks/shared/makeTopLevelSearch";
 import {
   SearchPermissionGroupsDocument,
   SearchPermissionGroupsQuery,
   SearchPermissionGroupsQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
 
 export const searchPermissionGroups = gql`
   query SearchPermissionGroups($after: String, $first: Int!, $query: String!) {

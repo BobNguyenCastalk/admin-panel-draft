@@ -2,9 +2,9 @@ import {
   permissionGroupDetailsUrl,
   PermissionGroupListUrlSortField,
 } from "@business/utils/permissions/urls";
+import { getPrevLocationState } from "@dashboard/business/hooks/shared/useBackLinkWithState";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { PermissionGroupFragment } from "@dashboard/graphql";
-import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { canBeSorted } from "@dashboard/presentation/pages/permissions/views/PermissionGroupList/sort";
 import { ListProps, SortPage } from "@dashboard/types";
 import { Item } from "@glideapps/glide-data-grid";

@@ -1,5 +1,5 @@
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { commonMessages } from "@dashboard/constants/common/intl";
-import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { FetchMoreProps } from "@dashboard/types";
 import { DynamicMultiselect, DynamicMultiselectProps, Option } from "@saleor/macaw-ui-next";
 import React, { forwardRef, ReactNode, useEffect, useRef, useState } from "react";

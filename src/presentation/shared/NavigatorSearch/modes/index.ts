@@ -1,5 +1,5 @@
 import { MutationFunction } from "@apollo/client";
-import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
+import { UseNavigatorResult } from "@dashboard/business/hooks/shared/useNavigator";
 import { IntlShape } from "react-intl";
 
 import { QuickSearchAction, QuickSearchMode } from "../types";

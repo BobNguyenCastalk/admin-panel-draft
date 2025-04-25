@@ -7,7 +7,7 @@ import {
   UserDetailsQuery,
 } from "@dashboard/graphql";
 
-import { PaginatorContextValues } from "./hooks/usePaginator";
+import { PaginatorContextValues } from "./business/hooks/shared/usePaginator";
 import {
   FetchMoreProps,
   FilterPageProps,

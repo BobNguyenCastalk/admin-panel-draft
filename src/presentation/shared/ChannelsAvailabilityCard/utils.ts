@@ -1,6 +1,6 @@
 // @ts-strict-ignore
+import { LocalizeDate } from "@dashboard/business/hooks/shared/useDateLocalize";
 import { ChannelData } from "@dashboard/business/utils/channels/utils";
-import { LocalizeDate } from "@dashboard/hooks/useDateLocalize";
 import { IntlShape } from "react-intl";
 
 import { publicationMessages } from "./messages";

@@ -1,5 +1,5 @@
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { AddressTypeInput } from "@dashboard/customers/types";
-import { FormChange } from "@dashboard/hooks/useForm";
 import { ChangeEvent } from "react";
 
 export const createCountryHandler =

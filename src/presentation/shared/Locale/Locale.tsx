@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 import React from "react";
 import { IntlProvider, ReactIntlErrorCode } from "react-intl";
 

@@ -1,8 +1,8 @@
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { renderCollection } from "@dashboard/business/misc";
 import { getPluginsWithAppReplacementsIds } from "@dashboard/business/utils/plugins/plugins-with-app-replacements";
 import { PluginListUrlSortField, pluginUrl } from "@dashboard/business/utils/plugins/urls";
 import { PluginBaseFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { ListProps, SortPage } from "@dashboard/types";
 import { TableBody, TableCell, TableFooter } from "@material-ui/core";
 import ResponsiveTable from "@presentation/shared//ResponsiveTable";

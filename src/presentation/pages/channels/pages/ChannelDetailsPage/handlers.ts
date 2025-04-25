@@ -1,8 +1,8 @@
+import { SearchData } from "@dashboard/business/hooks/shared/makeTopLevelSearch";
+import { getParsedSearchData } from "@dashboard/business/hooks/shared/makeTopLevelSearch/utils";
 import { getById, getByUnmatchingId } from "@dashboard/business/misc";
 import { move } from "@dashboard/business/utils/shared/lists";
 import { FormData } from "@dashboard/channels/components/ChannelForm";
-import { SearchData } from "@dashboard/hooks/makeTopLevelSearch";
-import { getParsedSearchData } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { ReorderAction, ReorderEvent } from "@dashboard/types";
 
 import { getUpdatedIdsWithNewId, getUpdatedIdsWithoutNewId } from "./utils";

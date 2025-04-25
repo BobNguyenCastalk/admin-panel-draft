@@ -1,4 +1,8 @@
 // @ts-strict-ignore
+import { useBackLinkWithState } from "@dashboard/business/hooks/shared/useBackLinkWithState";
+import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
+import useLocale from "@dashboard/business/hooks/shared/useLocale";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { getUserName } from "@dashboard/business/misc";
 import { staffListPath } from "@dashboard/business/utils/staffs/urls";
 import { getMemberPermissionGroups, isMemberActive } from "@dashboard/business/utils/staffs/utils";
@@ -8,10 +12,6 @@ import {
   StaffMemberDetailsFragment,
   UserFragment,
 } from "@dashboard/graphql";
-import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
-import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useLocale from "@dashboard/hooks/useLocale";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
 import UserStatus from "@presentation/pages/staffs/components/UserStatus";
 import AccountPermissionGroups from "@presentation/shared//AccountPermissionGroups";

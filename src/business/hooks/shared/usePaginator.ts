@@ -1,7 +1,7 @@
 import { stringifyQs } from "@dashboard/business/utils/shared/urls";
 import { createContext, useContext, useMemo } from "react";
 
-import { Pagination } from "../types";
+import { Pagination } from "../../../types";
 
 export interface PageInfo {
   endCursor: string | null;

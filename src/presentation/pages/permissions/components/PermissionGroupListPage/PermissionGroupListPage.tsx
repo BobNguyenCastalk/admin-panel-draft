@@ -2,9 +2,9 @@ import {
   permissionGroupAddUrl,
   PermissionGroupListUrlSortField,
 } from "@business/utils/permissions/urls";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { sectionNames } from "@dashboard/constants/common/intl";
 import { PermissionGroupFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { PageListProps, SortPage } from "@dashboard/types";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";

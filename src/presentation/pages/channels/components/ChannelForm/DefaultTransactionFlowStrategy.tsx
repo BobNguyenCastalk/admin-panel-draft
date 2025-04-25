@@ -1,4 +1,4 @@
-import { FormChange } from "@dashboard/hooks/useForm";
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import Link from "@presentation/shared//Link";
 import PreviewPill from "@presentation/shared//PreviewPill";
 import { Box, Checkbox, Text } from "@saleor/macaw-ui-next";

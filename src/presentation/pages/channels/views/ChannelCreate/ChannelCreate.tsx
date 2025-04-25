@@ -1,5 +1,8 @@
 // @ts-strict-ignore
 import { channelPath } from "@business/utils/channels/urls";
+import { getSearchFetchMoreProps } from "@dashboard/business/hooks/shared/makeTopLevelSearch/utils";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import getChannelsErrorMessage from "@dashboard/business/utils/shared/errors/channels";
 import { FormData } from "@dashboard/channels/components/ChannelForm/ChannelForm";
 import { commonMessages } from "@dashboard/constants/common/intl";
@@ -10,9 +13,6 @@ import {
   useChannelCreateMutation,
   useChannelReorderWarehousesMutation,
 } from "@dashboard/graphql";
-import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
 import { WindowTitle } from "@presentation/shared//WindowTitle";
 import currencyCodes from "currency-codes";
 import React from "react";

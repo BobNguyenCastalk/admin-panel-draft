@@ -1,7 +1,7 @@
 // @ts-strict-ignore
+import { UseFormResult } from "@dashboard/business/hooks/shared/useForm";
 import { RequireOnlyOne } from "@dashboard/business/misc";
 import commonErrorMessages from "@dashboard/business/utils/shared/errors/common";
-import { UseFormResult } from "@dashboard/hooks/useForm";
 import { TextField } from "@material-ui/core";
 import HorizontalSpacer from "@presentation/shared//HorizontalSpacer";
 import { makeStyles } from "@saleor/macaw-ui";

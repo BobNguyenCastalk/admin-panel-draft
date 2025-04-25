@@ -1,4 +1,4 @@
-import { FormChange } from "@dashboard/hooks/useForm";
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { TextFieldProps } from "@material-ui/core";
 import { useMemo } from "react";
 

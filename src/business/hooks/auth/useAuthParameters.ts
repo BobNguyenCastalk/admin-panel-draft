@@ -1,5 +1,5 @@
 import { loginCallbackPath } from "@business/utils/auth/urls";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 
 export const useAuthParameters = () => {
   const [requestedExternalPluginId, setRequestedExternalPluginId] = useLocalStorage<string | null>(

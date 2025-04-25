@@ -1,7 +1,7 @@
 import "@glideapps/glide-data-grid/dist/index.css";
 
-import { NavigatorOpts } from "@dashboard/hooks/useNavigator";
-import { usePreventHistoryBack } from "@dashboard/hooks/usePreventHistoryBack";
+import { NavigatorOpts } from "@dashboard/business/hooks/shared/useNavigator";
+import { usePreventHistoryBack } from "@dashboard/business/hooks/shared/usePreventHistoryBack";
 import DataEditor, {
   CellClickedEventArgs,
   DataEditorProps,

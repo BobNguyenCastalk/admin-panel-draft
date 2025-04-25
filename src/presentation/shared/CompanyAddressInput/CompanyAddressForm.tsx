@@ -1,4 +1,5 @@
 // @ts-strict-ignore
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
 import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/account";
 import getShopErrorMessage from "@dashboard/business/utils/shared/errors/shop";
@@ -9,7 +10,6 @@ import {
   ShopErrorFragment,
   WarehouseErrorFragment,
 } from "@dashboard/graphql";
-import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { TextField } from "@material-ui/core";
 import FormSpacer from "@presentation/shared//FormSpacer";
 import Grid from "@presentation/shared//Grid";

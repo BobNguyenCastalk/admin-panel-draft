@@ -1,4 +1,4 @@
-import { usePreventHistoryBack } from "@dashboard/hooks/usePreventHistoryBack";
+import { usePreventHistoryBack } from "@dashboard/business/hooks/shared/usePreventHistoryBack";
 import { useEffect, useState } from "react";
 
 import { useDelayedState } from "./useDelayedState";

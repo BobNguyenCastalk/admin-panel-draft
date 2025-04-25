@@ -1,4 +1,4 @@
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { DialogProps, FetchMoreProps, Node } from "@dashboard/types";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";

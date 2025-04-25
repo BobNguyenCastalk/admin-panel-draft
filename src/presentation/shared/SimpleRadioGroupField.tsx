@@ -1,4 +1,4 @@
-import { ChangeEvent } from "@dashboard/hooks/useForm";
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { RadioGroup, RadioGroupRootProps, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 

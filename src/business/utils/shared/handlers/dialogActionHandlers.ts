@@ -1,4 +1,4 @@
-import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
+import { UseNavigatorResult } from "@dashboard/business/hooks/shared/useNavigator";
 import { BulkAction, Dialog, SingleAction } from "@dashboard/types";
 
 type Url<T extends Dialog<any>> = (params: T) => string;

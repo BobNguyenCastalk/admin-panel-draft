@@ -1,4 +1,6 @@
 import { commonMessages } from "@constants/common/intl";
+import useClipboard from "@dashboard/business/hooks/shared/useClipboard";
+import { ChangeEvent, FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
 import getChannelsErrorMessage from "@dashboard/business/utils/shared/errors/channels";
 import { AutomaticallyCompleteCheckouts } from "@dashboard/channels/components/ChannelForm/AutomaticallyCompleteCheckouts";
@@ -13,8 +15,6 @@ import {
   StockSettingsInput,
   TransactionFlowStrategyEnum,
 } from "@dashboard/graphql";
-import useClipboard from "@dashboard/hooks/useClipboard";
-import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
 import { DashboardCard } from "@presentation/shared//Card";
 import { Combobox } from "@presentation/shared//Combobox";
 import FormSpacer from "@presentation/shared//FormSpacer";

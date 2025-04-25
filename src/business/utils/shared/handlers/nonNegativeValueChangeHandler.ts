@@ -1,4 +1,4 @@
-import { FormChange } from "@dashboard/hooks/useForm";
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 
 function createNonNegativeValueChangeHandler(change: FormChange) {
   return (event: React.ChangeEvent<any>) => {

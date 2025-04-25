@@ -1,8 +1,8 @@
 import { useAuthParameters } from "@business/hooks/auth/useAuthParameters";
 import { loginCallbackPath, LoginUrlQueryParams } from "@business/utils/auth/urls";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { getAppMountUriForRedirect } from "@dashboard/business/utils/shared/urls";
 import { useAvailableExternalAuthenticationsLazyQuery } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { useBoundStore } from "@dashboard/stores";
 import React, { useEffect } from "react";
 import urlJoin from "url-join";

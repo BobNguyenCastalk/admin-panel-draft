@@ -1,5 +1,5 @@
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { AccountErrorFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { useAuth } from "@saleor/sdk";
 import { parse as parseQs } from "qs";
 import React, { useState } from "react";

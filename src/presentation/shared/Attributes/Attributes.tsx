@@ -1,4 +1,5 @@
 import { AttributeReference } from "@dashboard/attributes/utils/data";
+import { FormsetAtomicData } from "@dashboard/business/hooks/shared/useFormset";
 import { RichTextGetters } from "@dashboard/business/utils/shared/richText/useMultipleRichText";
 import {
   AttributeEntityTypeEnum,
@@ -9,7 +10,6 @@ import {
   PageErrorWithAttributesFragment,
   ProductErrorWithAttributesFragment,
 } from "@dashboard/graphql";
-import { FormsetAtomicData } from "@dashboard/hooks/useFormset";
 import { AttributeValuesMetadata } from "@dashboard/products/utils/data";
 import { FetchMoreProps } from "@dashboard/types";
 import { Accordion, Box, Text } from "@saleor/macaw-ui-next";

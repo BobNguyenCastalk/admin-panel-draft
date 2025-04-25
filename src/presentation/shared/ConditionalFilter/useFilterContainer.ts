@@ -1,4 +1,4 @@
-import useDebounce from "@dashboard/hooks/useDebounce";
+import useDebounce from "@dashboard/business/hooks/shared/useDebounce";
 
 import { FilterAPIProvider } from "./API/FilterAPIProvider";
 import { useConditionalFilterContext } from "./context";

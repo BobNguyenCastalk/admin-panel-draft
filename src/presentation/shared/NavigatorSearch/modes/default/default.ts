@@ -1,7 +1,7 @@
 import { MutationFunction } from "@apollo/client";
+import { UseNavigatorResult } from "@dashboard/business/hooks/shared/useNavigator";
 import { fuzzySearch } from "@dashboard/business/misc";
 import { OrderDraftCreateMutation } from "@dashboard/graphql";
-import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { IntlShape } from "react-intl";
 
 import { QuickSearchAction, QuickSearchMode } from "../../types";

@@ -1,7 +1,7 @@
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { useStaffMemberDeleteMutation, useStaffMemberUpdateMutation } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
 import { useIntl } from "react-intl";
 
 import { staffListUrl } from "../../utils/staffs/urls";

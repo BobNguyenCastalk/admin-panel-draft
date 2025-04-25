@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
+import useStateFromProps from "@dashboard/business/hooks/shared/useStateFromProps";
 import { extractMutationErrors } from "@dashboard/business/misc";
 import {
   pluginUrl,
@@ -14,9 +17,6 @@ import {
   usePluginQuery,
   usePluginUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import ActionDialog from "@presentation/shared//ActionDialog";
 import { WindowTitle } from "@presentation/shared//WindowTitle";
 import React from "react";

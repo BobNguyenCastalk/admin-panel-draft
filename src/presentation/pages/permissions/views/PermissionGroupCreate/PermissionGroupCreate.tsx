@@ -3,10 +3,10 @@ import {
   checkIfUserHasRestictedAccessToChannels,
   getUserAccessibleChannelsOptions,
 } from "@business/utils/permissions/utils";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import { extractMutationErrors } from "@dashboard/business/misc";
 import { usePermissionGroupCreateMutation } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";

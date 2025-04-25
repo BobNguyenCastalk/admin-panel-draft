@@ -1,4 +1,4 @@
-import useAppState from "@dashboard/hooks/useAppState";
+import useAppState from "@dashboard/business/hooks/shared/useAppState";
 import { LinearProgress } from "@material-ui/core";
 import { Box } from "@saleor/macaw-ui-next";
 import React from "react";

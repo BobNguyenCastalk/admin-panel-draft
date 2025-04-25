@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 
+import { useQuery } from "@dashboard/business/hooks/shared/graphql";
 import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
-import { useQuery } from "@dashboard/hooks/graphql";
 import { Radio } from "@material-ui/core";
 import {
   List,

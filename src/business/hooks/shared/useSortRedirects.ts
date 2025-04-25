@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import useNavigator from "@dashboard/hooks/useNavigator";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { Sort } from "@dashboard/types";
 import { useEffect, useRef } from "react";
 

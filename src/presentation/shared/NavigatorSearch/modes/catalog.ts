@@ -1,8 +1,8 @@
 // @ts-strict-ignore
+import { UseNavigatorResult } from "@dashboard/business/hooks/shared/useNavigator";
 import { fuzzySearch } from "@dashboard/business/misc";
 import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { SearchCatalogQuery } from "@dashboard/graphql";
-import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { IntlShape } from "react-intl";
 
 import { QuickSearchAction, QuickSearchActionInput } from "../types";

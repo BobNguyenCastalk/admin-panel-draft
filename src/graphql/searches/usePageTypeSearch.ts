@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { gql } from "@apollo/client";
+import makeTopLevelSearch from "@dashboard/business/hooks/shared/makeTopLevelSearch";
 import {
   SearchPageTypesDocument,
   SearchPageTypesQuery,
   SearchPageTypesQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
 
 export const searchPageTypes = gql`
   query SearchPageTypes($after: String, $first: Int!, $query: String!) {

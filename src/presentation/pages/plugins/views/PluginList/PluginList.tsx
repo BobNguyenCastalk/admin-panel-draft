@@ -1,4 +1,12 @@
 // @ts-strict-ignore
+import { useChannelsSearchWithLoadMore } from "@dashboard/business/hooks/shared/useChannelsSearchWithLoadMore";
+import useListSettings from "@dashboard/business/hooks/shared/useListSettings";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import { usePaginationReset } from "@dashboard/business/hooks/shared/usePaginationReset";
+import usePaginator, {
+  createPaginationState,
+  PaginatorContext,
+} from "@dashboard/business/hooks/shared/usePaginator";
 import { maybe } from "@dashboard/business/misc";
 import {
   pluginListUrl,
@@ -11,14 +19,6 @@ import createSortHandler from "@dashboard/business/utils/shared/handlers/sortHan
 import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { getSortParams } from "@dashboard/business/utils/shared/sort";
 import { usePluginsQuery } from "@dashboard/graphql";
-import { useChannelsSearchWithLoadMore } from "@dashboard/hooks/useChannelsSearchWithLoadMore";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
-import usePaginator, {
-  createPaginationState,
-  PaginatorContext,
-} from "@dashboard/hooks/usePaginator";
 import { ListViews } from "@dashboard/types";
 import DeleteFilterTabDialog from "@presentation/shared//DeleteFilterTabDialog";
 import SaveFilterTabDialog, {

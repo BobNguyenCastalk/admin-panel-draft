@@ -1,6 +1,6 @@
+import useForm, { FormChange, SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
+import useHandleFormSubmit from "@dashboard/business/hooks/shared/useHandleFormSubmit";
 import { DEMO_MODE } from "@dashboard/configs";
-import useForm, { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
 import React from "react";
 
 export interface LoginFormData {

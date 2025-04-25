@@ -1,9 +1,9 @@
 // @ts-strict-ignore
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { getFieldError, getFormErrors } from "@dashboard/business/utils/shared/errors";
 import getPermissionGroupErrorMessage from "@dashboard/business/utils/shared/errors/permissionGroups";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { PermissionGroupErrorFragment } from "@dashboard/graphql";
-import { FormChange } from "@dashboard/hooks/useForm";
 import { TextField } from "@material-ui/core";
 import { DashboardCard } from "@presentation/shared//Card";
 import React from "react";

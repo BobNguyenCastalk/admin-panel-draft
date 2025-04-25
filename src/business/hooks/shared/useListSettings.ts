@@ -1,9 +1,9 @@
 // @ts-strict-ignore
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 import mergeWith from "lodash/mergeWith";
 
-import { AppListViewSettings, defaultListSettings } from "../configs";
-import { ListSettings, ListViews } from "../types";
+import { AppListViewSettings, defaultListSettings } from "../../../configs";
+import { ListSettings, ListViews } from "../../../types";
 
 export const listSettingsStorageKey = "listConfig";
 export interface UseListSettings<TColumns extends string = string> {

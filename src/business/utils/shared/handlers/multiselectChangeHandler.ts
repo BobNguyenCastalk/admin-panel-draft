@@ -1,4 +1,4 @@
-import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
+import { ChangeEvent, FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { Option } from "@saleor/macaw-ui-next";
 
 /**

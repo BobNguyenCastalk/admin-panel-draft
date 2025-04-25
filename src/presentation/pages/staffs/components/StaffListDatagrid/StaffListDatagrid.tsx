@@ -1,9 +1,9 @@
+import { getPrevLocationState } from "@dashboard/business/hooks/shared/useBackLinkWithState";
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import {
   StaffListUrlSortField,
   staffMemberDetailsUrl,
 } from "@dashboard/business/utils/staffs/urls";
-import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useNavigator from "@dashboard/hooks/useNavigator";
 import { ListProps, SortPage } from "@dashboard/types";
 import { StaffMember, StaffMembers } from "@dashboard/types/staffs";
 import { Item } from "@glideapps/glide-data-grid";

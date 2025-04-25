@@ -1,4 +1,5 @@
 // @ts-strict-ignore
+import { ChannelsWithLoadMoreProps } from "@dashboard/business/hooks/shared/useChannelsSearch";
 import { maybe, parseBoolean } from "@dashboard/business/misc";
 import {
   PluginListUrlFilters,
@@ -15,7 +16,6 @@ import {
 } from "@dashboard/business/utils/shared/filters";
 import { mapNodeToChoice } from "@dashboard/business/utils/shared/maps";
 import { PluginConfigurationType, PluginFilterInput } from "@dashboard/graphql";
-import { ChannelsWithLoadMoreProps } from "@dashboard/hooks/useChannelsSearch";
 import {
   PluginFilterKeys,
   PluginListFilterOpts,
