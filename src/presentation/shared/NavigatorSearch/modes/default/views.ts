@@ -2,7 +2,6 @@ import { pluginListUrl } from "@dashboard/business/utils/plugins/urls";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { fuzzySearch } from "@dashboard/misc";
-import { menuListUrl } from "@dashboard/navigation/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
 import { IntlShape } from "react-intl";
@@ -22,10 +21,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.home),
       url: "/",
-    },
-    {
-      label: intl.formatMessage(sectionNames.navigation),
-      url: menuListUrl(),
     },
     {
       label: intl.formatMessage(sectionNames.permissionGroups),

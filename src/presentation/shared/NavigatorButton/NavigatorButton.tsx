@@ -1,11 +1,18 @@
 // @ts-strict-ignore
-import { triangle } from "@dashboard/styles/mixins";
 import { Grow, Paper, Popper } from "@material-ui/core";
 import { IconButtonProps } from "@material-ui/core/IconButton";
 import { LayoutButton, makeStyles, NavigatorIcon } from "@saleor/macaw-ui";
 import clsx from "clsx";
-import React from "react";
+import React, { CSSProperties } from "react";
 import { FormattedMessage } from "react-intl";
+
+const triangle = (color: string, width: number): CSSProperties => ({
+  borderBottom: `${width}px solid ${color}`,
+  borderLeft: `${width}px solid transparent`,
+  borderRight: `${width}px solid transparent`,
+  height: 0,
+  width: 0,
+});
 
 const useStyles = makeStyles(
   theme => ({

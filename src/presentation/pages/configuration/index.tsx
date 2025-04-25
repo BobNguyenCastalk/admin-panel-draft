@@ -4,13 +4,11 @@ import { channelsListUrl } from "@dashboard/channels/urls";
 import { APP_VERSION as dashboardVersion } from "@dashboard/config";
 import { PermissionEnum } from "@dashboard/graphql";
 import Channels from "@dashboard/icons/Channels";
-import Navigation from "@dashboard/icons/Navigation";
 import PermissionGroups from "@dashboard/icons/PermissionGroups";
 import Plugins from "@dashboard/icons/Plugins";
 import StaffMembers from "@dashboard/icons/StaffMembers";
 import { sectionNames } from "@dashboard/intl";
 import { maybe } from "@dashboard/misc";
-import { menuListUrl } from "@dashboard/navigation/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { staffListUrl } from "@dashboard/staff/urls";
@@ -85,17 +83,6 @@ export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
         defaultMessage: "Miscellaneous",
       }),
       menuItems: [
-        {
-          description: intl.formatMessage({
-            id: "hpMcW8",
-            defaultMessage: "Define how users can navigate through your store",
-          }),
-          icon: <Navigation />,
-          permissions: [PermissionEnum.MANAGE_MENUS],
-          title: intl.formatMessage(sectionNames.navigation),
-          url: menuListUrl(),
-          testId: "configuration-menu-navigation",
-        },
         {
           description: intl.formatMessage({
             id: "m19JfL",

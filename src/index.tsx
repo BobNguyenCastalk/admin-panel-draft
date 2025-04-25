@@ -45,8 +45,6 @@ import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvide
 import { apolloClient, saleorClient } from "./graphql/client";
 import { useLocationState } from "./hooks/useLocationState";
 import { commonMessages } from "./intl";
-import NavigationSection from "./navigation";
-import { navigationSection } from "./navigation/urls";
 import { NotFound } from "./NotFound";
 import PermissionGroupSection from "./permissionGroups";
 import Auth from "./presentation/pages/auth";
@@ -163,11 +161,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_STAFF]}
                 path="/permission-groups"
                 component={PermissionGroupSection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_MENUS]}
-                path={navigationSection}
-                component={NavigationSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_CHANNELS]}
