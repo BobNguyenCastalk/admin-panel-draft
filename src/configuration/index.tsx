@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { useUser } from "@dashboard/auth";
 import { channelsListUrl } from "@dashboard/channels/urls";
 import { APP_VERSION as dashboardVersion } from "@dashboard/config";
 import { PermissionEnum } from "@dashboard/graphql";
@@ -14,6 +13,7 @@ import { maybe } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import { staffListUrl } from "@dashboard/staff/urls";
 import { WindowTitle } from "@presentation/shared//WindowTitle";
 import React from "react";

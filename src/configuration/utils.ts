@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { hasAllPermissions, hasAnyPermissions } from "@dashboard/auth/misc";
+import { hasAllPermissions, hasAnyPermissions } from "@business/utils/auth/misc";
 import { PermissionEnum, UserFragment } from "@dashboard/graphql";
 import { IntlShape } from "react-intl";
 

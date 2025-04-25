@@ -1,4 +1,4 @@
-import { useUser } from "..";
+import { useUser } from "@presentation/pages/auth";
 
 export const useUserAccessibleChannels = () => {
   const user = useUser();

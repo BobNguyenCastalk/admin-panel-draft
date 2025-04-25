@@ -1,5 +1,5 @@
-import { useUser } from "@dashboard/auth";
 import { PermissionEnum } from "@dashboard/graphql";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";
 import { hasPermissions } from "@presentation/shared//RequirePermissions";
 import { Box } from "@saleor/macaw-ui-next";

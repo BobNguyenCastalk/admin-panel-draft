@@ -6,10 +6,14 @@ import {
   MutationResult,
   useMutation as useBaseMutation,
 } from "@apollo/client";
-import { handleNestedMutationErrors, showAllErrors, useUser } from "@dashboard/auth";
-import { isJwtError } from "@dashboard/auth/errors";
+import { isJwtError } from "@business/utils/auth/errors";
 import { commonMessages } from "@dashboard/intl";
 import { getMutationStatus } from "@dashboard/misc";
+import {
+  handleNestedMutationErrors,
+  showAllErrors,
+  useUser,
+} from "@dashboard/presentation/pages/auth";
 import { MutationResultAdditionalProps } from "@dashboard/types";
 import { GqlErrors, hasError } from "@dashboard/utils/api";
 import { DocumentNode } from "graphql";

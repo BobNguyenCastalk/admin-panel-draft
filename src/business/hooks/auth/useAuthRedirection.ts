@@ -1,10 +1,11 @@
+import { loginCallbackPath } from "@business/utils/auth/urls";
 import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
+// TODO: Context is being defined in presentation layer. To fix this
+import { useUser } from "@presentation/pages/auth";
 import { useEffect } from "react";
 import urlJoin from "url-join";
 import useRouter from "use-react-router";
 
-import { useUser } from "..";
-import { loginCallbackPath } from "../urls";
 import { useAuthParameters } from "./useAuthParameters";
 
 const PLUGIN_ID_PARAM = "saleorPluginId";

@@ -1,4 +1,4 @@
-import { newPasswordUrl } from "@dashboard/auth/urls";
+import { newPasswordUrl } from "@business/utils/auth/urls";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { useFlag } from "@dashboard/featureFlags";
 import { useStaffListQuery, useStaffMemberAddMutation } from "@dashboard/graphql";

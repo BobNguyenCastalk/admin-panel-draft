@@ -1,4 +1,4 @@
-import { useUserPermissions } from "@dashboard/auth/hooks/useUserPermissions";
+import { useUserPermissions } from "@business/hooks/auth/useUserPermissions";
 import { PermissionEnum } from "@dashboard/graphql";
 
 export const useHasManagedAppsPermission = () => {

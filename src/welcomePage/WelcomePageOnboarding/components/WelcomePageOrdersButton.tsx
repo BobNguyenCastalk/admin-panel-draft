@@ -1,5 +1,5 @@
-import { useUser } from "@dashboard/auth";
 import { PermissionEnum } from "@dashboard/graphql";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import { hasPermissions } from "@presentation/shared//RequirePermissions";
 import { Button, Tooltip } from "@saleor/macaw-ui-next";
 import React from "react";

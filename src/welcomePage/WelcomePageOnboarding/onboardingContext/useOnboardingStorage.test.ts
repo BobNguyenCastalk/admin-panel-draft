@@ -1,5 +1,5 @@
-import { useUser } from "@dashboard/auth";
 import { useSaveOnBoardingStateMutation } from "@dashboard/graphql";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import { act } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 

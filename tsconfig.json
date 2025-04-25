@@ -21,6 +21,7 @@
       "@locale/*": ["locale/*"],
       "@dashboard/*": ["src/*"],
       "@presentation/*": ["src/presentation/*"],
+      "@business/*": ["src/business/*"],
       "@test/*": ["testUtils/*"]
     }
   },

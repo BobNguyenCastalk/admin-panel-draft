@@ -1,5 +1,5 @@
-import { useUser } from "@dashboard/auth";
 import { useSaveOnBoardingStateMutation } from "@dashboard/graphql";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import debounce from "lodash/debounce";
 import { useCallback, useMemo } from "react";
 

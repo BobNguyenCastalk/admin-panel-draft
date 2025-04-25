@@ -1,9 +1,9 @@
 // @ts-strict-ignore
-import { useUser } from "@dashboard/auth";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import usePermissionGroupSearch from "@dashboard/searches/usePermissionGroupSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import ActionDialog from "@presentation/shared//ActionDialog";

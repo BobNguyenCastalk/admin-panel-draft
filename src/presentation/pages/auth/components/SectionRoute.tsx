@@ -1,11 +1,11 @@
+import { hasAllPermissions, hasAnyPermissions } from "@business/utils/auth/misc";
 import { PermissionEnum } from "@dashboard/graphql";
 import { Route } from "@presentation/shared//Router";
 import React from "react";
 import { RouteProps } from "react-router-dom";
 
-import NotFound from "../../NotFound";
+import NotFound from "../../../../NotFound";
 import { useUser } from "..";
-import { hasAllPermissions, hasAnyPermissions } from "../misc";
 
 type MatchPermissionType = "all" | "any";
 

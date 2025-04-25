@@ -1,4 +1,3 @@
-import { useUser } from "@dashboard/auth";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { getConfigMenuItemsPermissions } from "@dashboard/configuration/utils";
 import { useFlag } from "@dashboard/featureFlags";
@@ -13,6 +12,7 @@ import { OrdersIcon } from "@dashboard/icons/Orders";
 import { ProductsIcon } from "@dashboard/icons/Products";
 import { TranslationsIcon } from "@dashboard/icons/Translations";
 import { commonMessages, sectionNames } from "@dashboard/intl";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import { Box } from "@saleor/macaw-ui-next";
 import isEmpty from "lodash/isEmpty";
 import React from "react";

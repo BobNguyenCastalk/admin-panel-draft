@@ -1,4 +1,4 @@
-import { useUser } from "@dashboard/auth";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import React, { PropsWithChildren } from "react";
 

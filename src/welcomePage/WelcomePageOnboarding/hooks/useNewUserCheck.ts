@@ -1,4 +1,4 @@
-import { useUser } from "@dashboard/auth";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import moment from "moment";
 
 export const useNewUserCheck = () => {

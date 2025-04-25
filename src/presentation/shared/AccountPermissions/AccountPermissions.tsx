@@ -1,5 +1,5 @@
-import { useUser } from "@dashboard/auth";
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import React, { ChangeEvent } from "react";
 import { useIntl } from "react-intl";

@@ -210,6 +210,7 @@ export default defineConfig(({ command, mode }) => {
         "@assets": path.resolve(__dirname, "./assets"),
         "@locale": path.resolve(__dirname, "./locale"),
         "@presentation": path.resolve(__dirname, "./src/presentation"),
+        "@business": path.resolve(__dirname, "./src/business"),
         "@dashboard": path.resolve(__dirname, "./src"),
         src: path.resolve(__dirname, "./src"),
         /*

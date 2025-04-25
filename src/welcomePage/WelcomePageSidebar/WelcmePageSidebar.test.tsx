@@ -1,4 +1,4 @@
-import { useUserPermissions } from "@dashboard/auth/hooks/useUserPermissions";
+import { useUserPermissions } from "@business/hooks/auth/useUserPermissions";
 import { channelsList } from "@dashboard/channels/fixtures";
 import { ChannelFragment, PermissionEnum } from "@dashboard/graphql";
 import { act, render, screen } from "@testing-library/react";

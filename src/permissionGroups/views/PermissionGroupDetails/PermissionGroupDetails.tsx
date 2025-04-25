@@ -1,4 +1,3 @@
-import { useUser } from "@dashboard/auth";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
   PermissionGroupDetailsQuery,
@@ -16,6 +15,7 @@ import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import MembersErrorDialog from "@dashboard/permissionGroups/components/MembersErrorDialog";
 import PermissionGroupDeleteDialog from "@dashboard/permissionGroups/components/PermissionGroupDeleteDialog";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import useStaffMemberSearch from "@dashboard/searches/useStaffMemberSearch";
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import createSortHandler from "@dashboard/utils/handlers/sortHandler";

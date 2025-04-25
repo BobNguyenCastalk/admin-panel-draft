@@ -1,6 +1,6 @@
-import { useUser } from "@dashboard/auth";
 import { ChannelWarehouses } from "@dashboard/channels/pages/ChannelDetailsPage/types";
 import { ChannelCreateInput } from "@dashboard/graphql";
+import { useUser } from "@dashboard/presentation/pages/auth";
 
 import { useSaveChannel } from "./useSaveChannel";
 

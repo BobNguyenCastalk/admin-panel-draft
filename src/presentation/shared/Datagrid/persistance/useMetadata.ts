@@ -1,9 +1,9 @@
-import { useUser } from "@dashboard/auth";
 import {
   MetadataInput,
   MetadataItemFragment,
   useUserAccountUpdateMutation,
 } from "@dashboard/graphql";
+import { useUser } from "@dashboard/presentation/pages/auth";
 
 const extractGridRelatedMetadata = (metadata: MetadataItemFragment[], key: string) => {
   return metadata.find(meta => meta.key === `grid_${key}`);

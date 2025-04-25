@@ -1,4 +1,3 @@
-import { useUser } from "@dashboard/auth";
 import {
   ChannelFragment,
   PermissionEnum,
@@ -11,6 +10,7 @@ import { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { buttonMessages } from "@dashboard/intl";
 import { MembersListUrlSortField, permissionGroupListPath } from "@dashboard/permissionGroups/urls";
+import { useUser } from "@dashboard/presentation/pages/auth";
 import { ListActions, SortPage } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
 import getPermissionGroupErrorMessage from "@dashboard/utils/errors/permissionGroups";

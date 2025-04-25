@@ -1,4 +1,13 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
+import { parseAuthError } from "@business/utils/auth/errors";
+import {
+  ExternalLoginInput,
+  RequestExternalLoginInput,
+  RequestExternalLogoutInput,
+  UserContext,
+  UserContextError,
+} from "@business/utils/auth/types";
+import { displayDemoMessage } from "@business/utils/auth/utils";
 import { DEMO_MODE } from "@dashboard/config";
 import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
 import useLocalStorage from "@dashboard/hooks/useLocalStorage";
@@ -17,16 +26,6 @@ import isEmpty from "lodash/isEmpty";
 import { useEffect, useRef, useState } from "react";
 import { IntlShape } from "react-intl";
 import urlJoin from "url-join";
-
-import { parseAuthError } from "../errors";
-import {
-  ExternalLoginInput,
-  RequestExternalLoginInput,
-  RequestExternalLogoutInput,
-  UserContext,
-  UserContextError,
-} from "../types";
-import { displayDemoMessage } from "../utils";
 
 export interface UseAuthProviderOpts {
   intl: IntlShape;

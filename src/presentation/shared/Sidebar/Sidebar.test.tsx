@@ -1,4 +1,4 @@
-import { useCloud } from "@dashboard/auth/hooks/useCloud";
+import { useCloud } from "@business/hooks/auth/useCloud";
 import { useDevModeContext } from "@presentation/shared//DevModePanel/hooks";
 import { useNavigatorSearchContext } from "@presentation/shared//NavigatorSearch/useNavigatorSearchContext";
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";

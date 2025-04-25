@@ -1,11 +1,11 @@
+import { LoginUrlQueryParams, newPasswordPath } from "@business/utils/auth/urls";
 import { Route } from "@presentation/shared/Router";
 import { parse as parseQs } from "qs";
 import React, { useContext } from "react";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
+import { UserContext as Context } from "../../../auth/types";
 import Layout from "./components/Layout";
-import { UserContext as Context } from "./types";
-import { LoginUrlQueryParams, newPasswordPath } from "./urls";
 import LoginViewComponent from "./views/Login";
 import NewPassword from "./views/NewPassword";
 
@@ -40,5 +40,5 @@ const AuthRouter: React.FC = () => (
 AuthRouter.displayName = "AuthRouter";
 export default AuthRouter;
 
-export * from "./utils";
+export * from "@business/utils/auth/utils"; // TODO: to update this
 export const useUser = () => useContext(UserContext);

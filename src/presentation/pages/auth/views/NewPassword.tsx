@@ -5,8 +5,8 @@ import { parse as parseQs } from "qs";
 import React, { useState } from "react";
 import { RouteComponentProps } from "react-router";
 
+import { NewPasswordUrlQueryParams } from "../../../../auth/urls";
 import NewPasswordPage, { NewPasswordPageFormData } from "../components/NewPasswordPage";
-import { NewPasswordUrlQueryParams } from "../urls";
 
 const NewPassword: React.FC<RouteComponentProps> = ({ location }) => {
   const navigate = useNavigator();

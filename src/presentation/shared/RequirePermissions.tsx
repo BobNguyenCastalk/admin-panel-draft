@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { useUserPermissions } from "@dashboard/auth/hooks/useUserPermissions";
+import { useUserPermissions } from "@business/hooks/auth/useUserPermissions";
 import { PermissionEnum, UserPermissionFragment } from "@dashboard/graphql";
 import React from "react";
 
