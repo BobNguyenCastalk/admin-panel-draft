@@ -5,8 +5,6 @@ import {
   PluginListUrlFiltersEnum,
   PluginListUrlQueryParams,
 } from "@dashboard/business/utils/plugins/urls";
-import { PluginConfigurationType, PluginFilterInput } from "@dashboard/graphql";
-import { ChannelsWithLoadMoreProps } from "@dashboard/hooks/useChannelsSearch";
 import {
   createFilterTabUtils,
   createFilterUtils,
@@ -14,8 +12,10 @@ import {
   getMultipleValueQueryParam,
   getSingleEnumValueQueryParam,
   getSingleValueQueryParam,
-} from "@dashboard/utils/filters";
-import { mapNodeToChoice } from "@dashboard/utils/maps";
+} from "@dashboard/business/utils/shared/filters";
+import { mapNodeToChoice } from "@dashboard/business/utils/shared/maps";
+import { PluginConfigurationType, PluginFilterInput } from "@dashboard/graphql";
+import { ChannelsWithLoadMoreProps } from "@dashboard/hooks/useChannelsSearch";
 import {
   PluginFilterKeys,
   PluginListFilterOpts,

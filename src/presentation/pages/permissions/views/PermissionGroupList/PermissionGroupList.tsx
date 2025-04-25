@@ -2,6 +2,9 @@ import {
   permissionGroupListUrl,
   PermissionGroupListUrlQueryParams,
 } from "@business/utils/permissions/urls";
+import createSortHandler from "@dashboard/business/utils/shared/handlers/sortHandler";
+import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
+import { getSortParams } from "@dashboard/business/utils/shared/sort";
 import { usePermissionGroupListQuery } from "@dashboard/graphql";
 import useListSettings from "@dashboard/hooks/useListSettings";
 import useNavigator from "@dashboard/hooks/useNavigator";
@@ -11,9 +14,6 @@ import usePaginator, {
   PaginatorContext,
 } from "@dashboard/hooks/usePaginator";
 import { ListViews } from "@dashboard/types";
-import createSortHandler from "@dashboard/utils/handlers/sortHandler";
-import { mapEdgesToItems } from "@dashboard/utils/maps";
-import { getSortParams } from "@dashboard/utils/sort";
 import React from "react";
 
 import PermissionGroupListPage from "../../components/PermissionGroupListPage";

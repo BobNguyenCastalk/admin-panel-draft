@@ -1,11 +1,11 @@
 import { PluginListUrlFilters } from "@dashboard/business/utils/permissions/urls";
+import { getFilterQueryParams } from "@dashboard/business/utils/shared/filters";
+import { stringifyQs } from "@dashboard/business/utils/shared/urls";
 import { PluginConfigurationType } from "@dashboard/graphql";
 import {
   createFilterStructure,
   PluginFilterKeys,
 } from "@dashboard/plugins/components/PluginsListPage";
-import { getFilterQueryParams } from "@dashboard/utils/filters";
-import { stringifyQs } from "@dashboard/utils/urls";
 import { FieldType } from "@presentation/shared//Filter";
 import { getExistingKeys } from "@test/filters";
 import { config } from "@test/intl";

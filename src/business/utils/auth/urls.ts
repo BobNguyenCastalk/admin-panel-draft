@@ -1,4 +1,4 @@
-import { stringifyQs } from "@dashboard/utils/urls";
+import { stringifyQs } from "@dashboard/business/utils/shared/urls";
 
 export const newPasswordPath = "/new-password/";
 export const loginCallbackPath = "/login/callback/";

@@ -1,4 +1,5 @@
 import { AttributeReference } from "@dashboard/attributes/utils/data";
+import { RichTextGetters } from "@dashboard/business/utils/shared/richText/useMultipleRichText";
 import {
   AttributeEntityTypeEnum,
   AttributeInputTypeEnum,
@@ -11,7 +12,6 @@ import {
 import { FormsetAtomicData } from "@dashboard/hooks/useFormset";
 import { AttributeValuesMetadata } from "@dashboard/products/utils/data";
 import { FetchMoreProps } from "@dashboard/types";
-import { RichTextGetters } from "@dashboard/utils/richText/useMultipleRichText";
 import { Accordion, Box, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";

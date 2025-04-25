@@ -6,6 +6,8 @@ import {
   getUserAccessibleChannelsOptions,
   isGroupFullAccess,
 } from "@business/utils/permissions/utils";
+import { getFormErrors } from "@dashboard/business/utils/shared/errors";
+import getPermissionGroupErrorMessage from "@dashboard/business/utils/shared/errors/permissionGroups";
 import { buttonMessages } from "@dashboard/constants/common/intl";
 import {
   ChannelFragment,
@@ -19,8 +21,6 @@ import { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { ListActions, SortPage } from "@dashboard/types";
-import { getFormErrors } from "@dashboard/utils/errors";
-import getPermissionGroupErrorMessage from "@dashboard/utils/errors/permissionGroups";
 import AccountPermissions from "@presentation/shared//AccountPermissions";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import { ChannelPermission } from "@presentation/shared//ChannelPermission";

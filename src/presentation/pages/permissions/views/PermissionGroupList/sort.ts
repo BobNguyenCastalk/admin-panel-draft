@@ -1,6 +1,6 @@
 import { PermissionGroupListUrlSortField } from "@business/utils/permissions/urls";
+import { createGetSortQueryVariables } from "@dashboard/business/utils/shared/sort";
 import { PermissionGroupSortField } from "@dashboard/graphql";
-import { createGetSortQueryVariables } from "@dashboard/utils/sort";
 
 export function getSortQueryField(sort: PermissionGroupListUrlSortField): PermissionGroupSortField {
   switch (sort) {

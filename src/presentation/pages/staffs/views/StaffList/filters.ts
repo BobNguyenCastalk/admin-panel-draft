@@ -4,12 +4,12 @@ import {
   StaffListUrlQueryParams,
 } from "@business/utils/staffs/urls";
 import { findValueInEnum } from "@dashboard/business/misc";
-import { StaffMemberStatus, StaffUserInput } from "@dashboard/graphql";
 import {
   createFilterTabUtils,
   createFilterUtils,
   getSingleEnumValueQueryParam,
-} from "@dashboard/utils/filters";
+} from "@dashboard/business/utils/shared/filters";
+import { StaffMemberStatus, StaffUserInput } from "@dashboard/graphql";
 import {
   StaffFilterKeys,
   StaffListFilterOpts,

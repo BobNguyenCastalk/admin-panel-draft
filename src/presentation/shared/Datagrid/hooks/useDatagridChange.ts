@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { updateAtIndex } from "@dashboard/utils/lists";
+import { updateAtIndex } from "@dashboard/business/utils/shared/lists";
 import { EditableGridCell, Item } from "@glideapps/glide-data-grid";
 import {
   createContext,

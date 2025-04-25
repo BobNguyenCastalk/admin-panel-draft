@@ -1,7 +1,7 @@
 // @ts-strict-ignore
+import { getFieldError } from "@dashboard/business/utils/shared/errors";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
 import { UserError } from "@dashboard/types";
-import { getFieldError } from "@dashboard/utils/errors";
 import { TextField } from "@material-ui/core";
 import InfoIcon from "@material-ui/icons/Info";
 import { DashboardCard } from "@presentation/shared//Card";

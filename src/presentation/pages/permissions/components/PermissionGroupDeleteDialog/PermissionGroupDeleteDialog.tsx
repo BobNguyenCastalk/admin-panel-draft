@@ -1,5 +1,5 @@
+import getPermissionGroupErrorMessage from "@dashboard/business/utils/shared/errors/permissionGroups";
 import { PermissionGroupErrorCode, PermissionGroupErrorFragment } from "@dashboard/graphql";
-import getPermissionGroupErrorMessage from "@dashboard/utils/errors/permissionGroups";
 import ActionDialog from "@presentation/shared//ActionDialog";
 import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
 import { Box, Text } from "@saleor/macaw-ui-next";

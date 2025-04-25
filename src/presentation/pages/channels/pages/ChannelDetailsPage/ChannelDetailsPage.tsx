@@ -1,6 +1,8 @@
 // @ts-strict-ignore
 import { channelsListUrl } from "@dashboard/business/utils/channels/urls";
 import { validateChannelFormData } from "@dashboard/business/utils/channels/validation";
+import createSingleAutocompleteSelectHandler from "@dashboard/business/utils/shared/handlers/singleAutocompleteSelectChangeHandler";
+import { mapCountriesToChoices } from "@dashboard/business/utils/shared/maps";
 import ChannelAllocationStrategy from "@dashboard/channels/components/ChannelAllocationStrategy";
 import ShippingZones from "@dashboard/channels/components/ShippingZones";
 import Warehouses from "@dashboard/channels/components/Warehouses";
@@ -25,8 +27,6 @@ import { SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useStateFromProps from "@dashboard/hooks/useStateFromProps";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
-import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import CardSpacer from "@presentation/shared//CardSpacer";
 import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";

@@ -1,6 +1,6 @@
+import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/account";
+import getOrderErrorMessage from "@dashboard/business/utils/shared/errors/order";
 import { AccountErrorFragment, OrderErrorFragment } from "@dashboard/graphql";
-import getAccountErrorMessage from "@dashboard/utils/errors/account";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
 import { IntlShape } from "react-intl";
 
 import { getErrorMessage } from "./getErrorMessage";

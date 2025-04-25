@@ -1,6 +1,13 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
 import { parseAuthError } from "@business/utils/auth/errors";
 import { displayDemoMessage } from "@business/utils/auth/utils";
+import {
+  checkIfCredentialsExist,
+  isSupported as isCredentialsManagementAPISupported,
+  login as loginWithCredentialsManagementAPI,
+  saveCredentials,
+} from "@dashboard/business/utils/shared/credentialsManagement";
+import { getAppMountUriForRedirect } from "@dashboard/business/utils/shared/urls";
 import { DEMO_MODE } from "@dashboard/configs";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
@@ -13,13 +20,6 @@ import {
   UserContext,
   UserContextError,
 } from "@dashboard/types/auth";
-import {
-  checkIfCredentialsExist,
-  isSupported as isCredentialsManagementAPISupported,
-  login as loginWithCredentialsManagementAPI,
-  saveCredentials,
-} from "@dashboard/utils/credentialsManagement";
-import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
 import { IMessageContext } from "@presentation/shared//messages";
 import { GetExternalAccessTokenData, LoginData, useAuth, useAuthState } from "@saleor/sdk";
 import isEmpty from "lodash/isEmpty";

@@ -5,6 +5,8 @@ import {
   ChannelsListUrlQueryParams,
 } from "@business/utils/channels/urls";
 import { getChannelsCurrencyChoices } from "@dashboard/business/utils/channels/utils";
+import getChannelsErrorMessage from "@dashboard/business/utils/shared/errors/channels";
+import createDialogActionHandlers from "@dashboard/business/utils/shared/handlers/dialogActionHandlers";
 import {
   ChannelDeleteMutation,
   useChannelDeleteMutation,
@@ -12,8 +14,6 @@ import {
 } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
-import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import React from "react";
 import { useIntl } from "react-intl";
 

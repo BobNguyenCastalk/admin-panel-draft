@@ -1,5 +1,5 @@
 import { loginCallbackPath } from "@business/utils/auth/urls";
-import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
+import { getAppMountUriForRedirect } from "@dashboard/business/utils/shared/urls";
 // TODO: Context is being defined in presentation layer. To fix this
 import { useUser } from "@presentation/pages/auth";
 import { useEffect } from "react";

@@ -7,8 +7,8 @@ import {
   PermissionGroupListUrlQueryParams,
   PermissionGroupListUrlSortField,
 } from "@business/utils/permissions/urls";
+import { asSortParams } from "@dashboard/business/utils/shared/sort";
 import { sectionNames } from "@dashboard/constants/common/intl";
-import { asSortParams } from "@dashboard/utils/sort";
 import { Route } from "@presentation/shared//Router";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { parse as parseQs } from "qs";

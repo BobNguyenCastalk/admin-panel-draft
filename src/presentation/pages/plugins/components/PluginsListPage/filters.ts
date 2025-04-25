@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import { sectionNames } from "@dashboard/constants/common/intl";
-import { PluginConfigurationType } from "@dashboard/graphql";
-import { AutocompleteFilterOpts, FilterOpts } from "@dashboard/types";
 import {
   createAutocompleteField,
   createBooleanField,
   createOptionsField,
-} from "@dashboard/utils/filters/fields";
+} from "@dashboard/business/utils/shared/filters/fields";
+import { sectionNames } from "@dashboard/constants/common/intl";
+import { PluginConfigurationType } from "@dashboard/graphql";
+import { AutocompleteFilterOpts, FilterOpts } from "@dashboard/types";
 import { IFilter } from "@presentation/shared//Filter";
 import { defineMessages, IntlShape } from "react-intl";
 

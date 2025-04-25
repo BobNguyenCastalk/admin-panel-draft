@@ -1,10 +1,10 @@
 import { permissionGroupListUrl } from "@business/utils/permissions/urls";
+import { getFormErrors } from "@dashboard/business/utils/shared/errors";
+import getPermissionGroupErrorMessage from "@dashboard/business/utils/shared/errors/permissionGroups";
 import { buttonMessages, sectionNames } from "@dashboard/constants/common/intl";
 import { ChannelFragment, PermissionEnum, PermissionGroupErrorFragment } from "@dashboard/graphql";
 import { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
-import { getFormErrors } from "@dashboard/utils/errors";
-import getPermissionGroupErrorMessage from "@dashboard/utils/errors/permissionGroups";
 import AccountPermissions from "@presentation/shared//AccountPermissions";
 import { TopNav } from "@presentation/shared//AppLayout/TopNav";
 import { Backlink } from "@presentation/shared//Backlink";

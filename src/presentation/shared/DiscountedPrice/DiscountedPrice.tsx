@@ -1,4 +1,4 @@
-import { IMoney } from "@dashboard/utils/intl";
+import { IMoney } from "@dashboard/business/utils/shared/intl";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 

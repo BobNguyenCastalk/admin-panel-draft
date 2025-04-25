@@ -7,12 +7,12 @@ import {
 } from "@business/utils/staffs/urls";
 import { groupsDiff } from "@business/utils/staffs/utils";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/business/misc";
+import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/configs";
 import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
 import usePermissionGroupSearch from "@dashboard/graphql/searches/usePermissionGroupSearch";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { useUser } from "@dashboard/presentation/pages/auth";
-import { mapEdgesToItems } from "@dashboard/utils/maps";
 import ActionDialog from "@presentation/shared//ActionDialog";
 import NotFoundPage from "@presentation/shared//NotFoundPage";
 import { hasPermissions } from "@presentation/shared//RequirePermissions";

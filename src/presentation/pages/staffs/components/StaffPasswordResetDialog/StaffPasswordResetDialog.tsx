@@ -1,11 +1,11 @@
 // @ts-strict-ignore
+import { getFormErrors } from "@dashboard/business/utils/shared/errors";
+import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/account";
 import { buttonMessages } from "@dashboard/constants/common/intl";
 import { AccountErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
 import { DialogProps } from "@dashboard/types";
-import { getFormErrors } from "@dashboard/utils/errors";
-import getAccountErrorMessage from "@dashboard/utils/errors/account";
 import { TextField } from "@material-ui/core";
 import BackButton from "@presentation/shared//BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";

@@ -7,10 +7,10 @@ import {
   renderCollection,
   stopPropagation,
 } from "@dashboard/business/misc";
+import { getArrowDirection } from "@dashboard/business/utils/shared/sort";
 import { commonStatusMessages } from "@dashboard/constants/common/intl";
 import { PermissionGroupMemberFragment } from "@dashboard/graphql";
 import { ListActions, SortPage } from "@dashboard/types";
-import { getArrowDirection } from "@dashboard/utils/sort";
 import { TableBody, TableCell } from "@material-ui/core";
 import { Button } from "@presentation/shared//Button";
 import { DashboardCard } from "@presentation/shared//Card";

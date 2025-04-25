@@ -1,11 +1,11 @@
 // @ts-strict-ignore
+import { getProductErrorMessage } from "@dashboard/business/utils/shared/errors";
+import getPageErrorMessage from "@dashboard/business/utils/shared/errors/page";
 import {
   AttributeValueFragment,
   PageErrorWithAttributesFragment,
   ProductErrorWithAttributesFragment,
 } from "@dashboard/graphql";
-import { getProductErrorMessage } from "@dashboard/utils/errors";
-import getPageErrorMessage from "@dashboard/utils/errors/page";
 import { OutputData } from "@editorjs/editorjs";
 import { AttributeInput } from "@presentation/shared//Attributes/Attributes";
 import { FileChoiceType } from "@presentation/shared//FileUploadField";

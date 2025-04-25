@@ -1,8 +1,8 @@
+import { getFilterQueryParams } from "@dashboard/business/utils/shared/filters";
+import { stringifyQs } from "@dashboard/business/utils/shared/urls";
 import { StaffListUrlFilters } from "@dashboard/business/utils/staffs/urls";
 import { StaffMemberStatus } from "@dashboard/graphql";
 import { createFilterStructure } from "@dashboard/staff/components/StaffListPage";
-import { getFilterQueryParams } from "@dashboard/utils/filters";
-import { stringifyQs } from "@dashboard/utils/urls";
 import { getExistingKeys, setFilterOptsStatus } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";

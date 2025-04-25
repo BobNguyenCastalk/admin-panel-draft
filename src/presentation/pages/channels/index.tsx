@@ -6,7 +6,7 @@ import {
   ChannelsListUrlSortField,
 } from "@business/utils/channels/urls";
 import { sectionNames } from "@constants/common/intl";
-import { asSortParams } from "@dashboard/utils/sort";
+import { asSortParams } from "@dashboard/business/utils/shared/sort";
 import { Route } from "@presentation/shared//Router";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { parse as parseQs } from "qs";

@@ -1,6 +1,6 @@
+import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/account";
 import { AccountErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import getAccountErrorMessage from "@dashboard/utils/errors/account";
 import { TextField } from "@material-ui/core";
 import Form from "@presentation/shared//Form";
 import FormSpacer from "@presentation/shared//FormSpacer";

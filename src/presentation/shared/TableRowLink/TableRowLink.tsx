@@ -1,4 +1,4 @@
-import { isExternalURL } from "@dashboard/utils/urls";
+import { isExternalURL } from "@dashboard/business/utils/shared/urls";
 import { TableRow, TableRowTypeMap } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import clsx from "clsx";

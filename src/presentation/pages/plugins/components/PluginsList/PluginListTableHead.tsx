@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { PluginListUrlSortField } from "@business/utils/plugins/urls";
+import { getArrowDirection } from "@dashboard/business/utils/shared/sort";
 import { SortPage } from "@dashboard/types";
-import { getArrowDirection } from "@dashboard/utils/sort";
 import { TableHead } from "@material-ui/core";
 import TableCellHeader from "@presentation/shared//TableCellHeader";
 import React from "react";

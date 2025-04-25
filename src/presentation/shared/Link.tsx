@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { isExternalURL } from "@dashboard/utils/urls";
+import { isExternalURL } from "@dashboard/business/utils/shared/urls";
 import { TypographyProps } from "@material-ui/core/Typography";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";

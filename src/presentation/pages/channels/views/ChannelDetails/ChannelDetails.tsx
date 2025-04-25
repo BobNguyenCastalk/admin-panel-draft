@@ -7,6 +7,9 @@ import {
 } from "@business/utils/channels/urls";
 import { extractMutationErrors } from "@dashboard/business/misc";
 import { getChannelsCurrencyChoices } from "@dashboard/business/utils/channels/utils";
+import getChannelsErrorMessage from "@dashboard/business/utils/shared/errors/channels";
+import createDialogActionHandlers from "@dashboard/business/utils/shared/handlers/dialogActionHandlers";
+import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import {
   ChannelDeleteMutation,
   ChannelErrorFragment,
@@ -22,9 +25,6 @@ import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/uti
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import { getDefaultNotifierSuccessErrorData } from "@dashboard/hooks/useNotifier/utils";
-import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import { mapEdgesToItems } from "@dashboard/utils/maps";
 import ChannelDeleteDialog from "@presentation/pages/channels/components/ChannelDeleteDialog";
 import { FormData } from "@presentation/pages/channels/components/ChannelForm/ChannelForm";
 import { useChannelWarehousesReorder } from "@presentation/pages/channels/views/ChannelDetails/useChannelWarehouseReorder";

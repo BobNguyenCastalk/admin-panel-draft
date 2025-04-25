@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { update } from "@dashboard/utils/lists";
+import { update } from "@dashboard/business/utils/shared/lists";
 
 import { FieldType, IFilter, IFilterElementMutableDataGeneric } from "./types";
 

@@ -1,5 +1,5 @@
+import { flattenErrors } from "@dashboard/business/utils/shared/hook-form/errors";
 import { MetadataInput } from "@dashboard/graphql";
-import { flattenErrors } from "@dashboard/utils/hook-form/errors";
 import { Box } from "@saleor/macaw-ui-next";
 import React, { useMemo } from "react";
 import { FieldError, FieldErrors, UseFormReturn } from "react-hook-form";

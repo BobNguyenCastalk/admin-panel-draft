@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { removeAtIndex } from "@dashboard/utils/lists";
+import { removeAtIndex } from "@dashboard/business/utils/shared/lists";
 
 import useStateFromProps from "./useStateFromProps";
 

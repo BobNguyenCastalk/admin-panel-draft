@@ -1,7 +1,7 @@
 // @ts-strict-ignore
+import { getProductErrorMessage } from "@dashboard/business/utils/shared/errors";
 import { Node, useProductVariantSetDefaultMutation } from "@dashboard/graphql";
 import useNotifier from "@dashboard/hooks/useNotifier";
-import { getProductErrorMessage } from "@dashboard/utils/errors";
 import { useIntl } from "react-intl";
 
 function useOnSetDefaultVariant(productId: string, variant: Node) {

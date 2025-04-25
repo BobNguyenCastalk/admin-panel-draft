@@ -1,9 +1,9 @@
 // @ts-strict-ignore
+import { getFieldError } from "@dashboard/business/utils/shared/errors";
 import useCurrentDate from "@dashboard/hooks/useCurrentDate";
 import useDateLocalize from "@dashboard/hooks/useDateLocalize";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { UserError } from "@dashboard/types";
-import { getFieldError } from "@dashboard/utils/errors";
 import ControlledCheckbox from "@presentation/shared//ControlledCheckbox";
 import Hr from "@presentation/shared//Hr";
 import RadioSwitchField from "@presentation/shared//RadioSwitchField";

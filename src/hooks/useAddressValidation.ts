@@ -1,5 +1,6 @@
 // @ts-strict-ignore
 import { transformFormToAddressInput } from "@dashboard/business/misc";
+import { add, remove } from "@dashboard/business/utils/shared/lists";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import {
   AccountErrorCode,
@@ -7,7 +8,6 @@ import {
   AddressInput,
   AddressTypeEnum,
 } from "@dashboard/graphql";
-import { add, remove } from "@dashboard/utils/lists";
 import { useState } from "react";
 
 interface UseAddressValidation<TInput, TOutput> {

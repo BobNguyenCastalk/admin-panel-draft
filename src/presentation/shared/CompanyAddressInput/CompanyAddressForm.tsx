@@ -1,4 +1,8 @@
 // @ts-strict-ignore
+import { getFormErrors } from "@dashboard/business/utils/shared/errors";
+import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/account";
+import getShopErrorMessage from "@dashboard/business/utils/shared/errors/shop";
+import getWarehouseErrorMessage from "@dashboard/business/utils/shared/errors/warehouse";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import {
   AccountErrorFragment,
@@ -6,10 +10,6 @@ import {
   WarehouseErrorFragment,
 } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
-import { getFormErrors } from "@dashboard/utils/errors";
-import getAccountErrorMessage from "@dashboard/utils/errors/account";
-import getShopErrorMessage from "@dashboard/utils/errors/shop";
-import getWarehouseErrorMessage from "@dashboard/utils/errors/warehouse";
 import { TextField } from "@material-ui/core";
 import FormSpacer from "@presentation/shared//FormSpacer";
 import Grid from "@presentation/shared//Grid";

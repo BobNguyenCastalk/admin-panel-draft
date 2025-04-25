@@ -1,6 +1,6 @@
+import { createOptionsField } from "@dashboard/business/utils/shared/filters/fields";
 import { StaffMemberStatus } from "@dashboard/graphql";
 import { FilterOpts } from "@dashboard/types";
-import { createOptionsField } from "@dashboard/utils/filters/fields";
 import { IFilter } from "@presentation/shared//Filter";
 import { defineMessages, IntlShape } from "react-intl";
 

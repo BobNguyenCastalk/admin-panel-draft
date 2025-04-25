@@ -1,5 +1,5 @@
+import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { FetchMoreProps } from "@dashboard/types";
-import { mapEdgesToItems } from "@dashboard/utils/maps";
 
 import { ResultSearchData } from "./makeTopLevelSearch";
 import { CommonSearchOpts } from "./types";

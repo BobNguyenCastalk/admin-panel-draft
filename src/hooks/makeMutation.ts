@@ -8,6 +8,7 @@ import {
 } from "@apollo/client";
 import { isJwtError } from "@business/utils/auth/errors";
 import { getMutationStatus } from "@dashboard/business/misc";
+import { GqlErrors, hasError } from "@dashboard/business/utils/shared/api";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import {
   handleNestedMutationErrors,
@@ -15,7 +16,6 @@ import {
   useUser,
 } from "@dashboard/presentation/pages/auth";
 import { MutationResultAdditionalProps } from "@dashboard/types";
-import { GqlErrors, hasError } from "@dashboard/utils/api";
 import { DocumentNode } from "graphql";
 import { useIntl } from "react-intl";
 

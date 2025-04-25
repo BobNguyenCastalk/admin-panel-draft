@@ -1,3 +1,4 @@
+import { RichTextGetters } from "@dashboard/business/utils/shared/richText/useMultipleRichText";
 import {
   AttributeValueFragment,
   PageErrorWithAttributesFragment,
@@ -5,7 +6,6 @@ import {
 } from "@dashboard/graphql";
 import { FormsetChange } from "@dashboard/hooks/useFormset";
 import { FetchMoreProps, ReorderEvent } from "@dashboard/types";
-import { RichTextGetters } from "@dashboard/utils/richText/useMultipleRichText";
 
 import { AttributeInput } from "./Attributes";
 

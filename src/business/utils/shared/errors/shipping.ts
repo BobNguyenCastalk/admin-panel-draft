@@ -1,5 +1,5 @@
+import { ChannelError } from "@dashboard/business/utils/shared/errors";
 import { ShippingErrorCode, ShippingErrorFragment } from "@dashboard/graphql";
-import { ChannelError } from "@dashboard/utils/errors";
 import { defineMessages, IntlShape } from "react-intl";
 
 import { getCommonFormFieldErrorMessage } from "./common";

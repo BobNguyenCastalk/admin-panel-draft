@@ -1,9 +1,9 @@
 import { getById, getByUnmatchingId } from "@dashboard/business/misc";
+import { move } from "@dashboard/business/utils/shared/lists";
 import { FormData } from "@dashboard/channels/components/ChannelForm";
 import { SearchData } from "@dashboard/hooks/makeTopLevelSearch";
 import { getParsedSearchData } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { ReorderAction, ReorderEvent } from "@dashboard/types";
-import { move } from "@dashboard/utils/lists";
 
 import { getUpdatedIdsWithNewId, getUpdatedIdsWithoutNewId } from "./utils";
 

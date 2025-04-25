@@ -1,4 +1,5 @@
 import { FetchResult } from "@apollo/client";
+import { arrayDiff } from "@dashboard/business/utils/shared/arrays";
 import {
   MetadataErrorFragment,
   MetadataInput,
@@ -8,7 +9,6 @@ import {
   UpdatePrivateMetadataMutationVariables,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import { arrayDiff } from "@dashboard/utils/arrays";
 import { MetadataFormData } from "@presentation/shared//Metadata/types";
 
 import { filterMetadataArray } from "./filterMetadataArray";

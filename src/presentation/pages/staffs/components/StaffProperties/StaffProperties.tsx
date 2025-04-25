@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import photoIcon from "@assets/images/photo-icon.svg";
 import { getUserInitials } from "@dashboard/business/misc";
+import { getFormErrors } from "@dashboard/business/utils/shared/errors";
+import getStaffErrorMessage from "@dashboard/business/utils/shared/errors/staff";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { StaffErrorFragment, StaffMemberDetailsFragment, UserFragment } from "@dashboard/graphql";
-import { getFormErrors } from "@dashboard/utils/errors";
-import getStaffErrorMessage from "@dashboard/utils/errors/staff";
 import { TextField } from "@material-ui/core";
 import { DashboardCard } from "@presentation/shared//Card";
 import { Box, Text } from "@saleor/macaw-ui-next";

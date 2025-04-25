@@ -1,4 +1,5 @@
 import { RequireOnlyOne } from "@dashboard/business/misc";
+import { mapNodeToChoice } from "@dashboard/business/utils/shared/maps";
 import {
   ChannelDetailsFragment,
   ChannelFragment,
@@ -10,7 +11,6 @@ import {
   ShippingMethodTypeFragment,
   VoucherDetailsFragment,
 } from "@dashboard/graphql";
-import { mapNodeToChoice } from "@dashboard/utils/maps";
 import uniqBy from "lodash/uniqBy";
 
 export interface Channel {

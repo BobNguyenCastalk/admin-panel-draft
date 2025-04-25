@@ -1,5 +1,5 @@
+import { IMoney } from "@dashboard/business/utils/shared/intl";
 import useLocale from "@dashboard/hooks/useLocale";
-import { IMoney } from "@dashboard/utils/intl";
 import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
 

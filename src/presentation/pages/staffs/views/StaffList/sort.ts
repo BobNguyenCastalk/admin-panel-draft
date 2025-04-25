@@ -1,6 +1,6 @@
+import { createGetSortQueryVariables } from "@dashboard/business/utils/shared/sort";
 import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";
 import { UserSortField } from "@dashboard/graphql";
-import { createGetSortQueryVariables } from "@dashboard/utils/sort";
 
 export function getSortQueryField(sort: StaffListUrlSortField): UserSortField | undefined {
   switch (sort) {

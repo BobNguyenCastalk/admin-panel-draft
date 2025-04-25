@@ -1,3 +1,4 @@
+import { stringifyQs } from "@dashboard/business/utils/shared/urls";
 import {
   BulkAction,
   Dialog,
@@ -6,7 +7,6 @@ import {
   Sort,
   TabActionDialog,
 } from "@dashboard/types";
-import { stringifyQs } from "@dashboard/utils/urls";
 import urlJoin from "url-join";
 
 const permissionGroupSection = "/permission-groups/";

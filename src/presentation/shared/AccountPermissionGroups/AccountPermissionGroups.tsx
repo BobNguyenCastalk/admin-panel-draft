@@ -1,9 +1,9 @@
 // @ts-strict-ignore
+import { getFormErrors } from "@dashboard/business/utils/shared/errors";
+import getStaffErrorMessage from "@dashboard/business/utils/shared/errors/staff";
 import { SearchPermissionGroupsQuery, StaffErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
-import { getFormErrors } from "@dashboard/utils/errors";
-import getStaffErrorMessage from "@dashboard/utils/errors/staff";
 import { Option, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";
