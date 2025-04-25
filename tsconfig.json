@@ -17,7 +17,7 @@
     "resolveJsonModule": true,
     "plugins": [{ "name": "typescript-strict-plugin" }],
     "paths": {
-      "@assets/*": ["assets/*"],
+      "@assets/*": ["src/assets/*"],
       "@locale/*": ["locale/*"],
       "@dashboard/*": ["src/*"],
       "@presentation/*": ["src/presentation/*"],

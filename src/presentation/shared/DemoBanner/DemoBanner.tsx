@@ -1,5 +1,5 @@
-import githubLogo from "@dashboard/../assets/images/github-logo.svg"; // TODO: update asset path
-import graphQl from "@dashboard/../assets/images/graphql.svg";
+import githubLogo from "@assets/images/github-logo.svg";
+import graphQl from "@assets/images/graphql.svg";
 import ExternalLink from "@presentation/shared//ExternalLink";
 import { OrdersIcon } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
