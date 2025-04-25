@@ -5,7 +5,7 @@ import { vars } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
 import React from "react";
 
-import ArrowSort from "../../../icons/ArrowSort";
+import ArrowSort from "../../../assets/icons/ArrowSort";
 
 const useStyles = makeStyles(
   theme => ({

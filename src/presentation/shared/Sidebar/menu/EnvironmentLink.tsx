@@ -1,4 +1,4 @@
-import { Cloud } from "@dashboard/icons/Cloud";
+import { Cloud } from "@assets/icons/Cloud";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";

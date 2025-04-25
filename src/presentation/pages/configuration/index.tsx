@@ -1,12 +1,12 @@
 // @ts-strict-ignore
+import Channels from "@assets/icons/Channels";
+import PermissionGroups from "@assets/icons/PermissionGroups";
+import Plugins from "@assets/icons/Plugins";
+import StaffMembers from "@assets/icons/StaffMembers";
 import { pluginListUrl } from "@dashboard/business/utils/plugins/urls";
 import { channelsListUrl } from "@dashboard/channels/urls";
 import { APP_VERSION as dashboardVersion } from "@dashboard/config";
 import { PermissionEnum } from "@dashboard/graphql";
-import Channels from "@dashboard/icons/Channels";
-import PermissionGroups from "@dashboard/icons/PermissionGroups";
-import Plugins from "@dashboard/icons/Plugins";
-import StaffMembers from "@dashboard/icons/StaffMembers";
 import { sectionNames } from "@dashboard/intl";
 import { maybe } from "@dashboard/misc";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";

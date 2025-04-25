@@ -1,4 +1,4 @@
-import { Graphql } from "@dashboard/icons/Graphql";
+import { Graphql } from "@assets/icons/Graphql";
 import { useDevModeContext } from "@presentation/shared//DevModePanel/hooks";
 import { useNavigatorSearchContext } from "@presentation/shared//NavigatorSearch/useNavigatorSearchContext";
 import { SearchIcon } from "@saleor/macaw-ui-next";
