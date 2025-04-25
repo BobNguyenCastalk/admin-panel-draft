@@ -8,14 +8,3 @@ export const checkExportFileStatus = gql`
     }
   }
 `;
-
-export const checkOrderInvoicesStatus = gql`
-  query CheckOrderInvoicesStatus($id: ID!) {
-    order(id: $id) {
-      id
-      invoices {
-        ...Invoice
-      }
-    }
-  }
-`;

@@ -71,48 +71,6 @@ export function queueCustom(
   ];
 }
 
-export function queueInvoiceGenerate(
-  id: number,
-  generateInvoice: InvoiceGenerateParams,
-  tasks: React.MutableRefObject<QueuedTask[]>,
-  fetch: () => Promise<ApolloQueryResult<CheckOrderInvoicesStatusQuery>>,
-  notify: IMessageContext,
-  intl: IntlShape,
-) {
-  if (!generateInvoice) {
-    throw new Error("generateInvoice is required when creating custom task");
-  }
-
-  tasks.current = [
-    ...tasks.current,
-    {
-      handle: async () => {
-        const result = await fetch();
-        const status = result.data.order.invoices.find(
-          invoice => invoice.id === generateInvoice.invoiceId,
-        ).status;
-
-        return getTaskStatus(status);
-      },
-      id,
-      onCompleted: data =>
-        data.status === TaskStatus.SUCCESS
-          ? notify({
-              status: "success",
-              text: intl.formatMessage(messages.invoiceGenerateFinishedText),
-              title: intl.formatMessage(messages.invoiceGenerateFinishedTitle),
-            })
-          : notify({
-              status: "error",
-              text: intl.formatMessage(commonMessages.somethingWentWrong),
-              title: intl.formatMessage(messages.invoiceGenerationFailedTitle),
-            }),
-      onError: handleError,
-      status: TaskStatus.PENDING,
-    },
-  ];
-}
-
 export function queueExport(
   id: number,
   tasks: React.MutableRefObject<QueuedTask[]>,

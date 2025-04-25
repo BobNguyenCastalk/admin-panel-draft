@@ -6,8 +6,8 @@ import React from "react";
 import { IntlShape, useIntl } from "react-intl";
 
 import BackgroundTasksContext from "./context";
-import { checkExportFileStatus, checkOrderInvoicesStatus } from "./queries";
-import { handleTask, queueCustom, queueExport, queueInvoiceGenerate } from "./tasks";
+import { checkExportFileStatus } from "./queries";
+import { handleTask, queueCustom, queueExport } from "./tasks";
 import { QueuedTask, Task, TaskData, TaskStatus } from "./types";
 
 export const backgroundTasksRefreshTime = 15 * 1000;
@@ -54,23 +54,6 @@ export function useBackgroundTasks(
     switch (type) {
       case Task.CUSTOM:
         queueCustom(idCounter.current, tasks, data);
-        break;
-      case Task.INVOICE_GENERATE:
-        queueInvoiceGenerate(
-          idCounter.current,
-          data.generateInvoice,
-          tasks,
-          () =>
-            apolloClient.query({
-              fetchPolicy: "network-only",
-              query: checkOrderInvoicesStatus,
-              variables: {
-                id: data.generateInvoice.orderId,
-              },
-            }),
-          notify,
-          intl,
-        );
         break;
       case Task.EXPORT:
         queueExport(

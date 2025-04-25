@@ -28,20 +28,5 @@ export const channelFragment = gql`
 export const channelDetailsFragment = gql`
   fragment ChannelDetails on Channel {
     ...Channel
-    hasOrders
-    warehouses {
-      ...Warehouse
-    }
-    orderSettings {
-      markAsPaidStrategy
-      deleteExpiredOrdersAfter
-      allowUnpaidOrders
-    }
-    paymentSettings {
-      defaultTransactionFlowStrategy
-    }
-    checkoutSettings {
-      automaticallyCompleteFullyPaidCheckouts
-    }
   }
 `;

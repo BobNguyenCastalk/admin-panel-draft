@@ -7,8 +7,6 @@ import { useIntl } from "react-intl";
 
 import getModeActions from "./modes";
 import { getMode } from "./modes/utils";
-import useSearchCatalog from "./queries/useCatalogSearch";
-import { useQuickOrderSearch } from "./queries/useQuickOrderSearch";
 import { QuickSearchAction, QuickSearchMode } from "./types";
 
 type UseQuickSearch = [string, QuickSearchMode, FormChange, QuickSearchAction[]];
@@ -17,9 +15,6 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
   const [mode, setMode] = useState<QuickSearchMode>("default");
   const intl = useIntl();
   const navigate = useNavigator();
-  const [{ data: orderData }, getOrderData] = useQuickOrderSearch(); // TODO: remove this
-
-  const [{ data: catalog }, searchCatalog] = useSearchCatalog(10);
 
   useModalDialogOpen(open, {
     onClose: () => {
@@ -64,10 +59,6 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
       }
     }
 
-    if (mode === "catalog") {
-      searchCatalog(value);
-    }
-
     setQuery(value);
   };
 
@@ -79,9 +70,7 @@ function useQuickSearch(open: boolean, input: RefObject<HTMLInputElement>): UseQ
       mode,
       query,
       intl,
-      {
-        catalog,
-      },
+      {},
       {
         createOrder: () => null,
         navigate,
