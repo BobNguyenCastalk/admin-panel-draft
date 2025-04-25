@@ -54,7 +54,6 @@ import { NotFound } from "./NotFound";
 import PermissionGroupSection from "./permissionGroups";
 import PluginsSection from "./plugins";
 import errorTracker from "./services/errorTracking";
-import SiteSettingsSection from "./siteSettings";
 import StaffSection from "./staff";
 import { paletteOverrides, themeOverrides } from "./themeOverrides";
 import { WelcomePage } from "./welcomePage";
@@ -170,11 +169,6 @@ const Routes: React.FC = () => {
                 permissions={[PermissionEnum.MANAGE_STAFF]}
                 path="/permission-groups"
                 component={PermissionGroupSection}
-              />
-              <SectionRoute
-                permissions={[PermissionEnum.MANAGE_SETTINGS]}
-                path="/site-settings"
-                component={SiteSettingsSection}
               />
               <SectionRoute
                 permissions={[PermissionEnum.MANAGE_MENUS]}

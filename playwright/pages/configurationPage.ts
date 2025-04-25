@@ -9,20 +9,12 @@ export class ConfigurationPage extends BasePage {
     readonly pluginsButton = page.locator("[data-test-id*='plugins']"),
     readonly permissionGroupsButton = page.locator("[data-test-id*='permission-groups']"),
     readonly staffMembersButton = page.locator("[data-test-id*='staff members']"),
-    readonly siteSettingsButton = page.locator("[data-test-id*='site-settings']"),
     readonly channelsButton = page.locator("[data-test-id*='channels']"),
-    readonly shippingMethodsButton = page.locator("[data-test-id*='shipping methods']"),
-    readonly productTypesButton = page.locator("[data-test-id*='product-types']"),
     readonly webhooksAndEventsButton = page.locator("[data-test-id*='webhooks']"),
-    readonly attributesButton = page.locator("[data-test-id*='attributes']"),
     readonly pageTypesButton = page.locator("[data-test-id*='configuration-menu-page-type']"),
     readonly taxesButton = page.locator("[data-test-id*='configuration-menu-taxes']"),
   ) {
     super(page);
-  }
-
-  async openShippingMethods() {
-    await this.shippingMethodsButton.click();
   }
 
   async openTaxes() {
@@ -41,14 +33,6 @@ export class ConfigurationPage extends BasePage {
     await this.staffMembersButton.click();
   }
 
-  async openSiteSettings() {
-    await this.siteSettingsButton.click();
-  }
-
-  async openProductTypes() {
-    await this.productTypesButton.click();
-  }
-
   async openPageTypes() {
     await this.pageTypesButton.click();
   }
@@ -63,9 +47,5 @@ export class ConfigurationPage extends BasePage {
 
   async openWebhooksAndEvents() {
     await this.webhooksAndEventsButton.click();
-  }
-
-  async openAttributes() {
-    await this.attributesButton.click();
   }
 }

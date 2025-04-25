@@ -8,14 +8,12 @@ import Channels from "@dashboard/icons/Channels";
 import Navigation from "@dashboard/icons/Navigation";
 import PermissionGroups from "@dashboard/icons/PermissionGroups";
 import Plugins from "@dashboard/icons/Plugins";
-import SiteSettings from "@dashboard/icons/SiteSettings";
 import StaffMembers from "@dashboard/icons/StaffMembers";
 import { sectionNames } from "@dashboard/intl";
 import { maybe } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
-import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
 import { WindowTitle } from "@presentation/shared//WindowTitle";
 import React from "react";
@@ -98,17 +96,6 @@ export function createConfigurationMenu(intl: IntlShape): MenuSection[] {
           title: intl.formatMessage(sectionNames.navigation),
           url: menuListUrl(),
           testId: "configuration-menu-navigation",
-        },
-        {
-          description: intl.formatMessage({
-            id: "5BajZK",
-            defaultMessage: "View and update your site settings",
-          }),
-          icon: <SiteSettings />,
-          permissions: [PermissionEnum.MANAGE_SETTINGS],
-          title: intl.formatMessage(sectionNames.siteSettings),
-          url: siteSettingsUrl(),
-          testId: "configuration-menu-site-settings",
         },
         {
           description: intl.formatMessage({

@@ -10154,19 +10154,6 @@ export type SearchWarehousesQueryVariables = Exact<{
 
 export type SearchWarehousesQuery = { __typename: 'Query', search: { __typename: 'WarehouseCountableConnection', totalCount: number | null, edges: Array<{ __typename: 'WarehouseCountableEdge', node: { __typename: 'Warehouse', id: string, name: string } }>, pageInfo: { __typename: 'PageInfo', endCursor: string | null, hasNextPage: boolean, hasPreviousPage: boolean, startCursor: string | null } } | null };
 
-export type ShopSettingsUpdateMutationVariables = Exact<{
-  shopSettingsInput: ShopSettingsInput;
-  addressInput?: InputMaybe<AddressInput>;
-}>;
-
-
-export type ShopSettingsUpdateMutation = { __typename: 'Mutation', shopSettingsUpdate: { __typename: 'ShopSettingsUpdate', errors: Array<{ __typename: 'ShopError', code: ShopErrorCode, field: string | null, message: string | null }>, shop: { __typename: 'Shop', customerSetPasswordUrl: string | null, defaultMailSenderAddress: string | null, defaultMailSenderName: string | null, description: string | null, name: string, reserveStockDurationAnonymousUser: number | null, reserveStockDurationAuthenticatedUser: number | null, limitQuantityPerCheckout: number | null, enableAccountConfirmationByEmail: boolean | null, companyAddress: { __typename: 'Address', city: string, cityArea: string, companyName: string, countryArea: string, firstName: string, id: string, lastName: string, phone: string | null, postalCode: string, streetAddress1: string, streetAddress2: string, country: { __typename: 'CountryDisplay', code: string, country: string } } | null, countries: Array<{ __typename: 'CountryDisplay', code: string, country: string }>, domain: { __typename: 'Domain', host: string } } | null } | null, shopAddressUpdate: { __typename: 'ShopAddressUpdate', errors: Array<{ __typename: 'ShopError', code: ShopErrorCode, field: string | null, message: string | null }>, shop: { __typename: 'Shop', companyAddress: { __typename: 'Address', city: string, cityArea: string, companyName: string, countryArea: string, firstName: string, id: string, lastName: string, phone: string | null, postalCode: string, streetAddress1: string, streetAddress2: string, country: { __typename: 'CountryDisplay', code: string, country: string } } | null } | null } | null };
-
-export type SiteSettingsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type SiteSettingsQuery = { __typename: 'Query', shop: { __typename: 'Shop', customerSetPasswordUrl: string | null, defaultMailSenderAddress: string | null, defaultMailSenderName: string | null, description: string | null, name: string, reserveStockDurationAnonymousUser: number | null, reserveStockDurationAuthenticatedUser: number | null, limitQuantityPerCheckout: number | null, enableAccountConfirmationByEmail: boolean | null, companyAddress: { __typename: 'Address', city: string, cityArea: string, companyName: string, countryArea: string, firstName: string, id: string, lastName: string, phone: string | null, postalCode: string, streetAddress1: string, streetAddress2: string, country: { __typename: 'CountryDisplay', code: string, country: string } } | null, countries: Array<{ __typename: 'CountryDisplay', code: string, country: string }>, domain: { __typename: 'Domain', host: string } } };
-
 export type StaffMemberAddMutationVariables = Exact<{
   input: StaffCreateInput;
 }>;

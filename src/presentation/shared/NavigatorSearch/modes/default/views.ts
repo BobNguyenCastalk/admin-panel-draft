@@ -4,7 +4,6 @@ import { fuzzySearch } from "@dashboard/misc";
 import { menuListUrl } from "@dashboard/navigation/urls";
 import { permissionGroupListUrl } from "@dashboard/permissionGroups/urls";
 import { pluginListUrl } from "@dashboard/plugins/urls";
-import { siteSettingsUrl } from "@dashboard/siteSettings/urls";
 import { staffListUrl } from "@dashboard/staff/urls";
 import { IntlShape } from "react-intl";
 
@@ -35,10 +34,6 @@ function searchInViews(
     {
       label: intl.formatMessage(sectionNames.plugins),
       url: pluginListUrl(),
-    },
-    {
-      label: intl.formatMessage(sectionNames.siteSettings),
-      url: siteSettingsUrl(),
     },
     {
       label: intl.formatMessage(sectionNames.staff),
