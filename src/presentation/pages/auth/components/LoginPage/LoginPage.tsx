@@ -1,7 +1,6 @@
 import { commonMessages } from "@constants/common/intl";
 import { UserContextError } from "@dashboard/auth/types";
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
-import { AvailableExternalAuthenticationsQuery } from "@dashboard/graphql";
 import { ButtonWithLoader } from "@presentation/shared//ButtonWithLoader/ButtonWithLoader";
 import { FormSpacer } from "@presentation/shared//FormSpacer";
 import { EyeIcon } from "@saleor/macaw-ui";
@@ -17,24 +16,14 @@ export interface LoginCardProps {
   errors: UserContextError[];
   disabled: boolean;
   loading: boolean;
-  externalAuthentications?: AvailableExternalAuthenticationsQuery["shop"]["availableExternalAuthentications"];
-  onExternalAuthentication: (pluginId: string) => void;
   onSubmit: (event: LoginFormData) => SubmitPromise;
 }
 
 const LoginPage: React.FC<LoginCardProps> = props => {
-  const {
-    errors,
-    disabled,
-    loading,
-    externalAuthentications = [],
-    onExternalAuthentication,
-    onSubmit,
-  } = props;
+  const { errors, disabled, loading, onSubmit } = props;
   const classes = useStyles(props);
   const intl = useIntl();
   const [showPassword, setShowPassword] = useState(false);
-  const [optimisticLoaderAuthId, setOptimisticLoaderAuthId] = useState<null | string>(null);
 
   // TODO: remove string related to id 3tbL7x
   // TODO : add bottom margin to the password input
@@ -113,40 +102,6 @@ const LoginPage: React.FC<LoginCardProps> = props => {
               <FormattedMessage id="AubJ/S" defaultMessage="Sign in" description="button" />
             </ButtonWithLoader>
           </div>
-          {externalAuthentications.length > 0 && (
-            <>
-              <FormSpacer />
-              <Divider />
-              <FormSpacer />
-              <Text>
-                <FormattedMessage
-                  id="aFU0vm"
-                  defaultMessage="or continue with"
-                  description="description"
-                />
-              </Text>
-            </>
-          )}
-          {externalAuthentications.map(externalAuthentication => (
-            <React.Fragment key={externalAuthentication.id}>
-              <FormSpacer />
-              <ButtonWithLoader
-                width="100%"
-                variant="secondary"
-                onClick={() => {
-                  onExternalAuthentication(externalAuthentication.id);
-                  setOptimisticLoaderAuthId(externalAuthentication.id);
-                }}
-                data-test-id="external-authentication"
-                disabled={disabled}
-                transitionState={
-                  optimisticLoaderAuthId === externalAuthentication.id ? "loading" : "default"
-                }
-              >
-                {externalAuthentication.name}
-              </ButtonWithLoader>
-            </React.Fragment>
-          ))}
         </Box>
       )}
     </LoginForm>
