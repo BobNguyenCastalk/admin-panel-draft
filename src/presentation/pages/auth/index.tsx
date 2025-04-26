@@ -1,4 +1,4 @@
-import { LoginUrlQueryParams, newPasswordPath } from "@business/utils/auth/urls";
+import { newPasswordPath } from "@business/utils/auth/urls";
 import { Route } from "@presentation/shared/Router";
 import { parse as parseQs } from "qs";
 import React, { useContext } from "react";
@@ -11,9 +11,8 @@ import NewPassword from "./views/NewPassword";
 
 const LoginView: React.FC<RouteComponentProps<any>> = () => {
   const qs = parseQs(location.search.substr(1)) as any;
-  const params: LoginUrlQueryParams = qs;
 
-  return <LoginViewComponent params={params} />;
+  return <LoginViewComponent />;
 };
 
 export const UserContext = React.createContext<Context>({

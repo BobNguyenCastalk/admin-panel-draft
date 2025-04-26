@@ -6,21 +6,17 @@ import { useEffect } from "react";
 import urlJoin from "url-join";
 import useRouter from "use-react-router";
 
-import { useAuthParameters } from "./useAuthParameters";
-
 const PLUGIN_ID_PARAM = "saleorPluginId";
 
 export const useAuthRedirection = () => {
+  // TODO: this is tightly coupled with login by external plugin logic. To either remove this or refactor it
   const router = useRouter();
   const params = new URLSearchParams(router.location.search);
   const shouldRedirect = params.has(PLUGIN_ID_PARAM);
   const { authenticated, authenticating, requestLoginByExternalPlugin, isCredentialsLogin } =
     useUser();
-  const { setRequestedExternalPluginId } = useAuthParameters();
   const pluginId = params.get(PLUGIN_ID_PARAM);
   const handleAuthentication = async () => {
-    setRequestedExternalPluginId(pluginId);
-
     const redirectUri = urlJoin(
       window.location.origin,
       getAppMountUriForRedirect(),
