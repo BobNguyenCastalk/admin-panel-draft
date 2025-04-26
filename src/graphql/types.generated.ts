@@ -9316,11 +9316,6 @@ export type RequestPasswordResetMutationVariables = Exact<{
 
 export type RequestPasswordResetMutation = { __typename: 'Mutation', requestPasswordReset: { __typename: 'RequestPasswordReset', errors: Array<{ __typename: 'AccountError', code: AccountErrorCode, field: string | null, addressType: AddressTypeEnum | null, message: string | null }> } | null };
 
-export type AvailableExternalAuthenticationsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type AvailableExternalAuthenticationsQuery = { __typename: 'Query', shop: { __typename: 'Shop', availableExternalAuthentications: Array<{ __typename: 'ExternalAuthentication', id: string, name: string | null }> } };
-
 export type UserDetailsQueryVariables = Exact<{ [key: string]: never; }>;
 
 

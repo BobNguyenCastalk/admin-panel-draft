@@ -35,7 +35,7 @@ export interface UseAuthProviderOpts {
 type AuthErrorCodes = `${AccountErrorCode}`;
 
 export function useAuthProvider({ intl, notify, apolloClient }: UseAuthProviderOpts): UserContext {
-  const { login, getExternalAuthUrl, getExternalAccessToken, logout } = useAuth();
+  const { login, logout } = useAuth();
   const navigate = useNavigator();
   const { authenticated, authenticating, user } = useAuthState();
   const [requestedExternalPluginId] = useLocalStorage("requestedExternalPluginId", null);
@@ -182,60 +182,7 @@ export function useAuthProvider({ intl, notify, apolloClient }: UseAuthProviderO
       setIsCredentialsLogin(false);
     }
   };
-  const handleRequestExternalLogin = async (pluginId: string, input: RequestExternalLoginInput) => {
-    let stringifyInput: string;
 
-    try {
-      stringifyInput = JSON.stringify(input);
-    } catch (error) {
-      setErrors(["externalLoginError"]);
-
-      return;
-    }
-
-    const result = await getExternalAuthUrl({
-      pluginId,
-      input: stringifyInput,
-    });
-
-    return result?.data?.externalAuthenticationUrl;
-  };
-  const handleExternalLogin = async (pluginId: string | null, input: ExternalLoginInput) => {
-    if (!pluginId) {
-      return;
-    }
-
-    try {
-      const result = await getExternalAccessToken({
-        pluginId,
-        input: JSON.stringify(input),
-      });
-
-      if (isEmpty(result.data?.externalObtainAccessTokens?.user?.userPermissions)) {
-        setErrors(["noPermissionsError"]);
-        await handleLogout();
-      }
-
-      if (result && !result.data?.externalObtainAccessTokens?.errors.length) {
-        if (DEMO_MODE) {
-          displayDemoMessage(intl, notify);
-        }
-      } else {
-        setErrors(["externalLoginError"]);
-        await handleLogout();
-      }
-
-      await logoutNonStaffUser(result.data?.externalObtainAccessTokens!);
-
-      return result?.data?.externalObtainAccessTokens;
-    } catch (error) {
-      if (error instanceof ApolloError) {
-        handleLoginError(error);
-      } else {
-        setErrors(["unknownLoginError"]);
-      }
-    }
-  };
   const logoutNonStaffUser = async (data: LoginData | GetExternalAccessTokenData) => {
     if (data?.user && !data.user.isStaff) {
       notify({
@@ -249,8 +196,6 @@ export function useAuthProvider({ intl, notify, apolloClient }: UseAuthProviderO
 
   return {
     login: handleLogin,
-    requestLoginByExternalPlugin: handleRequestExternalLogin,
-    loginByExternalPlugin: handleExternalLogin,
     logout: handleLogout,
     authenticating: authenticating && !errors.length,
     isCredentialsLogin,

@@ -1698,43 +1698,6 @@ export function useRequestPasswordResetMutation(baseOptions?: ApolloReactHooks.M
 export type RequestPasswordResetMutationHookResult = ReturnType<typeof useRequestPasswordResetMutation>;
 export type RequestPasswordResetMutationResult = Apollo.MutationResult<Types.RequestPasswordResetMutation>;
 export type RequestPasswordResetMutationOptions = Apollo.BaseMutationOptions<Types.RequestPasswordResetMutation, Types.RequestPasswordResetMutationVariables>;
-export const AvailableExternalAuthenticationsDocument = gql`
-    query AvailableExternalAuthentications {
-  shop {
-    availableExternalAuthentications {
-      id
-      name
-    }
-  }
-}
-    `;
-
-/**
- * __useAvailableExternalAuthenticationsQuery__
- *
- * To run a query within a React component, call `useAvailableExternalAuthenticationsQuery` and pass it any options that fit your needs.
- * When your component renders, `useAvailableExternalAuthenticationsQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useAvailableExternalAuthenticationsQuery({
- *   variables: {
- *   },
- * });
- */
-export function useAvailableExternalAuthenticationsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<Types.AvailableExternalAuthenticationsQuery, Types.AvailableExternalAuthenticationsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<Types.AvailableExternalAuthenticationsQuery, Types.AvailableExternalAuthenticationsQueryVariables>(AvailableExternalAuthenticationsDocument, options);
-      }
-export function useAvailableExternalAuthenticationsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<Types.AvailableExternalAuthenticationsQuery, Types.AvailableExternalAuthenticationsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<Types.AvailableExternalAuthenticationsQuery, Types.AvailableExternalAuthenticationsQueryVariables>(AvailableExternalAuthenticationsDocument, options);
-        }
-export type AvailableExternalAuthenticationsQueryHookResult = ReturnType<typeof useAvailableExternalAuthenticationsQuery>;
-export type AvailableExternalAuthenticationsLazyQueryHookResult = ReturnType<typeof useAvailableExternalAuthenticationsLazyQuery>;
-export type AvailableExternalAuthenticationsQueryResult = Apollo.QueryResult<Types.AvailableExternalAuthenticationsQuery, Types.AvailableExternalAuthenticationsQueryVariables>;
 export const UserDetailsDocument = gql`
     query UserDetails {
   me {

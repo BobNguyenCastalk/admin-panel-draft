@@ -5,8 +5,7 @@ import LoginPage from "../components/LoginPage";
 import { LoginFormData } from "../components/LoginPage/types";
 
 const LoginView: React.FC = () => {
-  const { login, requestLoginByExternalPlugin, loginByExternalPlugin, authenticating, errors } =
-    useUser();
+  const { login, authenticating, errors } = useUser();
 
   const handleSubmit = async (data: LoginFormData) => {
     if (!login) {
