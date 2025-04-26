@@ -71,7 +71,7 @@ for (const rawSuffix of schemaSuffixes) {
           },
           config: {
             withHooks: true,
-            apolloReactHooksImportFrom: "@dashboard/hooks/graphql",
+            apolloReactHooksImportFrom: "@business/hooks/shared/graphql",
           },
           plugins: [
             {
