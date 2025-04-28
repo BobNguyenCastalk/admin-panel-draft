@@ -4,6 +4,7 @@ import "@assets/styles/index.css";
 import { ApolloProvider } from "@apollo/client";
 import { useAuthRedirection } from "@business/hooks/auth/useAuthRedirection";
 import AuthProvider from "@business/providers/auth/AuthProvider";
+import { createStorage } from "@business/utils/shared/storage";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
 import { PermissionEnum } from "@dashboard/graphql";
 import PermissionGroupSection from "@dashboard/presentation/pages/permissions";
@@ -78,45 +79,50 @@ const handleLegacyTheming = () => {
 
 handleLegacyTheming();
 
-const App: React.FC = () => (
-  <SaleorProvider client={saleorClient}>
-    <ApolloProvider client={apolloClient}>
-      <Router>
-        <LegacyThemeProvider overrides={themeOverrides} palettes={paletteOverrides}>
-          <ThemeProvider>
-            <DateProvider>
-              <LocaleProvider>
-                <MessageManagerProvider>
-                  <BackgroundTasksProvider>
-                    <AppStateProvider>
-                      <AuthProvider>
-                        <ProductAnalytics>
-                          <AppChannelProvider>
-                            <ExitFormDialogProvider>
-                              <DevModeProvider>
-                                <NavigatorSearchProvider>
-                                  <SavebarRefProvider>
-                                    <FeatureFlagsProviderWithUser>
-                                      <Routes />
-                                    </FeatureFlagsProviderWithUser>
-                                  </SavebarRefProvider>
-                                </NavigatorSearchProvider>
-                              </DevModeProvider>
-                            </ExitFormDialogProvider>
-                          </AppChannelProvider>
-                        </ProductAnalytics>
-                      </AuthProvider>
-                    </AppStateProvider>
-                  </BackgroundTasksProvider>
-                </MessageManagerProvider>
-              </LocaleProvider>
-            </DateProvider>
-          </ThemeProvider>
-        </LegacyThemeProvider>
-      </Router>
-    </ApolloProvider>
-  </SaleorProvider>
-);
+const App: React.FC = () => {
+  createStorage(true);
+
+  return (
+    <SaleorProvider client={saleorClient}>
+      <ApolloProvider client={apolloClient}>
+        <Router>
+          <LegacyThemeProvider overrides={themeOverrides} palettes={paletteOverrides}>
+            <ThemeProvider>
+              <DateProvider>
+                <LocaleProvider>
+                  <MessageManagerProvider>
+                    <BackgroundTasksProvider>
+                      <AppStateProvider>
+                        <AuthProvider>
+                          <ProductAnalytics>
+                            <AppChannelProvider>
+                              <ExitFormDialogProvider>
+                                <DevModeProvider>
+                                  <NavigatorSearchProvider>
+                                    <SavebarRefProvider>
+                                      <FeatureFlagsProviderWithUser>
+                                        <Routes />
+                                      </FeatureFlagsProviderWithUser>
+                                    </SavebarRefProvider>
+                                  </NavigatorSearchProvider>
+                                </DevModeProvider>
+                              </ExitFormDialogProvider>
+                            </AppChannelProvider>
+                          </ProductAnalytics>
+                        </AuthProvider>
+                      </AppStateProvider>
+                    </BackgroundTasksProvider>
+                  </MessageManagerProvider>
+                </LocaleProvider>
+              </DateProvider>
+            </ThemeProvider>
+          </LegacyThemeProvider>
+        </Router>
+      </ApolloProvider>
+    </SaleorProvider>
+  );
+};
+
 const Routes: React.FC = () => {
   const intl = useIntl();
   const [, dispatchAppState] = useAppState();
