@@ -2,7 +2,7 @@
 import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 import { getById } from "@dashboard/business/misc";
 import { ChannelFragment, useBaseChannelsQuery } from "@dashboard/graphql";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import { useBoundStore } from "@dashboard/stores";
 import { useSaleorConfig } from "@saleor/sdk";
 import React from "react";
 
@@ -35,7 +35,8 @@ const isValidChannel = (channelId: string, channelList?: ChannelFragment[]) => {
 
 export const AppChannelProvider: React.FC = ({ children }) => {
   const { setChannel } = useSaleorConfig();
-  const { authenticated, user } = useUser();
+  const authenticated = useBoundStore(state => state.authenticated);
+  const user = useBoundStore(state => state.user);
   const [selectedChannel, setSelectedChannel] = useLocalStorage("channel", "");
   const { data: channelData, refetch } = useBaseChannelsQuery({
     skip: !authenticated || !user,

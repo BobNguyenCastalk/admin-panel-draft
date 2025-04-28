@@ -2,7 +2,6 @@ import "@saleor/macaw-ui-next/style";
 import "@assets/styles/index.css";
 
 import { ApolloProvider } from "@apollo/client";
-import AuthProvider from "@business/providers/auth/AuthProvider";
 import { createStorage } from "@business/utils/shared/storage";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
 import { PermissionEnum } from "@dashboard/graphql";
