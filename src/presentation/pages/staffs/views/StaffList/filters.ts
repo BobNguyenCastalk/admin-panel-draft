@@ -14,7 +14,7 @@ import {
   StaffFilterKeys,
   StaffListFilterOpts,
 } from "@presentation/pages/staffs/components/StaffListPage";
-import { FilterElement, FilterElementRegular } from "@presentation/shared//Filter";
+import { FilterElement, FilterElementRegular } from "@presentation/shared/Filter";
 
 export const STAFF_FILTERS_KEY = "staffFilters";
 

@@ -2,8 +2,8 @@
 import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
 import { useTriggerWebhookDryRunMutation, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
 import { capitalize } from "@material-ui/core";
-import Grid from "@presentation/shared//Grid";
-import { DashboardModal } from "@presentation/shared//Modal";
+import Grid from "@presentation/shared/Grid";
+import { DashboardModal } from "@presentation/shared/Modal";
 import {
   Alert,
   Button,

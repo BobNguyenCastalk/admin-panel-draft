@@ -1,4 +1,4 @@
-import VerticalSpacer from "@presentation/shared//VerticalSpacer";
+import VerticalSpacer from "@presentation/shared/VerticalSpacer";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 

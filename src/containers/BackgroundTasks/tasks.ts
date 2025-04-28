@@ -6,7 +6,7 @@ import {
   CheckOrderInvoicesStatusQuery,
   JobStatusEnum,
 } from "@dashboard/graphql";
-import { IMessageContext } from "@presentation/shared//messages";
+import { IMessageContext } from "@presentation/shared/messages";
 import { IntlShape } from "react-intl";
 
 import messages from "./messages";

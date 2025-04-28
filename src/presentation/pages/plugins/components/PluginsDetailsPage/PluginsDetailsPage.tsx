@@ -10,13 +10,13 @@ import {
   PluginErrorFragment,
   PluginsDetailsFragment,
 } from "@dashboard/graphql";
-import { TopNav } from "@presentation/shared//AppLayout/TopNav";
-import CardSpacer from "@presentation/shared//CardSpacer";
-import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
-import Form from "@presentation/shared//Form";
-import Grid from "@presentation/shared//Grid";
-import { DetailPageLayout } from "@presentation/shared//Layouts";
-import { Savebar } from "@presentation/shared//Savebar";
+import { TopNav } from "@presentation/shared/AppLayout/TopNav";
+import CardSpacer from "@presentation/shared/CardSpacer";
+import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
+import Form from "@presentation/shared/Form";
+import Grid from "@presentation/shared/Grid";
+import { DetailPageLayout } from "@presentation/shared/Layouts";
+import { Savebar } from "@presentation/shared/Savebar";
 import React from "react";
 import { useIntl } from "react-intl";
 

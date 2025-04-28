@@ -1,4 +1,4 @@
-import { UrlEntry, UrlToken } from "@presentation/shared//ConditionalFilter/ValueProvider/UrlToken";
+import { UrlEntry, UrlToken } from "@presentation/shared/ConditionalFilter/ValueProvider/UrlToken";
 
 import { InitialOrderStateResponse } from "./InitialOrderState";
 

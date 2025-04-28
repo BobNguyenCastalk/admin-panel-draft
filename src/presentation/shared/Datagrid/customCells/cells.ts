@@ -3,9 +3,9 @@ import {
   NumberCell,
   numberCellEmptyValue,
   NumberCellProps,
-} from "@presentation/shared//Datagrid/customCells/NumberCell";
-import { Locale } from "@presentation/shared//Locale";
-import { DotStatus } from "@presentation/shared//StatusDot/StatusDot";
+} from "@presentation/shared/Datagrid/customCells/NumberCell";
+import { Locale } from "@presentation/shared/Locale";
+import { DotStatus } from "@presentation/shared/StatusDot/StatusDot";
 import { Option } from "@saleor/macaw-ui-next";
 
 import { DropdownCell, DropdownCellProps } from "./DropdownCell";

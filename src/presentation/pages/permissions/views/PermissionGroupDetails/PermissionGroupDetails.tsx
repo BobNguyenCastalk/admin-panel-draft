@@ -33,8 +33,8 @@ import useStaffMemberSearch from "@dashboard/graphql/searches/useStaffMemberSear
 import { useUser } from "@dashboard/presentation/pages/auth";
 import MembersErrorDialog from "@presentation/pages/permissions/components/MembersErrorDialog";
 import PermissionGroupDeleteDialog from "@presentation/pages/permissions/components/PermissionGroupDeleteDialog";
-import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";
-import { Button } from "@presentation/shared//Button";
+import useAppChannel from "@presentation/shared/AppLayout/AppChannelContext";
+import { Button } from "@presentation/shared/Button";
 import React from "react";
 import { useIntl } from "react-intl";
 

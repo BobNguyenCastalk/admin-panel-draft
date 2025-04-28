@@ -5,9 +5,9 @@ import { PluginListUrlSortField, pluginUrl } from "@dashboard/business/utils/plu
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { ListProps, SortPage } from "@dashboard/types";
 import { TableBody, TableCell, TableFooter } from "@material-ui/core";
-import ResponsiveTable from "@presentation/shared//ResponsiveTable";
-import { TablePaginationWithContext } from "@presentation/shared//TablePagination";
-import TableRowLink from "@presentation/shared//TableRowLink";
+import ResponsiveTable from "@presentation/shared/ResponsiveTable";
+import { TablePaginationWithContext } from "@presentation/shared/TablePagination";
+import TableRowLink from "@presentation/shared/TableRowLink";
 import { EditIcon, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import React from "react";

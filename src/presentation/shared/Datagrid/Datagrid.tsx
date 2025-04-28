@@ -16,7 +16,7 @@ import DataEditor, {
 } from "@glideapps/glide-data-grid";
 import { GetRowThemeCallback } from "@glideapps/glide-data-grid/dist/ts/data-grid/data-grid-render";
 import { CircularProgress } from "@material-ui/core";
-import { useRowAnchorHandler } from "@presentation/shared//Datagrid/hooks/useRowAnchorHandler";
+import { useRowAnchorHandler } from "@presentation/shared/Datagrid/hooks/useRowAnchorHandler";
 import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
 import range from "lodash/range";

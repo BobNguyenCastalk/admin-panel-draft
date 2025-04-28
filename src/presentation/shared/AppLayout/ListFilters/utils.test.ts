@@ -1,4 +1,4 @@
-import { FilterElement, IFilter } from "@presentation/shared//Filter";
+import { FilterElement, IFilter } from "@presentation/shared/Filter";
 
 import { getSelectedFilterAmount } from "./utils";
 

@@ -7,14 +7,14 @@ import {
 import { ListProps, SortPage } from "@dashboard/types";
 import { StaffMember, StaffMembers } from "@dashboard/types/staffs";
 import { Item } from "@glideapps/glide-data-grid";
-import { useColumns } from "@presentation/shared//Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@presentation/shared//Datagrid/Datagrid";
+import { useColumns } from "@presentation/shared/Datagrid/ColumnPicker/useColumns";
+import Datagrid from "@presentation/shared/Datagrid/Datagrid";
 import {
   DatagridChangeStateContext,
   useDatagridChangeState,
-} from "@presentation/shared//Datagrid/hooks/useDatagridChange";
-import { useEmptyColumn } from "@presentation/shared//Datagrid/hooks/useEmptyColumn";
-import { TablePaginationWithContext } from "@presentation/shared//TablePagination";
+} from "@presentation/shared/Datagrid/hooks/useDatagridChange";
+import { useEmptyColumn } from "@presentation/shared/Datagrid/hooks/useEmptyColumn";
+import { TablePaginationWithContext } from "@presentation/shared/TablePagination";
 import { Box, useTheme } from "@saleor/macaw-ui-next";
 import React, { useCallback, useMemo } from "react";
 import { useIntl } from "react-intl";

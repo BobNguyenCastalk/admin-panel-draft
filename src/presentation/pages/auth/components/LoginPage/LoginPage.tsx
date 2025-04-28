@@ -1,8 +1,8 @@
 import { commonMessages } from "@constants/common/intl";
 import { UserContextError } from "@dashboard/auth/types";
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
-import { ButtonWithLoader } from "@presentation/shared//ButtonWithLoader/ButtonWithLoader";
-import { FormSpacer } from "@presentation/shared//FormSpacer";
+import { ButtonWithLoader } from "@presentation/shared/ButtonWithLoader/ButtonWithLoader";
+import { FormSpacer } from "@presentation/shared/FormSpacer";
 import { EyeIcon } from "@saleor/macaw-ui";
 import { Box, Button, Divider, Input, Text } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";

@@ -2,8 +2,8 @@
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { Popper } from "@material-ui/core";
 import { isPluginGlobal } from "@presentation/pages/plugins/views/utils";
-import { DashboardCard } from "@presentation/shared//Card";
-import ChannelsAvailabilityMenuContent from "@presentation/shared//ChannelsAvailabilityMenuContent";
+import { DashboardCard } from "@presentation/shared/Card";
+import ChannelsAvailabilityMenuContent from "@presentation/shared/ChannelsAvailabilityMenuContent";
 import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
 

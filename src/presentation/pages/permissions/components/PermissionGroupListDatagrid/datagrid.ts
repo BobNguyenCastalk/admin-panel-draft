@@ -3,9 +3,9 @@ import { getColumnSortDirectionIcon } from "@dashboard/business/utils/shared/col
 import { PermissionGroupFragment } from "@dashboard/graphql";
 import { Sort } from "@dashboard/types";
 import { GridCell, Item } from "@glideapps/glide-data-grid";
-import { PLACEHOLDER } from "@presentation/shared//Datagrid/const";
-import { readonlyTextCell } from "@presentation/shared//Datagrid/customCells/cells";
-import { AvailableColumn } from "@presentation/shared//Datagrid/types";
+import { PLACEHOLDER } from "@presentation/shared/Datagrid/const";
+import { readonlyTextCell } from "@presentation/shared/Datagrid/customCells/cells";
+import { AvailableColumn } from "@presentation/shared/Datagrid/types";
 import { IntlShape } from "react-intl";
 
 import { columnsMessages } from "./messages";

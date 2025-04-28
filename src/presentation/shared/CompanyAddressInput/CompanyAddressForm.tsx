@@ -11,8 +11,8 @@ import {
   WarehouseErrorFragment,
 } from "@dashboard/graphql";
 import { TextField } from "@material-ui/core";
-import FormSpacer from "@presentation/shared//FormSpacer";
-import Grid from "@presentation/shared//Grid";
+import FormSpacer from "@presentation/shared/FormSpacer";
+import Grid from "@presentation/shared/Grid";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Option } from "@saleor/macaw-ui-next";
 import React from "react";

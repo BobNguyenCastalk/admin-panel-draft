@@ -1,4 +1,4 @@
-import { useModalContext } from "@presentation/shared//Modal/context";
+import { useModalContext } from "@presentation/shared/Modal/context";
 import { Box } from "@saleor/macaw-ui-next";
 import React, { ReactNode } from "react";
 

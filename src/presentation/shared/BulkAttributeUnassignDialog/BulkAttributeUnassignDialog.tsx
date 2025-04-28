@@ -1,5 +1,5 @@
-import ActionDialog from "@presentation/shared//ActionDialog";
-import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import ActionDialog from "@presentation/shared/ActionDialog";
+import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

@@ -10,7 +10,7 @@ import {
   Popper,
 } from "@material-ui/core";
 import { ArrowDropDown as ArrowDropDownIcon } from "@material-ui/icons";
-import { Button } from "@presentation/shared//Button";
+import { Button } from "@presentation/shared/Button";
 import React from "react";
 
 import { useStyles } from "./styles";

@@ -1,6 +1,6 @@
 import githubLogo from "@assets/images/github-logo.svg";
 import graphQl from "@assets/images/graphql.svg";
-import ExternalLink from "@presentation/shared//ExternalLink";
+import ExternalLink from "@presentation/shared/ExternalLink";
 import { OrdersIcon } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import SVG from "react-inlinesvg";

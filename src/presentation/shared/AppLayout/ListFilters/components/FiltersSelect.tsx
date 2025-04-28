@@ -6,9 +6,9 @@ import {
   FilterErrorMessages,
   IFilter,
   InvalidFilters,
-} from "@presentation/shared//Filter";
-import useFilter from "@presentation/shared//Filter/useFilter";
-import { extractInvalidFilters } from "@presentation/shared//Filter/utils";
+} from "@presentation/shared/Filter";
+import useFilter from "@presentation/shared/Filter/useFilter";
+import { extractInvalidFilters } from "@presentation/shared/Filter/utils";
 import { DropdownButton, sprinkles } from "@saleor/macaw-ui-next";
 import React, { useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";

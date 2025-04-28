@@ -1,4 +1,4 @@
-import { IMessage, IMessageContext, MessageContext } from "@presentation/shared//messages";
+import { IMessage, IMessageContext, MessageContext } from "@presentation/shared/messages";
 import { useContext } from "react";
 
 export type UseNotifierResult = IMessageContext;

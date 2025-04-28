@@ -1,4 +1,4 @@
-import { DashboardCard } from "@presentation/shared//Card";
+import { DashboardCard } from "@presentation/shared/Card";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { defineMessages, FormattedMessage } from "react-intl";

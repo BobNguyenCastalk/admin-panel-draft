@@ -1,6 +1,6 @@
-import { ConditionOptions } from "@presentation/shared//ConditionalFilter/FilterElement/ConditionOptions";
-import { ConditionSelected } from "@presentation/shared//ConditionalFilter/FilterElement/ConditionSelected";
-import { ExpressionValue } from "@presentation/shared//ConditionalFilter/FilterElement/FilterElement";
+import { ConditionOptions } from "@presentation/shared/ConditionalFilter/FilterElement/ConditionOptions";
+import { ConditionSelected } from "@presentation/shared/ConditionalFilter/FilterElement/ConditionSelected";
+import { ExpressionValue } from "@presentation/shared/ConditionalFilter/FilterElement/FilterElement";
 
 import { Condition, FilterContainer, FilterElement } from "../FilterElement";
 import { getFilterElement } from "./utils";

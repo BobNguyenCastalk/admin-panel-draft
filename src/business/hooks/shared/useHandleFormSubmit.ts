@@ -1,6 +1,6 @@
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
-import { FormId, useExitFormDialog } from "@presentation/shared//Form";
-import { MessageContext } from "@presentation/shared//messages";
+import { FormId, useExitFormDialog } from "@presentation/shared/Form";
+import { MessageContext } from "@presentation/shared/messages";
 import { useContext } from "react";
 
 interface UseHandleFormSubmitProps<TData, TError> {

@@ -13,10 +13,10 @@ import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/configs";
 import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
 import usePermissionGroupSearch from "@dashboard/graphql/searches/usePermissionGroupSearch";
 import { useUser } from "@dashboard/presentation/pages/auth";
-import ActionDialog from "@presentation/shared//ActionDialog";
-import NotFoundPage from "@presentation/shared//NotFoundPage";
-import { hasPermissions } from "@presentation/shared//RequirePermissions";
-import { WindowTitle } from "@presentation/shared//WindowTitle";
+import ActionDialog from "@presentation/shared/ActionDialog";
+import NotFoundPage from "@presentation/shared/NotFoundPage";
+import { hasPermissions } from "@presentation/shared/RequirePermissions";
+import { WindowTitle } from "@presentation/shared/WindowTitle";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

@@ -2,7 +2,7 @@ import useListActions from "@dashboard/business/hooks/shared/useListActions";
 import useStateFromProps from "@dashboard/business/hooks/shared/useStateFromProps";
 import { ChannelsAction } from "@dashboard/business/utils/channels/urls";
 import { Channel } from "@dashboard/business/utils/channels/utils";
-import { useExitFormDialog, WithFormId } from "@presentation/shared//Form";
+import { useExitFormDialog, WithFormId } from "@presentation/shared/Form";
 
 interface Modal {
   openModal: (action: ChannelsAction) => void;

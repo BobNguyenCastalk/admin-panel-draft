@@ -1,6 +1,6 @@
 import { FetchResult, MutationResult } from "@apollo/client";
 import { UserPermissionFragment } from "@dashboard/graphql";
-import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import { FilterElement, IFilter } from "@presentation/shared/Filter";
 import { Option } from "@saleor/macaw-ui-next";
 

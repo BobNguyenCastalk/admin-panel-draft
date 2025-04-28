@@ -1,5 +1,5 @@
 import { buttonMessages } from "@dashboard/constants/common/intl";
-import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
+import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

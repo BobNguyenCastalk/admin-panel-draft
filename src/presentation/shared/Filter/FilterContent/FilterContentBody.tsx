@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import { FormControlLabel, Radio, TextField } from "@material-ui/core";
-import { FilterDateTimeField } from "@presentation/shared//Filter/FilterContent/FilterDateTimeField";
-import { FilterNumericField } from "@presentation/shared//Filter/FilterContent/FilterNumericField";
-import { FilterSingleSelectField } from "@presentation/shared//Filter/FilterContent/FilterSingleSelectField";
-import { useCommonStyles } from "@presentation/shared//Filter/FilterContent/utils";
+import { FilterDateTimeField } from "@presentation/shared/Filter/FilterContent/FilterDateTimeField";
+import { FilterNumericField } from "@presentation/shared/Filter/FilterContent/FilterNumericField";
+import { FilterSingleSelectField } from "@presentation/shared/Filter/FilterContent/FilterSingleSelectField";
+import { useCommonStyles } from "@presentation/shared/Filter/FilterContent/utils";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Option, Skeleton } from "@saleor/macaw-ui-next";
 import clsx from "clsx";

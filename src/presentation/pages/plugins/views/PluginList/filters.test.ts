@@ -6,7 +6,7 @@ import {
   createFilterStructure,
   PluginFilterKeys,
 } from "@dashboard/plugins/components/PluginsListPage";
-import { FieldType } from "@presentation/shared//Filter";
+import { FieldType } from "@presentation/shared/Filter";
 import { getExistingKeys } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";

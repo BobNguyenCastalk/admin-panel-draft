@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { inputTypeMessages } from "@dashboard/attributes/components/AttributeDetails/messages";
 import { AttributeInputTypeEnum } from "@dashboard/graphql";
-import { BasicAttributeRow } from "@presentation/shared//Attributes/BasicAttributeRow";
-import ExtendedAttributeRow from "@presentation/shared//Attributes/ExtendedAttributeRow";
-import { attributeRowMessages } from "@presentation/shared//Attributes/messages";
-import { SwatchRow } from "@presentation/shared//Attributes/SwatchRow";
+import { BasicAttributeRow } from "@presentation/shared/Attributes/BasicAttributeRow";
+import ExtendedAttributeRow from "@presentation/shared/Attributes/ExtendedAttributeRow";
+import { attributeRowMessages } from "@presentation/shared/Attributes/messages";
+import { SwatchRow } from "@presentation/shared/Attributes/SwatchRow";
 import {
   booleanAttrValueToValue,
   getBooleanDropdownOptions,
@@ -16,10 +16,10 @@ import {
   getSingleChoices,
   getSingleDisplayValue,
   getTruncatedTextValue,
-} from "@presentation/shared//Attributes/utils";
-import FileUploadField from "@presentation/shared//FileUploadField";
-import RichTextEditor from "@presentation/shared//RichTextEditor";
-import SortableChipsField from "@presentation/shared//SortableChipsField";
+} from "@presentation/shared/Attributes/utils";
+import FileUploadField from "@presentation/shared/FileUploadField";
+import RichTextEditor from "@presentation/shared/RichTextEditor";
+import SortableChipsField from "@presentation/shared/SortableChipsField";
 import { Box, Input, Select, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

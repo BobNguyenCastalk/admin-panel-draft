@@ -1,5 +1,5 @@
 import { SearchPageProps, TabPageProps } from "@dashboard/types";
-import { Button } from "@presentation/shared//Button";
+import { Button } from "@presentation/shared/Button";
 import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

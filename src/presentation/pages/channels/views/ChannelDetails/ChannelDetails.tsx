@@ -28,7 +28,7 @@ import {
 import ChannelDeleteDialog from "@presentation/pages/channels/components/ChannelDeleteDialog";
 import { FormData } from "@presentation/pages/channels/components/ChannelForm/ChannelForm";
 import { useChannelWarehousesReorder } from "@presentation/pages/channels/views/ChannelDetails/useChannelWarehouseReorder";
-import { WindowTitle } from "@presentation/shared//WindowTitle";
+import { WindowTitle } from "@presentation/shared/WindowTitle";
 import React from "react";
 import { useIntl } from "react-intl";
 

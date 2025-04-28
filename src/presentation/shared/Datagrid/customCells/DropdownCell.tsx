@@ -5,7 +5,7 @@ import {
   GridCellKind,
   ProvideEditorCallback,
 } from "@glideapps/glide-data-grid";
-import { Combobox } from "@presentation/shared//Combobox";
+import { Combobox } from "@presentation/shared/Combobox";
 import { Option } from "@saleor/macaw-ui-next";
 import pick from "lodash/pick";
 import React from "react";

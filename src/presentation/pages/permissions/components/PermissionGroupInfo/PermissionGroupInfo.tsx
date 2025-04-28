@@ -5,7 +5,7 @@ import getPermissionGroupErrorMessage from "@dashboard/business/utils/shared/err
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { PermissionGroupErrorFragment } from "@dashboard/graphql";
 import { TextField } from "@material-ui/core";
-import { DashboardCard } from "@presentation/shared//Card";
+import { DashboardCard } from "@presentation/shared/Card";
 import React from "react";
 import { useIntl } from "react-intl";
 

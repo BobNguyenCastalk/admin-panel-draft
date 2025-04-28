@@ -1,9 +1,9 @@
 import { isSecretField } from "@dashboard/business/utils/plugins/utils";
 import { buttonMessages } from "@dashboard/constants/common/intl";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
-import { Button } from "@presentation/shared//Button";
-import { DashboardCard } from "@presentation/shared//Card";
-import Hr from "@presentation/shared//Hr";
+import { Button } from "@presentation/shared/Button";
+import { DashboardCard } from "@presentation/shared/Card";
+import Hr from "@presentation/shared/Hr";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";

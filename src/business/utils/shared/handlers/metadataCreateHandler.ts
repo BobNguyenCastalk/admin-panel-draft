@@ -1,5 +1,5 @@
 import { UpdateMetadataMutationFn, UpdatePrivateMetadataMutationFn } from "@dashboard/graphql";
-import { MetadataFormData } from "@presentation/shared//Metadata/types";
+import { MetadataFormData } from "@presentation/shared/Metadata/types";
 
 import { filterMetadataArray } from "./filterMetadataArray";
 

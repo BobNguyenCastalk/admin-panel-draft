@@ -1,5 +1,5 @@
 import { getStatusColor } from "@dashboard/business/misc";
-import { TokenType } from "@presentation/shared//ConditionalFilter/ValueProvider/UrlToken";
+import { TokenType } from "@presentation/shared/ConditionalFilter/ValueProvider/UrlToken";
 import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 import React from "react";
 import { defineMessages, useIntl } from "react-intl";

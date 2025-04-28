@@ -9,7 +9,7 @@ import {
 } from "@business/utils/permissions/urls";
 import { asSortParams } from "@dashboard/business/utils/shared/sort";
 import { sectionNames } from "@dashboard/constants/common/intl";
-import { Route } from "@presentation/shared//Router";
+import { Route } from "@presentation/shared/Router";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { parse as parseQs } from "qs";
 import React from "react";

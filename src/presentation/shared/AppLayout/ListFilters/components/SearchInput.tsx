@@ -1,5 +1,5 @@
 import { SearchPageProps } from "@dashboard/types";
-import Debounce from "@presentation/shared//Debounce";
+import Debounce from "@presentation/shared/Debounce";
 import {
   Box,
   SearchInput as MacawSearchInput,

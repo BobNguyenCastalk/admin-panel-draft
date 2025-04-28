@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { ApolloClient, useApolloClient } from "@apollo/client";
 import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
-import { IMessageContext } from "@presentation/shared//messages";
+import { IMessageContext } from "@presentation/shared/messages";
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
 

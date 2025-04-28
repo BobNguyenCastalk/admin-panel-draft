@@ -1,6 +1,6 @@
 import { TextField } from "@material-ui/core";
-import { ControlledCheckbox } from "@presentation/shared//ControlledCheckbox";
-import Hr from "@presentation/shared//Hr";
+import { ControlledCheckbox } from "@presentation/shared/ControlledCheckbox";
+import Hr from "@presentation/shared/Hr";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import clsx from "clsx";

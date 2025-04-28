@@ -1,6 +1,6 @@
 import { useCloud } from "@business/hooks/auth/useCloud";
-import { useDevModeContext } from "@presentation/shared//DevModePanel/hooks";
-import { useNavigatorSearchContext } from "@presentation/shared//NavigatorSearch/useNavigatorSearchContext";
+import { useDevModeContext } from "@presentation/shared/DevModePanel/hooks";
+import { useNavigatorSearchContext } from "@presentation/shared/NavigatorSearch/useNavigatorSearchContext";
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
 import { ThemeProvider } from "@saleor/macaw-ui-next";
 import { render, screen } from "@testing-library/react";

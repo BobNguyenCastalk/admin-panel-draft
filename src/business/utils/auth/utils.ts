@@ -2,7 +2,7 @@ import { ApolloError, ServerError } from "@apollo/client/core";
 import { UseNotifierResult } from "@dashboard/business/hooks/shared/useNotifier";
 import { getMutationErrors, parseLogMessage } from "@dashboard/business/misc";
 import { commonMessages } from "@dashboard/constants/common/intl";
-import { IMessage, IMessageContext } from "@presentation/shared//messages";
+import { IMessage, IMessageContext } from "@presentation/shared/messages";
 import { IntlShape } from "react-intl";
 
 import { isJwtError, isTokenExpired } from "./errors";

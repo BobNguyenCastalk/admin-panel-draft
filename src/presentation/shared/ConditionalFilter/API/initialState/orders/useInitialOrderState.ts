@@ -8,7 +8,7 @@ import {
   OrderStatusFilter,
   PaymentChargeStatusEnum,
 } from "@dashboard/graphql";
-import { OrderFetchingParams } from "@presentation/shared//ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
+import { OrderFetchingParams } from "@presentation/shared/ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 

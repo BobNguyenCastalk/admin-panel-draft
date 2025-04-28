@@ -1,4 +1,4 @@
-import { LocaleContext } from "@presentation/shared//Locale";
+import { LocaleContext } from "@presentation/shared/Locale";
 import { useContext } from "react";
 
 function useLocale() {

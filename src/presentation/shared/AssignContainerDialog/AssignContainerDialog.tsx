@@ -1,11 +1,11 @@
 import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { DialogProps, FetchMoreProps, Node } from "@dashboard/types";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
-import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
-import { InfiniteScroll } from "@presentation/shared//InfiniteScroll";
-import { DashboardModal } from "@presentation/shared//Modal";
-import ResponsiveTable from "@presentation/shared//ResponsiveTable";
-import TableRowLink from "@presentation/shared//TableRowLink";
+import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
+import { InfiniteScroll } from "@presentation/shared/InfiniteScroll";
+import { DashboardModal } from "@presentation/shared/Modal";
+import ResponsiveTable from "@presentation/shared/ResponsiveTable";
+import TableRowLink from "@presentation/shared/TableRowLink";
 import React from "react";
 
 import BackButton from "../BackButton";

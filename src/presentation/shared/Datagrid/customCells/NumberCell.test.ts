@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import { Locale } from "@presentation/shared//Locale";
+import { Locale } from "@presentation/shared/Locale";
 
 import { numberCellEmptyValue, NumberCellProps, numberCellRenderer } from "./NumberCell";
 

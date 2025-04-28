@@ -7,7 +7,7 @@ import {
 import { sectionNames } from "@dashboard/constants/common/intl";
 import { PluginConfigurationType } from "@dashboard/graphql";
 import { AutocompleteFilterOpts, FilterOpts } from "@dashboard/types";
-import { IFilter } from "@presentation/shared//Filter";
+import { IFilter } from "@presentation/shared/Filter";
 import { defineMessages, IntlShape } from "react-intl";
 
 import {

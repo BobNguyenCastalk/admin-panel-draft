@@ -1,5 +1,5 @@
-import { ItemOption } from "@presentation/shared//ConditionalFilter/FilterElement/ConditionValue";
-import { UrlToken } from "@presentation/shared//ConditionalFilter/ValueProvider/UrlToken";
+import { ItemOption } from "@presentation/shared/ConditionalFilter/FilterElement/ConditionValue";
+import { UrlToken } from "@presentation/shared/ConditionalFilter/ValueProvider/UrlToken";
 
 export interface InitialCollectionState {
   channel: ItemOption[];

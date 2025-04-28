@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { CustomCell, CustomRenderer, GridCellKind } from "@glideapps/glide-data-grid";
-import { Locale } from "@presentation/shared//Locale";
+import { Locale } from "@presentation/shared/Locale";
 import React, { useCallback } from "react";
 
 import { cellHeight } from "../../styles";

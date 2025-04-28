@@ -5,7 +5,7 @@ import {
   FilterElementKeyValue,
   FilterElementRegular,
   IFilter,
-} from "@presentation/shared//Filter";
+} from "@presentation/shared/Filter";
 
 function createFilterUtils<TQueryParams extends {}, TFilters extends {}>(filters: {}) {
   function getActiveFilters(params: TQueryParams): TFilters {

@@ -12,7 +12,7 @@ import { APP_VERSION as dashboardVersion } from "@dashboard/configs";
 import { sectionNames } from "@dashboard/constants/common/intl";
 import { PermissionEnum } from "@dashboard/graphql";
 import { useUser } from "@dashboard/presentation/pages/auth";
-import { WindowTitle } from "@presentation/shared//WindowTitle";
+import { WindowTitle } from "@presentation/shared/WindowTitle";
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
 

@@ -1,7 +1,7 @@
 import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { MetadataInput } from "@dashboard/graphql";
 import { Table, TableBody, TableCell, TableHead } from "@material-ui/core";
-import TableRowLink from "@presentation/shared//TableRowLink";
+import TableRowLink from "@presentation/shared/TableRowLink";
 import { Box, Button, Input, Text, Textarea, TrashBinIcon, vars } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";

@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { TextField } from "@material-ui/core";
-import { Select } from "@presentation/shared//Select";
+import { Select } from "@presentation/shared/Select";
 import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
 

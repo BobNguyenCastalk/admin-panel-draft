@@ -20,10 +20,10 @@ import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { getSortParams } from "@dashboard/business/utils/shared/sort";
 import { usePluginsQuery } from "@dashboard/graphql";
 import { ListViews } from "@dashboard/types";
-import DeleteFilterTabDialog from "@presentation/shared//DeleteFilterTabDialog";
+import DeleteFilterTabDialog from "@presentation/shared/DeleteFilterTabDialog";
 import SaveFilterTabDialog, {
   SaveFilterTabDialogFormData,
-} from "@presentation/shared//SaveFilterTabDialog";
+} from "@presentation/shared/SaveFilterTabDialog";
 import React from "react";
 
 import PluginsListPage from "../../components/PluginsListPage/PluginsListPage";

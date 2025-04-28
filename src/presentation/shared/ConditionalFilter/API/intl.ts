@@ -11,7 +11,7 @@ import {
   StaffMemberStatus,
   VoucherDiscountType,
 } from "@dashboard/graphql";
-import { LeftOperand } from "@presentation/shared//ConditionalFilter/LeftOperandsProvider";
+import { LeftOperand } from "@presentation/shared/ConditionalFilter/LeftOperandsProvider";
 import { IntlShape } from "react-intl";
 
 import {

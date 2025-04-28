@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 import { PluginBaseFragment } from "@dashboard/graphql";
-import { DashboardCard } from "@presentation/shared//Card";
-import CardSpacer from "@presentation/shared//CardSpacer";
-import { Pill } from "@presentation/shared//Pill";
+import { DashboardCard } from "@presentation/shared/Card";
+import CardSpacer from "@presentation/shared/CardSpacer";
+import { Pill } from "@presentation/shared/Pill";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

@@ -1,4 +1,4 @@
-import { ModalContextProvider } from "@presentation/shared//Modal/context";
+import { ModalContextProvider } from "@presentation/shared/Modal/context";
 import { Modal, ModalRootProps } from "@saleor/macaw-ui-next";
 import React from "react";
 

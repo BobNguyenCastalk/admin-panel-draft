@@ -1,7 +1,7 @@
 import { createOptionsField } from "@dashboard/business/utils/shared/filters/fields";
 import { StaffMemberStatus } from "@dashboard/graphql";
 import { FilterOpts } from "@dashboard/types";
-import { IFilter } from "@presentation/shared//Filter";
+import { IFilter } from "@presentation/shared/Filter";
 import { defineMessages, IntlShape } from "react-intl";
 
 export enum StaffFilterKeys {

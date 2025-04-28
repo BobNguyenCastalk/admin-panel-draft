@@ -2,7 +2,7 @@ import { ProductTypeEnum } from "@dashboard/graphql";
 import {
   BooleanValuesHandler,
   EnumValuesHandler,
-} from "@presentation/shared//ConditionalFilter/API/Handler";
+} from "@presentation/shared/ConditionalFilter/API/Handler";
 import { useIntl } from "react-intl";
 
 import { FilterContainer } from "../../FilterElement";

@@ -1,8 +1,8 @@
 // @ts-strict-ignore
-import { FilterFieldBaseProps, FilterType } from "@presentation/shared//Filter";
-import { getIsFilterMultipleChoices } from "@presentation/shared//Filter/FilterContent/utils";
-import FormSpacer from "@presentation/shared//FormSpacer";
-import { Select } from "@presentation/shared//Select";
+import { FilterFieldBaseProps, FilterType } from "@presentation/shared/Filter";
+import { getIsFilterMultipleChoices } from "@presentation/shared/Filter/FilterContent/utils";
+import FormSpacer from "@presentation/shared/FormSpacer";
+import { Select } from "@presentation/shared/Select";
 import React from "react";
 import { useIntl } from "react-intl";
 

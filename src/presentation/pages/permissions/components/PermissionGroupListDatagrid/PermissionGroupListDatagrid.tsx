@@ -8,14 +8,14 @@ import { PermissionGroupFragment } from "@dashboard/graphql";
 import { canBeSorted } from "@dashboard/presentation/pages/permissions/views/PermissionGroupList/sort";
 import { ListProps, SortPage } from "@dashboard/types";
 import { Item } from "@glideapps/glide-data-grid";
-import { useColumns } from "@presentation/shared//Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@presentation/shared//Datagrid/Datagrid";
+import { useColumns } from "@presentation/shared/Datagrid/ColumnPicker/useColumns";
+import Datagrid from "@presentation/shared/Datagrid/Datagrid";
 import {
   DatagridChangeStateContext,
   useDatagridChangeState,
-} from "@presentation/shared//Datagrid/hooks/useDatagridChange";
-import { useEmptyColumn } from "@presentation/shared//Datagrid/hooks/useEmptyColumn";
-import { TablePaginationWithContext } from "@presentation/shared//TablePagination";
+} from "@presentation/shared/Datagrid/hooks/useDatagridChange";
+import { useEmptyColumn } from "@presentation/shared/Datagrid/hooks/useEmptyColumn";
+import { TablePaginationWithContext } from "@presentation/shared/TablePagination";
 import { Box } from "@saleor/macaw-ui-next";
 import React, { useCallback, useMemo } from "react";
 import { useIntl } from "react-intl";

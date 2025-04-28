@@ -4,8 +4,8 @@ import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboar
 import { UserError } from "@dashboard/types";
 import { TextField } from "@material-ui/core";
 import InfoIcon from "@material-ui/icons/Info";
-import { DashboardCard } from "@presentation/shared//Card";
-import ControlledSwitch from "@presentation/shared//ControlledSwitch";
+import { DashboardCard } from "@presentation/shared/Card";
+import ControlledSwitch from "@presentation/shared/ControlledSwitch";
 import { Box, Tooltip } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

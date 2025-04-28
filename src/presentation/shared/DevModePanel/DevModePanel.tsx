@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { FetcherOpts, FetcherParams } from "@graphiql/toolkit";
-import { useDashboardTheme } from "@presentation/shared//GraphiQL/styles";
-import { DashboardModal } from "@presentation/shared//Modal";
+import { useDashboardTheme } from "@presentation/shared/GraphiQL/styles";
+import { DashboardModal } from "@presentation/shared/Modal";
 import React from "react";
 import { useIntl } from "react-intl";
 

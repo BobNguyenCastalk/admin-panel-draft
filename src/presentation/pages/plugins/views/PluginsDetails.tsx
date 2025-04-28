@@ -17,8 +17,8 @@ import {
   usePluginQuery,
   usePluginUpdateMutation,
 } from "@dashboard/graphql";
-import ActionDialog from "@presentation/shared//ActionDialog";
-import { WindowTitle } from "@presentation/shared//WindowTitle";
+import ActionDialog from "@presentation/shared/ActionDialog";
+import { WindowTitle } from "@presentation/shared/WindowTitle";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

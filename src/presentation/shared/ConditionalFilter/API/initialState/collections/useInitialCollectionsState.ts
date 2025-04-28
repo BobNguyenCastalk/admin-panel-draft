@@ -4,7 +4,7 @@ import {
   _GetChannelOperandsQuery,
   _GetChannelOperandsQueryVariables,
 } from "@dashboard/graphql";
-import { CollectionFetchingParams } from "@presentation/shared//ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
+import { CollectionFetchingParams } from "@presentation/shared/ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
 import { useState } from "react";
 
 import { createInitialCollectionState } from "../helpers";

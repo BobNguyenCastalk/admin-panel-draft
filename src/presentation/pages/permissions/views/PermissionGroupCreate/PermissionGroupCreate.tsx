@@ -9,8 +9,8 @@ import { extractMutationErrors } from "@dashboard/business/misc";
 import { usePermissionGroupCreateMutation } from "@dashboard/graphql";
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
 import { useUser } from "@dashboard/presentation/pages/auth";
-import useAppChannel from "@presentation/shared//AppLayout/AppChannelContext";
-import { WindowTitle } from "@presentation/shared//WindowTitle";
+import useAppChannel from "@presentation/shared/AppLayout/AppChannelContext";
+import { WindowTitle } from "@presentation/shared/WindowTitle";
 import React, { useMemo } from "react";
 import { useIntl } from "react-intl";
 

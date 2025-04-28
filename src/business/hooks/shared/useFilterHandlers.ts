@@ -4,7 +4,7 @@ import {
   getFilterQueryParams,
 } from "@dashboard/business/utils/shared/filters";
 import { ActiveTab, Pagination, Search, Sort } from "@dashboard/types";
-import { IFilter } from "@presentation/shared//Filter";
+import { IFilter } from "@presentation/shared/Filter";
 import { useEffect, useRef } from "react";
 
 import useNavigator from "./useNavigator";

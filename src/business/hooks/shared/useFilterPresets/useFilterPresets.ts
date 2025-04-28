@@ -1,7 +1,7 @@
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { GetFilterTabsOutput, StorageUtils } from "@dashboard/business/utils/shared/filters";
 import { prepareQs } from "@dashboard/business/utils/shared/filters/qs";
-import { SaveFilterTabDialogFormData } from "@presentation/shared//SaveFilterTabDialog";
+import { SaveFilterTabDialogFormData } from "@presentation/shared/SaveFilterTabDialog";
 import { stringify } from "qs";
 import { useState } from "react";
 

@@ -1,6 +1,6 @@
 import { UseNavigatorResult } from "@dashboard/business/hooks/shared/useNavigator";
 import { ActiveTab, Pagination, Search, Sort } from "@dashboard/types";
-import { IFilter } from "@presentation/shared//Filter";
+import { IFilter } from "@presentation/shared/Filter";
 
 import { GetFilterQueryParam, getFilterQueryParams } from "../filters";
 

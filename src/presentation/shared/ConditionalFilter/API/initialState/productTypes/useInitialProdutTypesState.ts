@@ -1,6 +1,6 @@
 import { ProductTypeEnum } from "@dashboard/graphql";
-import { InitialProductTypesStateResponse } from "@presentation/shared//ConditionalFilter/API/initialState/productTypes/InitialProductTypesState";
-import { createBooleanOptions } from "@presentation/shared//ConditionalFilter/constants";
+import { InitialProductTypesStateResponse } from "@presentation/shared/ConditionalFilter/API/initialState/productTypes/InitialProductTypesState";
+import { createBooleanOptions } from "@presentation/shared/ConditionalFilter/constants";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 

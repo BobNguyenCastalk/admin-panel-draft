@@ -1,6 +1,6 @@
 import { getMiddleCenterBias, Rectangle, Theme } from "@glideapps/glide-data-grid";
-import { Locale } from "@presentation/shared//Locale";
-import { formatMoneyAmount } from "@presentation/shared//Money";
+import { Locale } from "@presentation/shared/Locale";
+import { formatMoneyAmount } from "@presentation/shared/Money";
 
 const OFFSET = 8;
 

@@ -7,9 +7,9 @@ import {
   _SearchProductOperandsQuery,
   _SearchProductOperandsQueryVariables,
 } from "@dashboard/graphql";
-import { createInitialGiftCardsState } from "@presentation/shared//ConditionalFilter/API/initialState/helpers";
-import { InitialGiftCardsAPIResponse } from "@presentation/shared//ConditionalFilter/API/initialState/types";
-import { GiftCardsFetchingParams } from "@presentation/shared//ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
+import { createInitialGiftCardsState } from "@presentation/shared/ConditionalFilter/API/initialState/helpers";
+import { InitialGiftCardsAPIResponse } from "@presentation/shared/ConditionalFilter/API/initialState/types";
+import { GiftCardsFetchingParams } from "@presentation/shared/ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
 import { useState } from "react";
 
 import { InitialGiftCardsStateResponse } from "./InitialGiftCardsState";

@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { isPluginGlobal } from "@presentation/pages/plugins/views/utils";
-import { Pill } from "@presentation/shared//Pill";
+import { Pill } from "@presentation/shared/Pill";
 import React from "react";
 import { useIntl } from "react-intl";
 

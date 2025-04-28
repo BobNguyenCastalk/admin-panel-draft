@@ -1,10 +1,10 @@
 import getPluginErrorMessage from "@dashboard/business/utils/shared/errors/plugins";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { PluginErrorCode, PluginErrorFragment } from "@dashboard/graphql";
-import { DashboardCard } from "@presentation/shared//Card";
-import ControlledCheckbox from "@presentation/shared//ControlledCheckbox";
-import FormSpacer from "@presentation/shared//FormSpacer";
-import Hr from "@presentation/shared//Hr";
+import { DashboardCard } from "@presentation/shared/Card";
+import ControlledCheckbox from "@presentation/shared/ControlledCheckbox";
+import FormSpacer from "@presentation/shared/FormSpacer";
+import Hr from "@presentation/shared/Hr";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";

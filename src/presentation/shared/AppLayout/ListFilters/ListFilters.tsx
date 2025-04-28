@@ -1,5 +1,5 @@
 import { FilterProps, SearchPageProps } from "@dashboard/types";
-import { FilterErrorMessages, IFilter } from "@presentation/shared//Filter";
+import { FilterErrorMessages, IFilter } from "@presentation/shared/Filter";
 import { Box } from "@saleor/macaw-ui-next";
 import React, { ReactNode } from "react";
 

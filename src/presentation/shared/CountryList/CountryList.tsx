@@ -2,9 +2,9 @@
 import { CountryFragment } from "@dashboard/graphql";
 import { TableBody, TableCell } from "@material-ui/core";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import { Button } from "@presentation/shared//Button";
-import ResponsiveTable from "@presentation/shared//ResponsiveTable";
-import TableRowLink from "@presentation/shared//TableRowLink";
+import { Button } from "@presentation/shared/Button";
+import ResponsiveTable from "@presentation/shared/ResponsiveTable";
+import TableRowLink from "@presentation/shared/TableRowLink";
 import { DeleteIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import clsx from "clsx";

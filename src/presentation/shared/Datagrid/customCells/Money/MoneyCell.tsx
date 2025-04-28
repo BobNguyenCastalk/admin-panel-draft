@@ -5,7 +5,7 @@ import {
   GridCellKind,
   ProvideEditorCallback,
 } from "@glideapps/glide-data-grid";
-import { Locale } from "@presentation/shared//Locale";
+import { Locale } from "@presentation/shared/Locale";
 import React from "react";
 
 import { usePriceField } from "../../../PriceField/usePriceField";

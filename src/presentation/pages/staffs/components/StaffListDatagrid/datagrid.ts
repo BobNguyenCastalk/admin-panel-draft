@@ -5,13 +5,13 @@ import { commonStatusMessages } from "@dashboard/constants/common/intl";
 import { Sort } from "@dashboard/types";
 import { StaffMember, StaffMembers } from "@dashboard/types/staffs";
 import { GridCell, Item } from "@glideapps/glide-data-grid";
+import { PLACEHOLDER } from "@presentation/shared/Datagrid/const";
 import {
   readonlyTextCell,
   tagsCell,
   thumbnailCell,
-} from "@presentation/shared//Datagrid/customCells/cells";
-import { AvailableColumn } from "@presentation/shared//Datagrid/types";
-import { PLACEHOLDER } from "@presentation/shared/Datagrid/const";
+} from "@presentation/shared/Datagrid/customCells/cells";
+import { AvailableColumn } from "@presentation/shared/Datagrid/types";
 import { DefaultTheme } from "@saleor/macaw-ui-next";
 import { IntlShape } from "react-intl";
 

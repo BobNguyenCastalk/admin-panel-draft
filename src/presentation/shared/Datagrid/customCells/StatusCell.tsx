@@ -1,6 +1,6 @@
 import { getDotColor } from "@dashboard/business/misc";
 import { CustomCell, CustomRenderer, GridCellKind } from "@glideapps/glide-data-grid";
-import { DotStatus } from "@presentation/shared//StatusDot/StatusDot";
+import { DotStatus } from "@presentation/shared/StatusDot/StatusDot";
 import { ThemeTokensValues } from "@saleor/macaw-ui-next";
 
 interface StatusCellProps {

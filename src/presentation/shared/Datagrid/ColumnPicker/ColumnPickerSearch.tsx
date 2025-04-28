@@ -1,4 +1,4 @@
-import Debounce from "@presentation/shared//Debounce";
+import Debounce from "@presentation/shared/Debounce";
 import { SearchInput } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

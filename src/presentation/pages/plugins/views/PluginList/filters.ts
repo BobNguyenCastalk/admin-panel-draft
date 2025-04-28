@@ -20,7 +20,7 @@ import {
   PluginFilterKeys,
   PluginListFilterOpts,
 } from "@presentation/pages/plugins/components/PluginsListPage";
-import { FilterElement, FilterElementRegular } from "@presentation/shared//Filter";
+import { FilterElement, FilterElementRegular } from "@presentation/shared/Filter";
 
 export const PLUGIN_FILTERS_KEY = "pluginFilters";
 

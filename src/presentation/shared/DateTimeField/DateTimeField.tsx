@@ -5,7 +5,7 @@ import {
   PageErrorWithAttributesFragment,
   ProductErrorWithAttributesFragment,
 } from "@dashboard/graphql";
-import { getErrorMessage } from "@presentation/shared//Attributes/utils";
+import { getErrorMessage } from "@presentation/shared/Attributes/utils";
 import { Box, Input } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";

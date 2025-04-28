@@ -13,7 +13,7 @@ import {
   useChannelCreateMutation,
   useChannelReorderWarehousesMutation,
 } from "@dashboard/graphql";
-import { WindowTitle } from "@presentation/shared//WindowTitle";
+import { WindowTitle } from "@presentation/shared/WindowTitle";
 import currencyCodes from "currency-codes";
 import React from "react";
 import { useIntl } from "react-intl";

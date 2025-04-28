@@ -27,13 +27,13 @@ import {
   TransactionFlowStrategyEnum,
 } from "@dashboard/graphql/types.generated";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
-import { TopNav } from "@presentation/shared//AppLayout/TopNav";
-import CardSpacer from "@presentation/shared//CardSpacer";
-import { ConfirmButtonTransitionState } from "@presentation/shared//ConfirmButton";
-import Form from "@presentation/shared//Form";
-import { DetailPageLayout } from "@presentation/shared//Layouts";
-import RequirePermissions from "@presentation/shared//RequirePermissions";
-import { Savebar } from "@presentation/shared//Savebar";
+import { TopNav } from "@presentation/shared/AppLayout/TopNav";
+import CardSpacer from "@presentation/shared/CardSpacer";
+import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
+import Form from "@presentation/shared/Form";
+import { DetailPageLayout } from "@presentation/shared/Layouts";
+import RequirePermissions from "@presentation/shared/RequirePermissions";
+import { Savebar } from "@presentation/shared/Savebar";
 import { Option } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { useIntl } from "react-intl";

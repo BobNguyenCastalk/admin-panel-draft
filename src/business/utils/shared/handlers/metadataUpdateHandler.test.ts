@@ -1,4 +1,4 @@
-import { MetadataFormData } from "@presentation/shared//Metadata";
+import { MetadataFormData } from "@presentation/shared/Metadata";
 
 import createMetadataUpdateHandler, { ObjectWithMetadata } from "./metadataUpdateHandler";
 
