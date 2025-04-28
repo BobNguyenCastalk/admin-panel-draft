@@ -4,7 +4,7 @@ import { useAuth, useAuthState } from "@saleor/sdk";
 import { waitFor } from "@testing-library/react";
 import { act, renderHook } from "@testing-library/react-hooks";
 
-import { useAuthProvider } from "./useAuthProvider";
+import { useAuthProvider } from "./useAuth";
 
 // Mock dependencies
 jest.mock("@saleor/sdk");

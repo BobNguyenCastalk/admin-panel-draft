@@ -32,7 +32,6 @@ export interface UserContext {
   logout?: () => Promise<void>;
   user?: UserFragment | null;
   authenticating: boolean;
-  isCredentialsLogin: boolean;
   authenticated: boolean;
   errors: UserContextError[];
   refetchUser?: () => Promise<ApolloQueryResult<UserDetailsQuery>>;

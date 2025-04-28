@@ -1,7 +1,6 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
 import { parseAuthError } from "@business/utils/auth/errors";
 import { login, logout } from "@business/utils/auth/temp";
-import { displayDemoMessage } from "@business/utils/auth/utils";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import {
   checkIfCredentialsExist,
@@ -9,9 +8,9 @@ import {
   login as loginWithCredentialsManagementAPI,
   saveCredentials,
 } from "@dashboard/business/utils/shared/credentialsManagement";
-import { DEMO_MODE } from "@dashboard/configs";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
+import { useBoundStore } from "@dashboard/stores";
 import { UserContext, UserContextError } from "@dashboard/types/auth";
 import { IMessageContext } from "@presentation/shared/messages";
 import { GetExternalAccessTokenData, LoginData } from "@saleor/sdk";
@@ -19,20 +18,22 @@ import isEmpty from "lodash/isEmpty";
 import { useEffect, useRef, useState } from "react";
 import { IntlShape } from "react-intl";
 
-export interface UseAuthProviderOpts {
+export interface UseAuthOpts {
   intl: IntlShape;
   notify: IMessageContext;
   apolloClient: ApolloClient<any>;
 }
 type AuthErrorCodes = `${AccountErrorCode}`;
 
-export function useAuthProvider({ intl, notify, apolloClient }: UseAuthProviderOpts): UserContext {
+export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContext {
   const navigate = useNavigator();
-  const [authenticated, setAuthenticated] = useState(false);
-  const [authenticating, setAuthenticating] = useState(false);
-  const [user, setUser] = useState(null);
+  const authenticated = useBoundStore(state => state.authenticated);
+  const authenticating = useBoundStore(state => state.authenticating);
+  const user = useBoundStore(state => state.user);
+  const setUser = useBoundStore(state => state.setUser);
+  const setAuthenticated = useBoundStore(state => state.setAuthenticated);
+  const setAuthenticating = useBoundStore(state => state.setAuthenticating);
 
-  const [isCredentialsLogin, setIsCredentialsLogin] = useState(false);
   const [errors, setErrors] = useState<UserContextError[]>([]);
   const permitCredentialsAPI = useRef(true);
 
@@ -105,13 +106,8 @@ export function useAuthProvider({ intl, notify, apolloClient }: UseAuthProviderO
   };
 
   const handleLogin = async (email: string, password: string) => {
-    if (isCredentialsLogin) {
-      return;
-    }
-
     try {
       setAuthenticating(true);
-      setIsCredentialsLogin(true);
 
       const result = await login(apolloClient, {
         email,
@@ -135,10 +131,6 @@ export function useAuthProvider({ intl, notify, apolloClient }: UseAuthProviderO
       const hasUser = !!result.data?.tokenCreate?.user;
 
       if (hasUser && !errorList?.length) {
-        if (DEMO_MODE) {
-          displayDemoMessage(intl, notify);
-        }
-
         saveCredentials(result.data!.tokenCreate!.user!, password);
       } else {
         const userContextErrorList: UserContextError[] = [];
@@ -173,7 +165,6 @@ export function useAuthProvider({ intl, notify, apolloClient }: UseAuthProviderO
       }
     } finally {
       setAuthenticating(false);
-      setIsCredentialsLogin(false);
     }
   };
 
@@ -192,7 +183,6 @@ export function useAuthProvider({ intl, notify, apolloClient }: UseAuthProviderO
     login: handleLogin,
     logout: handleLogout,
     authenticating: authenticating && !errors.length,
-    isCredentialsLogin,
     authenticated: authenticated && !!user?.isStaff && !errors.length,
     user: userDetails.data?.me,
     refetchUser: userDetails.refetch,

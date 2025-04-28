@@ -2,12 +2,12 @@ import "@saleor/macaw-ui-next/style";
 import "@assets/styles/index.css";
 
 import { ApolloProvider } from "@apollo/client";
-import { useAuthRedirection } from "@business/hooks/auth/useAuthRedirection";
 import AuthProvider from "@business/providers/auth/AuthProvider";
 import { createStorage } from "@business/utils/shared/storage";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
 import { PermissionEnum } from "@dashboard/graphql";
 import PermissionGroupSection from "@dashboard/presentation/pages/permissions";
+import { useBoundStore } from "@dashboard/stores";
 import { ThemeProvider } from "@dashboard/theme";
 import ChannelsSection from "@presentation/pages/channels";
 import ConfigurationSection from "@presentation/pages/configuration";
@@ -93,23 +93,21 @@ const App: React.FC = () => {
                   <MessageManagerProvider>
                     <BackgroundTasksProvider>
                       <AppStateProvider>
-                        <AuthProvider>
-                          <ProductAnalytics>
-                            <AppChannelProvider>
-                              <ExitFormDialogProvider>
-                                <DevModeProvider>
-                                  <NavigatorSearchProvider>
-                                    <SavebarRefProvider>
-                                      <FeatureFlagsProviderWithUser>
-                                        <Routes />
-                                      </FeatureFlagsProviderWithUser>
-                                    </SavebarRefProvider>
-                                  </NavigatorSearchProvider>
-                                </DevModeProvider>
-                              </ExitFormDialogProvider>
-                            </AppChannelProvider>
-                          </ProductAnalytics>
-                        </AuthProvider>
+                        <ProductAnalytics>
+                          <AppChannelProvider>
+                            <ExitFormDialogProvider>
+                              <DevModeProvider>
+                                <NavigatorSearchProvider>
+                                  <SavebarRefProvider>
+                                    <FeatureFlagsProviderWithUser>
+                                      <Routes />
+                                    </FeatureFlagsProviderWithUser>
+                                  </SavebarRefProvider>
+                                </NavigatorSearchProvider>
+                              </DevModeProvider>
+                            </ExitFormDialogProvider>
+                          </AppChannelProvider>
+                        </ProductAnalytics>
                       </AppStateProvider>
                     </BackgroundTasksProvider>
                   </MessageManagerProvider>
@@ -126,7 +124,8 @@ const App: React.FC = () => {
 const Routes: React.FC = () => {
   const intl = useIntl();
   const [, dispatchAppState] = useAppState();
-  const { authenticated, authenticating } = useAuthRedirection();
+  const authenticated = useBoundStore(state => state.authenticated);
+  const authenticating = useBoundStore(state => state.authenticating);
   const { channel } = useAppChannel(false);
   const channelLoaded = typeof channel !== "undefined";
   const homePageLoaded = channelLoaded && authenticated;

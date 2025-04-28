@@ -19,7 +19,6 @@ export const UserContext = React.createContext<Context>({
   login: undefined,
   logout: undefined,
   authenticating: false,
-  isCredentialsLogin: false,
   authenticated: false,
   errors: [],
   refetchUser: undefined,
