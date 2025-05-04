@@ -4,6 +4,7 @@ import "@assets/styles/index.css";
 import { ApolloProvider } from "@apollo/client";
 import { createStorage } from "@business/utils/shared/storage";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
+import { fetchUser } from "@dashboard/business/utils/auth/user";
 import { PermissionEnum } from "@dashboard/graphql";
 import PermissionGroupSection from "@dashboard/presentation/pages/permissions";
 import { useBoundStore } from "@dashboard/stores";
@@ -31,7 +32,7 @@ import { SavebarRefProvider } from "@presentation/shared/Savebar/SavebarRefConte
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
 import { SaleorProvider } from "@saleor/sdk";
-import React from "react";
+import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
 import TagManager from "react-gtm-module";
@@ -130,6 +131,12 @@ const Routes: React.FC = () => {
   const homePageLoaded = channelLoaded && authenticated;
   const homePageLoading = (authenticated && !channelLoaded) || authenticating;
   const { isAppPath } = useLocationState();
+
+  useEffect(() => {
+    if (authenticated) {
+      fetchUser();
+    }
+  }, [authenticated]);
 
   return (
     <>

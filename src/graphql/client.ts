@@ -1,9 +1,17 @@
 // DON'T TOUCH THIS
 // These are separate clients and do not share configs between themselves
-import { ApolloClient, ApolloLink, InMemoryCache } from "@apollo/client";
+import {
+  ApolloClient,
+  ApolloLink,
+  FetchResult,
+  InMemoryCache,
+  NormalizedCacheObject,
+} from "@apollo/client";
+import { storage } from "@business/utils/shared/storage";
 import { ENABLED_SERVICE_NAME_HEADER, getApiUrl } from "@dashboard/configs";
-import { createFetch, createSaleorClient } from "@saleor/sdk";
+import { createSaleorClient } from "@saleor/sdk";
 import { createUploadLink } from "apollo-upload-client";
+import jwtDecode from "jwt-decode";
 
 import introspectionQueryResultData from "./fragmentTypes.generated";
 import { TypedTypePolicies } from "./typePolicies.generated";
@@ -29,6 +37,146 @@ const attachVariablesLink = new ApolloLink((operation, forward) => {
     },
   }));
 });
+
+export type FetchConfig = Partial<{
+  /**
+   * Enable auto token refreshing. Default to `true`.
+   */
+  autoTokenRefresh: boolean;
+  /**
+   * Set a value for skew between local time and token expiration date in
+   * seconds (only together with `autoTokenRefresh`). Defaults to `120`.
+   */
+  tokenRefreshTimeSkew: number;
+  /**
+   * Refresh token and retry the request when Saleor responds with `Unauthorized` error.
+   * Defaults to `true`.
+   */
+  refreshOnUnauthorized: boolean;
+}>;
+
+export type JWTToken = {
+  iat: number;
+  iss: string;
+  owner: string;
+  exp: number;
+  token: string;
+  email: string;
+  type: string;
+  user_id: string;
+  is_staff: boolean;
+};
+
+let client: ApolloClient<NormalizedCacheObject>;
+let authClient;
+let refreshPromise = null;
+
+const isTokenRefreshExternal = result => "externalRefresh" in result;
+
+export const isInternalToken = (owner: string): boolean => owner === "saleor";
+
+export const createFetch =
+  ({
+    autoTokenRefresh = true,
+    tokenRefreshTimeSkew = 120,
+    refreshOnUnauthorized = true,
+  }: FetchConfig = {}) =>
+  async (input: RequestInfo, init: RequestInit = {}): Promise<Response> => {
+    let token = storage.getAccessToken();
+
+    try {
+      if (
+        ["refreshToken"].includes(
+          // INFO: Non-null assertion is enabled because the block is wrapped inside try/catch
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+          JSON.parse(init.body!.toString()).operationName,
+        )
+      ) {
+        return fetch(input, init);
+      }
+    } catch (e) {
+      // TODO: handle error
+    }
+
+    if (autoTokenRefresh && token) {
+      // auto refresh token before provided time skew (in seconds) until it expires
+      const decodedToken = jwtDecode<JWTToken>(token);
+      const expirationTime = (decodedToken.exp - tokenRefreshTimeSkew) * 1000;
+      const owner = decodedToken.owner;
+
+      try {
+        if (refreshPromise) {
+          await refreshPromise;
+        } else if (Date.now() >= expirationTime) {
+          if (isInternalToken(owner)) {
+            await authClient.refreshToken();
+          } else {
+            await authClient.refreshExternalToken();
+          }
+        }
+      } catch (e) {
+        // TODO: handle error
+      } finally {
+        refreshPromise = null;
+      }
+
+      token = storage.getAccessToken();
+    }
+
+    if (token) {
+      init.headers = {
+        ...init.headers,
+        "authorization-bearer": token,
+      };
+    }
+
+    if (refreshOnUnauthorized && token) {
+      const response = await fetch(input, init);
+      const data: FetchResult = await response.clone().json();
+      const isUnauthenticated = data?.errors?.some(
+        error => error.extensions?.exception.code === "ExpiredSignatureError",
+      );
+      let refreshTokenResponse = null;
+      const owner = jwtDecode<JWTToken>(token).owner;
+
+      if (isUnauthenticated) {
+        try {
+          if (refreshPromise) {
+            refreshTokenResponse = await refreshPromise;
+          } else {
+            refreshPromise = isInternalToken(owner)
+              ? authClient.refreshToken()
+              : authClient.refreshExternalToken();
+            refreshTokenResponse = await refreshPromise;
+          }
+
+          if (
+            refreshTokenResponse.data && isTokenRefreshExternal(refreshTokenResponse.data)
+              ? refreshTokenResponse.data.externalRefresh?.token
+              : refreshTokenResponse.data?.tokenRefresh?.token
+          ) {
+            // check if mutation returns a valid token after refresh and retry the request
+            return createFetch({
+              autoTokenRefresh: false,
+              refreshOnUnauthorized: false,
+            })(input, init);
+          } else {
+            // after Saleor returns ExpiredSignatureError status and token refresh fails
+            // we log out the user and return the failed response
+            authClient.logout();
+          }
+        } catch (e) {
+          // TODO: handle error
+        } finally {
+          refreshPromise = null;
+        }
+      }
+
+      return response;
+    }
+
+    return fetch(input, init);
+  };
 
 export const link = attachVariablesLink.concat(
   createUploadLink({
