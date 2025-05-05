@@ -20,7 +20,7 @@
       "version": "detect"
     }
   },
-  "plugins": ["import", "local-rules", "formatjs", "react-refresh", "simple-import-sort"],
+  "plugins": ["import", "local-rules", "formatjs", "react-refresh", "simple-import-sort", "eslint-plugin-react-hooks"],
   "overrides": [
     {
       "files": ["playwright/**/*.ts"],
@@ -103,7 +103,9 @@
     "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-unused-vars": "off"
+    "@typescript-eslint/no-unused-vars": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "ignorePatterns": ["node_modules/", "**/types/**/*", "type-policies.ts", "playwright/auth.js"]
 }

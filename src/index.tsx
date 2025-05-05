@@ -118,7 +118,7 @@ const Routes: React.FC = () => {
   const user = useBoundStore(state => state.user);
   const selectedChannel = useBoundStore(state => state.selectedChannel);
   const setSelectedChannel = useBoundStore(state => state.setSelectedChannel);
-  const channelLoaded = typeof channel !== "undefined";
+  const channelLoaded = typeof selectedChannel !== "undefined";
   const homePageLoaded = channelLoaded && authenticated;
   const homePageLoading = (authenticated && !channelLoaded) || authenticating;
   const { isAppPath } = useLocationState();
@@ -130,9 +130,12 @@ const Routes: React.FC = () => {
   // TODO: this is a logic to check the progress. Remove this once done
   useEffect(() => {
     if (authenticated) {
-      fetchUser();
+      setTimeout(async () => {
+        await fetchUser();
+        refetch();
+      }, 1000);
     }
-  }, [authenticated]);
+  }, [authenticated, refetch]);
 
   useEffect(() => {
     const isValidChannel = (channelId: string, channelList?: ChannelFragment[]) => {
