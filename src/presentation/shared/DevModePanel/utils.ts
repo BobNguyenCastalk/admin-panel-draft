@@ -1,6 +1,6 @@
 import { ENABLED_SERVICE_NAME_HEADER } from "@dashboard/configs";
+import { createFetch } from "@dashboard/graphql/client";
 import { createGraphiQLFetcher, FetcherOpts } from "@graphiql/toolkit";
-import { createFetch } from "@saleor/sdk";
 
 const authHeaders = ["Authorization", "Authorization-Bearer"];
 

@@ -1,8 +1,8 @@
 import { useUser } from "@dashboard/presentation/pages/auth";
+import { useBoundStore } from "@dashboard/stores";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import React, { PropsWithChildren } from "react";
 
-import useAppChannel from "../AppChannelContext";
 import AppChannelSelect from "../AppChannelSelect";
 import { ContextualLine } from "../ContextualLinks/ContextualLine";
 import { TopNavLink } from "./TopNavLink";
@@ -24,7 +24,9 @@ export const Root: React.FC<PropsWithChildren<TopNavProps>> = ({
   isAlignToRight = true,
   children,
 }) => {
-  const { channel, isPickerActive, setChannel } = useAppChannel(false);
+  const channel = useBoundStore(state => state.selectedChannel);
+  const isPickerActive = useBoundStore(state => state.isPickerActive);
+  const setChannel = useBoundStore(state => state.setSelectedChannel);
   const user = useUser();
   const channels = user?.user?.accessibleChannels ?? [];
 

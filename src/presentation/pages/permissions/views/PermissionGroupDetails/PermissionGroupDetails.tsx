@@ -31,9 +31,9 @@ import {
 } from "@dashboard/graphql";
 import useStaffMemberSearch from "@dashboard/graphql/searches/useStaffMemberSearch";
 import { useUser } from "@dashboard/presentation/pages/auth";
+import { useBoundStore } from "@dashboard/stores";
 import MembersErrorDialog from "@presentation/pages/permissions/components/MembersErrorDialog";
 import PermissionGroupDeleteDialog from "@presentation/pages/permissions/components/PermissionGroupDeleteDialog";
-import useAppChannel from "@presentation/shared/AppLayout/AppChannelContext";
 import { Button } from "@presentation/shared/Button";
 import React from "react";
 import { useIntl } from "react-intl";
@@ -61,7 +61,7 @@ export const PermissionGroupDetails: React.FC<PermissionGroupDetailsProps> = ({ 
     displayLoader: true,
     variables: { id, userId: user?.user?.id ?? "" },
   });
-  const { availableChannels } = useAppChannel(false);
+  const availableChannels = useBoundStore(state => state.channels);
   const [membersList, setMembersList] = useStateFromProps<Members>(
     data?.permissionGroup?.users ?? [],
   );

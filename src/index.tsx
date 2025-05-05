@@ -3,8 +3,9 @@ import "@assets/styles/index.css";
 
 import { ApolloProvider } from "@apollo/client";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
+import { getById } from "@dashboard/business/misc";
 import { fetchUser } from "@dashboard/business/utils/auth/user";
-import { PermissionEnum } from "@dashboard/graphql";
+import { ChannelFragment, PermissionEnum, useBaseChannelsQuery } from "@dashboard/graphql";
 import PermissionGroupSection from "@dashboard/presentation/pages/permissions";
 import { useBoundStore } from "@dashboard/stores";
 import { ThemeProvider } from "@dashboard/theme";
@@ -14,10 +15,6 @@ import PluginsSection from "@presentation/pages/plugins";
 import StaffSection from "@presentation/pages/staffs";
 import { WelcomePage } from "@presentation/pages/welcome";
 import AppLayout from "@presentation/shared/AppLayout";
-import useAppChannel, {
-  AppChannelProvider,
-} from "@presentation/shared/AppLayout/AppChannelContext";
-import { DateProvider } from "@presentation/shared/Date";
 import { DevModeProvider } from "@presentation/shared/DevModePanel/DevModeProvider";
 import ErrorPage from "@presentation/shared/ErrorPage";
 import ExitFormDialogProvider from "@presentation/shared/Form/ExitFormDialogProvider";
@@ -84,31 +81,27 @@ const App: React.FC = () => {
         <Router>
           <LegacyThemeProvider overrides={themeOverrides} palettes={paletteOverrides}>
             <ThemeProvider>
-              <DateProvider>
-                <LocaleProvider>
-                  <MessageManagerProvider>
-                    <BackgroundTasksProvider>
-                      <AppStateProvider>
-                        <ProductAnalytics>
-                          <AppChannelProvider>
-                            <ExitFormDialogProvider>
-                              <DevModeProvider>
-                                <NavigatorSearchProvider>
-                                  <SavebarRefProvider>
-                                    <FeatureFlagsProviderWithUser>
-                                      <Routes />
-                                    </FeatureFlagsProviderWithUser>
-                                  </SavebarRefProvider>
-                                </NavigatorSearchProvider>
-                              </DevModeProvider>
-                            </ExitFormDialogProvider>
-                          </AppChannelProvider>
-                        </ProductAnalytics>
-                      </AppStateProvider>
-                    </BackgroundTasksProvider>
-                  </MessageManagerProvider>
-                </LocaleProvider>
-              </DateProvider>
+              <LocaleProvider>
+                <MessageManagerProvider>
+                  <BackgroundTasksProvider>
+                    <AppStateProvider>
+                      <ProductAnalytics>
+                        <ExitFormDialogProvider>
+                          <DevModeProvider>
+                            <NavigatorSearchProvider>
+                              <SavebarRefProvider>
+                                <FeatureFlagsProviderWithUser>
+                                  <Routes />
+                                </FeatureFlagsProviderWithUser>
+                              </SavebarRefProvider>
+                            </NavigatorSearchProvider>
+                          </DevModeProvider>
+                        </ExitFormDialogProvider>
+                      </ProductAnalytics>
+                    </AppStateProvider>
+                  </BackgroundTasksProvider>
+                </MessageManagerProvider>
+              </LocaleProvider>
             </ThemeProvider>
           </LegacyThemeProvider>
         </Router>
@@ -122,20 +115,48 @@ const Routes: React.FC = () => {
   const [, dispatchAppState] = useAppState();
   const authenticated = useBoundStore(state => state.authenticated);
   const authenticating = useBoundStore(state => state.authenticating);
-  const { channel } = useAppChannel(false);
+  const user = useBoundStore(state => state.user);
+  const selectedChannel = useBoundStore(state => state.selectedChannel);
+  const setSelectedChannel = useBoundStore(state => state.setSelectedChannel);
   const channelLoaded = typeof channel !== "undefined";
   const homePageLoaded = channelLoaded && authenticated;
   const homePageLoading = (authenticated && !channelLoaded) || authenticating;
   const { isAppPath } = useLocationState();
 
+  const { data: channelData, refetch } = useBaseChannelsQuery({
+    skip: !authenticated || !user,
+  });
+
   // TODO: this is a logic to check the progress. Remove this once done
   useEffect(() => {
     if (authenticated) {
-      setTimeout(() => {
-        fetchUser();
-      }, 1000);
+      fetchUser();
     }
   }, [authenticated]);
+
+  useEffect(() => {
+    const isValidChannel = (channelId: string, channelList?: ChannelFragment[]) => {
+      if (!channelId) {
+        return false;
+      }
+
+      return channelList?.some(getById(channelId));
+    };
+
+    const channels = user?.accessibleChannels ?? [];
+    const isValid = isValidChannel(selectedChannel, channels);
+
+    if (!isValid && channels?.length > 0) {
+      setSelectedChannel(channels[0].id);
+    }
+
+    if (!isValid && selectedChannel !== "") {
+      setSelectedChannel("");
+    }
+
+    // const availableChannels = channelData?.channels || [];
+    // const channel = channelData && (availableChannels.find(getById(selectedChannel)) || null);
+  }, [selectedChannel, setSelectedChannel, user]);
 
   return (
     <>

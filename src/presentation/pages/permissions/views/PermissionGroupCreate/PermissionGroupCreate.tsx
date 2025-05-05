@@ -9,7 +9,7 @@ import { extractMutationErrors } from "@dashboard/business/misc";
 import { usePermissionGroupCreateMutation } from "@dashboard/graphql";
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
 import { useUser } from "@dashboard/presentation/pages/auth";
-import useAppChannel from "@presentation/shared/AppLayout/AppChannelContext";
+import { useBoundStore } from "@dashboard/stores";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import React, { useMemo } from "react";
 import { useIntl } from "react-intl";
@@ -24,7 +24,7 @@ export const PermissionGroupCreate: React.FC = () => {
   const notify = useNotifier();
   const intl = useIntl();
   const user = useUser();
-  const { availableChannels } = useAppChannel(false);
+  const availableChannels = useBoundStore(state => state.channels);
   const hasUserRestrictedAccessToChannels = checkIfUserHasRestictedAccessToChannels(user.user);
   const userAccessibleChannelsOptions = useMemo(
     () => getUserAccessibleChannelsOptions(availableChannels, user.user),

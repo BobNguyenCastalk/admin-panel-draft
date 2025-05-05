@@ -1,7 +1,7 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
 import { parseAuthError } from "@business/utils/auth/errors";
-import { login, logout } from "@business/utils/auth/temp";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import { login, logout } from "@dashboard/business/utils/auth/temp";
 import {
   checkIfCredentialsExist,
   isSupported as isCredentialsManagementAPISupported,
@@ -13,7 +13,6 @@ import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
 import { useBoundStore } from "@dashboard/stores";
 import { UserContext, UserContextError } from "@dashboard/types/auth";
 import { IMessageContext } from "@presentation/shared/messages";
-import { GetExternalAccessTokenData, LoginData } from "@saleor/sdk";
 import isEmpty from "lodash/isEmpty";
 import { useEffect, useRef, useState } from "react";
 import { IntlShape } from "react-intl";
@@ -168,7 +167,7 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
     }
   };
 
-  const logoutNonStaffUser = async (data: LoginData | GetExternalAccessTokenData) => {
+  const logoutNonStaffUser = async data => {
     if (data?.user && !data.user.isStaff) {
       notify({
         status: "error",

@@ -1,6 +1,6 @@
 import { ApolloQueryResult } from "@apollo/client";
 import { UserDetailsQuery, UserFragment } from "@dashboard/graphql";
-import { GetExternalAccessTokenData, GetExternalAuthUrlData, LoginData } from "@saleor/sdk";
+import { LoginData } from "@saleor/sdk";
 
 export interface RequestExternalLoginInput {
   redirectUri: string;
