@@ -18,7 +18,6 @@ import useAppChannel, {
   AppChannelProvider,
 } from "@presentation/shared/AppLayout/AppChannelContext";
 import { DateProvider } from "@presentation/shared/Date";
-import DemoBanner from "@presentation/shared/DemoBanner";
 import { DevModeProvider } from "@presentation/shared/DevModePanel/DevModeProvider";
 import ErrorPage from "@presentation/shared/ErrorPage";
 import ExitFormDialogProvider from "@presentation/shared/Form/ExitFormDialogProvider";
@@ -141,7 +140,6 @@ const Routes: React.FC = () => {
   return (
     <>
       <WindowTitle title={intl.formatMessage(commonMessages.dashboard)} />
-      {DEMO_MODE && <DemoBanner />}
       {homePageLoaded ? (
         <AppLayout fullSize={isAppPath}>
           <ErrorBoundary
