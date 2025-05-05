@@ -1,6 +1,5 @@
 import useForm, { FormChange, SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import useHandleFormSubmit from "@dashboard/business/hooks/shared/useHandleFormSubmit";
-import { DEMO_MODE } from "@dashboard/configs";
 import React from "react";
 
 export interface LoginFormData {
@@ -21,13 +20,6 @@ export interface LoginFormProps {
 }
 
 const getLoginFormData = () => {
-  if (DEMO_MODE) {
-    return {
-      email: "admin@example.com",
-      password: "admin",
-    };
-  }
-
   return { email: "", password: "" };
 };
 

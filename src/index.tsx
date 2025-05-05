@@ -40,7 +40,7 @@ import { Switch } from "react-router-dom";
 import { useLocationState } from "./business/hooks/shared/useLocationState";
 import { channelsSection } from "./business/utils/channels/urls";
 import { getConfigMenuItemsPermissions } from "./business/utils/configuration/utils";
-import { DEMO_MODE, GTM_ID } from "./configs";
+import { GTM_ID } from "./configs";
 import { commonMessages } from "./constants/common/intl";
 import AppStateProvider from "./containers/AppState";
 import BackgroundTasksProvider from "./containers/BackgroundTasks";
