@@ -75,7 +75,35 @@ export const USER = gql`
   }
 `;
 
-export const login = async (client, { email, password }) => {
+export const REFRESH_TOKEN = gql`
+  ${accountErrorFragment}
+  mutation refreshToken($refreshToken: String!) {
+    tokenRefresh(refreshToken: $refreshToken) {
+      token
+      errors {
+        ...AccountErrorFragment
+      }
+    }
+  }
+`;
+
+export const REFRESH_TOKEN_WITH_USER = gql`
+  ${accountErrorFragment}
+  ${userDetailsFragment}
+  mutation refreshTokenWithUser($refreshToken: String!) {
+    tokenRefresh(refreshToken: $refreshToken) {
+      token
+      user {
+        ...UserDetailsFragment
+      }
+      errors {
+        ...AccountErrorFragment
+      }
+    }
+  }
+`;
+
+export const login = (client, { email, password }) => {
   const query = USER_WITHOUT_DETAILS;
   const loginMutation = LOGIN_WITHOUT_DETAILS;
 
@@ -110,7 +138,7 @@ export const login = async (client, { email, password }) => {
   });
 };
 
-export const logout = async client => {
+export const logout = client => {
   storage.clear();
   client.writeQuery({
     query: USER,
@@ -121,4 +149,42 @@ export const logout = async client => {
   client.resetStore();
 
   return null;
+};
+
+export const refreshToken = (client, includeUser = false) => {
+  const refreshToken = storage.getRefreshToken();
+
+  if (!refreshToken) {
+    throw Error("refreshToken not present");
+  }
+
+  if (includeUser) {
+    return client.mutate({
+      mutation: REFRESH_TOKEN_WITH_USER,
+      variables: {
+        refreshToken,
+      },
+      update: (_, { data }) => {
+        if (data?.tokenRefresh?.token) {
+          storage.setAccessToken(data.tokenRefresh.token);
+        } else {
+          logout();
+        }
+      },
+    });
+  }
+
+  return client.mutate({
+    mutation: REFRESH_TOKEN,
+    variables: {
+      refreshToken,
+    },
+    update: (_, { data }) => {
+      if (data?.tokenRefresh?.token) {
+        storage.setAccessToken(data.tokenRefresh.token);
+      } else {
+        logout();
+      }
+    },
+  });
 };

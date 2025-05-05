@@ -1,20 +1,20 @@
 // DON'T TOUCH THIS
 // These are separate clients and do not share configs between themselves
-import {
-  ApolloClient,
-  ApolloLink,
-  FetchResult,
-  InMemoryCache,
-  NormalizedCacheObject,
-} from "@apollo/client";
-import { storage } from "@business/utils/shared/storage";
+import { ApolloClient, ApolloLink, FetchResult, InMemoryCache } from "@apollo/client";
+import { logout, refreshToken as getRefreshToken } from "@business/utils/auth/temp";
+import { getState } from "@business/utils/shared/state";
+import { createStorage, storage } from "@business/utils/shared/storage";
+import { DEVELOPMENT_MODE, WINDOW_EXISTS } from "@constants/common/app";
 import { ENABLED_SERVICE_NAME_HEADER, getApiUrl } from "@dashboard/configs";
-import { createSaleorClient } from "@saleor/sdk";
 import { createUploadLink } from "apollo-upload-client";
 import jwtDecode from "jwt-decode";
 
 import introspectionQueryResultData from "./fragmentTypes.generated";
 import { TypedTypePolicies } from "./typePolicies.generated";
+
+interface SaleorClientOpts {
+  channel: string;
+}
 
 const attachVariablesLink = new ApolloLink((operation, forward) => {
   operation.setContext(({ headers = {} }) => {
@@ -67,13 +67,7 @@ export type JWTToken = {
   is_staff: boolean;
 };
 
-let client: ApolloClient<NormalizedCacheObject>;
-let authClient;
 let refreshPromise = null;
-
-const isTokenRefreshExternal = result => "externalRefresh" in result;
-
-export const isInternalToken = (owner: string): boolean => owner === "saleor";
 
 export const createFetch =
   ({
@@ -83,36 +77,30 @@ export const createFetch =
   }: FetchConfig = {}) =>
   async (input: RequestInfo, init: RequestInit = {}): Promise<Response> => {
     let token = storage.getAccessToken();
-
-    try {
-      if (
-        ["refreshToken"].includes(
-          // INFO: Non-null assertion is enabled because the block is wrapped inside try/catch
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          JSON.parse(init.body!.toString()).operationName,
-        )
-      ) {
-        return fetch(input, init);
-      }
-    } catch (e) {
-      // TODO: handle error
-    }
+    // try {
+    //   if (
+    //     ["refreshToken"].includes(
+    //       // INFO: Non-null assertion is enabled because the block is wrapped inside try/catch
+    //       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    //       JSON.parse(init.body!.toString()).operationName,
+    //     )
+    //   ) {
+    //     return fetch(input, init);
+    //   }
+    // } catch (e) {
+    //   // TODO: handle error
+    // }
 
     if (autoTokenRefresh && token) {
       // auto refresh token before provided time skew (in seconds) until it expires
       const decodedToken = jwtDecode<JWTToken>(token);
       const expirationTime = (decodedToken.exp - tokenRefreshTimeSkew) * 1000;
-      const owner = decodedToken.owner;
 
       try {
         if (refreshPromise) {
           await refreshPromise;
         } else if (Date.now() >= expirationTime) {
-          if (isInternalToken(owner)) {
-            await authClient.refreshToken();
-          } else {
-            await authClient.refreshExternalToken();
-          }
+          await refreshToken(apolloClient);
         }
       } catch (e) {
         // TODO: handle error
@@ -137,24 +125,17 @@ export const createFetch =
         error => error.extensions?.exception.code === "ExpiredSignatureError",
       );
       let refreshTokenResponse = null;
-      const owner = jwtDecode<JWTToken>(token).owner;
 
       if (isUnauthenticated) {
         try {
           if (refreshPromise) {
             refreshTokenResponse = await refreshPromise;
           } else {
-            refreshPromise = isInternalToken(owner)
-              ? authClient.refreshToken()
-              : authClient.refreshExternalToken();
+            refreshPromise = refreshToken(apolloClient);
             refreshTokenResponse = await refreshPromise;
           }
 
-          if (
-            refreshTokenResponse.data && isTokenRefreshExternal(refreshTokenResponse.data)
-              ? refreshTokenResponse.data.externalRefresh?.token
-              : refreshTokenResponse.data?.tokenRefresh?.token
-          ) {
+          if (refreshTokenResponse.data?.tokenRefresh?.token) {
             // check if mutation returns a valid token after refresh and retry the request
             return createFetch({
               autoTokenRefresh: false,
@@ -163,7 +144,7 @@ export const createFetch =
           } else {
             // after Saleor returns ExpiredSignatureError status and token refresh fails
             // we log out the user and return the failed response
-            authClient.logout();
+            logout(apolloClient);
           }
         } catch (e) {
           // TODO: handle error
@@ -230,7 +211,38 @@ export const apolloClient = new ApolloClient({
   link,
 });
 
+const createSaleorClient = ({ channel }: SaleorClientOpts) => {
+  let _channel = channel;
+
+  const setChannel = (channel: string): string => {
+    _channel = channel;
+
+    return _channel;
+  };
+
+  createStorage(true);
+
+  const refreshToken = storage.getRefreshToken();
+
+  if (refreshToken) {
+    getRefreshToken(apolloClient, true);
+  }
+
+  const client = {
+    auth: null,
+    user: null,
+    config: { channel: _channel, setChannel, autologin: true },
+    _internal: { apolloClient },
+    getState: () => getState(apolloClient),
+  };
+
+  if (DEVELOPMENT_MODE && WINDOW_EXISTS) {
+    (window as any).__SALEOR_CLIENT__ = client;
+  }
+
+  return client;
+};
+
 export const saleorClient = createSaleorClient({
-  apiUrl: getApiUrl(),
   channel: "",
 });

@@ -1,6 +1,4 @@
-const WINDOW_EXISTS = typeof window !== "undefined";
-const LOCAL_STORAGE_EXISTS = WINDOW_EXISTS && !!window.localStorage;
-const REFRESH_TOKEN = "_saleorRefreshToken";
+import { LOCAL_STORAGE_EXISTS, REFRESH_TOKEN } from "@constants/common/app";
 
 export let storage: {
   setAccessToken: (token: string | null) => void;

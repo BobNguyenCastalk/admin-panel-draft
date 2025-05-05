@@ -2,7 +2,6 @@ import "@saleor/macaw-ui-next/style";
 import "@assets/styles/index.css";
 
 import { ApolloProvider } from "@apollo/client";
-import { createStorage } from "@business/utils/shared/storage";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
 import { fetchUser } from "@dashboard/business/utils/auth/user";
 import { PermissionEnum } from "@dashboard/graphql";
@@ -80,8 +79,6 @@ const handleLegacyTheming = () => {
 handleLegacyTheming();
 
 const App: React.FC = () => {
-  createStorage(true);
-
   return (
     <SaleorProvider client={saleorClient}>
       <ApolloProvider client={apolloClient}>
@@ -132,9 +129,12 @@ const Routes: React.FC = () => {
   const homePageLoading = (authenticated && !channelLoaded) || authenticating;
   const { isAppPath } = useLocationState();
 
+  // TODO: this is a logic to check the progress. Remove this once done
   useEffect(() => {
     if (authenticated) {
-      fetchUser();
+      setTimeout(() => {
+        fetchUser();
+      }, 1000);
     }
   }, [authenticated]);
 
