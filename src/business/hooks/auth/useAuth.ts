@@ -1,23 +1,23 @@
 import { useCallback, useEffect, useRef } from "react";
 import { ApolloError, useApolloClient } from "@apollo/client";
 
+import useNavigator from "@business/hooks/shared/useNavigator";
 import { parseAuthError } from "@business/utils/auth/errors";
-import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
-import { login, logout } from "@dashboard/business/utils/auth/temp";
+import { login, logout } from "@business/utils/auth/temp";
 import {
   checkIfCredentialsExist,
   isSupported as isCredentialsManagementAPISupported,
   login as loginWithCredentialsManagementAPI,
   saveCredentials,
-} from "@dashboard/business/utils/shared/credentialsManagement";
+} from "@business/utils/shared/credentialsManagement";
 import { AccountErrorCode } from "@dashboard/graphql";
 import { useBoundStore } from "@dashboard/stores";
-import { UserContext, UserContextError } from "@dashboard/types/auth";
+import { IAuthContext, UserAuthError } from "@dashboard/types/auth.types";
 import isEmpty from "lodash/isEmpty";
 
 type AuthErrorCodes = `${AccountErrorCode}`;
 
-export function useAuth(): UserContext {
+export function useAuth(): IAuthContext {
   const client = useApolloClient();
   const navigate = useNavigator();
   const authenticated = useBoundStore(state => state.authenticated);
@@ -104,7 +104,7 @@ export function useAuth(): UserContext {
           setAuthenticated(true);
           setUser(result.data?.tokenCreate?.user);
         } else {
-          const userContextErrorList: UserContextError[] = [];
+          const userContextErrorList: UserAuthError[] = [];
 
           errorList?.forEach(error => {
             switch (error) {
