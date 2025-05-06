@@ -1,4 +1,10 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Box, Text } from "@saleor/macaw-ui-next";
+
 import useModalDialogErrors from "@dashboard/business/hooks/shared/useModalDialogErrors";
 import useModalDialogOpen from "@dashboard/business/hooks/shared/useModalDialogOpen";
 import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
@@ -12,10 +18,6 @@ import { InfiniteScroll } from "@presentation/shared/InfiniteScroll";
 import { DashboardModal } from "@presentation/shared/Modal";
 import ResponsiveTable from "@presentation/shared/ResponsiveTable";
 import TableRowLink from "@presentation/shared/TableRowLink";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Box, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import BackButton from "../BackButton";
 import { messages } from "./messages";

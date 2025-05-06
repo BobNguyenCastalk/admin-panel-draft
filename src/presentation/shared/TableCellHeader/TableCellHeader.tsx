@@ -1,9 +1,11 @@
-import { TableCell } from "@material-ui/core";
-import { TableCellProps } from "@material-ui/core/TableCell";
+import React from "react";
+
 import { makeStyles } from "@saleor/macaw-ui";
 import { vars } from "@saleor/macaw-ui-next";
+
+import { TableCell } from "@material-ui/core";
+import { TableCellProps } from "@material-ui/core/TableCell";
 import clsx from "clsx";
-import React from "react";
 
 import ArrowSort from "../../../assets/icons/ArrowSort";
 

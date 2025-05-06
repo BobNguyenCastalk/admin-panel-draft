@@ -1,9 +1,10 @@
+import { useIntl } from "react-intl";
+
 import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import getChannelsErrorMessage from "@dashboard/business/utils/shared/errors/channels";
 import { useChannelReorderWarehousesMutation, WarehouseFragment } from "@dashboard/graphql";
 import { ChannelWarehouse } from "@presentation/pages/channels/pages/ChannelDetailsPage/types";
 import { calculateItemsOrderMoves } from "@presentation/pages/channels/views/ChannelDetails/handlers";
-import { useIntl } from "react-intl";
 
 export const useChannelWarehousesReorder = () => {
   const notify = useNotifier();

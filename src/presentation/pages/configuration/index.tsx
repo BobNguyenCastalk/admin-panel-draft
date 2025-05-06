@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import React from "react";
+import { IntlShape, useIntl } from "react-intl";
+
 import Channels from "@assets/icons/Channels";
 import PermissionGroups from "@assets/icons/PermissionGroups";
 import Plugins from "@assets/icons/Plugins";
@@ -13,8 +16,6 @@ import { sectionNames } from "@dashboard/constants/common/intl";
 import { PermissionEnum } from "@dashboard/graphql";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
-import React from "react";
-import { IntlShape, useIntl } from "react-intl";
 
 import { ConfigurationPage } from "./ConfigurationPage";
 import { MenuSection } from "./types";

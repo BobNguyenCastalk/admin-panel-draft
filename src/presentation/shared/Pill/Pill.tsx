@@ -1,9 +1,11 @@
 // @ts-strict-ignore
-import { getStatusColor } from "@dashboard/business/misc";
+import React from "react";
+
 import { makeStyles, Pill as MacawuiPill, PillProps } from "@saleor/macaw-ui";
 import { useTheme } from "@saleor/macaw-ui-next";
+
+import { getStatusColor } from "@dashboard/business/misc";
 import clsx from "clsx";
-import React from "react";
 
 const useStyles = makeStyles<{
   color: string;

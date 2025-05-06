@@ -1,3 +1,8 @@
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Button } from "@saleor/macaw-ui-next";
+
 import {
   permissionGroupAddUrl,
   PermissionGroupListUrlSortField,
@@ -10,9 +15,6 @@ import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { TopNav } from "@presentation/shared/AppLayout/TopNav";
 import { DashboardCard } from "@presentation/shared/Card";
 import { ListPageLayout } from "@presentation/shared/Layouts";
-import { Button } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { PermissionGroupListDatagrid } from "../PermissionGroupListDatagrid";
 

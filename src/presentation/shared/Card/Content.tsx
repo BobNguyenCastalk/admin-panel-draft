@@ -1,5 +1,6 @@
-import { Box, PropsWithBox } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, PropsWithBox } from "@saleor/macaw-ui-next";
 
 export const Content: React.FC<PropsWithBox<{ children?: React.ReactNode }>> = ({
   children,

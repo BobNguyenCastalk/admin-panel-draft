@@ -1,3 +1,5 @@
+import { IntlShape } from "react-intl";
+
 import { transformOrderStatus, transformPaymentStatus } from "@dashboard/business/misc";
 import {
   AttributeTypeEnum,
@@ -12,7 +14,6 @@ import {
   VoucherDiscountType,
 } from "@dashboard/graphql";
 import { LeftOperand } from "@presentation/shared/ConditionalFilter/LeftOperandsProvider";
-import { IntlShape } from "react-intl";
 
 import {
   attributeTypesMessages,

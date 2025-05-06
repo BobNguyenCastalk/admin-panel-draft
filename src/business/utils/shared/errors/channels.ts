@@ -1,5 +1,6 @@
-import { ChannelErrorCode, ChannelErrorFragment } from "@dashboard/graphql";
 import { defineMessages, IntlShape } from "react-intl";
+
+import { ChannelErrorCode, ChannelErrorFragment } from "@dashboard/graphql";
 
 import { getCommonFormFieldErrorMessage } from "./common";
 

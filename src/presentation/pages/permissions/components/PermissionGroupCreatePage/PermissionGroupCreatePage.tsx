@@ -1,3 +1,8 @@
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { permissionGroupListUrl } from "@business/utils/permissions/urls";
 import { FormChange, SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
@@ -13,9 +18,6 @@ import Form from "@presentation/shared/Form";
 import FormSpacer from "@presentation/shared/FormSpacer";
 import { DetailPageLayout } from "@presentation/shared/Layouts";
 import { Savebar } from "@presentation/shared/Savebar";
-import { Box } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { PermissionData } from "../PermissionGroupDetailsPage";
 import PermissionGroupInfo from "../PermissionGroupInfo";

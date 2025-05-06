@@ -1,6 +1,8 @@
-import { getDotColor } from "@dashboard/business/misc";
-import { Box, useTheme } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, useTheme } from "@saleor/macaw-ui-next";
+
+import { getDotColor } from "@dashboard/business/misc";
 
 export type DotStatus = "success" | "error" | "warning";
 export interface StatusDotProps {

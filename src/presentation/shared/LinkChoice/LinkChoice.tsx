@@ -1,11 +1,13 @@
 // @ts-strict-ignore
+import React from "react";
+
+import { Option } from "@saleor/macaw-ui-next";
+
 import ArrowDropdown from "@assets/icons/ArrowDropdown";
 import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { ClickAwayListener, MenuItem, Paper, Popper } from "@material-ui/core";
-import { Option } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
 import { codes } from "keycode";
-import React from "react";
 
 import Link from "../Link";
 import { useStyles } from "./styles";

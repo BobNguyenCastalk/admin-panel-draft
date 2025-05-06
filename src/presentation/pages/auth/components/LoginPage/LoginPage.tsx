@@ -1,12 +1,14 @@
+import React, { useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { EyeIcon } from "@saleor/macaw-ui";
+import { Box, Button, Divider, Input, Text } from "@saleor/macaw-ui-next";
+
 import { commonMessages } from "@constants/common/intl";
 import { UserContextError } from "@dashboard/auth/types";
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import { ButtonWithLoader } from "@presentation/shared/ButtonWithLoader/ButtonWithLoader";
 import { FormSpacer } from "@presentation/shared/FormSpacer";
-import { EyeIcon } from "@saleor/macaw-ui";
-import { Box, Button, Divider, Input, Text } from "@saleor/macaw-ui-next";
-import React, { useState } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import useStyles from "../styles";
 import LoginForm, { LoginFormData } from "./form";

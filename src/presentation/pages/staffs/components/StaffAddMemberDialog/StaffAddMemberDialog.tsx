@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import useModalDialogErrors from "@dashboard/business/hooks/shared/useModalDialogErrors";
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
@@ -10,9 +15,6 @@ import BackButton from "@presentation/shared/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import Form from "@presentation/shared/Form";
 import { DashboardModal } from "@presentation/shared/Modal";
-import { Box } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { ExtendedFormHelperTextProps } from "./types";
 

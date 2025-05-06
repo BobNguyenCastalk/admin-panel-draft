@@ -1,9 +1,11 @@
-import { buttonMessages } from "@dashboard/constants/common/intl";
-import { Button } from "@presentation/shared/Button";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Text, vars } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Text, vars } from "@saleor/macaw-ui-next";
+
+import { buttonMessages } from "@dashboard/constants/common/intl";
+import { Button } from "@presentation/shared/Button";
 
 const useStyles = makeStyles(
   theme => ({

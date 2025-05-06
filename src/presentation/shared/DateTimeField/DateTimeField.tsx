@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box, Input } from "@saleor/macaw-ui-next";
+
 import { joinDateTime, splitDateTime } from "@dashboard/business/misc";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import {
@@ -6,9 +11,6 @@ import {
   ProductErrorWithAttributesFragment,
 } from "@dashboard/graphql";
 import { getErrorMessage } from "@presentation/shared/Attributes/utils";
-import { Box, Input } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 interface DateTimeFieldProps {
   onChange: (value: string) => void;

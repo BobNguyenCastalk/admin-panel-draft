@@ -1,12 +1,14 @@
-import { SearchPageProps } from "@dashboard/types";
-import Debounce from "@presentation/shared/Debounce";
+import React from "react";
+
 import {
   Box,
   SearchInput as MacawSearchInput,
   SearchInputProps as MacawSearchInputProps,
   sprinkles,
 } from "@saleor/macaw-ui-next";
-import React from "react";
+
+import { SearchPageProps } from "@dashboard/types";
+import Debounce from "@presentation/shared/Debounce";
 
 export interface SearchInputProps extends SearchPageProps {
   placeholder: string;

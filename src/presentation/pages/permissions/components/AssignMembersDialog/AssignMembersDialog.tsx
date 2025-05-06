@@ -1,4 +1,10 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
+
 import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { getUserInitials, getUserName, renderCollection } from "@dashboard/business/misc";
 import { buttonMessages } from "@dashboard/constants/common/intl";
@@ -12,10 +18,6 @@ import { DashboardModal } from "@presentation/shared/Modal";
 import ResponsiveTable from "@presentation/shared/ResponsiveTable";
 import TableRowLink from "@presentation/shared/TableRowLink";
 import { UserAvatar } from "@presentation/shared/UserAvatar";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { messages } from "./messages";
 

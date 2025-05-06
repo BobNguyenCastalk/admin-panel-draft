@@ -1,11 +1,13 @@
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Text } from "@saleor/macaw-ui-next";
+
 import { sectionNames } from "@constants/common/intl";
 import { ChannelShippingZones } from "@dashboard/channels/pages/ChannelDetailsPage/types";
 import { SearchShippingZonesQuery } from "@dashboard/graphql";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { DashboardCard } from "@presentation/shared/Card";
-import { Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import AssignmentList from "../AssignmentList";
 import { messages } from "./messages";

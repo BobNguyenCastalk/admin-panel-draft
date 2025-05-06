@@ -1,5 +1,6 @@
-import { StaffMemberStatus } from "@dashboard/graphql";
 import { useIntl } from "react-intl";
+
+import { StaffMemberStatus } from "@dashboard/graphql";
 
 import { FilterContainer, FilterElement } from "../../FilterElement";
 import { FilterAPIProvider } from "../FilterAPIProvider";

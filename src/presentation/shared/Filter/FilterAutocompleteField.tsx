@@ -1,10 +1,12 @@
 // @ts-strict-ignore
-import { toggle } from "@dashboard/business/utils/shared/lists";
-import { FormControlLabel, TextField } from "@material-ui/core";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Option, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Option, Text } from "@saleor/macaw-ui-next";
+
+import { toggle } from "@dashboard/business/utils/shared/lists";
+import { FormControlLabel, TextField } from "@material-ui/core";
 
 import Checkbox from "../Checkbox";
 import Hr from "../Hr";

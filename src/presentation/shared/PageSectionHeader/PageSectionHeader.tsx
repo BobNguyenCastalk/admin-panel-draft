@@ -1,6 +1,8 @@
-import VerticalSpacer from "@presentation/shared/VerticalSpacer";
-import { Box, Text } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
+
+import VerticalSpacer from "@presentation/shared/VerticalSpacer";
 
 interface PageSectionHeaderProps {
   title?: string;

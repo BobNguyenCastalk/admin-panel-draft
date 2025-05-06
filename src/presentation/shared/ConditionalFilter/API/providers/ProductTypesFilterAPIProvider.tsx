@@ -1,9 +1,10 @@
+import { useIntl } from "react-intl";
+
 import { ProductTypeEnum } from "@dashboard/graphql";
 import {
   BooleanValuesHandler,
   EnumValuesHandler,
 } from "@presentation/shared/ConditionalFilter/API/Handler";
-import { useIntl } from "react-intl";
 
 import { FilterContainer } from "../../FilterElement";
 import { FilterAPIProvider } from "../FilterAPIProvider";

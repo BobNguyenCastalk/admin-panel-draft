@@ -1,9 +1,12 @@
 // @ts-strict-ignore
-import { MockedProvider, MockedResponse } from "@apollo/client/testing";
+import React from "react";
+
 import { ThemeProvider } from "@saleor/macaw-ui";
+
+import { MockedProvider, MockedResponse } from "@apollo/client/testing";
+
 import { productsMocks } from "@test/mocks/products";
 import { render, screen } from "@testing-library/react";
-import React from "react";
 
 import DryRunItemsList from "./DryRunItemsList";
 

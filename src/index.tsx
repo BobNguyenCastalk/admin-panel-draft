@@ -1,7 +1,15 @@
-import "@saleor/macaw-ui-next/style";
-import "@assets/styles/index.css";
+import React, { useEffect } from "react";
+import { createRoot } from "react-dom/client";
+import { ErrorBoundary } from "react-error-boundary";
+import TagManager from "react-gtm-module";
+import { useIntl } from "react-intl";
+import { Switch } from "react-router-dom";
+
+import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
+import { SaleorProvider } from "@saleor/sdk";
 
 import { ApolloProvider } from "@apollo/client";
+
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
 import { getById } from "@dashboard/business/misc";
 import {
@@ -29,14 +37,6 @@ import { ProductAnalytics } from "@presentation/shared/ProductAnalytics";
 import { history, Route, Router } from "@presentation/shared/Router";
 import { SavebarRefProvider } from "@presentation/shared/Savebar/SavebarRefContext";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
-import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
-import { SaleorProvider } from "@saleor/sdk";
-import React, { useEffect } from "react";
-import { createRoot } from "react-dom/client";
-import { ErrorBoundary } from "react-error-boundary";
-import TagManager from "react-gtm-module";
-import { useIntl } from "react-intl";
-import { Switch } from "react-router-dom";
 
 import { useLocationState } from "./business/hooks/shared/useLocationState";
 import { channelsSection } from "./business/utils/channels/urls";
@@ -53,6 +53,9 @@ import SectionRoute from "./presentation/pages/auth/components/SectionRoute";
 import { NotFound } from "./presentation/shared/NotFound";
 import errorTracker from "./services/errorTracking";
 import { paletteOverrides, themeOverrides } from "./themeOverrides";
+
+import "@saleor/macaw-ui-next/style";
+import "@assets/styles/index.css";
 
 if (GTM_ID) {
   TagManager.initialize({ gtmId: GTM_ID });

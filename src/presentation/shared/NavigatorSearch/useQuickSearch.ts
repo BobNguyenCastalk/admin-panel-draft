@@ -1,9 +1,10 @@
 // @ts-strict-ignore
+import { RefObject, useEffect, useState } from "react";
+import { useIntl } from "react-intl";
+
 import { ChangeEvent, FormChange } from "@dashboard/business/hooks/shared/useForm";
 import useModalDialogOpen from "@dashboard/business/hooks/shared/useModalDialogOpen";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
-import { RefObject, useEffect, useState } from "react";
-import { useIntl } from "react-intl";
 
 import getModeActions from "./modes";
 import { getMode } from "./modes/utils";

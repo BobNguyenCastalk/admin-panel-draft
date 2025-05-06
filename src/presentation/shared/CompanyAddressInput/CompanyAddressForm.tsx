@@ -1,4 +1,10 @@
 // @ts-strict-ignore
+import React from "react";
+import { IntlShape, useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Option } from "@saleor/macaw-ui-next";
+
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
 import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/account";
@@ -13,10 +19,6 @@ import {
 import { TextField } from "@material-ui/core";
 import FormSpacer from "@presentation/shared/FormSpacer";
 import Grid from "@presentation/shared/Grid";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Option } from "@saleor/macaw-ui-next";
-import React from "react";
-import { IntlShape, useIntl } from "react-intl";
 
 import { useAddressValidation } from "../AddressEdit/useAddressValidation";
 import { Combobox } from "../Combobox";

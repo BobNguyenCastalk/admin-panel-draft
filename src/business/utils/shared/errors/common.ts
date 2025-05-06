@@ -1,5 +1,6 @@
-import { commonMessages } from "@dashboard/constants/common/intl";
 import { defineMessages, IntlShape } from "react-intl";
+
+import { commonMessages } from "@dashboard/constants/common/intl";
 
 const commonErrorMessages = defineMessages({
   graphqlError: {

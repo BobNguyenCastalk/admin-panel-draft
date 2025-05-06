@@ -1,5 +1,6 @@
-import { Box, BoxProps } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, BoxProps } from "@saleor/macaw-ui-next";
 
 export const Divider = (props: BoxProps) => {
   return (

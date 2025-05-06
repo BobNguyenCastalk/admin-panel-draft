@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction, useState } from "react";
+
 import {
   DragEndEvent,
   DragMoveEvent,
@@ -6,7 +8,6 @@ import {
   UniqueIdentifier,
 } from "@dnd-kit/core";
 import { arrayMove } from "@dnd-kit/sortable";
-import { Dispatch, SetStateAction, useState } from "react";
 
 import { CurrentPosition, DataTypePlaceholder, FlattenedItems, TreeItems } from "../types";
 import { buildTree, flattenTree, getProjection } from "../utils";

@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 import { useApolloClient } from "@apollo/client";
+
 import {
   _SearchPageTypesOperandsDocument,
   _SearchPageTypesOperandsQuery,
@@ -7,7 +10,6 @@ import {
 import { createInitialPageState } from "@presentation/shared/ConditionalFilter/API/initialState/helpers";
 import { InitialPageAPIResponse } from "@presentation/shared/ConditionalFilter/API/initialState/types";
 import { PageFetchingParams } from "@presentation/shared/ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
-import { useState } from "react";
 
 import { InitialPageStateResponse } from "./InitialPageState";
 

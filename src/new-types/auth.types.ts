@@ -7,6 +7,8 @@ export interface UserI {
   } | null;
   authenticated: boolean;
   authenticating: boolean;
+  authErrors: string[];
+  setAuthErrors: (authErrors: string[]) => void;
 }
 
 export interface SetUserI {

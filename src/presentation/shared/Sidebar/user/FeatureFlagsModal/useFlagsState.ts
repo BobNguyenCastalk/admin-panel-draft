@@ -1,6 +1,7 @@
+import { useState } from "react";
+
 import { FlagDefinition, Name } from "@dashboard/featureFlags/availableFlags";
 import { useFlagsInfo } from "@dashboard/featureFlags/useFlagsInfo";
-import { useState } from "react";
 
 type changeTab = (name: Name) => void;
 

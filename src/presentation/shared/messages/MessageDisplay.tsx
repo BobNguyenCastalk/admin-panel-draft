@@ -1,9 +1,11 @@
-import { commonMessages } from "@dashboard/constants/common/intl";
-import { Portal } from "@radix-ui/react-portal";
-import { ApiMessageData, Notification } from "@saleor/macaw-ui";
 import React from "react";
 import { useIntl } from "react-intl";
 import { TransitionGroup } from "react-transition-group";
+
+import { ApiMessageData, Notification } from "@saleor/macaw-ui";
+
+import { commonMessages } from "@dashboard/constants/common/intl";
+import { Portal } from "@radix-ui/react-portal";
 
 import Container from "./Container";
 import { messages as notificationMessages } from "./messages";

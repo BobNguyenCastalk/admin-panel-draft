@@ -5,6 +5,8 @@
  *  LICENSE file in the root directory of this source tree.
  */
 
+import React, { ComponentType, PropsWithChildren, ReactNode, useState } from "react";
+
 import {
   Button,
   ButtonGroup,
@@ -45,7 +47,6 @@ import {
   VariableEditor,
   WriteableEditorProps,
 } from "@graphiql/react";
-import React, { ComponentType, PropsWithChildren, ReactNode, useState } from "react";
 
 import { useDashboardTheme, useGraphiQLThemeSwitcher } from "../GraphiQL/styles";
 

@@ -1,3 +1,8 @@
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Box, Button, CopyIcon, Input, Option, Text } from "@saleor/macaw-ui-next";
+
 import { commonMessages } from "@constants/common/intl";
 import useClipboard from "@dashboard/business/hooks/shared/useClipboard";
 import { ChangeEvent, FormChange } from "@dashboard/business/hooks/shared/useForm";
@@ -18,9 +23,6 @@ import {
 import { DashboardCard } from "@presentation/shared/Card";
 import { Combobox } from "@presentation/shared/Combobox";
 import FormSpacer from "@presentation/shared/FormSpacer";
-import { Box, Button, CopyIcon, Input, Option, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { AllowUnpaidOrders } from "./AllowUnpaidOrders";
 import { DefaultTransactionFlowStrategy } from "./DefaultTransactionFlowStrategy";

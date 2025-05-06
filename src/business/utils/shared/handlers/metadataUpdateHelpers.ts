@@ -1,4 +1,5 @@
 import { MetadataInput } from "@saleor/sdk/dist/apollo/types";
+
 import isEqual from "lodash/isEqual";
 import sortBy from "lodash/sortBy";
 

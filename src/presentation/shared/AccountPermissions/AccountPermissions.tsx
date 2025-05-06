@@ -1,8 +1,10 @@
-import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
-import { useUser } from "@dashboard/presentation/pages/auth";
-import { Box, Text } from "@saleor/macaw-ui-next";
 import React, { ChangeEvent } from "react";
 import { useIntl } from "react-intl";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
+
+import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
+import { useUser } from "@dashboard/presentation/pages/auth";
 
 import { Header } from "./components/Header";
 import { PermissionsExceeded } from "./components/PermissionExeeded";

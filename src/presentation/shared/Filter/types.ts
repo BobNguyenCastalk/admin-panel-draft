@@ -1,7 +1,9 @@
+import { MessageDescriptor } from "react-intl";
+
+import { Option } from "@saleor/macaw-ui-next";
+
 import { PermissionEnum } from "@dashboard/graphql";
 import { FetchMoreProps, KeyValue, SearchPageProps } from "@dashboard/types";
-import { Option } from "@saleor/macaw-ui-next";
-import { MessageDescriptor } from "react-intl";
 
 import { FilterDispatchFunction } from "./useFilter";
 

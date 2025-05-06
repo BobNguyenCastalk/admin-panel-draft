@@ -1,3 +1,6 @@
+import React, { useMemo } from "react";
+import { useIntl } from "react-intl";
+
 import { permissionGroupDetailsUrl } from "@business/utils/permissions/urls";
 import {
   checkIfUserHasRestictedAccessToChannels,
@@ -11,8 +14,6 @@ import { PermissionData } from "@dashboard/permissionGroups/components/Permissio
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { useBoundStore } from "@dashboard/stores";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
-import React, { useMemo } from "react";
-import { useIntl } from "react-intl";
 
 import {
   PermissionGroupCreateFormData,

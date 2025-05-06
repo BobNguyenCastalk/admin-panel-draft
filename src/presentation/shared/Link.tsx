@@ -1,11 +1,13 @@
 // @ts-strict-ignore
-import { isExternalURL } from "@dashboard/business/utils/shared/urls";
-import { TypographyProps } from "@material-ui/core/Typography";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
+import { isExternalURL } from "@dashboard/business/utils/shared/urls";
+import { TypographyProps } from "@material-ui/core/Typography";
+import clsx from "clsx";
 
 const useStyles = makeStyles(
   theme => ({

@@ -1,6 +1,7 @@
+import { useEffect } from "react";
+
 import { PageInfoFragment } from "@dashboard/graphql";
 import { DocumentNode } from "graphql";
-import { useEffect } from "react";
 
 import makeQuery from "./makeQuery";
 

@@ -44,7 +44,16 @@
     "import/no-internal-modules": "off", // imports are handled by simple-import-sort/sort
     "import/order": "off", // imports are handled by simple-import-sort/sort
     "sort-imports": "off", // imports are handled by simple-import-sort/sort
-    "simple-import-sort/imports": "warn",
+    "simple-import-sort/imports": ["warn", { 
+      "groups": [
+        ["^react"],
+        ["^@saleor"],
+        ["^@apollo"],
+        ["^@?\\w"],
+        ["@/(.*)"],
+        ["^[./]"]
+      ] 
+    }],
     "simple-import-sort/exports": "warn",
     "react-refresh/only-export-components": "warn",
     "lines-between-class-members": ["error", "always"],

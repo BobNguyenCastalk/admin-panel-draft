@@ -1,13 +1,15 @@
 // @ts-strict-ignore
+import React, { useState } from "react";
+import { useIntl } from "react-intl";
+
+import { Box, Checkbox, Divider, RadioGroup, Text } from "@saleor/macaw-ui-next";
+
 import useCurrentDate from "@dashboard/business/hooks/shared/useCurrentDate";
 import useDateLocalize from "@dashboard/business/hooks/shared/useDateLocalize";
 import { ChannelData } from "@dashboard/business/utils/channels/utils";
 import { getFormErrors, getProductErrorMessage } from "@dashboard/business/utils/shared/errors";
 import { DateTimeTimezoneField } from "@presentation/shared/DateTimeTimezoneField";
 import { StopPropagation } from "@presentation/shared/StopPropagation";
-import { Box, Checkbox, Divider, RadioGroup, Text } from "@saleor/macaw-ui-next";
-import React, { useState } from "react";
-import { useIntl } from "react-intl";
 
 import { ChannelOpts, ChannelsAvailabilityError, Messages } from "../types";
 import { availabilityItemMessages } from "./messages";

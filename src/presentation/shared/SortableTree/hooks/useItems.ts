@@ -1,5 +1,6 @@
-import { UniqueIdentifier } from "@dnd-kit/core";
 import { useEffect, useMemo, useState } from "react";
+
+import { UniqueIdentifier } from "@dnd-kit/core";
 
 import { DataTypePlaceholder, TreeItems } from "../types";
 import { flattenTree, removeChildrenOf } from "../utils";

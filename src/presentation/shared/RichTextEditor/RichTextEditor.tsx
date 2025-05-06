@@ -1,10 +1,12 @@
+import React from "react";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { LogLevels, OutputData } from "@editorjs/editorjs";
 import { FormControl, FormHelperText } from "@material-ui/core";
 import { useId } from "@reach/auto-id";
 import { EditorCore, Props as ReactEditorJSProps } from "@react-editor-js/core";
-import { Box } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
-import React from "react";
 
 import { tools } from "./consts";
 import { useHasRendered, useUpdateOnRerender } from "./hooks";

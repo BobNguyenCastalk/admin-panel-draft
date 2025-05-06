@@ -1,4 +1,10 @@
 // @ts-strict-ignore
+import React, { useState } from "react";
+import { useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Box, Checkbox, RadioGroup, Text } from "@saleor/macaw-ui-next";
+
 import useCurrentDate from "@dashboard/business/hooks/shared/useCurrentDate";
 import useDateLocalize from "@dashboard/business/hooks/shared/useDateLocalize";
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
@@ -7,11 +13,7 @@ import { UserError } from "@dashboard/types";
 import ControlledCheckbox from "@presentation/shared/ControlledCheckbox";
 import Hr from "@presentation/shared/Hr";
 import RadioSwitchField from "@presentation/shared/RadioSwitchField";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Box, Checkbox, RadioGroup, Text } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
-import React, { useState } from "react";
-import { useIntl } from "react-intl";
 
 import { DashboardCard } from "../Card";
 import { DateTimeTimezoneField } from "../DateTimeTimezoneField";

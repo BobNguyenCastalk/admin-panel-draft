@@ -1,6 +1,7 @@
-import { TextField } from "@material-ui/core";
 import React from "react";
 import { FormattedMessage } from "react-intl";
+
+import { TextField } from "@material-ui/core";
 
 import { FieldType, FilterFieldBaseProps } from "../types";
 import useStyles from "./styles";

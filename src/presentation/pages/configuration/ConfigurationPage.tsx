@@ -1,4 +1,11 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+import { Link } from "react-router-dom";
+
+import { makeStyles, NavigationCard } from "@saleor/macaw-ui";
+import { Box, Text, vars } from "@saleor/macaw-ui-next";
+
 import { hasUserMenuItemPermissions } from "@business/utils/configuration/utils"; // TODO: to fix this
 import { sectionNames } from "@dashboard/constants/common/intl";
 import { UserFragment } from "@dashboard/graphql";
@@ -7,11 +14,6 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { TopNav } from "@presentation/shared/AppLayout/TopNav";
 import { DetailPageLayout } from "@presentation/shared/Layouts";
 import VersionInfo from "@presentation/shared/VersionInfo";
-import { makeStyles, NavigationCard } from "@saleor/macaw-ui";
-import { Box, Text, vars } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
-import { Link } from "react-router-dom";
 
 import { MenuSection } from "./types";
 

@@ -1,5 +1,6 @@
-import { fuzzySearch } from "@dashboard/business/misc";
 import React from "react";
+
+import { fuzzySearch } from "@dashboard/business/misc";
 
 export const useChannelsSearch = function <T extends { name: string }>(channels: T[]) {
   const [query, onQueryChange] = React.useState("");

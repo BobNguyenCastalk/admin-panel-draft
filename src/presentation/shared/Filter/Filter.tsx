@@ -1,11 +1,13 @@
 // @ts-strict-ignore
-import { ClickAwayListener, Grow, Popper } from "@material-ui/core";
-import { alpha } from "@material-ui/core/styles";
-import { Button, makeStyles } from "@saleor/macaw-ui";
-import { Text, vars } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
 import React, { useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
+
+import { Button, makeStyles } from "@saleor/macaw-ui";
+import { Text, vars } from "@saleor/macaw-ui-next";
+
+import { ClickAwayListener, Grow, Popper } from "@material-ui/core";
+import { alpha } from "@material-ui/core/styles";
+import clsx from "clsx";
 
 import { FilterContent } from ".";
 import { FilterElement, FilterErrorMessages, IFilter, InvalidFilters } from "./types";

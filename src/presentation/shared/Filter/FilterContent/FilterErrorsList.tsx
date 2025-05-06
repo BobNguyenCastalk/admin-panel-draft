@@ -1,10 +1,12 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Text } from "@saleor/macaw-ui-next";
+
 import errorTracker from "@dashboard/services/errorTracking";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 import InlineAlert from "@presentation/shared/Alert/InlineAlert";
-import { Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { validationMessages } from "../messages";
 import { FilterElement, FilterErrorMessages, FilterErrors } from "../types";

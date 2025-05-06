@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Text } from "@saleor/macaw-ui-next";
+
 import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { maybe, renderCollection } from "@dashboard/business/misc";
 import { SearchProductsQuery } from "@dashboard/graphql";
@@ -11,9 +16,6 @@ import Money from "@presentation/shared/Money";
 import ResponsiveTable from "@presentation/shared/ResponsiveTable";
 import TableCellAvatar from "@presentation/shared/TableCellAvatar";
 import TableRowLink from "@presentation/shared/TableRowLink";
-import { Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { Container } from "../AssignContainerDialog";
 import BackButton from "../BackButton";

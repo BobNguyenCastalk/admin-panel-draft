@@ -1,5 +1,6 @@
-import { createSvgIcon, SvgIconProps } from "@material-ui/core";
 import React from "react";
+
+import { createSvgIcon, SvgIconProps } from "@material-ui/core";
 
 const PermissionGroupsIcon = createSvgIcon(
   <path

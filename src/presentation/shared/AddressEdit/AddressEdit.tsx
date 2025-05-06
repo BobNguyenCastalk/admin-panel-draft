@@ -1,13 +1,15 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Option } from "@saleor/macaw-ui-next";
+
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
 import { commonMessages } from "@dashboard/constants/common/intl";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import { AccountErrorFragment, OrderErrorFragment } from "@dashboard/graphql";
 import { TextField } from "@material-ui/core";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Option } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { Combobox } from "../Combobox";
 import { getErrorMessage } from "./getErrorMessage";

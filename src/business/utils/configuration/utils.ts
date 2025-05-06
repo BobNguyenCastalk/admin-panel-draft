@@ -1,8 +1,9 @@
 // @ts-strict-ignore
+import { IntlShape } from "react-intl";
+
 import { hasAllPermissions, hasAnyPermissions } from "@business/utils/auth/misc";
 import { PermissionEnum, UserFragment } from "@dashboard/graphql";
 import { createConfigurationMenu } from "@presentation/pages/configuration"; // TODO: to fix this
-import { IntlShape } from "react-intl";
 
 import { MenuItem } from "../../../types/configuration";
 

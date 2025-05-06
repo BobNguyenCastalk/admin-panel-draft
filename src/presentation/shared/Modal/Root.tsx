@@ -1,6 +1,8 @@
-import { ModalContextProvider } from "@presentation/shared/Modal/context";
-import { Modal, ModalRootProps } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Modal, ModalRootProps } from "@saleor/macaw-ui-next";
+
+import { ModalContextProvider } from "@presentation/shared/Modal/context";
 
 type RootProps = ModalRootProps;
 

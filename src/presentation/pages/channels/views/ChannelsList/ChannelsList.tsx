@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
 import {
   channelsListUrl,
   ChannelsListUrlDialog,
@@ -14,8 +17,6 @@ import {
   useChannelDeleteMutation,
   useChannelsQuery,
 } from "@dashboard/graphql";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import ChannelDeleteDialog from "../../components/ChannelDeleteDialog";
 import ChannelsListPage from "../../pages/ChannelsListPage";

@@ -1,4 +1,8 @@
+import { useCallback, useEffect, useRef } from "react";
+import { IntlShape } from "react-intl";
+
 import { ApolloClient, ApolloError } from "@apollo/client";
+
 import { parseAuthError } from "@business/utils/auth/errors";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { login, logout } from "@dashboard/business/utils/auth/temp";
@@ -9,13 +13,11 @@ import {
   saveCredentials,
 } from "@dashboard/business/utils/shared/credentialsManagement";
 import { commonMessages } from "@dashboard/constants/common/intl";
-import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
+import { AccountErrorCode } from "@dashboard/graphql";
 import { useBoundStore } from "@dashboard/stores";
 import { UserContext, UserContextError } from "@dashboard/types/auth";
 import { IMessageContext } from "@presentation/shared/messages";
 import isEmpty from "lodash/isEmpty";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { IntlShape } from "react-intl";
 
 export interface UseAuthOpts {
   intl: IntlShape;
@@ -28,23 +30,26 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
   const navigate = useNavigator();
   const authenticated = useBoundStore(state => state.authenticated);
   const authenticating = useBoundStore(state => state.authenticating);
-  const user = useBoundStore(state => state.user);
   const setUser = useBoundStore(state => state.setUser);
   const setAuthenticated = useBoundStore(state => state.setAuthenticated);
   const setAuthenticating = useBoundStore(state => state.setAuthenticating);
+  const setAuthErrors = useBoundStore(state => state.setAuthErrors);
+  const authErrors = useBoundStore(state => state.authErrors);
 
-  const [errors, setErrors] = useState<UserContextError[]>([]);
   const permitCredentialsAPI = useRef(true);
 
-  const handleLoginError = (error: ApolloError) => {
-    const parsedErrors = parseAuthError(error);
+  const handleLoginError = useCallback(
+    (error: ApolloError) => {
+      const parsedErrors = parseAuthError(error);
 
-    if (parsedErrors.length) {
-      setErrors(parsedErrors);
-    } else {
-      setErrors(["unknownLoginError"]);
-    }
-  };
+      if (parsedErrors.length) {
+        setAuthErrors(parsedErrors);
+      } else {
+        setAuthErrors(["unknownLoginError"]);
+      }
+    },
+    [setAuthErrors],
+  );
 
   const handleLogout = useCallback(async () => {
     setAuthenticated(false);
@@ -112,7 +117,7 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
           isEmpty(result.data?.tokenCreate?.user?.userPermissions);
 
         if (userLoggedInButHasNoPermissions) {
-          setErrors(["noPermissionsError"]);
+          setAuthErrors(["noPermissionsError"]);
           await handleLogout();
         }
 
@@ -137,7 +142,7 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
             }
           });
 
-          setErrors(userContextErrorList);
+          setAuthErrors(userContextErrorList);
         }
 
         await logoutNonStaffUser(result.data?.tokenCreate!);
@@ -149,20 +154,29 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
         if (error instanceof ApolloError) {
           handleLoginError(error);
         } else {
-          setErrors(["unknownLoginError"]);
+          setAuthErrors(["unknownLoginError"]);
         }
       } finally {
         setAuthenticating(false);
       }
     },
-    [apolloClient, handleLogout, logoutNonStaffUser, setAuthenticated, setAuthenticating, setUser],
+    [
+      setAuthenticating,
+      apolloClient,
+      logoutNonStaffUser,
+      setAuthenticated,
+      setUser,
+      setAuthErrors,
+      handleLogout,
+      handleLoginError,
+    ],
   );
 
   useEffect(() => {
-    if (authenticating && errors.length) {
-      setErrors([]);
+    if (authenticating && authErrors.length) {
+      setAuthErrors([]);
     }
-  }, [authenticating, errors.length]);
+  }, [authenticating, authErrors.length, setAuthErrors]);
 
   useEffect(() => {
     if (authenticated) {
@@ -180,8 +194,7 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
   return {
     login: handleLogin,
     logout: handleLogout,
-    authenticating: authenticating && !errors.length,
-    authenticated: authenticated && !!user?.isStaff && !errors.length,
-    errors,
+    authenticating: authenticating && !authErrors.length,
+    authenticated: authenticated && !authErrors.length,
   };
 }

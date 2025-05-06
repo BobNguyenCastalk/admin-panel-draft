@@ -1,6 +1,7 @@
+import React from "react";
+
 import { PostHogConfig } from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
-import React from "react";
 
 const isDomainExcluded = () => {
   const domainsString = process.env.POSTHOG_EXCLUDED_DOMAINS;

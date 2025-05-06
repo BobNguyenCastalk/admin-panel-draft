@@ -1,5 +1,6 @@
-import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import React from "react";
+
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 
 export type UseSearchQuery = [string, (event: ChangeEvent) => void, () => void];
 function useSearchQuery(onFetch: (query: string) => void, initial?: string): UseSearchQuery {

@@ -1,6 +1,7 @@
+import React from "react";
+
 import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
-import React from "react";
 
 import ExtendedPageHeader from "../ExtendedPageHeader";
 import PreviewPill from "../PreviewPill";

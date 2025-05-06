@@ -1,3 +1,7 @@
+import React from "react";
+
+import { Option } from "@saleor/macaw-ui-next";
+
 import {
   CustomCell,
   CustomRenderer,
@@ -6,9 +10,7 @@ import {
   ProvideEditorCallback,
 } from "@glideapps/glide-data-grid";
 import { Combobox } from "@presentation/shared/Combobox";
-import { Option } from "@saleor/macaw-ui-next";
 import pick from "lodash/pick";
-import React from "react";
 
 export type DropdownCellGetSuggestionsFn = (text: string) => Promise<Option[]>;
 export interface DropdownCellProps {

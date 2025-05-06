@@ -1,6 +1,7 @@
+import { Dispatch, SetStateAction } from "react";
+
 import { Announcements, UniqueIdentifier } from "@dnd-kit/core";
 import { arrayMove } from "@dnd-kit/sortable";
-import { Dispatch, SetStateAction } from "react";
 
 import {
   CurrentPosition,

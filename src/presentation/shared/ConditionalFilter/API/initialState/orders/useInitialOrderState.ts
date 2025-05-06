@@ -1,4 +1,8 @@
+import { useState } from "react";
+import { useIntl } from "react-intl";
+
 import { useApolloClient } from "@apollo/client";
+
 import {
   _GetLegacyChannelOperandsDocument,
   _GetLegacyChannelOperandsQuery,
@@ -9,8 +13,6 @@ import {
   PaymentChargeStatusEnum,
 } from "@dashboard/graphql";
 import { OrderFetchingParams } from "@presentation/shared/ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
-import { useState } from "react";
-import { useIntl } from "react-intl";
 
 import { EnumValuesHandler } from "../../Handler";
 import { createInitialOrderState } from "../helpers";

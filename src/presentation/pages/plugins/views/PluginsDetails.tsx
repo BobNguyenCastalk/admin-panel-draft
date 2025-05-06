@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import useStateFromProps from "@dashboard/business/hooks/shared/useStateFromProps";
@@ -19,8 +22,6 @@ import {
 } from "@dashboard/graphql";
 import ActionDialog from "@presentation/shared/ActionDialog";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import PluginsDetailsPage, { PluginDetailsPageFormData } from "../components/PluginsDetailsPage";
 import PluginSecretFieldDialog from "../components/PluginSecretFieldDialog";

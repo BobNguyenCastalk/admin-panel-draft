@@ -1,6 +1,8 @@
-import { SearchCatalogQuery } from "@dashboard/graphql";
-import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Text } from "@saleor/macaw-ui-next";
+
+import { SearchCatalogQuery } from "@dashboard/graphql";
 
 type Variant = NonNullable<SearchCatalogQuery["productVariants"]>["edges"][0]["node"];
 

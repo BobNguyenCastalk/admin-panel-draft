@@ -1,7 +1,8 @@
-import { AttributeEntityTypeEnum, SearchPagesQuery } from "@dashboard/graphql";
-import { RelayToFlat } from "@dashboard/types";
 import React from "react";
 import { defineMessages, useIntl } from "react-intl";
+
+import { AttributeEntityTypeEnum, SearchPagesQuery } from "@dashboard/graphql";
+import { RelayToFlat } from "@dashboard/types";
 
 import AssignContainerDialog from "../AssignContainerDialog";
 import AssignProductDialog, { AssignProductDialogProps } from "../AssignProductDialog";

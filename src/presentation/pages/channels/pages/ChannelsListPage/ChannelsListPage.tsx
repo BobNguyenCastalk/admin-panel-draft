@@ -1,4 +1,10 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
+import { Skeleton } from "@saleor/macaw-ui-next";
+
 import { renderCollection, stopPropagation } from "@dashboard/business/misc";
 import { channelAddUrl, channelUrl } from "@dashboard/business/utils/channels/urls";
 import { sectionNames } from "@dashboard/constants/common/intl";
@@ -13,10 +19,6 @@ import ResponsiveTable from "@presentation/shared/ResponsiveTable";
 import { TableButtonWrapper } from "@presentation/shared/TableButtonWrapper/TableButtonWrapper";
 import TableCellHeader from "@presentation/shared/TableCellHeader";
 import TableRowLink from "@presentation/shared/TableRowLink";
-import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
-import { Skeleton } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { useStyles } from "./styles";
 

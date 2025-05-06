@@ -1,6 +1,7 @@
+import React, { ReactNode, useEffect, useState } from "react";
+
 import { useUser } from "@dashboard/presentation/pages/auth";
 import LoginLoading from "@dashboard/presentation/pages/auth/components/LoginLoading/LoginLoading";
-import React, { ReactNode, useEffect, useState } from "react";
 
 import { FlagList } from "./availableFlags";
 import { Provider } from "./context";

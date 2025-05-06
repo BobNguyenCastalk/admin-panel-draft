@@ -1,5 +1,6 @@
-import { Button, CloseIcon, Modal, PropsWithBox } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Button, CloseIcon, Modal, PropsWithBox } from "@saleor/macaw-ui-next";
 
 export const Close = ({ onClose, ...rest }: PropsWithBox<{ onClose: () => void }>) => {
   return (

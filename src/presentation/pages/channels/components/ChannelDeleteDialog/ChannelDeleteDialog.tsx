@@ -1,11 +1,13 @@
+import React from "react";
+import { defineMessages, useIntl } from "react-intl";
+
+import { Option, Text } from "@saleor/macaw-ui-next";
+
 import { buttonMessages } from "@constants/common/intl";
 import useStateFromProps from "@dashboard/business/hooks/shared/useStateFromProps";
 import ActionDialog from "@presentation/shared/ActionDialog";
 import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import { Select } from "@presentation/shared/Select";
-import { Option, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { defineMessages, useIntl } from "react-intl";
 
 import { useStyles } from "../styles";
 

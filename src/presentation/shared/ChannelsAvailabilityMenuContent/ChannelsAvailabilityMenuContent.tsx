@@ -1,11 +1,13 @@
 // @ts-strict-ignore
+import React from "react";
+import { MessageDescriptor, useIntl } from "react-intl";
+
+import { PillColor } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
 import { CollectionFragment } from "@dashboard/graphql";
 import ScrollableContent from "@presentation/pages/plugins/components/PluginsList/PluginAvailabilityStatusPopup/ScrollableContent";
 import HorizontalSpacer from "@presentation/shared/HorizontalSpacer";
-import { PillColor } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { MessageDescriptor, useIntl } from "react-intl";
 
 import { messages } from "../ChannelsAvailabilityDropdown/messages";
 import { Pill } from "../Pill";

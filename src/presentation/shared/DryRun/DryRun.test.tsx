@@ -1,9 +1,12 @@
-import { MockedProvider, MockedResponse } from "@apollo/client/testing";
-import { WebhookEventTypeSyncEnum } from "@dashboard/graphql";
+import React from "react";
+
 import { ThemeProvider } from "@saleor/macaw-ui";
+
+import { MockedProvider, MockedResponse } from "@apollo/client/testing";
+
+import { WebhookEventTypeSyncEnum } from "@dashboard/graphql";
 import productsMocks from "@test/mocks/products";
 import { render, screen } from "@testing-library/react";
-import React from "react";
 
 import DryRun from "./DryRun";
 

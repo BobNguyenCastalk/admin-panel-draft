@@ -1,3 +1,8 @@
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { ConfigurationIcon } from "@assets/icons/Configuration";
 import { ContentsIcon } from "@assets/icons/Contents";
 import { HomeIcon } from "@assets/icons/Home";
@@ -13,10 +18,7 @@ import { OrdersIcon } from "@dashboard/icons/Orders";
 import { ProductsIcon } from "@dashboard/icons/Products";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
-import { Box } from "@saleor/macaw-ui-next";
 import isEmpty from "lodash/isEmpty";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { SidebarMenuItem } from "../types";
 

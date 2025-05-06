@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   ButtonGroup,
   ButtonGroupProps,
@@ -11,7 +13,6 @@ import {
 } from "@material-ui/core";
 import { ArrowDropDown as ArrowDropDownIcon } from "@material-ui/icons";
 import { Button } from "@presentation/shared/Button";
-import React from "react";
 
 import { useStyles } from "./styles";
 

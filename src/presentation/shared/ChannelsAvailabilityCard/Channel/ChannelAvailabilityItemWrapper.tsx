@@ -1,7 +1,9 @@
 // @ts-strict-ignore
-import { ChannelData } from "@dashboard/business/utils/channels/utils";
-import { Accordion, Text } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Accordion, Text } from "@saleor/macaw-ui-next";
+
+import { ChannelData } from "@dashboard/business/utils/channels/utils";
 
 import { Messages } from "../types";
 

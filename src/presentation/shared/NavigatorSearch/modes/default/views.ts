@@ -1,10 +1,11 @@
+import { IntlShape } from "react-intl";
+
 import { permissionGroupListUrl } from "@business/utils/permissions/urls";
 import { UseNavigatorResult } from "@dashboard/business/hooks/shared/useNavigator";
 import { fuzzySearch } from "@dashboard/business/misc";
 import { pluginListUrl } from "@dashboard/business/utils/plugins/urls";
 import { staffListUrl } from "@dashboard/business/utils/staffs/urls";
 import { sectionNames } from "@dashboard/constants/common/intl";
-import { IntlShape } from "react-intl";
 
 import { QuickSearchActionInput } from "../../types";
 

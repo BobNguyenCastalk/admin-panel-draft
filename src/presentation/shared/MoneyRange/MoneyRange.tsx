@@ -1,6 +1,7 @@
-import { IMoney } from "@dashboard/business/utils/shared/intl";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { IMoney } from "@dashboard/business/utils/shared/intl";
 
 import { LocaleConsumer } from "../Locale";
 import { getMoneyRange } from "./utils";

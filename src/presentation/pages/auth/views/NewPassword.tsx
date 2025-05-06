@@ -1,9 +1,11 @@
-import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
-import { AccountErrorFragment } from "@dashboard/graphql";
-import { useAuth } from "@saleor/sdk";
-import { parse as parseQs } from "qs";
 import React, { useState } from "react";
 import { RouteComponentProps } from "react-router";
+
+import { useAuth } from "@saleor/sdk";
+
+import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
+import { AccountErrorFragment } from "@dashboard/graphql";
+import { parse as parseQs } from "qs";
 
 import { NewPasswordUrlQueryParams } from "../../../../auth/urls";
 import NewPasswordPage, { NewPasswordPageFormData } from "../components/NewPasswordPage";

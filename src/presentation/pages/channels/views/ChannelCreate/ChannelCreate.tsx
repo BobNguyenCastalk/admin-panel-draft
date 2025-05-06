@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
 import { channelPath } from "@business/utils/channels/urls";
 import { getSearchFetchMoreProps } from "@dashboard/business/hooks/shared/makeTopLevelSearch/utils";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
@@ -15,8 +18,6 @@ import {
 } from "@dashboard/graphql";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import currencyCodes from "currency-codes";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import ChannelDetailsPage from "../../pages/ChannelDetailsPage";
 import { useSaveChannel } from "./useSaveChannel";

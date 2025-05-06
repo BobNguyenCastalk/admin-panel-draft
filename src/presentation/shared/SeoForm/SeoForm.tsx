@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Accordion, Box, Input, Text, Textarea } from "@saleor/macaw-ui-next";
+
 import { getFieldError, getProductErrorMessage } from "@dashboard/business/utils/shared/errors";
 import getPageErrorMessage from "@dashboard/business/utils/shared/errors/page";
 import {
@@ -6,9 +11,6 @@ import {
   PageErrorFragment,
   ProductErrorFragment,
 } from "@dashboard/graphql";
-import { Accordion, Box, Input, Text, Textarea } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { DashboardCard } from "../Card";
 

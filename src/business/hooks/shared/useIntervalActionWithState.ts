@@ -1,5 +1,6 @@
-import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 import { useEffect, useRef } from "react";
+
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 
 type Timeout = ReturnType<typeof setTimeout>;
 

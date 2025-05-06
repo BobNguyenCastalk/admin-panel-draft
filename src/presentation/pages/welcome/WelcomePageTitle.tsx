@@ -1,8 +1,10 @@
-import { getUserName } from "@dashboard/business/misc";
-import { useUser } from "@dashboard/presentation/pages/auth";
-import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";
+
+import { Text } from "@saleor/macaw-ui-next";
+
+import { getUserName } from "@dashboard/business/misc";
+import { useUser } from "@dashboard/presentation/pages/auth";
 
 export const WelcomePageTitle = () => {
   const { user } = useUser();

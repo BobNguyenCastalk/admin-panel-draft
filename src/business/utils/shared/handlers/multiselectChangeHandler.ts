@@ -1,5 +1,6 @@
-import { ChangeEvent, FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { Option } from "@saleor/macaw-ui-next";
+
+import { ChangeEvent, FormChange } from "@dashboard/business/hooks/shared/useForm";
 
 /**
  * @param change Use toggleValue callback delivered by form

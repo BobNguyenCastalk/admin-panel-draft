@@ -1,6 +1,7 @@
-import { Box, Text } from "@saleor/macaw-ui-next";
 import React, { ReactNode } from "react";
 import { FormattedMessage } from "react-intl";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
 
 interface HeaderProps {
   children: ReactNode;

@@ -1,9 +1,11 @@
 // @ts-strict-ignore
-import { CardHeader } from "@material-ui/core";
-import RefreshIcon from "@material-ui/icons/Refresh";
-import { IconButton } from "@saleor/macaw-ui";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { IconButton } from "@saleor/macaw-ui";
+
+import { CardHeader } from "@material-ui/core";
+import RefreshIcon from "@material-ui/icons/Refresh";
 
 import { DashboardCard } from "../Card";
 

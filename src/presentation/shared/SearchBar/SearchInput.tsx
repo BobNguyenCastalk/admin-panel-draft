@@ -1,6 +1,8 @@
-import { TextField } from "@material-ui/core";
-import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
+
+import { makeStyles } from "@saleor/macaw-ui";
+
+import { TextField } from "@material-ui/core";
 
 import { SearchPageProps } from "../../../types";
 import Debounce from "../Debounce";

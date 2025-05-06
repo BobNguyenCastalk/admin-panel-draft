@@ -1,6 +1,8 @@
-import * as RadixRadioGroup from "@radix-ui/react-radio-group";
-import { sprinkles } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { sprinkles } from "@saleor/macaw-ui-next";
+
+import * as RadixRadioGroup from "@radix-ui/react-radio-group";
 
 export const RadioTileIndicator = () => {
   return (

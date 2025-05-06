@@ -1,5 +1,6 @@
-import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import React from "react";
+
+import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 
 export type SubmitFn = (event?: React.FormEvent) => SubmitPromise;
 

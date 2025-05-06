@@ -1,4 +1,8 @@
 // @ts-strict-ignore
+import { IntlShape } from "react-intl";
+
+import { Option } from "@saleor/macaw-ui-next";
+
 import { getProductErrorMessage } from "@dashboard/business/utils/shared/errors";
 import getPageErrorMessage from "@dashboard/business/utils/shared/errors/page";
 import {
@@ -10,8 +14,6 @@ import { OutputData } from "@editorjs/editorjs";
 import { AttributeInput } from "@presentation/shared/Attributes/Attributes";
 import { FileChoiceType } from "@presentation/shared/FileUploadField";
 import { SortableChipsFieldValueType } from "@presentation/shared/SortableChipsField";
-import { Option } from "@saleor/macaw-ui-next";
-import { IntlShape } from "react-intl";
 
 export function getSingleChoices(values: AttributeValueFragment[]): Option[] {
   return values.map(value => ({

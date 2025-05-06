@@ -1,3 +1,5 @@
+import { createIntl } from "react-intl";
+
 import { PluginListUrlFilters } from "@dashboard/business/utils/permissions/urls";
 import { getFilterQueryParams } from "@dashboard/business/utils/shared/filters";
 import { stringifyQs } from "@dashboard/business/utils/shared/urls";
@@ -9,7 +11,6 @@ import {
 import { FieldType } from "@presentation/shared/Filter";
 import { getExistingKeys } from "@test/filters";
 import { config } from "@test/intl";
-import { createIntl } from "react-intl";
 
 import { getFilterQueryParam, getFilterVariables } from "./filters";
 

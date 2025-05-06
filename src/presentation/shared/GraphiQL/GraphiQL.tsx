@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import React, { ComponentType, PropsWithChildren, ReactNode, useState } from "react";
+import { useIntl } from "react-intl";
+
 import { WebhookFormData } from "@dashboard/custom-apps/components/WebhookDetailsPage";
 import {
   CopyIcon,
@@ -21,8 +24,6 @@ import {
   WriteableEditorProps,
 } from "@graphiql/react";
 import clsx from "clsx";
-import React, { ComponentType, PropsWithChildren, ReactNode, useState } from "react";
-import { useIntl } from "react-intl";
 
 import DryRun from "../DryRun";
 import { messages } from "./messages";

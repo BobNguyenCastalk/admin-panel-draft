@@ -1,5 +1,6 @@
 // @ts-strict-ignore
 import { gql } from "@apollo/client";
+
 import makeTopLevelSearch from "@dashboard/business/hooks/shared/makeTopLevelSearch";
 import {
   SearchStaffMembersDocument,

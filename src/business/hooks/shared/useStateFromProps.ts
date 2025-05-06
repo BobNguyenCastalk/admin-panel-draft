@@ -1,5 +1,6 @@
-import isEqual from "lodash/isEqual";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
+
+import isEqual from "lodash/isEqual";
 
 export interface UseStateFromPropsOpts<T> {
   mergeFunc?: (prevData: T, state: T, newData: T) => T;

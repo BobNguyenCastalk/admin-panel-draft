@@ -1,3 +1,5 @@
+import React from "react";
+
 import EditorJS, { EditorConfig, OutputData, ToolConstructable } from "@editorjs/editorjs";
 import Paragraph from "@editorjs/paragraph";
 import {
@@ -5,7 +7,6 @@ import {
   Props as ReactEditorJSProps,
   ReactEditorJS as BaseReactEditorJS,
 } from "@react-editor-js/core";
-import React from "react";
 
 // Source of @react-editor-js
 class ClientEditorCore implements EditorCore {

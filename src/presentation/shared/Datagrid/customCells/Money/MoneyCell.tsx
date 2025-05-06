@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   CustomCell,
   CustomRenderer,
@@ -6,7 +8,6 @@ import {
   ProvideEditorCallback,
 } from "@glideapps/glide-data-grid";
 import { Locale } from "@presentation/shared/Locale";
-import React from "react";
 
 import { usePriceField } from "../../../PriceField/usePriceField";
 import { hasDiscountValue } from "./utils";

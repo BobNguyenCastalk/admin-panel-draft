@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Option, Text } from "@saleor/macaw-ui-next";
+
 import { useBackLinkWithState } from "@dashboard/business/hooks/shared/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import useLocale from "@dashboard/business/hooks/shared/useLocale";
@@ -22,9 +27,6 @@ import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton
 import Form from "@presentation/shared/Form";
 import { DetailPageLayout } from "@presentation/shared/Layouts";
 import { Savebar } from "@presentation/shared/Savebar";
-import { Option, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import StaffPassword from "../StaffPassword/StaffPassword";
 import StaffPreferences from "../StaffPreferences";

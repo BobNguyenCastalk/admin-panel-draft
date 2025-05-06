@@ -1,9 +1,11 @@
 // @ts-strict-ignore
+import React from "react";
+
+import { makeStyles } from "@saleor/macaw-ui";
+
 import { toggle } from "@dashboard/business/utils/shared/lists";
 import { FormControlLabel, Radio } from "@material-ui/core";
-import { makeStyles } from "@saleor/macaw-ui";
 import clsx from "clsx";
-import React from "react";
 
 import Checkbox from "../Checkbox";
 import { FieldType, FilterFieldBaseProps } from "./types";

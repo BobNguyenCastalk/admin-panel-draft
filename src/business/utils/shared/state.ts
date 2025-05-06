@@ -1,4 +1,5 @@
 import { ApolloClient, NormalizedCacheObject } from "@apollo/client";
+
 import { USER } from "@business/utils/auth/temp";
 
 interface SaleorClientInternals {

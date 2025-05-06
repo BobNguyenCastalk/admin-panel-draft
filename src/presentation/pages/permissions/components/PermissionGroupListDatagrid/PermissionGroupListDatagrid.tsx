@@ -1,3 +1,9 @@
+import React, { useCallback, useMemo } from "react";
+import { useIntl } from "react-intl";
+import { useLocation } from "react-router";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import {
   permissionGroupDetailsUrl,
   PermissionGroupListUrlSortField,
@@ -16,10 +22,6 @@ import {
 } from "@presentation/shared/Datagrid/hooks/useDatagridChange";
 import { useEmptyColumn } from "@presentation/shared/Datagrid/hooks/useEmptyColumn";
 import { TablePaginationWithContext } from "@presentation/shared/TablePagination";
-import { Box } from "@saleor/macaw-ui-next";
-import React, { useCallback, useMemo } from "react";
-import { useIntl } from "react-intl";
-import { useLocation } from "react-router";
 
 import { createGetCellContent, permissionGroupsListStaticColumnsAdapter } from "./datagrid";
 import { messages } from "./messages";

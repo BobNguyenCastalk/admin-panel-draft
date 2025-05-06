@@ -1,7 +1,9 @@
-import { UserPermissionFragment } from "@dashboard/graphql";
-import { Box, List, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { Box, List, Text } from "@saleor/macaw-ui-next";
+
+import { UserPermissionFragment } from "@dashboard/graphql";
 
 import { messages } from "../../messages";
 

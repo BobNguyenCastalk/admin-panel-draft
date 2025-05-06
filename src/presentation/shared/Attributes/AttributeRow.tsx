@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box, Input, Select, Text } from "@saleor/macaw-ui-next";
+
 import { inputTypeMessages } from "@dashboard/attributes/components/AttributeDetails/messages";
 import { AttributeInputTypeEnum } from "@dashboard/graphql";
 import { BasicAttributeRow } from "@presentation/shared/Attributes/BasicAttributeRow";
@@ -20,9 +25,6 @@ import {
 import FileUploadField from "@presentation/shared/FileUploadField";
 import RichTextEditor from "@presentation/shared/RichTextEditor";
 import SortableChipsField from "@presentation/shared/SortableChipsField";
-import { Box, Input, Select, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { Combobox, Multiselect } from "../Combobox";
 import { DateTimeField } from "../DateTimeField";

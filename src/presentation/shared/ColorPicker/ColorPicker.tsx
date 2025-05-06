@@ -1,16 +1,18 @@
 // @ts-strict-ignore
+import React, { useEffect, useState } from "react";
+import { useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+
 import { UseFormResult } from "@dashboard/business/hooks/shared/useForm";
 import { RequireOnlyOne } from "@dashboard/business/misc";
 import commonErrorMessages from "@dashboard/business/utils/shared/errors/common";
 import { TextField } from "@material-ui/core";
 import HorizontalSpacer from "@presentation/shared/HorizontalSpacer";
-import { makeStyles } from "@saleor/macaw-ui";
 import Hue from "@uiw/react-color-hue";
 import Saturation from "@uiw/react-color-saturation";
 import convert from "color-convert";
 import { RGB } from "color-convert/conversions";
-import React, { useEffect, useState } from "react";
-import { useIntl } from "react-intl";
 
 const useStyles = makeStyles(
   theme => ({

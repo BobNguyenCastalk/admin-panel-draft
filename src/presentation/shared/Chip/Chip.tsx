@@ -1,9 +1,11 @@
-import { alpha } from "@material-ui/core/styles";
-import CloseIcon from "@material-ui/icons/Close";
+import React from "react";
+
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
+
+import { alpha } from "@material-ui/core/styles";
+import CloseIcon from "@material-ui/icons/Close";
 import clsx from "clsx";
-import React from "react";
 
 export interface ChipProps {
   className?: string;

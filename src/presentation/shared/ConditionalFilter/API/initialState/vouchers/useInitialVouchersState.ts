@@ -1,4 +1,8 @@
+import { useState } from "react";
+import { useIntl } from "react-intl";
+
 import { useApolloClient } from "@apollo/client";
+
 import {
   _GetLegacyChannelOperandsDocument,
   _GetLegacyChannelOperandsQuery,
@@ -6,8 +10,6 @@ import {
   DiscountStatusEnum,
   VoucherDiscountType,
 } from "@dashboard/graphql";
-import { useState } from "react";
-import { useIntl } from "react-intl";
 
 import { VoucherFetchingParams } from "../../../ValueProvider/TokenArray/fetchingParams";
 import { EnumValuesHandler } from "../../Handler";

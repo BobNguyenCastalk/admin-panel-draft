@@ -1,6 +1,7 @@
 // @ts-strict-ignore
-import { AppExtensionMountEnum } from "@dashboard/graphql";
 import { matchPath } from "react-router";
+
+import { AppExtensionMountEnum } from "@dashboard/graphql";
 
 import { SidebarMenuItem } from "./types";
 

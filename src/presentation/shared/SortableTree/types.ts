@@ -1,5 +1,6 @@
-import type { UniqueIdentifier } from "@dnd-kit/core";
 import type { MutableRefObject } from "react";
+
+import type { UniqueIdentifier } from "@dnd-kit/core";
 
 export type DataTypePlaceholder = Record<string, unknown> | null;
 

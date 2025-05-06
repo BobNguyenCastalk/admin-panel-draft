@@ -1,5 +1,6 @@
-import { DynamicMultiselect } from "@saleor/macaw-ui-next";
 import React, { useRef, useState } from "react";
+
+import { DynamicMultiselect } from "@saleor/macaw-ui-next";
 
 import { BulkselectOperator, RightOperatorOption } from "./types";
 

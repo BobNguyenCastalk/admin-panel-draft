@@ -1,6 +1,8 @@
-import { Box, Text } from "@saleor/macaw-ui-next";
-import { GetItemPropsOptions } from "downshift";
 import React from "react";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
+
+import { GetItemPropsOptions } from "downshift";
 
 import { NavigatorThumbnail } from "./NavigatorThumbnail";
 import { QuickSearchAction } from "./types";

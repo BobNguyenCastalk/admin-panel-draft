@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React, { useState } from "react";
+import { useIntl } from "react-intl";
+
+import { Option } from "@saleor/macaw-ui-next";
+
 import { SearchData } from "@dashboard/business/hooks/shared/makeTopLevelSearch";
 import { getParsedSearchData } from "@dashboard/business/hooks/shared/makeTopLevelSearch/utils";
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
@@ -34,9 +39,6 @@ import Form from "@presentation/shared/Form";
 import { DetailPageLayout } from "@presentation/shared/Layouts";
 import RequirePermissions from "@presentation/shared/RequirePermissions";
 import { Savebar } from "@presentation/shared/Savebar";
-import { Option } from "@saleor/macaw-ui-next";
-import React, { useState } from "react";
-import { useIntl } from "react-intl";
 
 import { ChannelForm, FormData } from "../../components/ChannelForm";
 import { ChannelStatus } from "../../components/ChannelStatus/ChannelStatus";

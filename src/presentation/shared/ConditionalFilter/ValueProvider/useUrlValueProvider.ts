@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { stringify } from "qs";
 import { useEffect, useState } from "react";
+
+import { stringify } from "qs";
 import useRouter from "use-react-router";
 
 import { InitialAttributesAPIState } from "../API/initialState/attributes/useInitialAttributesState";

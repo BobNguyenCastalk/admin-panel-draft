@@ -1,4 +1,10 @@
 // @ts-strict-ignore
+import React from "react";
+import SVG from "react-inlinesvg";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
+
 import photoIcon from "@assets/images/photo-icon.svg";
 import { getUserInitials } from "@dashboard/business/misc";
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
@@ -7,10 +13,6 @@ import { commonMessages } from "@dashboard/constants/common/intl";
 import { StaffErrorFragment, StaffMemberDetailsFragment, UserFragment } from "@dashboard/graphql";
 import { TextField } from "@material-ui/core";
 import { DashboardCard } from "@presentation/shared/Card";
-import { Box, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import SVG from "react-inlinesvg";
-import { FormattedMessage, useIntl } from "react-intl";
 
 interface StaffPropertiesProps {
   canEditAvatar: boolean;

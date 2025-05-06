@@ -1,4 +1,11 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
 import { LanguageCodeEnum, LanguageFragment } from "@dashboard/graphql";
 import {
   ClickAwayListener,
@@ -9,12 +16,7 @@ import {
   Popper,
 } from "@material-ui/core";
 import ArrowDropDown from "@material-ui/icons/ArrowDropDown";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
-import React from "react";
-import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
 
 import { DashboardCard } from "../Card";
 

@@ -1,8 +1,9 @@
 // @ts-strict-ignore
+import { IntlShape } from "react-intl";
+
 import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/account";
 import getOrderErrorMessage from "@dashboard/business/utils/shared/errors/order";
 import { AccountErrorFragment, OrderErrorFragment } from "@dashboard/graphql";
-import { IntlShape } from "react-intl";
 
 export function getErrorMessage(
   err: AccountErrorFragment | OrderErrorFragment,

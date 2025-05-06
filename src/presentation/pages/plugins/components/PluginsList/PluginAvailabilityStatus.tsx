@@ -1,9 +1,10 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { isPluginGlobal } from "@presentation/pages/plugins/views/utils";
 import { Pill } from "@presentation/shared/Pill";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { pluginAvailabilityStatusMessages as messages, pluginStatusMessages } from "./messages";
 import { getActiveChannelConfigsCount } from "./utils";

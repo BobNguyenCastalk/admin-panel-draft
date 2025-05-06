@@ -1,5 +1,6 @@
-import { Box, Text, Toggle } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, Text, Toggle } from "@saleor/macaw-ui-next";
 
 import { AvailableColumn } from "../types";
 import { filterEmptyColumn, isLastEnabledColumn } from "./utils";

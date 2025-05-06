@@ -1,7 +1,9 @@
-import closeIcon from "@assets/images/close-thin.svg";
+import React, { useState } from "react";
+
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-import React, { useState } from "react";
+
+import closeIcon from "@assets/images/close-thin.svg";
 
 import FormSpacer from "../FormSpacer";
 

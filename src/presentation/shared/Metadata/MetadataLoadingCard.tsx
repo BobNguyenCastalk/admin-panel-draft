@@ -1,6 +1,7 @@
-import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 
 import { DashboardCard } from "../Card";
 import { getMetadataTitle } from "./utils";

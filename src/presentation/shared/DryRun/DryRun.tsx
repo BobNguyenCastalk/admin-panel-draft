@@ -1,9 +1,7 @@
 // @ts-strict-ignore
-import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
-import { useTriggerWebhookDryRunMutation, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
-import { capitalize } from "@material-ui/core";
-import Grid from "@presentation/shared/Grid";
-import { DashboardModal } from "@presentation/shared/Modal";
+import React, { Dispatch, SetStateAction, useState } from "react";
+import { useIntl } from "react-intl";
+
 import {
   Alert,
   Button,
@@ -14,8 +12,12 @@ import {
   ListItemCell,
 } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-import React, { Dispatch, SetStateAction, useState } from "react";
-import { useIntl } from "react-intl";
+
+import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
+import { useTriggerWebhookDryRunMutation, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
+import { capitalize } from "@material-ui/core";
+import Grid from "@presentation/shared/Grid";
+import { DashboardModal } from "@presentation/shared/Modal";
 
 import DryRunItemsList from "../DryRunItemsList/DryRunItemsList";
 import { DocumentMap } from "../DryRunItemsList/utils";

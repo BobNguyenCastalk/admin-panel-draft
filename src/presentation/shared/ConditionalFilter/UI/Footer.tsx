@@ -1,5 +1,6 @@
-import { Box, Button, ButtonProps, PropsWithBox } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, Button, ButtonProps, PropsWithBox } from "@saleor/macaw-ui-next";
 
 import { useFilterContext } from "./context";
 

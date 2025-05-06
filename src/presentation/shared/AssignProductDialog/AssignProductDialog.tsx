@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React, { useEffect } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Text } from "@saleor/macaw-ui-next";
+
 import useModalDialogOpen from "@dashboard/business/hooks/shared/useModalDialogOpen";
 import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { maybe } from "@dashboard/business/misc";
@@ -10,9 +15,6 @@ import { DashboardModal } from "@presentation/shared/Modal";
 import ResponsiveTable from "@presentation/shared/ResponsiveTable";
 import TableCellAvatar from "@presentation/shared/TableCellAvatar";
 import TableRowLink from "@presentation/shared/TableRowLink";
-import { Text } from "@saleor/macaw-ui-next";
-import React, { useEffect } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { Container } from "../AssignContainerDialog";
 import BackButton from "../BackButton";

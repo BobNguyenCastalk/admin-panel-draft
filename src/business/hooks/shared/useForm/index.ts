@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from "react";
+
 import useHandleFormSubmit from "@dashboard/business/hooks/shared/useHandleFormSubmit";
 import { toggle } from "@dashboard/business/utils/shared/lists";
 import {
@@ -8,7 +10,6 @@ import {
 } from "@presentation/shared/Form";
 import isEqual from "lodash/isEqual";
 import omit from "lodash/omit";
-import React, { useEffect, useState } from "react";
 
 import useStateFromProps from "./../useStateFromProps";
 import { FormData } from "./types";

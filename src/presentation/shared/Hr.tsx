@@ -1,5 +1,6 @@
-import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box } from "@saleor/macaw-ui-next";
 
 /**
  * @deprecated use `Divider` component from `@saleor/macaw-ui-next`

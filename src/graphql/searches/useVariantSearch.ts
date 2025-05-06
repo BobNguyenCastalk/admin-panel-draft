@@ -1,4 +1,5 @@
 import { gql } from "@apollo/client";
+
 import makeTopLevelSearch, {
   SearchData,
 } from "@dashboard/business/hooks/shared/makeTopLevelSearch";

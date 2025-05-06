@@ -1,6 +1,8 @@
-import { ApolloClient, useApolloClient } from "@apollo/client";
-import { DiscountStatusEnum, VoucherDiscountType } from "@dashboard/graphql";
 import { IntlShape, useIntl } from "react-intl";
+
+import { ApolloClient, useApolloClient } from "@apollo/client";
+
+import { DiscountStatusEnum, VoucherDiscountType } from "@dashboard/graphql";
 
 import { FilterContainer, FilterElement } from "../../FilterElement";
 import { FilterAPIProvider } from "../FilterAPIProvider";

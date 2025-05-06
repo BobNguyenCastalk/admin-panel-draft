@@ -1,9 +1,11 @@
+import React from "react";
+import SVG from "react-inlinesvg";
+
+import { makeStyles, useTheme } from "@saleor/macaw-ui";
+
 import backgroundArt from "@assets/images/login-background.svg";
 import saleorDarkLogo from "@assets/images/logo-dark.svg";
 import saleorLightLogo from "@assets/images/logo-light.svg";
-import { makeStyles, useTheme } from "@saleor/macaw-ui";
-import React from "react";
-import SVG from "react-inlinesvg";
 
 import { useUser } from "..";
 import LoginLoading from "./LoginLoading";

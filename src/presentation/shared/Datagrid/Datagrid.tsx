@@ -1,4 +1,15 @@
-import "@glideapps/glide-data-grid/dist/index.css";
+import React, {
+  MutableRefObject,
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+
+import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 
 import { NavigatorOpts } from "@dashboard/business/hooks/shared/useNavigator";
 import { usePreventHistoryBack } from "@dashboard/business/hooks/shared/usePreventHistoryBack";
@@ -17,19 +28,8 @@ import DataEditor, {
 import { GetRowThemeCallback } from "@glideapps/glide-data-grid/dist/ts/data-grid/data-grid-render";
 import { CircularProgress } from "@material-ui/core";
 import { useRowAnchorHandler } from "@presentation/shared/Datagrid/hooks/useRowAnchorHandler";
-import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
 import range from "lodash/range";
-import React, {
-  MutableRefObject,
-  ReactElement,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
 
 import { DashboardCard } from "../Card";
 import { CardMenuItem } from "../CardMenu";
@@ -48,6 +48,8 @@ import { useTooltipContainer } from "./hooks/useTooltipContainer";
 import useStyles, { cellHeight, useDatagridTheme, useFullScreenStyles } from "./styles";
 import { AvailableColumn } from "./types";
 import { preventRowClickOnSelectionCheckbox } from "./utils";
+
+import "@glideapps/glide-data-grid/dist/index.css";
 
 export interface GetCellContentOpts {
   changes: MutableRefObject<DatagridChange[]>;

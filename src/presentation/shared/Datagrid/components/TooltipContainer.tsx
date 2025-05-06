@@ -1,5 +1,6 @@
-import { Box, Tooltip } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, Tooltip } from "@saleor/macaw-ui-next";
 
 interface TooltipContainerProps {
   clearTooltip: () => void;

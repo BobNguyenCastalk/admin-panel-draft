@@ -1,8 +1,10 @@
-import { ReorderAction, ReorderEvent } from "@dashboard/types";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { SortableContainerProps } from "react-sortable-hoc";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
+import { ReorderAction, ReorderEvent } from "@dashboard/types";
 
 import DraggableChip from "../SortableChip";
 import SortableContainer from "./SortableContainer";

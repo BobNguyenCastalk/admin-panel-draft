@@ -1,5 +1,6 @@
-import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { useState } from "react";
+
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 
 function useMetadataChangeTrigger() {
   const [isMetadataModified, setMetadataModified] = useState(false);

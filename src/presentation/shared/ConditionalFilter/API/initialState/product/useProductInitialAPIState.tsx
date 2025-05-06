@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 import { useApolloClient } from "@apollo/client";
+
 import {
   _GetChannelOperandsDocument,
   _GetChannelOperandsQuery,
@@ -16,7 +19,6 @@ import {
   _SearchProductTypesOperandsQuery,
   _SearchProductTypesOperandsQueryVariables,
 } from "@dashboard/graphql";
-import { useState } from "react";
 
 import { FetchingParams } from "../../../ValueProvider/TokenArray/fetchingParams";
 import { createInitialProductStateFromData } from "../helpers";

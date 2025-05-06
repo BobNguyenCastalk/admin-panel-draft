@@ -1,6 +1,7 @@
 // @ts-strict-ignore
-import { IMoney } from "@dashboard/business/utils/shared/intl";
 import { IntlShape } from "react-intl";
+
+import { IMoney } from "@dashboard/business/utils/shared/intl";
 
 import { Locale } from "../Locale";
 import { getMoneyRange } from "./utils";

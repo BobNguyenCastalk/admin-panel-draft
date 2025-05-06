@@ -1,8 +1,10 @@
+import React from "react";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
+
 import { getUserInitials, getUserName } from "@dashboard/business/misc";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { UserAvatar } from "@presentation/shared/UserAvatar";
-import { Box, Text } from "@saleor/macaw-ui-next";
-import React from "react";
 
 import { UserControls } from "./Controls";
 

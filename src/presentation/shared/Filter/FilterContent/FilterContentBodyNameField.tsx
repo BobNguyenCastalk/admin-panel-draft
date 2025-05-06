@@ -1,6 +1,8 @@
-import { Checkbox, FormControlLabel } from "@material-ui/core";
-import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
+
+import { makeStyles } from "@saleor/macaw-ui";
+
+import { Checkbox, FormControlLabel } from "@material-ui/core";
 
 import { FilterElement } from "../types";
 import { FilterDispatchFunction } from "../useFilter";

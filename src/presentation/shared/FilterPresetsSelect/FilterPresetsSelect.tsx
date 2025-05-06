@@ -1,4 +1,6 @@
-import { commonMessages } from "@dashboard/constants/common/intl";
+import React, { MouseEvent } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
 import {
   Box,
   Button,
@@ -11,8 +13,8 @@ import {
   Tooltip,
   vars,
 } from "@saleor/macaw-ui-next";
-import React, { MouseEvent } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
+
+import { commonMessages } from "@dashboard/constants/common/intl";
 
 import { FilterPresetItem } from "./FilterPresetItem";
 import { messages } from "./messages";

@@ -1,6 +1,7 @@
-import { staffMemberDetailsUrl } from "@dashboard/business/utils/staffs/urls";
-import { useUser } from "@dashboard/presentation/pages/auth";
-import { useTheme } from "@dashboard/theme";
+import React, { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
+
 import { useTheme as useLegacyTheme } from "@saleor/macaw-ui";
 import {
   Box,
@@ -11,9 +12,10 @@ import {
   sprinkles,
   Text,
 } from "@saleor/macaw-ui-next";
-import React, { useEffect, useState } from "react";
-import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+
+import { staffMemberDetailsUrl } from "@dashboard/business/utils/staffs/urls";
+import { useUser } from "@dashboard/presentation/pages/auth";
+import { useTheme } from "@dashboard/theme";
 
 import { FeatureFlagsModal } from "./FeatureFlagsModal";
 import { ThemeSwitcher } from "./ThemeSwitcher";

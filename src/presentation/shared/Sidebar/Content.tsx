@@ -1,7 +1,9 @@
 // TODO: shared component should not import business logic. To fix this
-import { useCloud } from "@business/hooks/auth/useCloud";
-import { Box } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box } from "@saleor/macaw-ui-next";
+
+import { useCloud } from "@business/hooks/auth/useCloud";
 
 import { Menu } from "./menu";
 import { EnvironmentLink } from "./menu/EnvironmentLink";

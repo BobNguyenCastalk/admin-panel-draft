@@ -1,5 +1,6 @@
-import { usePreventHistoryBack } from "@dashboard/business/hooks/shared/usePreventHistoryBack";
 import { useEffect, useState } from "react";
+
+import { usePreventHistoryBack } from "@dashboard/business/hooks/shared/usePreventHistoryBack";
 
 import { useDelayedState } from "./useDelayedState";
 import { usePressEscKey } from "./usePressEscKey";

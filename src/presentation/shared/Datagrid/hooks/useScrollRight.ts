@@ -1,6 +1,7 @@
 // @ts-strict-ignore
-import throttle from "lodash/throttle";
 import { useEffect, useState } from "react";
+
+import throttle from "lodash/throttle";
 
 export const useScrollRight = () => {
   const [scrolledToRight, setScrolledToRight] = useState(false);

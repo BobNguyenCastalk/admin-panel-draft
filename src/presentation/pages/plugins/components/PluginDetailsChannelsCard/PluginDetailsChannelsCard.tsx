@@ -1,7 +1,8 @@
-import { sectionNames } from "@dashboard/constants/common/intl";
-import { DashboardCard } from "@presentation/shared/Card";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { sectionNames } from "@dashboard/constants/common/intl";
+import { DashboardCard } from "@presentation/shared/Card";
 
 import PluginDetailsChannelsCardContent, {
   PluginDetailsChannelsCardProps,

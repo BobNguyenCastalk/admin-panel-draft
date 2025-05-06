@@ -1,4 +1,7 @@
+import { IntlShape } from "react-intl";
+
 import { ApolloClient } from "@apollo/client";
+
 import {
   _GetAttributeChoicesDocument,
   _GetAttributeChoicesQuery,
@@ -32,7 +35,6 @@ import {
   _GetProductTypesChoicesQuery,
   _GetProductTypesChoicesQueryVariables,
 } from "@dashboard/graphql";
-import { IntlShape } from "react-intl";
 
 import { ItemOption } from "../FilterElement/ConditionValue";
 import { LeftOperand } from "../LeftOperandsProvider";

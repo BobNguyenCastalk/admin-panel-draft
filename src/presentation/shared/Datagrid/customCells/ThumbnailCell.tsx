@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   CustomCell,
   CustomRenderer,
@@ -5,7 +7,6 @@ import {
   GridCellKind,
   TextCellEntry,
 } from "@glideapps/glide-data-grid";
-import React from "react";
 
 export interface ThumbnailCellProps {
   readonly kind: "thumbnail-cell";

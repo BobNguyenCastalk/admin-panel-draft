@@ -1,8 +1,10 @@
-import { getUserInitials, getUserName } from "@dashboard/business/misc";
-import { GiftCardDetailsQuery, OrderEventFragment } from "@dashboard/graphql";
-import { Box, Button, EditIcon, Text } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
+
+import { Box, Button, EditIcon, Text } from "@saleor/macaw-ui-next";
+
+import { getUserInitials, getUserName } from "@dashboard/business/misc";
+import { GiftCardDetailsQuery, OrderEventFragment } from "@dashboard/graphql";
 
 import { DashboardCard } from "../Card";
 import { DateTime } from "../Date";

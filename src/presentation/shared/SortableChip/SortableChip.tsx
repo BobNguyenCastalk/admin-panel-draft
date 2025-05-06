@@ -1,9 +1,11 @@
-import CloseIcon from "@material-ui/icons/Close";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
 import React from "react";
 import { SortableElement, SortableElementProps } from "react-sortable-hoc";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
+import CloseIcon from "@material-ui/icons/Close";
+import clsx from "clsx";
 
 import SortableHandle from "./SortableHandle";
 

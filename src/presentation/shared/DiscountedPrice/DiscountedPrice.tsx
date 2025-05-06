@@ -1,6 +1,8 @@
-import { IMoney } from "@dashboard/business/utils/shared/intl";
-import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Text } from "@saleor/macaw-ui-next";
+
+import { IMoney } from "@dashboard/business/utils/shared/intl";
 
 import Money from "../Money";
 import { useStyles } from "./styles";

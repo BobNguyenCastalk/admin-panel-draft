@@ -1,7 +1,8 @@
 // @ts-strict-ignore
+import { useEffect, useRef } from "react";
+
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { Sort } from "@dashboard/types";
-import { useEffect, useRef } from "react";
 
 export type SortByRankUrlQueryParams<T extends string> = Sort<T> & {
   query?: string;

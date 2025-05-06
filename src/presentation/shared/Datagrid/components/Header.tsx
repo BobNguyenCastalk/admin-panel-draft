@@ -1,3 +1,5 @@
+import React, { FC, PropsWithChildren } from "react";
+
 import {
   Box,
   Button,
@@ -6,7 +8,6 @@ import {
   PlusIcon,
   Text,
 } from "@saleor/macaw-ui-next";
-import React, { FC, PropsWithChildren } from "react";
 
 interface ButtonFullScreenProps {
   isOpen: boolean;

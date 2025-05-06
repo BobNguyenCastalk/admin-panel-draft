@@ -1,5 +1,6 @@
-import { Pagination } from "@dashboard/types";
 import { useEffect, useRef, useState } from "react";
+
+import { Pagination } from "@dashboard/types";
 
 export interface UseRowSelection {
   selectedRowIds: string[];

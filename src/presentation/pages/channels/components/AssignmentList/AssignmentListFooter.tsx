@@ -1,11 +1,13 @@
+import React, { useEffect, useRef, useState } from "react";
+import { defineMessages, useIntl } from "react-intl";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { mapNodeToChoice } from "@dashboard/business/utils/shared/maps";
 import CardAddItemsFooter from "@dashboard/products/components/ProductStocks/components/CardAddItemsFooter";
 import { ClickAwayListener } from "@material-ui/core";
 import { Combobox } from "@presentation/shared/Combobox";
-import { Box } from "@saleor/macaw-ui-next";
-import React, { useEffect, useRef, useState } from "react";
-import { defineMessages, useIntl } from "react-intl";
 
 import { AssignItem, AssignmentListProps } from "./types";
 

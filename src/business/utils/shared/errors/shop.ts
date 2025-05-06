@@ -1,5 +1,6 @@
-import { ShopErrorCode, ShopErrorFragment } from "@dashboard/graphql";
 import { defineMessages, IntlShape } from "react-intl";
+
+import { ShopErrorCode, ShopErrorFragment } from "@dashboard/graphql";
 
 import { getCommonFormFieldErrorMessage } from "./common";
 

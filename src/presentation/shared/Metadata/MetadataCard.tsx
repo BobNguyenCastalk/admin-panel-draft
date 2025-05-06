@@ -1,8 +1,10 @@
-import { FormChange } from "@dashboard/business/hooks/shared/useForm";
-import { MetadataInput } from "@dashboard/graphql";
-import { Accordion, Box, Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { Accordion, Box, Button, Skeleton, Text } from "@saleor/macaw-ui-next";
+
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
+import { MetadataInput } from "@dashboard/graphql";
 
 import { DashboardCard } from "../Card";
 import { MetadataCardTable } from "./MetadataCardTable";

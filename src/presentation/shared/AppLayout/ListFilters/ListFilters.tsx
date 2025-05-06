@@ -1,7 +1,9 @@
+import React, { ReactNode } from "react";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { FilterProps, SearchPageProps } from "@dashboard/types";
 import { FilterErrorMessages, IFilter } from "@presentation/shared/Filter";
-import { Box } from "@saleor/macaw-ui-next";
-import React, { ReactNode } from "react";
 
 import { ExpressionFilters } from "./components/ExpressionFilters";
 import { FiltersSelect } from "./components/FiltersSelect";

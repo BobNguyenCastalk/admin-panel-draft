@@ -1,11 +1,13 @@
 // @ts-strict-ignore
-import { getById } from "@dashboard/business/misc";
-import { buttonMessages } from "@dashboard/constants/common/intl";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
-import { Box, Spinner } from "@saleor/macaw-ui-next";
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
+
+import { Box, Spinner } from "@saleor/macaw-ui-next";
+
+import { getById } from "@dashboard/business/misc";
+import { buttonMessages } from "@dashboard/constants/common/intl";
+import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 
 import DeleteButton from "../DeleteButton";
 import { DashboardModal } from "../Modal";

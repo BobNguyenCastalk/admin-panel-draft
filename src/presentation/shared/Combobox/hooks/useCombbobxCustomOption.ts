@@ -1,5 +1,6 @@
-import { Option } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
+import { Option } from "@saleor/macaw-ui-next";
 
 import { messages } from "../messages";
 

@@ -1,8 +1,10 @@
+import React, { memo } from "react";
+
+import { Box, BoxProps } from "@saleor/macaw-ui-next";
+
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { removeAtIndex, updateAtIndex } from "@dashboard/business/utils/shared/lists";
 import { MetadataInput } from "@dashboard/graphql";
-import { Box, BoxProps } from "@saleor/macaw-ui-next";
-import React, { memo } from "react";
 
 import { MetadataCard, MetadataCardProps } from "./MetadataCard";
 import { MetadataLoadingCard } from "./MetadataLoadingCard";

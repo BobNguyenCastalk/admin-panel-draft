@@ -1,3 +1,8 @@
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { MembersListUrlSortField, permissionGroupListPath } from "@business/utils/permissions/urls";
 import {
   checkIfUserHasRestictedAccessToChannels,
@@ -28,9 +33,6 @@ import Form from "@presentation/shared/Form";
 import FormSpacer from "@presentation/shared/FormSpacer";
 import { DetailPageLayout } from "@presentation/shared/Layouts";
 import { Savebar } from "@presentation/shared/Savebar";
-import { Box } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import PermissionGroupInfo from "../PermissionGroupInfo";
 import PermissionGroupMemberList from "../PermissionGroupMemberList";

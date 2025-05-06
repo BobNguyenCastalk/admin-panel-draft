@@ -1,8 +1,10 @@
-import BackButton from "@presentation/shared/BackButton";
-import { DashboardModal } from "@presentation/shared/Modal";
-import { Button } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { Button } from "@saleor/macaw-ui-next";
+
+import BackButton from "@presentation/shared/BackButton";
+import { DashboardModal } from "@presentation/shared/Modal";
 
 import { exitFormPromptMessages as messages } from "./messages";
 

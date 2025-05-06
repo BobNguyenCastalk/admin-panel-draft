@@ -1,7 +1,9 @@
-import { TableCell } from "@material-ui/core";
-import { IconButton, ICONBUTTON_SIZE, makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
 import React from "react";
+
+import { IconButton, ICONBUTTON_SIZE, makeStyles } from "@saleor/macaw-ui";
+
+import { TableCell } from "@material-ui/core";
+import clsx from "clsx";
 
 import { stopPropagation } from "../../../business/misc";
 

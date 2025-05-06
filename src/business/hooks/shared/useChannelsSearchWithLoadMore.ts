@@ -1,9 +1,10 @@
 // @ts-strict-ignore
+import { useEffect, useState } from "react";
+
 import { useBaseChannelsQuery } from "@dashboard/graphql";
 import chunk from "lodash/chunk";
 import compact from "lodash/compact";
 import concat from "lodash/concat";
-import { useEffect, useState } from "react";
 
 import { ChannelsWithLoadMoreProps, useChannelsSearch } from "./useChannelsSearch";
 

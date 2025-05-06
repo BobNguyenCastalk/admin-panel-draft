@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   permissionGroupListUrl,
   PermissionGroupListUrlQueryParams,
@@ -14,7 +16,6 @@ import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { getSortParams } from "@dashboard/business/utils/shared/sort";
 import { usePermissionGroupListQuery } from "@dashboard/graphql";
 import { ListViews } from "@dashboard/types";
-import React from "react";
 
 import PermissionGroupListPage from "../../components/PermissionGroupListPage";
 import { getSortQueryVariables } from "./sort";

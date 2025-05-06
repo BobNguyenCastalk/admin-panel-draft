@@ -1,3 +1,5 @@
+import { Option } from "@saleor/macaw-ui-next";
+
 import { CustomCell, GridCell, GridCellKind, TextCell } from "@glideapps/glide-data-grid";
 import {
   NumberCell,
@@ -6,7 +8,6 @@ import {
 } from "@presentation/shared/Datagrid/customCells/NumberCell";
 import { Locale } from "@presentation/shared/Locale";
 import { DotStatus } from "@presentation/shared/StatusDot/StatusDot";
-import { Option } from "@saleor/macaw-ui-next";
 
 import { DropdownCell, DropdownCellProps } from "./DropdownCell";
 import { MoneyCell, MoneyDiscuntedCell } from "./Money";

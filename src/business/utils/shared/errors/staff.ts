@@ -1,5 +1,6 @@
-import { StaffErrorFragment } from "@dashboard/graphql";
 import { IntlShape } from "react-intl";
+
+import { StaffErrorFragment } from "@dashboard/graphql";
 
 import getAccountErrorMessage from "./account";
 

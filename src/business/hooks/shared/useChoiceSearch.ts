@@ -1,6 +1,8 @@
-import { fuzzySearch } from "@dashboard/business/misc";
-import { Option } from "@saleor/macaw-ui-next";
 import { useMemo, useState } from "react";
+
+import { Option } from "@saleor/macaw-ui-next";
+
+import { fuzzySearch } from "@dashboard/business/misc";
 
 function useChoiceSearch(choices: Option[]) {
   const [query, setQuery] = useState("");

@@ -1,7 +1,9 @@
-import { Tab } from "@material-ui/core";
-import { makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
 import React from "react";
+
+import { makeStyles } from "@saleor/macaw-ui";
+
+import { Tab } from "@material-ui/core";
+import clsx from "clsx";
 
 const useStyles = makeStyles(
   theme => ({

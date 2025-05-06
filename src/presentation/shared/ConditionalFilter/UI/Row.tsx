@@ -1,5 +1,6 @@
-import { Box, Button, DynamicCombobox, RemoveIcon, Select } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, Button, DynamicCombobox, RemoveIcon, Select } from "@saleor/macaw-ui-next";
 
 import { getItemConstraint } from "./constrains";
 import { ErrorLookup } from "./errors";

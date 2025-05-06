@@ -1,7 +1,8 @@
-import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
-import { act, renderHook } from "@testing-library/react-hooks";
 import { useForm } from "react-hook-form";
 import { IntlShape, MessageDescriptor } from "react-intl";
+
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
+import { act, renderHook } from "@testing-library/react-hooks";
 
 import { EventDataAction, EventDataField, MetadataFormData } from "../Metadata/types";
 import { useMetadataFormControls } from "./useMetadataFormControls";

@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
+
 import { getStatusColor } from "@dashboard/business/misc";
 import { PluginListUrlSortField } from "@dashboard/business/utils/plugins/urls";
 import { sectionNames } from "@dashboard/constants/common/intl";
@@ -10,9 +15,6 @@ import { DashboardCard } from "@presentation/shared/Card";
 import { ExternalLinkNext } from "@presentation/shared/ExternalLink";
 import FilterBar from "@presentation/shared/FilterBar";
 import { ListPageLayout } from "@presentation/shared/Layouts";
-import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import PluginsList from "../PluginsList/PluginsList";
 import { createFilterStructure, PluginFilterKeys, PluginListFilterOpts } from "./filters";

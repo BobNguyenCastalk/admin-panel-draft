@@ -1,5 +1,6 @@
-import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, Button, Text } from "@saleor/macaw-ui-next";
 
 interface ExtendedAttributeRowProps {
   label: string;

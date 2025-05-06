@@ -1,9 +1,11 @@
 // @ts-strict-ignore
-import { commonMessages } from "@dashboard/constants/common/intl";
-import { FileFragment } from "@dashboard/graphql";
-import { Box, Button, Skeleton, Text, TrashBinIcon } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { Box, Button, Skeleton, Text, TrashBinIcon } from "@saleor/macaw-ui-next";
+
+import { commonMessages } from "@dashboard/constants/common/intl";
+import { FileFragment } from "@dashboard/graphql";
 
 export interface FileChoiceType {
   label: string;

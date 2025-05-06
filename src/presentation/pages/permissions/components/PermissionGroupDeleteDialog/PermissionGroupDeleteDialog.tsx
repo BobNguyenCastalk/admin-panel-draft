@@ -1,10 +1,12 @@
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
+
 import getPermissionGroupErrorMessage from "@dashboard/business/utils/shared/errors/permissionGroups";
 import { PermissionGroupErrorCode, PermissionGroupErrorFragment } from "@dashboard/graphql";
 import ActionDialog from "@presentation/shared/ActionDialog";
 import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
-import { Box, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 export interface PermissionDeleteDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

@@ -1,4 +1,10 @@
+import { IntlShape } from "react-intl";
+
+import { ThemeType } from "@saleor/macaw-ui";
+import { DefaultTheme, ThemeTokensValues } from "@saleor/macaw-ui-next";
+
 import { FetchResult, MutationFunction, MutationResult } from "@apollo/client";
+
 import {
   AddressInput,
   CountryCode,
@@ -15,11 +21,8 @@ import {
   hueToPillColorLight,
 } from "@presentation/shared/Datagrid/customCells/PillCell";
 import { DotStatus } from "@presentation/shared/StatusDot/StatusDot";
-import { ThemeType } from "@saleor/macaw-ui";
-import { DefaultTheme, ThemeTokensValues } from "@saleor/macaw-ui-next";
 import Fuse from "fuse.js";
 import moment from "moment-timezone";
-import { IntlShape } from "react-intl";
 
 import {
   commonStatusMessages,

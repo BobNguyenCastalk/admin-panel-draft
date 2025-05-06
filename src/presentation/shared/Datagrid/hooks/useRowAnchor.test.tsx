@@ -1,7 +1,8 @@
+import React from "react";
+
 import { GridMouseEventArgs } from "@glideapps/glide-data-grid";
 import { render } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
-import React from "react";
 
 import { useRowAnchor } from "./useRowAnchor";
 

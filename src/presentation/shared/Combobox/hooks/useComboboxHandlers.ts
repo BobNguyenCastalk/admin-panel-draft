@@ -1,7 +1,8 @@
+import { useCallback, useRef } from "react";
+
 import useDebounce from "@dashboard/business/hooks/shared/useDebounce";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/configs";
 import { FetchMoreProps } from "@dashboard/types";
-import { useCallback, useRef } from "react";
 
 export const useComboboxHandlers = ({
   fetchOptions,

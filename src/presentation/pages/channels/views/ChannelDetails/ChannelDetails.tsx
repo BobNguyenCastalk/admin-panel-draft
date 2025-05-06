@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
 import {
   channelsListUrl,
   channelUrl,
@@ -29,8 +32,6 @@ import ChannelDeleteDialog from "@presentation/pages/channels/components/Channel
 import { FormData } from "@presentation/pages/channels/components/ChannelForm/ChannelForm";
 import { useChannelWarehousesReorder } from "@presentation/pages/channels/views/ChannelDetails/useChannelWarehouseReorder";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import ChannelDetailsPage from "../../pages/ChannelDetailsPage";
 

@@ -1,6 +1,7 @@
-import { ArrowLeftIcon, Button, sprinkles } from "@saleor/macaw-ui-next";
 import React from "react";
 import { Link } from "react-router-dom";
+
+import { ArrowLeftIcon, Button, sprinkles } from "@saleor/macaw-ui-next";
 
 type Variant = "secondary" | "tertiary";
 

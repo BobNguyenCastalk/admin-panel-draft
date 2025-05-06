@@ -1,4 +1,6 @@
 // @ts-strict-ignore
+import { defineMessages, IntlShape } from "react-intl";
+
 import {
   createAutocompleteField,
   createBooleanField,
@@ -8,7 +10,6 @@ import { sectionNames } from "@dashboard/constants/common/intl";
 import { PluginConfigurationType } from "@dashboard/graphql";
 import { AutocompleteFilterOpts, FilterOpts } from "@dashboard/types";
 import { IFilter } from "@presentation/shared/Filter";
-import { defineMessages, IntlShape } from "react-intl";
 
 import {
   pluginChannelConfigurationCellMessages,

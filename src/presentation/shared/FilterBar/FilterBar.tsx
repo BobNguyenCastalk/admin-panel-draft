@@ -1,7 +1,9 @@
-import { Button } from "@presentation/shared/Button";
-import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+
+import { Button } from "@presentation/shared/Button";
 
 import { FilterProps } from "../../../types";
 import Filter from "../Filter";

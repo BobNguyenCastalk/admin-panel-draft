@@ -1,9 +1,11 @@
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { buttonMessages } from "@dashboard/constants/common/intl";
 import { DialogProps } from "@dashboard/types";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
-import { Box } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import BackButton from "../BackButton";
 import { DashboardModal, DashboardModalContentSize } from "../Modal";

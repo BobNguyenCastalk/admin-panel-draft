@@ -1,10 +1,12 @@
 // @ts-strict-ignore
-import { Grow, Paper, Popper } from "@material-ui/core";
-import { IconButtonProps } from "@material-ui/core/IconButton";
-import { LayoutButton, makeStyles, NavigatorIcon } from "@saleor/macaw-ui";
-import clsx from "clsx";
 import React, { CSSProperties } from "react";
 import { FormattedMessage } from "react-intl";
+
+import { LayoutButton, makeStyles, NavigatorIcon } from "@saleor/macaw-ui";
+
+import { Grow, Paper, Popper } from "@material-ui/core";
+import { IconButtonProps } from "@material-ui/core/IconButton";
+import clsx from "clsx";
 
 const triangle = (color: string, width: number): CSSProperties => ({
   borderBottom: `${width}px solid ${color}`,

@@ -1,5 +1,6 @@
-import throttle from "lodash/throttle";
 import { useEffect, useState } from "react";
+
+import throttle from "lodash/throttle";
 
 function getPosition() {
   return {

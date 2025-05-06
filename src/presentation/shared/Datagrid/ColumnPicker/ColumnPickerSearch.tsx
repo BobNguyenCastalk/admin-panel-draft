@@ -1,7 +1,9 @@
-import Debounce from "@presentation/shared/Debounce";
-import { SearchInput } from "@saleor/macaw-ui-next";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { SearchInput } from "@saleor/macaw-ui-next";
+
+import Debounce from "@presentation/shared/Debounce";
 
 import messages from "./messages";
 import { ColumnCategory } from "./useColumns";

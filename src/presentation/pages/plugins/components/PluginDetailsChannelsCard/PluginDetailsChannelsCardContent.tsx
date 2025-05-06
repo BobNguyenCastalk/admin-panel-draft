@@ -1,12 +1,14 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Skeleton, Text } from "@saleor/macaw-ui-next";
+
 import { PluginsDetailsFragment } from "@dashboard/graphql";
 import { isPluginGlobal } from "@presentation/pages/plugins/views/utils";
 import { DashboardCard } from "@presentation/shared/Card";
 import CollectionWithDividers from "@presentation/shared/CollectionWithDividers";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Skeleton, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage } from "react-intl";
 
 import { pluginDetailsChannelsCardMessages as messages } from "./messages";
 

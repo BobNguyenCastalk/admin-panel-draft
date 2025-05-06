@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React, { useMemo, useState } from "react";
+import { FormattedMessage } from "react-intl";
+
+import { DropdownButton, sprinkles } from "@saleor/macaw-ui-next";
+
 import { ClickAwayListener, Grow, Popper } from "@material-ui/core";
 import {
   FilterContent,
@@ -9,9 +14,6 @@ import {
 } from "@presentation/shared/Filter";
 import useFilter from "@presentation/shared/Filter/useFilter";
 import { extractInvalidFilters } from "@presentation/shared/Filter/utils";
-import { DropdownButton, sprinkles } from "@saleor/macaw-ui-next";
-import React, { useMemo, useState } from "react";
-import { FormattedMessage } from "react-intl";
 
 import { getSelectedFilterAmount } from "../utils";
 

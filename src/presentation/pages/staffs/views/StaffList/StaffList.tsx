@@ -1,3 +1,6 @@
+import React from "react";
+import { useIntl } from "react-intl";
+
 import { newPasswordUrl } from "@business/utils/auth/urls";
 import {
   staffListUrl,
@@ -30,8 +33,6 @@ import { useConditionalFilterContext } from "@presentation/shared/ConditionalFil
 import { createStaffMembersQueryVariables } from "@presentation/shared/ConditionalFilter/queryVariables";
 import DeleteFilterTabDialog from "@presentation/shared/DeleteFilterTabDialog";
 import SaveFilterTabDialog from "@presentation/shared/SaveFilterTabDialog";
-import React from "react";
-import { useIntl } from "react-intl";
 import urlJoin from "url-join";
 
 import StaffAddMemberDialog, { AddMemberFormData } from "../../components/StaffAddMemberDialog";

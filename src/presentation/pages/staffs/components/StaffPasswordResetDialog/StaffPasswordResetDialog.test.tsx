@@ -1,11 +1,12 @@
-import "@testing-library/jest-dom/extend-expect";
+import React from "react";
 
 import { fireEvent, render, screen } from "@testing-library/react";
-import React from "react";
 
 import StaffPasswordResetDialog, {
   StaffPasswordResetDialogProps,
 } from "./StaffPasswordResetDialog";
+
+import "@testing-library/jest-dom/extend-expect";
 
 const defaultProps = {
   confirmButtonState: "default",

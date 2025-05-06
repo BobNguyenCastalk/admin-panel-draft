@@ -1,11 +1,13 @@
 // @ts-strict-ignore
-import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
-import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
-import { Box, Divider } from "@saleor/macaw-ui-next";
-import Downshift, { GetItemPropsOptions } from "downshift";
-import hotkeys from "hotkeys-js";
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
+
+import { Box, Divider } from "@saleor/macaw-ui-next";
+
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
+import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
+import Downshift, { GetItemPropsOptions } from "downshift";
+import hotkeys from "hotkeys-js";
 
 import { DashboardModal } from "../Modal";
 import {

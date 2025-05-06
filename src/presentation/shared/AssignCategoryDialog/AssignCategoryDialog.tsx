@@ -1,8 +1,9 @@
 // @ts-strict-ignore
-import { SearchCategoriesQuery } from "@dashboard/graphql";
-import { RelayToFlat } from "@dashboard/types";
 import React from "react";
 import { useIntl } from "react-intl";
+
+import { SearchCategoriesQuery } from "@dashboard/graphql";
+import { RelayToFlat } from "@dashboard/types";
 
 import AssignContainerDialog, { AssignContainerDialogProps } from "../AssignContainerDialog";
 import { messages } from "./messages";

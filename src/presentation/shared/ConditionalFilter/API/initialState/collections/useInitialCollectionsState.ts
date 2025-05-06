@@ -1,11 +1,13 @@
+import { useState } from "react";
+
 import { useApolloClient } from "@apollo/client";
+
 import {
   _GetChannelOperandsDocument,
   _GetChannelOperandsQuery,
   _GetChannelOperandsQueryVariables,
 } from "@dashboard/graphql";
 import { CollectionFetchingParams } from "@presentation/shared/ConditionalFilter/ValueProvider/TokenArray/fetchingParams";
-import { useState } from "react";
 
 import { createInitialCollectionState } from "../helpers";
 import { InitialCollectionAPIResponse } from "../types";

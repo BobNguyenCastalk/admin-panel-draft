@@ -1,3 +1,7 @@
+import React from "react";
+import { useIntl } from "react-intl";
+import { RouteComponentProps, Switch } from "react-router-dom";
+
 import {
   channelAddPath,
   channelPath,
@@ -10,9 +14,6 @@ import { asSortParams } from "@dashboard/business/utils/shared/sort";
 import { Route } from "@presentation/shared/Router";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { parse as parseQs } from "qs";
-import React from "react";
-import { useIntl } from "react-intl";
-import { RouteComponentProps, Switch } from "react-router-dom";
 
 import ChannelCreateComponent from "./views/ChannelCreate";
 import ChannelDetailsComponent from "./views/ChannelDetails";

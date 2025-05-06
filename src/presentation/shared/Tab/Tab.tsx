@@ -1,8 +1,10 @@
-import { alpha } from "@material-ui/core/styles";
+import React from "react";
+
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
+
+import { alpha } from "@material-ui/core/styles";
 import clsx from "clsx";
-import React from "react";
 
 const useStyles = makeStyles(
   theme => ({

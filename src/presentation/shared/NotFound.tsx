@@ -1,5 +1,6 @@
-import NotFoundPage from "@presentation/shared/NotFoundPage";
 import React from "react";
+
+import NotFoundPage from "@presentation/shared/NotFoundPage";
 
 import useNavigator from "../../business/hooks/shared/useNavigator";
 

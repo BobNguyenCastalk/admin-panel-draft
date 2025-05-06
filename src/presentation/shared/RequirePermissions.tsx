@@ -1,7 +1,8 @@
 // @ts-strict-ignore
+import React from "react";
+
 import { useUserPermissions } from "@business/hooks/auth/useUserPermissions";
 import { PermissionEnum, UserPermissionFragment } from "@dashboard/graphql";
-import React from "react";
 
 const findPerm = (permList, perm) => permList.find(userPerm => userPerm.code === perm);
 

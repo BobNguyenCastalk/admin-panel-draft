@@ -1,3 +1,5 @@
+import { defineMessages, IntlShape } from "react-intl";
+
 import {
   BulkProductErrorFragment,
   CollectionErrorFragment,
@@ -5,7 +7,6 @@ import {
   ProductErrorCode,
   ProductErrorFragment,
 } from "@dashboard/graphql";
-import { defineMessages, IntlShape } from "react-intl";
 
 import commonErrorMessages, { getCommonFormFieldErrorMessage } from "./common";
 

@@ -1,9 +1,10 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
 import { FetcherOpts, FetcherParams } from "@graphiql/toolkit";
 import { useDashboardTheme } from "@presentation/shared/GraphiQL/styles";
 import { DashboardModal } from "@presentation/shared/Modal";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { ContextualLine } from "../AppLayout/ContextualLinks/ContextualLine";
 import { useContextualLink } from "../AppLayout/ContextualLinks/useContextualLink";

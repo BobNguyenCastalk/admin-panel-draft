@@ -1,4 +1,10 @@
 // @ts-strict-ignore
+import React, { useEffect, useRef, useState } from "react";
+import { FormattedMessage } from "react-intl";
+
+import { IconButtonProps, makeStyles, SettingsIcon } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
 import {
   CircularProgress,
   ClickAwayListener,
@@ -8,11 +14,7 @@ import {
   Paper,
   Popper,
 } from "@material-ui/core";
-import { IconButtonProps, makeStyles, SettingsIcon } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
-import React, { useEffect, useRef, useState } from "react";
-import { FormattedMessage } from "react-intl";
 
 import { IconButton } from "../IconButton";
 import { cardMenuMessages as messages } from "./messages";

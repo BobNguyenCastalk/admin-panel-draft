@@ -1,3 +1,6 @@
+import React from "react";
+import { useIntl } from "react-intl";
+
 import {
   permissionGroupDetailsUrl,
   PermissionGroupDetailsUrlDialog,
@@ -35,8 +38,6 @@ import { useBoundStore } from "@dashboard/stores";
 import MembersErrorDialog from "@presentation/pages/permissions/components/MembersErrorDialog";
 import PermissionGroupDeleteDialog from "@presentation/pages/permissions/components/PermissionGroupDeleteDialog";
 import { Button } from "@presentation/shared/Button";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import AssignMembersDialog from "../../components/AssignMembersDialog";
 import {

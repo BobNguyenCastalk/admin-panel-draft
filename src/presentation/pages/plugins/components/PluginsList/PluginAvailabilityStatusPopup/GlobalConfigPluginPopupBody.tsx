@@ -1,11 +1,13 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Text } from "@saleor/macaw-ui-next";
+
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { DashboardCard } from "@presentation/shared/Card";
 import CardSpacer from "@presentation/shared/CardSpacer";
 import { Pill } from "@presentation/shared/Pill";
-import { Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { globalConfigPluginMessages as messages, pluginStatusMessages } from "../messages";
 

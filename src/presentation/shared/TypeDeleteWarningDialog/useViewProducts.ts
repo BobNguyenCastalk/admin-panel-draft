@@ -1,6 +1,7 @@
+import { useMemo } from "react";
+
 import { productListPath } from "@dashboard/products/urls";
 import { stringify } from "qs";
-import { useMemo } from "react";
 import urljoin from "url-join";
 
 import { FilterElement } from "../ConditionalFilter/FilterElement";

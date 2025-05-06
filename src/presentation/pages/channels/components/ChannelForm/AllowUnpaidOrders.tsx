@@ -1,8 +1,10 @@
-import { FormChange } from "@dashboard/business/hooks/shared/useForm";
-import PreviewPill from "@presentation/shared/PreviewPill";
-import { Box, Checkbox, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage } from "react-intl";
+
+import { Box, Checkbox, Text } from "@saleor/macaw-ui-next";
+
+import { FormChange } from "@dashboard/business/hooks/shared/useForm";
+import PreviewPill from "@presentation/shared/PreviewPill";
 
 import { messages } from "./messages";
 

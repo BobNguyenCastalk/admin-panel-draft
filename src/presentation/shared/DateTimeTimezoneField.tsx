@@ -1,9 +1,11 @@
 // @ts-strict-ignore
-import { commonMessages } from "@dashboard/constants/common/intl";
-import { Box, Input, Text } from "@saleor/macaw-ui-next";
-import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
+
+import { Box, Input, Text } from "@saleor/macaw-ui-next";
+
+import { commonMessages } from "@dashboard/constants/common/intl";
+import moment from "moment";
 
 interface DateTimeFieldProps {
   onChange: (value: string) => void;

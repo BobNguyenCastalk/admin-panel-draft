@@ -1,12 +1,14 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
 import { TableCell, TableHead as MuiTableHead } from "@material-ui/core";
 import { TableHeadProps as MuiTableHeadProps } from "@material-ui/core/TableHead";
 import TableRowLink from "@presentation/shared/TableRowLink";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
-import React from "react";
-import { FormattedMessage } from "react-intl";
 
 import { Node } from "../../../types";
 import Checkbox from "../Checkbox";

@@ -1,7 +1,9 @@
-import { isExternalURL } from "@dashboard/business/utils/shared/urls";
-import { IconButton as MacawIconButton, IconButtonProps } from "@saleor/macaw-ui";
 import React from "react";
 import { Link } from "react-router-dom";
+
+import { IconButton as MacawIconButton, IconButtonProps } from "@saleor/macaw-ui";
+
+import { isExternalURL } from "@dashboard/business/utils/shared/urls";
 
 const _IconButton: React.FC<any> = React.forwardRef(({ href, ...props }, ref) => {
   if (href && !isExternalURL(href)) {

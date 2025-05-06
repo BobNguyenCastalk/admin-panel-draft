@@ -1,5 +1,6 @@
-import { Box, Modal, PropsWithBox } from "@saleor/macaw-ui-next";
 import React, { ReactNode } from "react";
+
+import { Box, Modal, PropsWithBox } from "@saleor/macaw-ui-next";
 
 export type ContentSize = "xs" | "sm" | "md" | "lg" | "xl";
 

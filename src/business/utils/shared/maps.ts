@@ -1,3 +1,6 @@
+import { Choice } from "@saleor/macaw-ui";
+import { Option } from "@saleor/macaw-ui-next";
+
 import { getFullName } from "@dashboard/business/misc";
 import {
   CountryFragment,
@@ -7,8 +10,6 @@ import {
   PageFragment,
 } from "@dashboard/graphql";
 import { Node, SlugNode, TagNode } from "@dashboard/types";
-import { Choice } from "@saleor/macaw-ui";
-import { Option } from "@saleor/macaw-ui-next";
 
 interface Edge<T> {
   node: T;

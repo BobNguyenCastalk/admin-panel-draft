@@ -1,5 +1,6 @@
-import { Box, Checkbox, CheckedState, Text } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, Checkbox, CheckedState, Text } from "@saleor/macaw-ui-next";
 
 interface HeaderProps {
   description: string;

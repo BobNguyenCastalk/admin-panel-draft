@@ -1,6 +1,7 @@
 // This is the temporary file for the authentication function
 // TODO: Remove this file after the authentication is done
 import { gql } from "@apollo/client";
+
 import { storage } from "@business/utils/shared/storage";
 import { useBoundStore } from "@dashboard/stores";
 

@@ -1,6 +1,8 @@
-import * as RadixRadioGroup from "@radix-ui/react-radio-group";
-import { Box, Text } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
+
+import * as RadixRadioGroup from "@radix-ui/react-radio-group";
 
 import { RadioTileIndicator } from "./RadioTileIndicator";
 import { getBgColor, getBorderColor, getHoverStateBgColor } from "./utils";

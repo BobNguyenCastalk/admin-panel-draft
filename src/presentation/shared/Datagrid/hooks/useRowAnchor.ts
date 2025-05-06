@@ -1,7 +1,8 @@
+import { useCallback, useRef } from "react";
+
 import useDebounce from "@dashboard/business/hooks/shared/useDebounce";
 import { getAppMountUri } from "@dashboard/configs";
 import { DataEditorProps, GridMouseEventArgs, Item } from "@glideapps/glide-data-grid";
-import { useCallback, useRef } from "react";
 
 import { AvailableColumn } from "../types";
 import { preventRowClickOnSelectionCheckbox } from "../utils";

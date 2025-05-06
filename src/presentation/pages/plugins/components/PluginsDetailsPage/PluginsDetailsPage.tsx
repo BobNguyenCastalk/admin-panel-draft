@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
 import { ChangeEvent, SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { getStringOrPlaceholder } from "@dashboard/business/misc";
@@ -17,8 +20,6 @@ import Form from "@presentation/shared/Form";
 import Grid from "@presentation/shared/Grid";
 import { DetailPageLayout } from "@presentation/shared/Layouts";
 import { Savebar } from "@presentation/shared/Savebar";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import PluginAuthorization from "../PluginAuthorization";
 import PluginDetailsChannelsCard from "../PluginDetailsChannelsCard";

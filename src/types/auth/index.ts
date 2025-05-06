@@ -1,19 +1,4 @@
-import { ApolloQueryResult } from "@apollo/client";
-import { UserDetailsQuery, UserFragment } from "@dashboard/graphql";
 import { LoginData } from "@saleor/sdk";
-
-export interface RequestExternalLoginInput {
-  redirectUri: string;
-}
-
-export interface ExternalLoginInput {
-  code: string;
-  state: string;
-}
-
-export interface RequestExternalLogoutInput {
-  returnTo: string;
-}
 
 export const UserContextError = {
   loginError: "loginError",
@@ -32,5 +17,4 @@ export interface UserContext {
   logout?: () => Promise<void>;
   authenticating: boolean;
   authenticated: boolean;
-  errors: UserContextError[];
 }

@@ -1,7 +1,8 @@
 // @ts-strict-ignore
-import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 import React from "react";
 import { IntlProvider, ReactIntlErrorCode } from "react-intl";
+
+import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";
 
 export enum Locale {
   AR = "ar",

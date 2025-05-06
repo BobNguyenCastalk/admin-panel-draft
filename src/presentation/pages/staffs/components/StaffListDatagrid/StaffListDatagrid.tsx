@@ -1,3 +1,9 @@
+import React, { useCallback, useMemo } from "react";
+import { useIntl } from "react-intl";
+import { useLocation } from "react-router";
+
+import { Box, useTheme } from "@saleor/macaw-ui-next";
+
 import { getPrevLocationState } from "@dashboard/business/hooks/shared/useBackLinkWithState";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import {
@@ -15,10 +21,6 @@ import {
 } from "@presentation/shared/Datagrid/hooks/useDatagridChange";
 import { useEmptyColumn } from "@presentation/shared/Datagrid/hooks/useEmptyColumn";
 import { TablePaginationWithContext } from "@presentation/shared/TablePagination";
-import { Box, useTheme } from "@saleor/macaw-ui-next";
-import React, { useCallback, useMemo } from "react";
-import { useIntl } from "react-intl";
-import { useLocation } from "react-router";
 
 import { createGetCellContent, staffMembersListStaticColumnsAdapter } from "./datagrid";
 import { messages } from "./messages";

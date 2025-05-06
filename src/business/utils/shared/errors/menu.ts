@@ -1,5 +1,6 @@
-import { MenuErrorFragment } from "@dashboard/graphql";
 import { IntlShape } from "react-intl";
+
+import { MenuErrorFragment } from "@dashboard/graphql";
 
 import { getCommonFormFieldErrorMessage } from "./common";
 

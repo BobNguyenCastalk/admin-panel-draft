@@ -1,6 +1,7 @@
+import { useRef } from "react";
+
 import useDebounce from "@dashboard/business/hooks/shared/useDebounce";
 import { MetadataItemFragment } from "@dashboard/graphql";
-import { useRef } from "react";
 
 import { byDuplicates } from "./byDuplicates";
 import { PersistedColumn, RawColumn } from "./persistedColumn";

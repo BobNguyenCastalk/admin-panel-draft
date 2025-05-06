@@ -1,12 +1,14 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { sprinkles, vars } from "@saleor/macaw-ui-next";
+
 import { getUserInitials } from "@dashboard/business/misc";
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { TextField } from "@material-ui/core";
 import { Button } from "@presentation/shared/Button";
-import { makeStyles } from "@saleor/macaw-ui";
-import { sprinkles, vars } from "@saleor/macaw-ui-next";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { DashboardCard } from "../Card";
 import { UserAvatar } from "../UserAvatar";

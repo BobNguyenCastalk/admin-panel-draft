@@ -1,5 +1,6 @@
-import unionBy from "lodash/unionBy";
 import { useState } from "react";
+
+import unionBy from "lodash/unionBy";
 
 import { LeftOperand, LeftOperandsProvider } from "./LeftOperandsProvider";
 

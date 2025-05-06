@@ -1,11 +1,13 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box, Divider, Text } from "@saleor/macaw-ui-next";
+
 import useDateLocalize from "@dashboard/business/hooks/shared/useDateLocalize";
 import { RequireOnlyOne } from "@dashboard/business/misc";
 import { Channel as ChannelList, ChannelData } from "@dashboard/business/utils/channels/utils";
 import { PermissionEnum } from "@dashboard/graphql";
-import { Box, Divider, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { ChannelAvailabilityItemContent, ChannelAvailabilityItemWrapper } from "./Channel";
 import {

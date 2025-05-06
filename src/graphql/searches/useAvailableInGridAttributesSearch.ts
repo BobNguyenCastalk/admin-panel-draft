@@ -1,5 +1,6 @@
 // @ts-strict-ignore
 import { gql } from "@apollo/client";
+
 import makeSearch from "@dashboard/business/hooks/shared/makeSearch";
 import {
   SearchAvailableInGridAttributesDocument,

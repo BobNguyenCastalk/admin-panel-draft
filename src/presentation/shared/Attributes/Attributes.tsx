@@ -1,3 +1,8 @@
+import React from "react";
+import { defineMessages, FormattedMessage, useIntl } from "react-intl";
+
+import { Accordion, Box, Text } from "@saleor/macaw-ui-next";
+
 import { AttributeReference } from "@dashboard/attributes/utils/data";
 import { FormsetAtomicData } from "@dashboard/business/hooks/shared/useFormset";
 import { RichTextGetters } from "@dashboard/business/utils/shared/richText/useMultipleRichText";
@@ -12,9 +17,6 @@ import {
 } from "@dashboard/graphql";
 import { AttributeValuesMetadata } from "@dashboard/products/utils/data";
 import { FetchMoreProps } from "@dashboard/types";
-import { Accordion, Box, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { defineMessages, FormattedMessage, useIntl } from "react-intl";
 
 import { DashboardCard } from "../Card";
 import { AttributeListItem } from "./AttributeListItem";

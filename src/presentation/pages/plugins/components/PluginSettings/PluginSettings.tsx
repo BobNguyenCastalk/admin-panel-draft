@@ -1,4 +1,9 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Box, Tooltip } from "@saleor/macaw-ui-next";
+
 import { getFieldError } from "@dashboard/business/utils/shared/errors";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
 import { UserError } from "@dashboard/types";
@@ -6,9 +11,6 @@ import { TextField } from "@material-ui/core";
 import InfoIcon from "@material-ui/icons/Info";
 import { DashboardCard } from "@presentation/shared/Card";
 import ControlledSwitch from "@presentation/shared/ControlledSwitch";
-import { Box, Tooltip } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { PluginDetailsPageFormData } from "../PluginsDetailsPage";
 

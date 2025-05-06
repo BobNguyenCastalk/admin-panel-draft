@@ -1,9 +1,11 @@
+import React, { useCallback, useMemo } from "react";
+import { useIntl } from "react-intl";
+
+import { SearchIcon } from "@saleor/macaw-ui-next";
+
 import { Graphql } from "@assets/icons/Graphql";
 import { useDevModeContext } from "@presentation/shared/DevModePanel/hooks";
 import { useNavigatorSearchContext } from "@presentation/shared/NavigatorSearch/useNavigatorSearchContext";
-import { SearchIcon } from "@saleor/macaw-ui-next";
-import React, { useCallback, useMemo } from "react";
-import { useIntl } from "react-intl";
 
 import { shortcutsMessages } from "./messages";
 import { getShortcutLeadingKey } from "./utils";

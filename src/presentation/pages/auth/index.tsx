@@ -1,8 +1,9 @@
+import React, { useContext } from "react";
+import { RouteComponentProps, Switch } from "react-router-dom";
+
 import { newPasswordPath } from "@business/utils/auth/urls";
 import { Route } from "@presentation/shared/Router";
 import { parse as parseQs } from "qs";
-import React, { useContext } from "react";
-import { RouteComponentProps, Switch } from "react-router-dom";
 
 import { UserContext as Context } from "../../../auth/types";
 import Layout from "./components/Layout";

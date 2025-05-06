@@ -1,4 +1,6 @@
 // @ts-strict-ignore
+import { useIntl } from "react-intl";
+
 import {
   ApolloError,
   MutationFunction,
@@ -6,6 +8,7 @@ import {
   MutationResult,
   useMutation as useBaseMutation,
 } from "@apollo/client";
+
 import { isJwtError } from "@business/utils/auth/errors";
 import { getMutationStatus } from "@dashboard/business/misc";
 import { GqlErrors, hasError } from "@dashboard/business/utils/shared/api";
@@ -17,7 +20,6 @@ import {
 } from "@dashboard/presentation/pages/auth";
 import { MutationResultAdditionalProps } from "@dashboard/types";
 import { DocumentNode } from "graphql";
-import { useIntl } from "react-intl";
 
 import useNotifier from "./useNotifier";
 

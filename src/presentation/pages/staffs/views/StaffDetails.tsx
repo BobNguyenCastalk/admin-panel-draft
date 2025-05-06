@@ -1,4 +1,7 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
 import { useProfileOperations, useStaffUserOperations } from "@business/hooks/staffs";
 import {
   staffListUrl,
@@ -17,8 +20,6 @@ import ActionDialog from "@presentation/shared/ActionDialog";
 import NotFoundPage from "@presentation/shared/NotFoundPage";
 import { hasPermissions } from "@presentation/shared/RequirePermissions";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import StaffDetailsPage, {
   StaffDetailsFormData,

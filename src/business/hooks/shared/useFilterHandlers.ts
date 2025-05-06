@@ -1,11 +1,12 @@
 // @ts-strict-ignore
+import { useEffect, useRef } from "react";
+
 import {
   GetFilterQueryParam,
   getFilterQueryParams,
 } from "@dashboard/business/utils/shared/filters";
 import { ActiveTab, Pagination, Search, Sort } from "@dashboard/types";
 import { IFilter } from "@presentation/shared/Filter";
-import { useEffect, useRef } from "react";
 
 import useNavigator from "./useNavigator";
 

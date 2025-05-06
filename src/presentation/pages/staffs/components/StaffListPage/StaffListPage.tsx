@@ -1,3 +1,8 @@
+import React, { useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
+
 import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";
 import { sectionNames } from "@dashboard/constants/common/intl";
 import { useFlag } from "@dashboard/featureFlags";
@@ -10,9 +15,6 @@ import { TopNav } from "@presentation/shared/AppLayout/TopNav";
 import { DashboardCard } from "@presentation/shared/Card";
 import { FilterPresetsSelect } from "@presentation/shared/FilterPresetsSelect";
 import { ListPageLayout } from "@presentation/shared/Layouts";
-import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
-import React, { useState } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { StaffListDatagrid } from "../StaffListDatagrid";
 import { createFilterStructure, StaffFilterKeys, StaffListFilterOpts } from "./filters";

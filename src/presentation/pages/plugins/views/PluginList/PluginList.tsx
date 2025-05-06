@@ -1,4 +1,6 @@
 // @ts-strict-ignore
+import React from "react";
+
 import { useChannelsSearchWithLoadMore } from "@dashboard/business/hooks/shared/useChannelsSearchWithLoadMore";
 import useListSettings from "@dashboard/business/hooks/shared/useListSettings";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
@@ -24,7 +26,6 @@ import DeleteFilterTabDialog from "@presentation/shared/DeleteFilterTabDialog";
 import SaveFilterTabDialog, {
   SaveFilterTabDialogFormData,
 } from "@presentation/shared/SaveFilterTabDialog";
-import React from "react";
 
 import PluginsListPage from "../../components/PluginsListPage/PluginsListPage";
 import {

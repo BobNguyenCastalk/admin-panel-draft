@@ -1,9 +1,10 @@
+import { IntlShape } from "react-intl";
+
 import {
   TaxClassCreateErrorFragment,
   TaxClassDeleteErrorFragment,
   TaxClassUpdateErrorFragment,
 } from "@dashboard/graphql";
-import { IntlShape } from "react-intl";
 
 import { CommonError, CommonErrorCode, getCommonFormFieldErrorMessage } from "./common";
 

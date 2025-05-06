@@ -1,7 +1,8 @@
+import React from "react";
+
 import { fuzzySearch } from "@dashboard/business/misc";
 import { ChannelDetailsFragment } from "@dashboard/graphql";
 import { FetchMoreProps, Search, SearchProps } from "@dashboard/types";
-import React from "react";
 
 export const useChannelsSearch = function <T extends { name: string }>(channels: T[]) {
   const [query, onQueryChange] = React.useState("");

@@ -1,9 +1,10 @@
-import { getAppMountUri } from "@dashboard/configs";
-import * as Sentry from "@sentry/react";
-import { createBrowserHistory } from "history";
 import React from "react";
 import { RouterProps as BaseRouterProps } from "react-router";
 import { Route as BaseRoute, Router as BaseRouter } from "react-router-dom";
+
+import { getAppMountUri } from "@dashboard/configs";
+import * as Sentry from "@sentry/react";
+import { createBrowserHistory } from "history";
 
 type RouterProps = Omit<BaseRouterProps, "history"> & { children: React.ReactNode };
 

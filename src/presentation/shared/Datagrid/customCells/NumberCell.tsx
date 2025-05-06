@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   CustomCell,
   CustomRenderer,
@@ -5,7 +7,6 @@ import {
   GridCellKind,
   ProvideEditorCallback,
 } from "@glideapps/glide-data-grid";
-import React from "react";
 
 import { Locale } from "../../Locale";
 

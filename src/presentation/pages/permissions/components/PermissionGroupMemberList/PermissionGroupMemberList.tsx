@@ -1,4 +1,10 @@
 // @ts-strict-ignore
+import React from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { DeleteIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
+import { Box, Skeleton, Text, vars } from "@saleor/macaw-ui-next";
+
 import { sortMembers } from "@business/utils/permissions/sort";
 import { MembersListUrlSortField } from "@business/utils/permissions/urls";
 import {
@@ -20,11 +26,7 @@ import TableCellHeader from "@presentation/shared/TableCellHeader";
 import TableHead from "@presentation/shared/TableHead";
 import TableRowLink from "@presentation/shared/TableRowLink";
 import { UserAvatar } from "@presentation/shared/UserAvatar";
-import { DeleteIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
-import { Box, Skeleton, Text, vars } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
-import React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 const useStyles = makeStyles(
   theme => ({

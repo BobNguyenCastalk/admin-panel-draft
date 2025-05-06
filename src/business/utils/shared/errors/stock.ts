@@ -1,5 +1,6 @@
-import { BulkStockErrorFragment, StockErrorCode, StockErrorFragment } from "@dashboard/graphql";
 import { defineMessages, IntlShape } from "react-intl";
+
+import { BulkStockErrorFragment, StockErrorCode, StockErrorFragment } from "@dashboard/graphql";
 
 import { getCommonFormFieldErrorMessage } from "./common";
 import getProductErrorMessage from "./product";

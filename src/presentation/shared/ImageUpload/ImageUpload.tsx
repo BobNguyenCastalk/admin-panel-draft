@@ -1,10 +1,12 @@
 // @ts-strict-ignore
-import { alpha } from "@material-ui/core/styles";
-import { ImageIcon, makeStyles } from "@saleor/macaw-ui";
-import { Text, vars } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
 import React from "react";
 import { FormattedMessage } from "react-intl";
+
+import { ImageIcon, makeStyles } from "@saleor/macaw-ui";
+import { Text, vars } from "@saleor/macaw-ui-next";
+
+import { alpha } from "@material-ui/core/styles";
+import clsx from "clsx";
 
 import Dropzone from "../Dropzone";
 

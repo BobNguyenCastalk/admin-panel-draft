@@ -1,7 +1,8 @@
+import { CSSProperties } from "react";
+
 import type { UniqueIdentifier } from "@dnd-kit/core";
 import { AnimateLayoutChanges, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { CSSProperties } from "react";
 
 import { DataTypePlaceholder, TreeItemComponentProps } from "./types";
 

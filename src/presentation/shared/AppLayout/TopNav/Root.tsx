@@ -1,7 +1,9 @@
+import React, { PropsWithChildren } from "react";
+
+import { Box, Text } from "@saleor/macaw-ui-next";
+
 import { useUser } from "@dashboard/presentation/pages/auth";
 import { useBoundStore } from "@dashboard/stores";
-import { Box, Text } from "@saleor/macaw-ui-next";
-import React, { PropsWithChildren } from "react";
 
 import AppChannelSelect from "../AppChannelSelect";
 import { ContextualLine } from "../ContextualLinks/ContextualLine";

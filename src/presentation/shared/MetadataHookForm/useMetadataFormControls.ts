@@ -1,7 +1,8 @@
-import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
-import { MetadataInput } from "@dashboard/graphql";
 import { useFieldArray, UseFormReturn } from "react-hook-form";
 import { IntlShape, useIntl } from "react-intl";
+
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
+import { MetadataInput } from "@dashboard/graphql";
 
 import { EventDataAction, EventDataField } from "../Metadata/types";
 import { getDataKey, parseEventData } from "../Metadata/utils";

@@ -1,6 +1,7 @@
 // DON'T TOUCH THIS
 // These are separate clients and do not share configs between themselves
 import { ApolloClient, ApolloLink, FetchResult, InMemoryCache } from "@apollo/client";
+
 import { logout, refreshToken as getRefreshToken } from "@business/utils/auth/temp";
 import { getState } from "@business/utils/shared/state";
 import { createStorage, storage } from "@business/utils/shared/storage";

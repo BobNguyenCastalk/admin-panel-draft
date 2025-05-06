@@ -1,5 +1,6 @@
-import { Location, UnregisterCallback } from "history";
 import { useRef } from "react";
+
+import { Location, UnregisterCallback } from "history";
 import useRouter from "use-react-router";
 
 const compareLocations = (a: Location, b: Location) => {

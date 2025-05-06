@@ -1,5 +1,6 @@
-import { PluginErrorCode, PluginErrorFragment } from "@dashboard/graphql";
 import { defineMessages, IntlShape } from "react-intl";
+
+import { PluginErrorCode, PluginErrorFragment } from "@dashboard/graphql";
 
 import { getCommonFormFieldErrorMessage } from "./common";
 

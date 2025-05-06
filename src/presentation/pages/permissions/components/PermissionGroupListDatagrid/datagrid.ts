@@ -1,3 +1,5 @@
+import { IntlShape } from "react-intl";
+
 import { PermissionGroupListUrlSortField } from "@business/utils/permissions/urls";
 import { getColumnSortDirectionIcon } from "@dashboard/business/utils/shared/columns/getColumnSortDirectionIcon";
 import { PermissionGroupFragment } from "@dashboard/graphql";
@@ -6,7 +8,6 @@ import { GridCell, Item } from "@glideapps/glide-data-grid";
 import { PLACEHOLDER } from "@presentation/shared/Datagrid/const";
 import { readonlyTextCell } from "@presentation/shared/Datagrid/customCells/cells";
 import { AvailableColumn } from "@presentation/shared/Datagrid/types";
-import { IntlShape } from "react-intl";
 
 import { columnsMessages } from "./messages";
 

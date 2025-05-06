@@ -1,7 +1,8 @@
-import { ContextualLine } from "@presentation/shared/AppLayout/ContextualLinks/ContextualLine";
-import { renderHook } from "@testing-library/react-hooks";
 import React, { ReactNode } from "react";
 import { IntlProvider } from "react-intl";
+
+import { ContextualLine } from "@presentation/shared/AppLayout/ContextualLinks/ContextualLine";
+import { renderHook } from "@testing-library/react-hooks";
 
 import { useContextualLink } from "./useContextualLink";
 

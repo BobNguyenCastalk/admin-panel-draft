@@ -1,7 +1,9 @@
-import { useDragResize, usePluginContext, useTheme as useGraphiQLTheme } from "@graphiql/react";
+import { useEffect } from "react";
+
 import { makeStyles } from "@saleor/macaw-ui";
 import { useTheme, vars } from "@saleor/macaw-ui-next";
-import { useEffect } from "react";
+
+import { useDragResize, usePluginContext, useTheme as useGraphiQLTheme } from "@graphiql/react";
 
 export const useStyles = makeStyles(
   () => ({

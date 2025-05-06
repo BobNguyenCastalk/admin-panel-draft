@@ -1,10 +1,12 @@
 // @ts-strict-ignore
+import React, { useState } from "react";
+
+import { Accordion, AccordionSummary } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
 import useStateFromProps from "@dashboard/business/hooks/shared/useStateFromProps";
 import { makeStyles, Paper } from "@material-ui/core";
 import CollectionWithDividers from "@presentation/shared/CollectionWithDividers";
-import { Accordion, AccordionSummary } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
-import React, { useState } from "react";
 
 import { FilterAutocompleteDisplayValues } from "../FilterAutocompleteField";
 import { FilterReducerAction } from "../reducer";

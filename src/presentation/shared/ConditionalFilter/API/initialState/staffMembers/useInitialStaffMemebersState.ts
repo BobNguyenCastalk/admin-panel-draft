@@ -1,6 +1,7 @@
-import { StaffMemberStatus } from "@dashboard/graphql";
 import { useState } from "react";
 import { useIntl } from "react-intl";
+
+import { StaffMemberStatus } from "@dashboard/graphql";
 
 import { StaffMembersFetchingParams } from "../../../ValueProvider/TokenArray/fetchingParams";
 import { EnumValuesHandler } from "../../Handler";

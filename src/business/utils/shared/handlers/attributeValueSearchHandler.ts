@@ -1,10 +1,11 @@
+import { useEffect, useState } from "react";
+
 import { UseSearchResult } from "@dashboard/business/hooks/shared/makeSearch";
 import {
   SearchAttributeValuesQuery,
   SearchAttributeValuesQueryVariables,
 } from "@dashboard/graphql";
 import useAttributeValueSearch from "@dashboard/searches/useAttributeValueSearch";
-import { useEffect, useState } from "react";
 
 interface AttributeValueSearchHandlerState {
   id: string | null;

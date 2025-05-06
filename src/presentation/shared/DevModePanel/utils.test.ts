@@ -1,5 +1,6 @@
-import { createGraphiQLFetcher, FetcherOpts } from "@graphiql/toolkit";
 import { createFetch } from "@saleor/sdk";
+
+import { createGraphiQLFetcher, FetcherOpts } from "@graphiql/toolkit";
 
 import { getFetcher } from "./utils";
 

@@ -1,3 +1,5 @@
+import { Option } from "@saleor/macaw-ui-next";
+
 import { UserContext } from "@dashboard/auth/types";
 import {
   ChannelFragment,
@@ -5,7 +7,6 @@ import {
   PermissionGroupDetailsFragment,
   UserFragment,
 } from "@dashboard/graphql";
-import { Option } from "@saleor/macaw-ui-next";
 import difference from "lodash/difference";
 
 import { PermissionGroupDetailsPageFormData } from "./components/PermissionGroupDetailsPage";

@@ -1,10 +1,12 @@
+import React from "react";
+
+import { makeStyles } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
+
 import useForm from "@dashboard/business/hooks/shared/useForm";
 import { TableCell, TextField } from "@material-ui/core";
 import { TextFieldProps } from "@material-ui/core/TextField";
-import { makeStyles } from "@saleor/macaw-ui";
-import { Text } from "@saleor/macaw-ui-next";
 import clsx from "clsx";
-import React from "react";
 
 import { DashboardCard } from "../Card";
 

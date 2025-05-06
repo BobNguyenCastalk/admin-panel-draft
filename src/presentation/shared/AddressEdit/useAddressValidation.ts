@@ -1,10 +1,11 @@
 // @ts-strict-ignore
+import { ChoiceValue } from "@saleor/sdk/dist/apollo/types";
+
 import {
   AddressValidationRulesQuery,
   CountryCode,
   useAddressValidationRulesQuery,
 } from "@dashboard/graphql";
-import { ChoiceValue } from "@saleor/sdk/dist/apollo/types";
 
 interface AreaChoices {
   label: string;

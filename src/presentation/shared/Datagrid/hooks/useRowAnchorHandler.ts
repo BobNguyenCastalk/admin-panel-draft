@@ -1,5 +1,6 @@
-import useNavigator, { NavigatorOpts } from "@dashboard/business/hooks/shared/useNavigator";
 import { MouseEvent } from "react";
+
+import useNavigator, { NavigatorOpts } from "@dashboard/business/hooks/shared/useNavigator";
 
 export const useRowAnchorHandler = (navigatorOpts?: NavigatorOpts) => {
   const navigate = useNavigator();

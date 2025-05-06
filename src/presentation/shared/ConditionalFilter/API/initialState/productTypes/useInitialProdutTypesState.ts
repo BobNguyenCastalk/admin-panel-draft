@@ -1,8 +1,9 @@
+import { useState } from "react";
+import { useIntl } from "react-intl";
+
 import { ProductTypeEnum } from "@dashboard/graphql";
 import { InitialProductTypesStateResponse } from "@presentation/shared/ConditionalFilter/API/initialState/productTypes/InitialProductTypesState";
 import { createBooleanOptions } from "@presentation/shared/ConditionalFilter/constants";
-import { useState } from "react";
-import { useIntl } from "react-intl";
 
 import { ProductTypesFetchingParams } from "../../../ValueProvider/TokenArray/fetchingParams";
 import { EnumValuesHandler } from "../../Handler";

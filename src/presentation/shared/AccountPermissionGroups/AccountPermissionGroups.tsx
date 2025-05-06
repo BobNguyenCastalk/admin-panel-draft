@@ -1,12 +1,14 @@
 // @ts-strict-ignore
+import React from "react";
+import { useIntl } from "react-intl";
+
+import { Option, Text } from "@saleor/macaw-ui-next";
+
 import { FormChange } from "@dashboard/business/hooks/shared/useForm";
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
 import getStaffErrorMessage from "@dashboard/business/utils/shared/errors/staff";
 import { SearchPermissionGroupsQuery, StaffErrorFragment } from "@dashboard/graphql";
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
-import { Option, Text } from "@saleor/macaw-ui-next";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import { Multiselect } from "../Combobox";
 

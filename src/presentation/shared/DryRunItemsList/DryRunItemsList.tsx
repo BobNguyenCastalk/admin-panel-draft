@@ -1,9 +1,8 @@
 // @ts-strict-ignore
 
-import { useQuery } from "@dashboard/business/hooks/shared/graphql";
-import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
-import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
-import { Radio } from "@material-ui/core";
+import React from "react";
+import { useIntl } from "react-intl";
+
 import {
   List,
   ListBody,
@@ -13,9 +12,12 @@ import {
   useListWidths,
 } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
+
+import { useQuery } from "@dashboard/business/hooks/shared/graphql";
+import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
+import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
+import { Radio } from "@material-ui/core";
 import camelCase from "lodash/camelCase";
-import React from "react";
-import { useIntl } from "react-intl";
 
 import Avatar from "../TableCellAvatar/Avatar";
 import { messages } from "./messages";

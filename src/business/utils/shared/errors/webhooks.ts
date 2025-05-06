@@ -1,5 +1,6 @@
-import { WebhookErrorFragment } from "@dashboard/graphql";
 import { IntlShape } from "react-intl";
+
+import { WebhookErrorFragment } from "@dashboard/graphql";
 
 import { getCommonFormFieldErrorMessage } from "./common";
 

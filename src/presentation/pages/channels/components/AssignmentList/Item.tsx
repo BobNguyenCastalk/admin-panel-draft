@@ -1,7 +1,9 @@
-import DeletableItem from "@presentation/shared/DeletableItem";
-import { Divider, Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { SortableElement, SortableElementProps } from "react-sortable-hoc";
+
+import { Divider, Text } from "@saleor/macaw-ui-next";
+
+import DeletableItem from "@presentation/shared/DeletableItem";
 
 import SortableHandle from "./SortableHandle";
 import { useStyles } from "./styles";

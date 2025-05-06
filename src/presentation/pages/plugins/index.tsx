@@ -1,3 +1,7 @@
+import React from "react";
+import { useIntl } from "react-intl";
+import { RouteComponentProps, Switch } from "react-router-dom";
+
 import {
   pluginListPath,
   PluginListUrlQueryParams,
@@ -10,9 +14,6 @@ import { sectionNames } from "@dashboard/constants/common/intl";
 import { Route } from "@presentation/shared/Router";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { parse as parseQs } from "qs";
-import React from "react";
-import { useIntl } from "react-intl";
-import { RouteComponentProps, Switch } from "react-router-dom";
 
 import PluginsListComponent from "./views/PluginList";
 import PluginsDetailsComponent from "./views/PluginsDetails";

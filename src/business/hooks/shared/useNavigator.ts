@@ -1,5 +1,6 @@
-import { ExitFormDialogContext } from "@presentation/shared/Form/ExitFormDialogProvider";
 import { useContext } from "react";
+
+import { ExitFormDialogContext } from "@presentation/shared/Form/ExitFormDialogProvider";
 import useRouter from "use-react-router";
 
 export type NavigatorOpts = {

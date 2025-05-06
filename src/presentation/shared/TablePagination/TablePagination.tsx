@@ -1,13 +1,15 @@
-import { commonMessages } from "@dashboard/constants/common/intl";
-import { TableCell } from "@material-ui/core";
+import React from "react";
+import { useIntl } from "react-intl";
+import { Link, LinkProps } from "react-router-dom";
+
 import {
   Pagination,
   PaginationProps as MacawPaginationProps,
   PaginationRowNumberSelectLabels,
 } from "@saleor/macaw-ui";
-import React from "react";
-import { useIntl } from "react-intl";
-import { Link, LinkProps } from "react-router-dom";
+
+import { commonMessages } from "@dashboard/constants/common/intl";
+import { TableCell } from "@material-ui/core";
 
 import { ListSettings } from "../../../types";
 

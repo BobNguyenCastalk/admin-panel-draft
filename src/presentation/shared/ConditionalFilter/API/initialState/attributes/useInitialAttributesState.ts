@@ -1,12 +1,14 @@
+import { useState } from "react";
+import { useIntl } from "react-intl";
+
 import { useApolloClient } from "@apollo/client";
+
 import {
   _GetChannelOperandsDocument,
   _GetChannelOperandsQuery,
   _GetChannelOperandsQueryVariables,
   AttributeTypeEnum,
 } from "@dashboard/graphql";
-import { useState } from "react";
-import { useIntl } from "react-intl";
 
 import { AttributesFetchingParams } from "../../../ValueProvider/TokenArray/fetchingParams";
 import { EnumValuesHandler } from "../../Handler";

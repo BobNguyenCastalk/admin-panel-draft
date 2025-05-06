@@ -1,9 +1,11 @@
+import React from "react";
+
+import { Box } from "@saleor/macaw-ui-next";
+
 import { mapNodeToChoice } from "@dashboard/business/utils/shared/maps";
 import { ChannelFragment } from "@dashboard/graphql";
 import { ChannelProps } from "@dashboard/types";
 import { Select } from "@presentation/shared/Select";
-import { Box } from "@saleor/macaw-ui-next";
-import React from "react";
 
 export interface AppChannelSelectProps extends ChannelProps {
   channels: ChannelFragment[];

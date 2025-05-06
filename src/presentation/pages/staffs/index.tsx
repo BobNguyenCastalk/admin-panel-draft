@@ -1,3 +1,7 @@
+import React from "react";
+import { useIntl } from "react-intl";
+import { RouteComponentProps, Switch } from "react-router-dom";
+
 import {
   staffListPath,
   StaffListUrlQueryParams,
@@ -11,9 +15,6 @@ import { ConditionalStaffMembersFilterProvider } from "@presentation/shared/Cond
 import { Route } from "@presentation/shared/Router";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 import { parse as parseQs } from "qs";
-import React from "react";
-import { useIntl } from "react-intl";
-import { RouteComponentProps, Switch } from "react-router-dom";
 
 import StaffDetailsComponent from "./views/StaffDetails";
 import StaffListComponent from "./views/StaffList";

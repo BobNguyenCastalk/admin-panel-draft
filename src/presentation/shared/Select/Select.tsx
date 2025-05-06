@@ -1,10 +1,12 @@
-import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
+import React from "react";
+
 import {
   Option,
   Select as SelectComponent,
   SelectProps as SelectComponentProps,
 } from "@saleor/macaw-ui-next";
-import React from "react";
+
+import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 
 export interface SelectProps<T, V> extends Omit<SelectComponentProps<T, V>, "onChange"> {
   onChange: (event: ChangeEvent) => void;

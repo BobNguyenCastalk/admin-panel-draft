@@ -1,5 +1,6 @@
-import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import React from "react";
+
+import { Skeleton, Text } from "@saleor/macaw-ui-next";
 
 import { AddressType } from "../../customers/types";
 

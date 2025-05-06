@@ -1,3 +1,7 @@
+import { IntlShape } from "react-intl";
+
+import { DefaultTheme } from "@saleor/macaw-ui-next";
+
 import { getStatusColor, getUserName } from "@dashboard/business/misc";
 import { getColumnSortDirectionIcon } from "@dashboard/business/utils/shared/columns/getColumnSortDirectionIcon";
 import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";
@@ -12,8 +16,6 @@ import {
   thumbnailCell,
 } from "@presentation/shared/Datagrid/customCells/cells";
 import { AvailableColumn } from "@presentation/shared/Datagrid/types";
-import { DefaultTheme } from "@saleor/macaw-ui-next";
-import { IntlShape } from "react-intl";
 
 import { columnsMessages } from "./messages";
 

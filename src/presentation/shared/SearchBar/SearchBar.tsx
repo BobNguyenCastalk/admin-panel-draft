@@ -1,8 +1,10 @@
-import { SearchPageProps, TabPageProps } from "@dashboard/types";
-import { Button } from "@presentation/shared/Button";
-import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { makeStyles } from "@saleor/macaw-ui";
+
+import { SearchPageProps, TabPageProps } from "@dashboard/types";
+import { Button } from "@presentation/shared/Button";
 
 import FilterTabs, { FilterTab } from "../TableFilter";
 import SearchInput from "./SearchInput";
