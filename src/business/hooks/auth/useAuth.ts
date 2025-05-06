@@ -14,7 +14,7 @@ import { useBoundStore } from "@dashboard/stores";
 import { UserContext, UserContextError } from "@dashboard/types/auth";
 import { IMessageContext } from "@presentation/shared/messages";
 import isEmpty from "lodash/isEmpty";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { IntlShape } from "react-intl";
 
 export interface UseAuthOpts {
@@ -36,33 +36,6 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
   const [errors, setErrors] = useState<UserContextError[]>([]);
   const permitCredentialsAPI = useRef(true);
 
-  useEffect(() => {
-    if (authenticating && errors.length) {
-      setErrors([]);
-    }
-  }, [authenticating]);
-
-  useEffect(() => {
-    if (authenticated) {
-      permitCredentialsAPI.current = true;
-    }
-  }, [authenticated]);
-
-  useEffect(() => {
-    if (!authenticated && !authenticating && permitCredentialsAPI.current) {
-      permitCredentialsAPI.current = false;
-      loginWithCredentialsManagementAPI(handleLogin);
-    }
-  }, [authenticated, authenticating]);
-
-  const userDetails = useUserDetailsQuery({
-    client: apolloClient,
-    skip: !authenticated,
-    // Don't change this to 'network-only' - update of intl provider's
-    // state will cause an error
-    fetchPolicy: "cache-and-network",
-  });
-
   const handleLoginError = (error: ApolloError) => {
     const parsedErrors = parseAuthError(error);
 
@@ -73,7 +46,7 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
     }
   };
 
-  const handleLogout = async () => {
+  const handleLogout = useCallback(async () => {
     setAuthenticated(false);
     setUser(null);
 
@@ -102,89 +75,113 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
         navigate("/");
       }
     }
-  };
+  }, [apolloClient, navigate, setAuthenticated, setUser]);
 
-  const handleLogin = async (email: string, password: string) => {
-    try {
-      setAuthenticating(true);
-
-      const result = await login(apolloClient, {
-        email,
-        password,
-        includeDetails: false,
-      });
-
-      const errorList = result.data?.tokenCreate?.errors?.map(
-        ({ code }) => code,
-        // SDK is deprecated and has outdated types - we need to use ones from Dashboard
-      ) as AuthErrorCodes[];
-
-      const userLoggedInButHasNoPermissions =
-        result.data?.tokenCreate?.user && isEmpty(result.data?.tokenCreate?.user?.userPermissions);
-
-      if (userLoggedInButHasNoPermissions) {
-        setErrors(["noPermissionsError"]);
+  const logoutNonStaffUser = useCallback(
+    async data => {
+      if (data?.user && !data.user.isStaff) {
+        notify({
+          status: "error",
+          text: intl.formatMessage(commonMessages.unauthorizedDashboardAccess),
+          title: intl.formatMessage(commonMessages.insufficientPermissions),
+        });
         await handleLogout();
       }
+    },
+    [handleLogout, intl, notify],
+  );
 
-      const hasUser = !!result.data?.tokenCreate?.user;
+  const handleLogin = useCallback(
+    async (email: string, password: string) => {
+      try {
+        setAuthenticating(true);
 
-      if (hasUser && !errorList?.length) {
-        saveCredentials(result.data!.tokenCreate!.user!, password);
-      } else {
-        const userContextErrorList: UserContextError[] = [];
-
-        errorList?.forEach(error => {
-          switch (error) {
-            case AccountErrorCode.LOGIN_ATTEMPT_DELAYED:
-              userContextErrorList.push("loginAttemptDelay");
-              break;
-            case AccountErrorCode.INVALID_CREDENTIALS:
-              userContextErrorList.push("invalidCredentials");
-              break;
-            default:
-              userContextErrorList.push("loginError");
-              break;
-          }
+        const result = await login(apolloClient, {
+          email,
+          password,
+          includeDetails: false,
         });
 
-        setErrors(userContextErrorList);
+        const errorList = result.data?.tokenCreate?.errors?.map(
+          ({ code }) => code,
+          // SDK is deprecated and has outdated types - we need to use ones from Dashboard
+        ) as AuthErrorCodes[];
+
+        const userLoggedInButHasNoPermissions =
+          result.data?.tokenCreate?.user &&
+          isEmpty(result.data?.tokenCreate?.user?.userPermissions);
+
+        if (userLoggedInButHasNoPermissions) {
+          setErrors(["noPermissionsError"]);
+          await handleLogout();
+        }
+
+        const hasUser = !!result.data?.tokenCreate?.user;
+
+        if (hasUser && !errorList?.length) {
+          saveCredentials(result.data!.tokenCreate!.user!, password);
+        } else {
+          const userContextErrorList: UserContextError[] = [];
+
+          errorList?.forEach(error => {
+            switch (error) {
+              case AccountErrorCode.LOGIN_ATTEMPT_DELAYED:
+                userContextErrorList.push("loginAttemptDelay");
+                break;
+              case AccountErrorCode.INVALID_CREDENTIALS:
+                userContextErrorList.push("invalidCredentials");
+                break;
+              default:
+                userContextErrorList.push("loginError");
+                break;
+            }
+          });
+
+          setErrors(userContextErrorList);
+        }
+
+        await logoutNonStaffUser(result.data?.tokenCreate!);
+        setAuthenticated(true);
+        setUser(result.data?.tokenCreate?.user);
+
+        return result.data?.tokenCreate;
+      } catch (error) {
+        if (error instanceof ApolloError) {
+          handleLoginError(error);
+        } else {
+          setErrors(["unknownLoginError"]);
+        }
+      } finally {
+        setAuthenticating(false);
       }
+    },
+    [apolloClient, handleLogout, logoutNonStaffUser, setAuthenticated, setAuthenticating, setUser],
+  );
 
-      await logoutNonStaffUser(result.data?.tokenCreate!);
-      setAuthenticated(true);
-      setUser(result.data?.tokenCreate?.user);
-
-      return result.data?.tokenCreate;
-    } catch (error) {
-      if (error instanceof ApolloError) {
-        handleLoginError(error);
-      } else {
-        setErrors(["unknownLoginError"]);
-      }
-    } finally {
-      setAuthenticating(false);
+  useEffect(() => {
+    if (authenticating && errors.length) {
+      setErrors([]);
     }
-  };
+  }, [authenticating, errors.length]);
 
-  const logoutNonStaffUser = async data => {
-    if (data?.user && !data.user.isStaff) {
-      notify({
-        status: "error",
-        text: intl.formatMessage(commonMessages.unauthorizedDashboardAccess),
-        title: intl.formatMessage(commonMessages.insufficientPermissions),
-      });
-      await handleLogout();
+  useEffect(() => {
+    if (authenticated) {
+      permitCredentialsAPI.current = true;
     }
-  };
+  }, [authenticated]);
+
+  useEffect(() => {
+    if (!authenticated && !authenticating && permitCredentialsAPI.current) {
+      permitCredentialsAPI.current = false;
+      loginWithCredentialsManagementAPI(handleLogin);
+    }
+  }, [authenticated, authenticating, handleLogin]);
 
   return {
     login: handleLogin,
     logout: handleLogout,
     authenticating: authenticating && !errors.length,
     authenticated: authenticated && !!user?.isStaff && !errors.length,
-    user: userDetails.data?.me,
-    refetchUser: userDetails.refetch,
     errors,
   };
 }

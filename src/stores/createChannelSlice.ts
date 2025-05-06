@@ -5,7 +5,7 @@ import { ChannelI } from "@dashboard/new-types";
 
 export const createChannelSlice = (set): ChannelI => ({
   channels: [],
-  selectedChannel: "",
+  selectedChannel: undefined,
   isPickerActive: false,
   setChannels: (channels: string[]) => set({ channels }),
   setSelectedChannel: (channel: string) => set({ selectedChannel: channel }),

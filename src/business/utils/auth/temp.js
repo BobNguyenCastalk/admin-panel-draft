@@ -2,6 +2,7 @@
 // TODO: Remove this file after the authentication is done
 import { gql } from "@apollo/client";
 import { storage } from "@business/utils/shared/storage";
+import { useBoundStore } from "@dashboard/stores";
 
 export const userBaseFragment = gql`
   fragment UserBaseFragment on User {
@@ -167,8 +168,9 @@ export const refreshToken = (client, includeUser = false) => {
       update: (_, { data }) => {
         if (data?.tokenRefresh?.token) {
           storage.setAccessToken(data.tokenRefresh.token);
+          useBoundStore.setState({ authenticated: true });
         } else {
-          logout();
+          logout(client);
         }
       },
     });

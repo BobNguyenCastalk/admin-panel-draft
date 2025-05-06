@@ -4,8 +4,12 @@ import "@assets/styles/index.css";
 import { ApolloProvider } from "@apollo/client";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
 import { getById } from "@dashboard/business/misc";
-import { fetchUser } from "@dashboard/business/utils/auth/user";
-import { ChannelFragment, PermissionEnum, useBaseChannelsQuery } from "@dashboard/graphql";
+import {
+  ChannelFragment,
+  PermissionEnum,
+  useBaseChannelsQuery,
+  useUserDetailsQuery,
+} from "@dashboard/graphql";
 import PermissionGroupSection from "@dashboard/presentation/pages/permissions";
 import { useBoundStore } from "@dashboard/stores";
 import { ThemeProvider } from "@dashboard/theme";
@@ -74,6 +78,14 @@ const handleLegacyTheming = () => {
 
 handleLegacyTheming();
 
+const isValidChannel = (channelId: string, channelList?: ChannelFragment[]) => {
+  if (!channelId) {
+    return false;
+  }
+
+  return channelList?.some(getById(channelId));
+};
+
 const App: React.FC = () => {
   return (
     <SaleorProvider client={saleorClient}>
@@ -110,56 +122,39 @@ const App: React.FC = () => {
   );
 };
 
+// TODO: handle use logic fetch user detail here and set Channels and selectedChannel
+
 const Routes: React.FC = () => {
   const intl = useIntl();
   const [, dispatchAppState] = useAppState();
   const authenticated = useBoundStore(state => state.authenticated);
   const authenticating = useBoundStore(state => state.authenticating);
   const user = useBoundStore(state => state.user);
+  const setUser = useBoundStore(state => state.setUser);
   const selectedChannel = useBoundStore(state => state.selectedChannel);
   const setSelectedChannel = useBoundStore(state => state.setSelectedChannel);
-  const channelLoaded = typeof selectedChannel !== "undefined";
+  const setChannels = useBoundStore(state => state.setChannels);
+  const channelLoaded = !!selectedChannel;
   const homePageLoaded = channelLoaded && authenticated;
   const homePageLoading = (authenticated && !channelLoaded) || authenticating;
   const { isAppPath } = useLocationState();
 
-  const { data: channelData, refetch } = useBaseChannelsQuery({
-    skip: !authenticated || !user,
+  const userDetailsData = useUserDetailsQuery({
+    client: apolloClient,
+    skip: !authenticated,
+    fetchPolicy: "cache-and-network",
+    onCompleted: data => {
+      setUser(data.me);
+      setChannels(data.me.accessibleChannels);
+      if (!selectedChannel && data.me.accessibleChannels.length > 0) {
+        setSelectedChannel(data.me.accessibleChannels[0].id);
+      }
+    },
   });
 
-  // TODO: this is a logic to check the progress. Remove this once done
-  useEffect(() => {
-    if (authenticated) {
-      setTimeout(async () => {
-        await fetchUser();
-        refetch();
-      }, 1000);
-    }
-  }, [authenticated, refetch]);
-
-  useEffect(() => {
-    const isValidChannel = (channelId: string, channelList?: ChannelFragment[]) => {
-      if (!channelId) {
-        return false;
-      }
-
-      return channelList?.some(getById(channelId));
-    };
-
-    const channels = user?.accessibleChannels ?? [];
-    const isValid = isValidChannel(selectedChannel, channels);
-
-    if (!isValid && channels?.length > 0) {
-      setSelectedChannel(channels[0].id);
-    }
-
-    if (!isValid && selectedChannel !== "") {
-      setSelectedChannel("");
-    }
-
-    // const availableChannels = channelData?.channels || [];
-    // const channel = channelData && (availableChannels.find(getById(selectedChannel)) || null);
-  }, [selectedChannel, setSelectedChannel, user]);
+  const baseChannelsData = useBaseChannelsQuery({
+    skip: !authenticated || !user,
+  });
 
   return (
     <>
@@ -224,7 +219,7 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <App />,
+  // </React.StrictMode>,
 );
