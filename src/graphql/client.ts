@@ -211,39 +211,3 @@ export const apolloClient = new ApolloClient({
   }),
   link,
 });
-
-const createSaleorClient = ({ channel }: SaleorClientOpts) => {
-  let _channel = channel;
-
-  const setChannel = (channel: string): string => {
-    _channel = channel;
-
-    return _channel;
-  };
-
-  createStorage(true);
-
-  const refreshToken = storage.getRefreshToken();
-
-  if (refreshToken) {
-    getRefreshToken(apolloClient, true);
-  }
-
-  const client = {
-    auth: null,
-    user: null,
-    config: { channel: _channel, setChannel, autologin: true },
-    _internal: { apolloClient },
-    getState: () => getState(apolloClient),
-  };
-
-  if (DEVELOPMENT_MODE && WINDOW_EXISTS) {
-    (window as any).__SALEOR_CLIENT__ = client;
-  }
-
-  return client;
-};
-
-export const saleorClient = createSaleorClient({
-  channel: "",
-});

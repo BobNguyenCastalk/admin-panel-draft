@@ -1,11 +1,12 @@
 import React from "react";
 
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
-import { SaleorProvider } from "@saleor/sdk";
 
 import { ApolloProvider } from "@apollo/client";
 
-import { apolloClient, saleorClient } from "@dashboard/graphql/client";
+import { refreshToken as getRefreshToken } from "@business/utils/auth/temp";
+import { createStorage, storage } from "@business/utils/shared/storage";
+import { apolloClient } from "@dashboard/graphql/client";
 import { ThemeProvider } from "@dashboard/theme";
 import { paletteOverrides, themeOverrides } from "@dashboard/themeOverrides";
 import Routes from "@presentation/routes";
@@ -23,38 +24,44 @@ import BackgroundTasksProvider from "./containers/BackgroundTasks";
 import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvider";
 
 const App: React.FC = () => {
+  // Get new refresh and access token if user reset browser
+  createStorage(true);
+  const refreshToken = storage.getRefreshToken();
+
+  if (refreshToken) {
+    getRefreshToken(apolloClient, true);
+  }
+
   return (
-    <SaleorProvider client={saleorClient}>
-      <ApolloProvider client={apolloClient}>
-        <Router>
-          <LegacyThemeProvider overrides={themeOverrides} palettes={paletteOverrides}>
-            <ThemeProvider>
-              <LocaleProvider>
-                <MessageManagerProvider>
-                  <BackgroundTasksProvider>
-                    <AppStateProvider>
-                      <ProductAnalytics>
-                        <ExitFormDialogProvider>
-                          <DevModeProvider>
-                            <NavigatorSearchProvider>
-                              <SavebarRefProvider>
-                                <FeatureFlagsProviderWithUser>
-                                  <Routes />
-                                </FeatureFlagsProviderWithUser>
-                              </SavebarRefProvider>
-                            </NavigatorSearchProvider>
-                          </DevModeProvider>
-                        </ExitFormDialogProvider>
-                      </ProductAnalytics>
-                    </AppStateProvider>
-                  </BackgroundTasksProvider>
-                </MessageManagerProvider>
-              </LocaleProvider>
-            </ThemeProvider>
-          </LegacyThemeProvider>
-        </Router>
-      </ApolloProvider>
-    </SaleorProvider>
+    <ApolloProvider client={apolloClient}>
+      <Router>
+        <LegacyThemeProvider overrides={themeOverrides} palettes={paletteOverrides}>
+          <ThemeProvider>
+            <LocaleProvider>
+              <MessageManagerProvider>
+                <BackgroundTasksProvider>
+                  <AppStateProvider>
+                    <ProductAnalytics>
+                      <ExitFormDialogProvider>
+                        <DevModeProvider>
+                          <NavigatorSearchProvider>
+                            <SavebarRefProvider>
+                              <FeatureFlagsProviderWithUser>
+                                <Routes />
+                              </FeatureFlagsProviderWithUser>
+                            </SavebarRefProvider>
+                          </NavigatorSearchProvider>
+                        </DevModeProvider>
+                      </ExitFormDialogProvider>
+                    </ProductAnalytics>
+                  </AppStateProvider>
+                </BackgroundTasksProvider>
+              </MessageManagerProvider>
+            </LocaleProvider>
+          </ThemeProvider>
+        </LegacyThemeProvider>
+      </Router>
+    </ApolloProvider>
   );
 };
 
