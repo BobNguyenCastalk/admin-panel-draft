@@ -105,6 +105,23 @@ export const REFRESH_TOKEN_WITH_USER = gql`
   }
 `;
 
+export const SET_PASSWORD = gql`
+  ${userDetailsFragment}
+  ${accountErrorFragment}
+  mutation setPassword($token: String!, $email: String!, $password: String!) {
+    setPassword(token: $token, email: $email, password: $password) {
+      errors {
+        ...AccountErrorFragment
+      }
+      token
+      refreshToken
+      user {
+        ...UserDetailsFragment
+      }
+    }
+  }
+`;
+
 export const login = (client, { email, password }) => {
   const query = USER_WITHOUT_DETAILS;
   const loginMutation = LOGIN_WITHOUT_DETAILS;
@@ -169,7 +186,9 @@ export const refreshToken = (client, includeUser = false) => {
       update: (_, { data }) => {
         if (data?.tokenRefresh?.token) {
           storage.setAccessToken(data.tokenRefresh.token);
-          useBoundStore.setState({ authenticated: true });
+          if (useBoundStore.getState().authenticating) {
+            useBoundStore.setState({ authenticated: true, authenticating: false });
+          }
         } else {
           logout(client);
         }
@@ -187,6 +206,21 @@ export const refreshToken = (client, includeUser = false) => {
         storage.setAccessToken(data.tokenRefresh.token);
       } else {
         logout();
+      }
+    },
+  });
+};
+
+export const setUserPassword = (client, { email, password, token }) => {
+  return client.mutate({
+    mutation: SET_PASSWORD,
+    variables: { email, password, token },
+    update: (_, { data }) => {
+      if (data?.setPassword?.token) {
+        storage.setTokens({
+          accessToken: data.setPassword.token,
+          refreshToken: data.setPassword.refreshToken,
+        });
       }
     },
   });

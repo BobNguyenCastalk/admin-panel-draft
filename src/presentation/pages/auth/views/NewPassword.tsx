@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import { RouteComponentProps } from "react-router";
-import { useAuth } from "@saleor/sdk";
+import { useApolloClient } from "@apollo/client";
 
+import { setUserPassword } from "@business/utils/auth/temp";
+import { NewPasswordUrlQueryParams } from "@business/utils/auth/urls";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { AccountErrorFragment } from "@dashboard/graphql";
 import { parse as parseQs } from "qs";
 
-import { NewPasswordUrlQueryParams } from "../../../../auth/urls";
 import NewPasswordPage, { NewPasswordPageFormData } from "../components/NewPasswordPage";
 
 const NewPassword: React.FC<RouteComponentProps> = ({ location }) => {
   const navigate = useNavigator();
-  const { setPassword } = useAuth();
+  const apolloClient = useApolloClient();
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<AccountErrorFragment[]>([]);
   const params: NewPasswordUrlQueryParams = parseQs(location.search.substr(1)) as any;
   const handleSubmit = async (data: NewPasswordPageFormData) => {
     setLoading(true);
 
-    const result = await setPassword({
+    const result = await setUserPassword(apolloClient, {
       email: params.email,
       password: data.password,
       token: params.token,

@@ -5,6 +5,7 @@ import { ApolloProvider } from "@apollo/client";
 import { refreshToken as getRefreshToken } from "@business/utils/auth/temp";
 import { createStorage, storage } from "@business/utils/shared/storage";
 import { apolloClient } from "@dashboard/graphql/client";
+import useBoundStore from "@dashboard/stores";
 import { ThemeProvider } from "@dashboard/theme";
 import { paletteOverrides, themeOverrides } from "@dashboard/themeOverrides";
 import Routes from "@presentation/routes";
@@ -22,13 +23,15 @@ import BackgroundTasksProvider from "./containers/BackgroundTasks";
 import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvider";
 
 const App: React.FC = () => {
-  // Get new refresh and access token if user reset browser
+  const setAuthenticating = useBoundStore(state => state.setAuthenticating);
 
+  // When user resets browser, get new refresh and access token
   useEffect(() => {
     createStorage(true);
     const refreshToken = storage.getRefreshToken();
 
     if (refreshToken) {
+      setAuthenticating(true);
       getRefreshToken(apolloClient, true);
     }
   }, []);

@@ -8,7 +8,7 @@ import { channelsSection } from "@business/utils/channels/urls";
 import { getConfigMenuItemsPermissions } from "@business/utils/configuration/utils";
 import { commonMessages } from "@constants/common/intl";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
-import { PermissionEnum, useBaseChannelsQuery, useUserDetailsQuery } from "@dashboard/graphql";
+import { PermissionEnum, useUserDetailsQuery } from "@dashboard/graphql";
 import { apolloClient } from "@dashboard/graphql/client";
 import PermissionGroupSection from "@dashboard/presentation/pages/permissions";
 import { useBoundStore } from "@dashboard/stores";
@@ -31,7 +31,6 @@ const Routes: React.FC = () => {
   const [, dispatchAppState] = useAppState();
   const authenticated = useBoundStore(state => state.authenticated);
   const authenticating = useBoundStore(state => state.authenticating);
-  const user = useBoundStore(state => state.user);
   const setUser = useBoundStore(state => state.setUser);
   const selectedChannel = useBoundStore(state => state.selectedChannel);
   const setSelectedChannel = useBoundStore(state => state.setSelectedChannel);
@@ -54,9 +53,9 @@ const Routes: React.FC = () => {
     },
   });
 
-  const baseChannelsData = useBaseChannelsQuery({
-    skip: !authenticated || !user,
-  });
+  // const baseChannelsData = useBaseChannelsQuery({
+  //   skip: !authenticated || !user,
+  // });
 
   return (
     <>
