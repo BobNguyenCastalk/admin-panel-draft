@@ -14,6 +14,4 @@ export type UserContextError = (typeof UserContextError)[keyof typeof UserContex
 export interface UserContext {
   login?: (username: string, password: string) => Promise<LoginData | undefined>;
   logout?: () => Promise<void>;
-  authenticating: boolean;
-  authenticated: boolean;
 }

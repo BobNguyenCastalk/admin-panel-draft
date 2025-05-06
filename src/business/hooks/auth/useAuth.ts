@@ -74,21 +74,6 @@ export function useAuth(): UserContext {
     }
   }, [client, navigate, setAuthenticated, setUser]);
 
-  // TODO: remove this
-  const logoutNonStaffUser = useCallback(
-    async data => {
-      if (data?.user && !data.user.isStaff) {
-        // notify({
-        //   status: "error",
-        //   text: intl.formatMessage(commonMessages.unauthorizedDashboardAccess),
-        //   title: intl.formatMessage(commonMessages.insufficientPermissions),
-        // });
-        await handleLogout();
-      }
-    },
-    [handleLogout],
-  );
-
   const handleLogin = useCallback(
     async (email: string, password: string) => {
       try {
@@ -114,10 +99,10 @@ export function useAuth(): UserContext {
           await handleLogout();
         }
 
-        const hasUser = !!result.data?.tokenCreate?.user;
-
-        if (hasUser && !errorList?.length) {
+        if (!errorList?.length) {
           saveCredentials(result.data!.tokenCreate!.user!, password);
+          setAuthenticated(true);
+          setUser(result.data?.tokenCreate?.user);
         } else {
           const userContextErrorList: UserContextError[] = [];
 
@@ -138,10 +123,6 @@ export function useAuth(): UserContext {
           setAuthErrors(userContextErrorList);
         }
 
-        await logoutNonStaffUser(result.data?.tokenCreate!);
-        setAuthenticated(true);
-        setUser(result.data?.tokenCreate?.user);
-
         return result.data?.tokenCreate;
       } catch (error) {
         if (error instanceof ApolloError) {
@@ -156,7 +137,6 @@ export function useAuth(): UserContext {
     [
       setAuthenticating,
       client,
-      logoutNonStaffUser,
       setAuthenticated,
       setUser,
       setAuthErrors,
@@ -187,7 +167,5 @@ export function useAuth(): UserContext {
   return {
     login: handleLogin,
     logout: handleLogout,
-    authenticating: authenticating && !authErrors.length,
-    authenticated: authenticated && !authErrors.length,
   };
 }
