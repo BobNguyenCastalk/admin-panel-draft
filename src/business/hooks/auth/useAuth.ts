@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef } from "react";
-
 import { ApolloError, useApolloClient } from "@apollo/client";
 
 import { parseAuthError } from "@business/utils/auth/errors";

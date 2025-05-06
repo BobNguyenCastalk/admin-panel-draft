@@ -1,6 +1,5 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-
 import { Button, Text } from "@saleor/macaw-ui-next";
 
 import FormSpacer from "@presentation/shared/FormSpacer";

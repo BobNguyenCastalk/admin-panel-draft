@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Option, Text } from "@saleor/macaw-ui-next";
 
 import { FormChange } from "@dashboard/business/hooks/shared/useForm";

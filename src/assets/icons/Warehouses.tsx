@@ -1,5 +1,4 @@
 import React from "react";
-
 import { createSvgIcon, SvgIconProps } from "@material-ui/core";
 
 const WarehousesIcon = createSvgIcon(

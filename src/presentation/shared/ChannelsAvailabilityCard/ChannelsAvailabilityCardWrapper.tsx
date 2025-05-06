@@ -1,6 +1,5 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Button, Text } from "@saleor/macaw-ui-next";
 
 import { PermissionEnum } from "@dashboard/graphql";

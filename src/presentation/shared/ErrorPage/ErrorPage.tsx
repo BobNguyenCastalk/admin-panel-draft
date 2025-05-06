@@ -1,11 +1,11 @@
 // @ts-strict-ignore
+import notFoundImage from "@assets/images/what.svg";
+
 import React from "react";
 import SVG from "react-inlinesvg";
 import { FormattedMessage } from "react-intl";
-
 import { Box, Button, sprinkles, Text } from "@saleor/macaw-ui-next";
 
-import notFoundImage from "@assets/images/what.svg";
 import useAppState from "@dashboard/business/hooks/shared/useAppState";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 

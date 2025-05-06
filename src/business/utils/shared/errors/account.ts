@@ -1,5 +1,4 @@
 import { defineMessages, IntlShape } from "react-intl";
-
 import {
   AccountError,
   AccountErrorCode as SdkAccountErrorCode,

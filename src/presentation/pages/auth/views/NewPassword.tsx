@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { RouteComponentProps } from "react-router";
-
 import { useAuth } from "@saleor/sdk";
 
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";

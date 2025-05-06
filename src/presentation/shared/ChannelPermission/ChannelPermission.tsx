@@ -1,6 +1,5 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Checkbox, Multiselect, Text } from "@saleor/macaw-ui-next";
 
 import { FormChange } from "@dashboard/business/hooks/shared/useForm";

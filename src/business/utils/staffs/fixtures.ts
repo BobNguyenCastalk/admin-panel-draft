@@ -1,5 +1,6 @@
 // @ts-strict-ignore
 import avatarImage from "@assets/images/avatars/avatar.png";
+
 import { permissions } from "@dashboard/fixtures";
 import {
   StaffListQuery,

@@ -1,7 +1,5 @@
 import React from "react";
-
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
-
 import { ApolloProvider } from "@apollo/client";
 
 import { refreshToken as getRefreshToken } from "@business/utils/auth/temp";

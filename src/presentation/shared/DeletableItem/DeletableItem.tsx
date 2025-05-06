@@ -1,5 +1,4 @@
 import React from "react";
-
 import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
 
 interface DeletableItemProps {

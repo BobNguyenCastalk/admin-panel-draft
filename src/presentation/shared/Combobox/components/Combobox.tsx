@@ -1,6 +1,5 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
-
 import { DynamicCombobox, DynamicComboboxProps, Option } from "@saleor/macaw-ui-next";
 
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";

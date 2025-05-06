@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import { mapNodeToChoice } from "@dashboard/business/utils/shared/maps";

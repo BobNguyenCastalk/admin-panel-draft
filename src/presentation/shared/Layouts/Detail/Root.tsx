@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-
 import { Box, Sprinkles } from "@saleor/macaw-ui-next";
 
 import { borderHeight, savebarHeight } from "@presentation/shared/AppLayout/consts";

@@ -1,8 +1,8 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { TextField } from "@material-ui/core";
 
 import { buttonMessages } from "@dashboard/constants/common/intl";
-import { TextField } from "@material-ui/core";
 import { ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import { DashboardModal } from "@presentation/shared/Modal";
 

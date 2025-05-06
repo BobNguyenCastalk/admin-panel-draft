@@ -1,6 +1,5 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { Box, Button, CopyIcon, Input, Option, Text } from "@saleor/macaw-ui-next";
 
 import { commonMessages } from "@constants/common/intl";

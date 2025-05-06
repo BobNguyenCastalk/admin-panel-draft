@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Divider, Skeleton } from "@saleor/macaw-ui-next";
 
 export const LoadingFiltersArea = () => (

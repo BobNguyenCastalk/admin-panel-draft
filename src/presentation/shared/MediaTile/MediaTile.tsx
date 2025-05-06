@@ -1,9 +1,8 @@
 import React from "react";
-
 import { DeleteIcon, EditIcon, makeStyles } from "@saleor/macaw-ui";
 import { vars } from "@saleor/macaw-ui-next";
-
 import { CircularProgress } from "@material-ui/core";
+
 import { IconButton } from "@presentation/shared/IconButton";
 import clsx from "clsx";
 

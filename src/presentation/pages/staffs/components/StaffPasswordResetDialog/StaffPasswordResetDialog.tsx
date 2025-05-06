@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { Box } from "@saleor/macaw-ui-next";
+import { TextField } from "@material-ui/core";
 
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import useModalDialogErrors from "@dashboard/business/hooks/shared/useModalDialogErrors";
@@ -11,7 +11,6 @@ import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/acco
 import { buttonMessages } from "@dashboard/constants/common/intl";
 import { AccountErrorFragment } from "@dashboard/graphql";
 import { DialogProps } from "@dashboard/types";
-import { TextField } from "@material-ui/core";
 import BackButton from "@presentation/shared/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import Form from "@presentation/shared/Form";

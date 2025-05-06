@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import { topBarHeight, topBarHeightSubtitle } from "../consts";

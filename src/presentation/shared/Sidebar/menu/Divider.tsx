@@ -1,5 +1,4 @@
 import React from "react";
-
 import { List, Text } from "@saleor/macaw-ui-next";
 
 import { SidebarMenuItem } from "./types";

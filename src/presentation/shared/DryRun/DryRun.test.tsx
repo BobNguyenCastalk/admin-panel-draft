@@ -1,7 +1,5 @@
 import React from "react";
-
 import { ThemeProvider } from "@saleor/macaw-ui";
-
 import { MockedProvider, MockedResponse } from "@apollo/client/testing";
 
 import { WebhookEventTypeSyncEnum } from "@dashboard/graphql";

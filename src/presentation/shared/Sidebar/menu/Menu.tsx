@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, List } from "@saleor/macaw-ui-next";
 
 import { Shortcusts } from "../shortcuts";

@@ -1,6 +1,5 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Text } from "@saleor/macaw-ui-next";
 
 import { sectionNames } from "@constants/common/intl";

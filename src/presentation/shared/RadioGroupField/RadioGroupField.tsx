@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage } from "react-intl";
-
 import {
   FormControl,
   FormControlLabel,
@@ -10,6 +9,7 @@ import {
   Radio,
   RadioGroup,
 } from "@material-ui/core";
+
 import clsx from "clsx";
 
 import { SimpleRadioGroupField } from "../SimpleRadioGroupField";

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
+import { TextFieldProps } from "@material-ui/core";
 
 import { FormChange } from "@dashboard/business/hooks/shared/useForm";
-import { TextFieldProps } from "@material-ui/core";
 
 import { SEPARATOR_CHARACTERS } from "./consts";
 import { findPriceSeparator, getCurrencyDecimalPoints } from "./utils";

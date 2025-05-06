@@ -1,5 +1,4 @@
 import { MessageDescriptor } from "react-intl";
-
 import { Option } from "@saleor/macaw-ui-next";
 
 import { PermissionEnum } from "@dashboard/graphql";

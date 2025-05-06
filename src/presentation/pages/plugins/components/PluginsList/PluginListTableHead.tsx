@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
+import { TableHead } from "@material-ui/core";
 
 import { PluginListUrlSortField } from "@business/utils/plugins/urls";
 import { getArrowDirection } from "@dashboard/business/utils/shared/sort";
 import { SortPage } from "@dashboard/types";
-import { TableHead } from "@material-ui/core";
 import TableCellHeader from "@presentation/shared/TableCellHeader";
 
 import { pluginsListTableHeadMessages as messages } from "./messages";

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
 
 const defaultProps = {

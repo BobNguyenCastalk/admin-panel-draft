@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-
 import { Sprinkles } from "@saleor/macaw-ui-next";
 
 import { PermissionEnum } from "@dashboard/graphql";

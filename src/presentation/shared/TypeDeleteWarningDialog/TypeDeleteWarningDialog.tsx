@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
-
 import { Box, Spinner } from "@saleor/macaw-ui-next";
 
 import { getById } from "@dashboard/business/misc";

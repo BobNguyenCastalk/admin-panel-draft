@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from "react";
-
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 import { useBoundStore } from "@dashboard/stores";

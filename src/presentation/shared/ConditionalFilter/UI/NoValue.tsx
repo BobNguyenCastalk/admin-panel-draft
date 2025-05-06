@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 export const NoValue = ({ locale }: { locale: Record<string, string> }) => {

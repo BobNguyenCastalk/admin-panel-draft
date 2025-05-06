@@ -1,10 +1,9 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
+import { Checkbox, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
-import { Checkbox, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 
 import { messages } from "../../messages";
 import { hasPermissionSelected } from "../../utils";

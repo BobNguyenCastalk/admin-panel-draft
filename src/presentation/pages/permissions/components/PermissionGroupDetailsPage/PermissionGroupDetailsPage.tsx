@@ -1,6 +1,5 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import { MembersListUrlSortField, permissionGroupListPath } from "@business/utils/permissions/urls";

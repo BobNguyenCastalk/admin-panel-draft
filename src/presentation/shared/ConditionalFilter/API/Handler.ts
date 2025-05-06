@@ -1,5 +1,4 @@
 import { IntlShape } from "react-intl";
-
 import { ApolloClient } from "@apollo/client";
 
 import {

@@ -1,5 +1,4 @@
 import { IntlShape, useIntl } from "react-intl";
-
 import { ApolloClient, useApolloClient } from "@apollo/client";
 
 import { AttributeTypeEnum } from "@dashboard/graphql";

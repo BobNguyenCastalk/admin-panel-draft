@@ -1,5 +1,4 @@
 import { useIntl } from "react-intl";
-
 import { Option } from "@saleor/macaw-ui-next";
 
 export const useComboboxEmptyOption = () => {

@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
-
 import { Box, Button, Textarea } from "@saleor/macaw-ui-next";
 
 import { buttonMessages } from "@dashboard/constants/common/intl";

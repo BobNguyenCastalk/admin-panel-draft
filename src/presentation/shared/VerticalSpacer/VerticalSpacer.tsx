@@ -1,5 +1,4 @@
 import React from "react";
-
 import { makeStyles } from "@saleor/macaw-ui";
 
 export interface VerticalSpacerProps {

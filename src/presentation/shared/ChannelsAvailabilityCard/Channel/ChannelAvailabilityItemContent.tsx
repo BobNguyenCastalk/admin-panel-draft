@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Checkbox, Divider, RadioGroup, Text } from "@saleor/macaw-ui-next";
 
 import useCurrentDate from "@dashboard/business/hooks/shared/useCurrentDate";

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Button, Spinner } from "@saleor/macaw-ui-next";
 
 import { Name } from "@dashboard/featureFlags/availableFlags";

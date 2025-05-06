@@ -1,7 +1,6 @@
 import React, { useCallback, useMemo } from "react";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router";
-
 import { Box, useTheme } from "@saleor/macaw-ui-next";
 
 import { getPrevLocationState } from "@dashboard/business/hooks/shared/useBackLinkWithState";

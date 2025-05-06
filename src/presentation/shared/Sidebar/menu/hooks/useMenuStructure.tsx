@@ -3,7 +3,6 @@ import { HomeIcon } from "@assets/icons/Home";
 
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import { getConfigMenuItemsPermissions } from "@dashboard/business/utils/configuration/utils";

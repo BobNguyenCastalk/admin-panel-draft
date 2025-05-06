@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Tooltip } from "@saleor/macaw-ui-next";
 
 interface TooltipContainerProps {

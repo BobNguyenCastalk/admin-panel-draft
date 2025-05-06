@@ -1,8 +1,7 @@
 import React from "react";
-
 import { makeStyles } from "@saleor/macaw-ui";
-
 import { Divider } from "@material-ui/core";
+
 import clsx from "clsx";
 
 const useStyles = makeStyles(

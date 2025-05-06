@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React, { useMemo } from "react";
 import { useIntl } from "react-intl";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import { getBySlug } from "@dashboard/business/misc";

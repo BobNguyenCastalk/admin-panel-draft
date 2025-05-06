@@ -1,5 +1,4 @@
 import React from "react";
-
 import { createSvgIcon } from "@material-ui/core/utils";
 
 const FullScreenIcon = createSvgIcon(

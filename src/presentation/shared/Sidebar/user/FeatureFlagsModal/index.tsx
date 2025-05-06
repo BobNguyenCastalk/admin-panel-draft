@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Button, CloseIcon, Modal } from "@saleor/macaw-ui-next";
 
 import { Name } from "@dashboard/featureFlags/availableFlags";

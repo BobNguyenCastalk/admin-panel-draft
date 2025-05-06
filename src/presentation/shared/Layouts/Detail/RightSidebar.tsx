@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, BoxProps } from "@saleor/macaw-ui-next";
 
 interface DetailPageLayoutRightSidebarProps extends BoxProps {

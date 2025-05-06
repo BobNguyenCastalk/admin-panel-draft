@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Popper } from "@material-ui/core";
 
 import { DashboardCard } from "../Card";

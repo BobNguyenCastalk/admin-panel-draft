@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
-
 import { Box, Button, EditIcon, Text } from "@saleor/macaw-ui-next";
 
 import { getUserInitials, getUserName } from "@dashboard/business/misc";

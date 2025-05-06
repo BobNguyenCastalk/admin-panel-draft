@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   ButtonGroup,
   ButtonGroupProps,
@@ -12,6 +11,7 @@ import {
   Popper,
 } from "@material-ui/core";
 import { ArrowDropDown as ArrowDropDownIcon } from "@material-ui/icons";
+
 import { Button } from "@presentation/shared/Button";
 
 import { useStyles } from "./styles";

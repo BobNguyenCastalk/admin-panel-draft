@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Box,
   SearchInput as MacawSearchInput,

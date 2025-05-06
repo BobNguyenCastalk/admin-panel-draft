@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Text } from "@saleor/macaw-ui-next";
+import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 
 import useModalDialogErrors from "@dashboard/business/hooks/shared/useModalDialogErrors";
 import useModalDialogOpen from "@dashboard/business/hooks/shared/useModalDialogOpen";
@@ -11,7 +11,6 @@ import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { maybe, renderCollection } from "@dashboard/business/misc";
 import { AvailableAttributeFragment } from "@dashboard/graphql";
 import { FetchMoreProps } from "@dashboard/types";
-import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 import Checkbox from "@presentation/shared/Checkbox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import { InfiniteScroll } from "@presentation/shared/InfiniteScroll";

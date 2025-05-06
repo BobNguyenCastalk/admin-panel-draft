@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Option } from "@saleor/macaw-ui-next";
 
 import {

@@ -1,10 +1,8 @@
 // @ts-strict-ignore
 import React, { useEffect, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
-
 import { IconButtonProps, makeStyles, SettingsIcon } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-
 import {
   CircularProgress,
   ClickAwayListener,
@@ -14,6 +12,7 @@ import {
   Paper,
   Popper,
 } from "@material-ui/core";
+
 import clsx from "clsx";
 
 import { IconButton } from "../IconButton";

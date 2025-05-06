@@ -1,6 +1,5 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 export const NoFlags = () => (

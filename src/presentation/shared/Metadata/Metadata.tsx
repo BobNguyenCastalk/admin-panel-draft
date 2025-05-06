@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-
 import { Box, BoxProps } from "@saleor/macaw-ui-next";
 
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";

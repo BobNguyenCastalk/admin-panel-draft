@@ -1,13 +1,12 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { ArrowLeftIcon, Box, Button, Text } from "@saleor/macaw-ui-next";
+import { TextField } from "@material-ui/core";
 
 import { SubmitPromise } from "@business/hooks/shared/useForm";
 import { commonMessages } from "@constants/common/intl";
 import { getAppMountUri } from "@dashboard/configs";
 import { AccountErrorCode } from "@dashboard/graphql";
-import { TextField } from "@material-ui/core";
 import Form from "@presentation/shared/Form";
 import FormSpacer from "@presentation/shared/FormSpacer";
 

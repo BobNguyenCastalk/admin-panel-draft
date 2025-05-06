@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
-
 import { Option } from "@saleor/macaw-ui-next";
 
 import { SearchData } from "@dashboard/business/hooks/shared/makeTopLevelSearch";

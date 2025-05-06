@@ -1,9 +1,9 @@
-import React from "react";
-
-import { Avatar, Box, Text } from "@saleor/macaw-ui-next";
-
 import sideBarDefaultLogoDarkMode from "@assets/images/sidebar-deafult-logo-darkMode.png";
 import sideBarDefaultLogo from "@assets/images/sidebar-default-logo.png";
+
+import React from "react";
+import { Avatar, Box, Text } from "@saleor/macaw-ui-next";
+
 import { useLegacyThemeHandler } from "@presentation/shared/Sidebar/user/Controls";
 
 export const MountingPoint = () => {

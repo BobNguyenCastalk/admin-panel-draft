@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Drawer, MenuIcon } from "@saleor/macaw-ui-next";
 
 import { SidebarContent } from "./Content";

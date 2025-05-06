@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Checkbox, RadioGroup, Text } from "@saleor/macaw-ui-next";
 

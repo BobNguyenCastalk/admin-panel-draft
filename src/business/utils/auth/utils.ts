@@ -1,5 +1,4 @@
 import { IntlShape } from "react-intl";
-
 import { ApolloError, ServerError } from "@apollo/client/core";
 
 import { UseNotifierResult } from "@dashboard/business/hooks/shared/useNotifier";

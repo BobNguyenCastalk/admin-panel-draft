@@ -1,6 +1,5 @@
 import React, { MouseEvent } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import {
   Box,
   Button,

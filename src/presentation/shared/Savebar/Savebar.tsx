@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import { Root as Portal } from "@radix-ui/react-portal";

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { EditIcon, ThemeProvider } from "@saleor/macaw-ui";
 
 import { render, screen } from "@testing-library/react";

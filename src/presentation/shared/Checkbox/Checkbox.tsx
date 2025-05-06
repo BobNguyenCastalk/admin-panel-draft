@@ -1,8 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
-
 import { makeStyles } from "@saleor/macaw-ui";
-
 import MuiCheckbox, { CheckboxProps as MuiCheckboxProps } from "@material-ui/core/Checkbox";
 import FormHelperText from "@material-ui/core/FormHelperText";
 

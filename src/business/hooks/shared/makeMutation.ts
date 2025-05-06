@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { useIntl } from "react-intl";
-
 import {
   ApolloError,
   MutationFunction,

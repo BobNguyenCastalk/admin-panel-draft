@@ -1,6 +1,5 @@
 import React from "react";
 import { defineMessages, useIntl } from "react-intl";
-
 import { Option, Text } from "@saleor/macaw-ui-next";
 
 import { buttonMessages } from "@constants/common/intl";

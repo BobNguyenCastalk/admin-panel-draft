@@ -1,12 +1,11 @@
 // @ts-strict-ignore
 import React from "react";
 import { SortableContainer } from "react-sortable-hoc";
-
 import { makeStyles } from "@saleor/macaw-ui";
-
-import { ReorderAction } from "@dashboard/types";
 import { TableBody } from "@material-ui/core";
 import { TableBodyProps } from "@material-ui/core/TableBody";
+
+import { ReorderAction } from "@dashboard/types";
 
 const InnerSortableTableBody = SortableContainer<TableBodyProps>(({ children, ...props }) => (
   <TableBody {...props}>{children}</TableBody>

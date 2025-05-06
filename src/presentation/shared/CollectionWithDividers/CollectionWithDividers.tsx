@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Divider } from "@material-ui/core";
 
 interface CollectionWithDividersProps<T> {

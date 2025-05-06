@@ -1,6 +1,5 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { Button, Text } from "@saleor/macaw-ui-next";
 
 import { DashboardCard } from "@presentation/shared/Card";

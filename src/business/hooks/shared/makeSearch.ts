@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { useState } from "react";
-
 import { QueryResult } from "@apollo/client";
 
 import { DocumentNode } from "graphql";

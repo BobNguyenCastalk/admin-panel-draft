@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Input, Select, Text } from "@saleor/macaw-ui-next";
 
 import { inputTypeMessages } from "@dashboard/attributes/components/AttributeDetails/messages";

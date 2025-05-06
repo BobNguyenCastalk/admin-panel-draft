@@ -1,7 +1,6 @@
 import React, { useCallback, useMemo } from "react";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import {

@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
-
 import {
   ApolloError,
   ApolloQueryResult,

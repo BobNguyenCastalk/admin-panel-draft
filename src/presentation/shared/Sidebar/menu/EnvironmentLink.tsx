@@ -1,9 +1,8 @@
+import { Cloud } from "@assets/icons/Cloud";
+
 import React from "react";
 import { FormattedMessage } from "react-intl";
-
 import { Box, Text } from "@saleor/macaw-ui-next";
-
-import { Cloud } from "@assets/icons/Cloud";
 
 import { useEnvLink } from "./hooks/useEnvLink";
 

@@ -1,8 +1,6 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-
 import { Box, Checkbox, Text } from "@saleor/macaw-ui-next";
-
 import { CircularProgress } from "@material-ui/core";
 
 import { ColumnPickerSearch } from "./ColumnPickerSearch";

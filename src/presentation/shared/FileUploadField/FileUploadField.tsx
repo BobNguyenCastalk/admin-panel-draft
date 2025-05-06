@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Button, Skeleton, Text, TrashBinIcon } from "@saleor/macaw-ui-next";
 
 import { commonMessages } from "@dashboard/constants/common/intl";

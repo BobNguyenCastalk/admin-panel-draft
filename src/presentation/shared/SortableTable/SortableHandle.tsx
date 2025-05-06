@@ -1,9 +1,7 @@
 import React from "react";
 import { SortableHandle as SortableHandleHoc } from "react-sortable-hoc";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { GripIcon } from "@saleor/macaw-ui-next";
-
 import { TableCell } from "@material-ui/core";
 
 const useStyles = makeStyles(

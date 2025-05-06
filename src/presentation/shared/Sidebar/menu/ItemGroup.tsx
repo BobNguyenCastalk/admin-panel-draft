@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { Box, List, sprinkles, Text } from "@saleor/macaw-ui-next";
 
 import { MenuItem } from "./Item";

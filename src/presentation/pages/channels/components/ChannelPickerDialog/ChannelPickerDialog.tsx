@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
-
 import { Option } from "@saleor/macaw-ui-next";
 
 import useChoiceSearch from "@dashboard/business/hooks/shared/useChoiceSearch";

@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { IntlShape } from "react-intl";
-
 import { Option } from "@saleor/macaw-ui-next";
 
 import { getProductErrorMessage } from "@dashboard/business/utils/shared/errors";

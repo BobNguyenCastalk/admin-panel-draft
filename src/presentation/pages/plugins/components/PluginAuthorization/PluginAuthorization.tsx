@@ -1,6 +1,5 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 

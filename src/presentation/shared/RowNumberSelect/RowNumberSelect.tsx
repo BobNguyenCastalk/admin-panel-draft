@@ -1,9 +1,7 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
-
 import { MenuItem, Select } from "@material-ui/core";
 
 const useStyles = makeStyles(

@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { useIntl } from "react-intl";
-
 import {
   Alert,
   Button,
@@ -12,10 +11,10 @@ import {
   ListItemCell,
 } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
+import { capitalize } from "@material-ui/core";
 
 import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
 import { useTriggerWebhookDryRunMutation, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
-import { capitalize } from "@material-ui/core";
 import Grid from "@presentation/shared/Grid";
 import { DashboardModal } from "@presentation/shared/Modal";
 

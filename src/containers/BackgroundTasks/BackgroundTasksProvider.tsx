@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
-
 import { ApolloClient, useApolloClient } from "@apollo/client";
 
 import useNotifier from "@dashboard/business/hooks/shared/useNotifier";

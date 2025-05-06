@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 
 import { StaffListUrlSortField } from "@dashboard/business/utils/staffs/urls";

@@ -1,5 +1,4 @@
 import { MessageDescriptor } from "react-intl";
-
 import { PillColor } from "@saleor/macaw-ui";
 
 import { PluginConfigurationBaseFragment } from "@dashboard/graphql";

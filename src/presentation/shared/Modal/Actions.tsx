@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-
 import { Box, PropsWithBox } from "@saleor/macaw-ui-next";
 
 export const Actions = ({ children, ...rest }: PropsWithBox<{ children: ReactNode }>) => {

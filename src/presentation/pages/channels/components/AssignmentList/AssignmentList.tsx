@@ -1,6 +1,5 @@
 import React from "react";
 import { defineMessages, useIntl } from "react-intl";
-
 import { Accordion, Divider, Skeleton, Text } from "@saleor/macaw-ui-next";
 
 import { ReorderEvent } from "@dashboard/types";

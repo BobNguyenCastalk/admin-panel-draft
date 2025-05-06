@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Divider, Text } from "@saleor/macaw-ui-next";
 
 import useDateLocalize from "@dashboard/business/hooks/shared/useDateLocalize";

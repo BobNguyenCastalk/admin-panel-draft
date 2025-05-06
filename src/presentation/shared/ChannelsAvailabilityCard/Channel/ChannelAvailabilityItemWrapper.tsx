@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import React from "react";
-
 import { Accordion, Text } from "@saleor/macaw-ui-next";
 
 import { ChannelData } from "@dashboard/business/utils/channels/utils";

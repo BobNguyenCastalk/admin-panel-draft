@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import React from "react";
-
 import { makeStyles, Pill as MacawuiPill, PillProps } from "@saleor/macaw-ui";
 import { useTheme } from "@saleor/macaw-ui-next";
 

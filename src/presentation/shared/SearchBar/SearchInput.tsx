@@ -1,7 +1,5 @@
 import React from "react";
-
 import { makeStyles } from "@saleor/macaw-ui";
-
 import { TextField } from "@material-ui/core";
 
 import { SearchPageProps } from "../../../types";

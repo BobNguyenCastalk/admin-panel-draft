@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 
 import { getStatusColor } from "@dashboard/business/misc";

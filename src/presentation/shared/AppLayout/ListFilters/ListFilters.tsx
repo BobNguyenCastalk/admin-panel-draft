@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import { FilterProps, SearchPageProps } from "@dashboard/types";

@@ -1,6 +1,5 @@
 import React, { ChangeEvent } from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";

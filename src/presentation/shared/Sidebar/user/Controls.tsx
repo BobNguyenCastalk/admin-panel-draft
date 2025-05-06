@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-
 import { useTheme as useLegacyTheme } from "@saleor/macaw-ui";
 import {
   Box,

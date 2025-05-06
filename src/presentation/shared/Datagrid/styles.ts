@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { useTheme, vars } from "@saleor/macaw-ui-next";
 

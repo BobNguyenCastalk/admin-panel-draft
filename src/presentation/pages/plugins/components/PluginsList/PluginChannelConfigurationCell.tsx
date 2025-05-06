@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage } from "react-intl";
+import { TableCell } from "@material-ui/core";
 
 import { PluginBaseFragment } from "@dashboard/graphql";
-import { TableCell } from "@material-ui/core";
 import { isPluginGlobal } from "@presentation/pages/plugins/views/utils";
 
 import { pluginChannelConfigurationCellMessages as messages } from "./messages";

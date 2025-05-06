@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
-
 import { Box, Divider } from "@saleor/macaw-ui-next";
 
 import useLocalStorage from "@dashboard/business/hooks/shared/useLocalStorage";

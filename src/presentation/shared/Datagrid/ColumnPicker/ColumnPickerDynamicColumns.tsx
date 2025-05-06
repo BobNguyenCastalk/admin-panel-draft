@@ -1,6 +1,5 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-
 import { Box, Button, PlusIcon, RemoveIcon, Text } from "@saleor/macaw-ui-next";
 
 import { AvailableColumn } from "../types";

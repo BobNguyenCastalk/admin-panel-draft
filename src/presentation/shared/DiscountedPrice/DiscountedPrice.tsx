@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Text } from "@saleor/macaw-ui-next";
 
 import { IMoney } from "@dashboard/business/utils/shared/intl";

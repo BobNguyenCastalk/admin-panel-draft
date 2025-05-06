@@ -1,7 +1,7 @@
 import React from "react";
-
 import { TableCell } from "@material-ui/core";
 import { TableCellProps } from "@material-ui/core/TableCell";
+
 import clsx from "clsx";
 
 import Avatar, { AvatarProps } from "./Avatar";

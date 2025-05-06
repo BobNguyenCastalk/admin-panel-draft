@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 

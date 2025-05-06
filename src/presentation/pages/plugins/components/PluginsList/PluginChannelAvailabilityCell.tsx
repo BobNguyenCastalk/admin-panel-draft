@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
-
 import { Skeleton } from "@saleor/macaw-ui-next";
+import { TableCell } from "@material-ui/core";
 
 import { PluginBaseFragment } from "@dashboard/graphql";
-import { TableCell } from "@material-ui/core";
 
 import PluginAvailabilityStatus from "./PluginAvailabilityStatus";
 import PluginAvailabilityStatusPopup from "./PluginAvailabilityStatusPopup";

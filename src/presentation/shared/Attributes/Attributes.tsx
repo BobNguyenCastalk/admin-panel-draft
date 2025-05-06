@@ -1,6 +1,5 @@
 import React from "react";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";
-
 import { Accordion, Box, Text } from "@saleor/macaw-ui-next";
 
 import { AttributeReference } from "@dashboard/attributes/utils/data";

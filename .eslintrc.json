@@ -47,9 +47,7 @@
     "simple-import-sort/imports": ["warn", { 
       "groups": [
         ["^@assets"],
-        ["^react"],
-        ["^@saleor"],
-        ["^@apollo"],
+        ["^react", "^@saleor", "^@material-ui", "^@apollo"],
         ["^@?\\w"],
         ["@/(.*)"],
         ["^[./]"]

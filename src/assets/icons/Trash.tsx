@@ -1,7 +1,5 @@
 import React from "react";
-
 import { useTheme } from "@saleor/macaw-ui";
-
 import { createSvgIcon } from "@material-ui/core/utils";
 
 const Trash: React.FC = () => {

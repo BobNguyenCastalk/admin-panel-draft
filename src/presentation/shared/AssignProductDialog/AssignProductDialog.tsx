@@ -1,14 +1,13 @@
 // @ts-strict-ignore
 import React, { useEffect } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { Text } from "@saleor/macaw-ui-next";
+import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 
 import useModalDialogOpen from "@dashboard/business/hooks/shared/useModalDialogOpen";
 import useSearchQuery from "@dashboard/business/hooks/shared/useSearchQuery";
 import { maybe } from "@dashboard/business/misc";
 import { DialogProps, FetchMoreProps } from "@dashboard/types";
-import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import { InfiniteScroll } from "@presentation/shared/InfiniteScroll";
 import { DashboardModal } from "@presentation/shared/Modal";

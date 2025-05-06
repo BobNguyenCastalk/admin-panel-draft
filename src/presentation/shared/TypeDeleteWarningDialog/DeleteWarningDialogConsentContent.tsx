@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Checkbox, Text } from "@saleor/macaw-ui-next";
 
 interface DeleteWarningDialogConsentContentProps {

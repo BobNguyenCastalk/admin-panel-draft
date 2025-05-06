@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import React from "react";
 import { IntlShape, useIntl } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { Option } from "@saleor/macaw-ui-next";
+import { TextField } from "@material-ui/core";
 
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
 import { getFormErrors } from "@dashboard/business/utils/shared/errors";
@@ -16,7 +16,6 @@ import {
   ShopErrorFragment,
   WarehouseErrorFragment,
 } from "@dashboard/graphql";
-import { TextField } from "@material-ui/core";
 import FormSpacer from "@presentation/shared/FormSpacer";
 import Grid from "@presentation/shared/Grid";
 

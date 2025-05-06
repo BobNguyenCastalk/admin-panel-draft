@@ -1,10 +1,9 @@
 import React from "react";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-
 import { TextField } from "@material-ui/core";
+
 import { ControlledCheckbox } from "@presentation/shared/ControlledCheckbox";
 import Hr from "@presentation/shared/Hr";
 import clsx from "clsx";

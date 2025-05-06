@@ -1,15 +1,14 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
+import { TableBody, TableCell, TableHead } from "@material-ui/core";
 
 import { renderCollection, stopPropagation } from "@dashboard/business/misc";
 import { channelAddUrl, channelUrl } from "@dashboard/business/utils/channels/urls";
 import { sectionNames } from "@dashboard/constants/common/intl";
 import { ChannelDetailsFragment } from "@dashboard/graphql";
-import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
 import { TopNav } from "@presentation/shared/AppLayout/TopNav";
 import { Button } from "@presentation/shared/Button";

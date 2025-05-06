@@ -1,6 +1,5 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { Text } from "@saleor/macaw-ui-next";
 
 import { capitalize } from "@dashboard/business/misc";

@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, Input } from "@saleor/macaw-ui-next";
 
 import { joinDateTime, splitDateTime } from "@dashboard/business/misc";

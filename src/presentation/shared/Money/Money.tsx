@@ -1,5 +1,4 @@
 import React from "react";
-
 import { makeStyles } from "@saleor/macaw-ui";
 
 import useLocale from "@dashboard/business/hooks/shared/useLocale";

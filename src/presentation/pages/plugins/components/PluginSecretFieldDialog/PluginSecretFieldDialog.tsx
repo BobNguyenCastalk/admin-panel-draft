@@ -1,13 +1,12 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { Skeleton } from "@saleor/macaw-ui-next";
+import { TextField } from "@material-ui/core";
 
 import { maybe } from "@dashboard/business/misc";
 import { buttonMessages } from "@dashboard/constants/common/intl";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
 import { DialogProps } from "@dashboard/types";
-import { TextField } from "@material-ui/core";
 import BackButton from "@presentation/shared/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@presentation/shared/ConfirmButton";
 import Form from "@presentation/shared/Form";

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { DeleteIcon, IconButton, IconButtonProps } from "@saleor/macaw-ui";
 
 const DeleteIconButton: React.FC<IconButtonProps> = ({ onClick }) => (

@@ -2,11 +2,8 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-
-import { LanguageCodeEnum, LanguageFragment } from "@dashboard/graphql";
 import {
   ClickAwayListener,
   Grow,
@@ -16,6 +13,8 @@ import {
   Popper,
 } from "@material-ui/core";
 import ArrowDropDown from "@material-ui/icons/ArrowDropDown";
+
+import { LanguageCodeEnum, LanguageFragment } from "@dashboard/graphql";
 import clsx from "clsx";
 
 import { DashboardCard } from "../Card";

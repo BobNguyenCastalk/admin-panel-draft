@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Text } from "@saleor/macaw-ui-next";
 
 import { PluginBaseFragment } from "@dashboard/graphql";

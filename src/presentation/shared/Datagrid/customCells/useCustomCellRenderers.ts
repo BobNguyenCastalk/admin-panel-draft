@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-
 import { useTheme } from "@saleor/macaw-ui-next";
 
 import useLocale from "@dashboard/business/hooks/shared/useLocale";

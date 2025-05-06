@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Input, Option, Select, Spinner } from "@saleor/macaw-ui-next";
 
 import { ChangeEvent, FormChange } from "@dashboard/business/hooks/shared/useForm";

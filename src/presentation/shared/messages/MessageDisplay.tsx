@@ -1,7 +1,6 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import { TransitionGroup } from "react-transition-group";
-
 import { ApiMessageData, Notification } from "@saleor/macaw-ui";
 
 import { commonMessages } from "@dashboard/constants/common/intl";

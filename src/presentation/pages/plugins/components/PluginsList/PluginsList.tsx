@@ -1,8 +1,8 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { EditIcon, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
+import { TableBody, TableCell, TableFooter } from "@material-ui/core";
 
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
 import { renderCollection } from "@dashboard/business/misc";
@@ -10,7 +10,6 @@ import { getPluginsWithAppReplacementsIds } from "@dashboard/business/utils/plug
 import { PluginListUrlSortField, pluginUrl } from "@dashboard/business/utils/plugins/urls";
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { ListProps, SortPage } from "@dashboard/types";
-import { TableBody, TableCell, TableFooter } from "@material-ui/core";
 import ResponsiveTable from "@presentation/shared/ResponsiveTable";
 import { TablePaginationWithContext } from "@presentation/shared/TablePagination";
 import TableRowLink from "@presentation/shared/TableRowLink";

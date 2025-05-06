@@ -1,9 +1,8 @@
 // @ts-strict-ignore
 import React from "react";
-
 import { makeStyles } from "@saleor/macaw-ui";
-
 import { FormControl, FormControlLabel, Radio, RadioGroup } from "@material-ui/core";
+
 import clsx from "clsx";
 
 const useStyles = makeStyles(

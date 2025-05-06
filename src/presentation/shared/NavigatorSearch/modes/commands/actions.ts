@@ -1,5 +1,4 @@
 import { IntlShape } from "react-intl";
-
 import { MutationFunction } from "@apollo/client";
 
 import { permissionGroupAddUrl } from "@business/utils/permissions/urls";

@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { IntlShape } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { Option } from "@saleor/macaw-ui-next";
 

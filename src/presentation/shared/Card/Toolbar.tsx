@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, PropsWithBox } from "@saleor/macaw-ui-next";
 
 export const Toolbar: React.FC<PropsWithBox<{ children: React.ReactNode }>> = ({

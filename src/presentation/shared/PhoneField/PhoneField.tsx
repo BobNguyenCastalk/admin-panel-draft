@@ -1,10 +1,9 @@
 // @ts-strict-ignore
 import React from "react";
-
 import { makeStyles } from "@saleor/macaw-ui";
+import { TextField } from "@material-ui/core";
 
 import { ChangeEvent } from "@dashboard/business/hooks/shared/useForm";
-import { TextField } from "@material-ui/core";
 import { Select } from "@presentation/shared/Select";
 
 const useStyles = makeStyles(

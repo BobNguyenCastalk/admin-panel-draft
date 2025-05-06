@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 import * as RadixRadioGroup from "@radix-ui/react-radio-group";

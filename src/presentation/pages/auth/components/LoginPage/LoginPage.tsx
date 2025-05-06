@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
-
 import { EyeIcon } from "@saleor/macaw-ui";
 import { Box, Button, Divider, Input, Text } from "@saleor/macaw-ui-next";
 

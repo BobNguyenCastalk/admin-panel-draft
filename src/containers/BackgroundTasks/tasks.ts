@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { IntlShape } from "react-intl";
-
 import { ApolloQueryResult } from "@apollo/client";
 
 import { commonMessages } from "@dashboard/constants/common/intl";

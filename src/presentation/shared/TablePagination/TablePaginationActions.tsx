@@ -1,12 +1,11 @@
 // @ts-strict-ignore
 import React from "react";
-
 import { IconButton, makeStyles, useTheme } from "@saleor/macaw-ui";
-
-import { isDarkTheme } from "@dashboard/business/misc";
 import { alpha } from "@material-ui/core/styles";
 import ArrowLeft from "@material-ui/icons/ArrowLeft";
 import ArrowRight from "@material-ui/icons/ArrowRight";
+
+import { isDarkTheme } from "@dashboard/business/misc";
 import clsx from "clsx";
 
 const useStyles = makeStyles(

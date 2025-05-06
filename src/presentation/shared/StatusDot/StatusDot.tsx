@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, useTheme } from "@saleor/macaw-ui-next";
 
 import { getDotColor } from "@dashboard/business/misc";

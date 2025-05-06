@@ -1,8 +1,6 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Text } from "@saleor/macaw-ui-next";
-
 import { Grow, Paper, Popper } from "@material-ui/core";
 
 import { Pill } from "../Pill";

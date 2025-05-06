@@ -1,6 +1,5 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Box, InputProps, SearchIcon, sprinkles, Text } from "@saleor/macaw-ui-next";
 
 import { getModePlaceholder, getModeSymbol } from "./modes/utils";

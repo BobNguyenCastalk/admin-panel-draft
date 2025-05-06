@@ -1,13 +1,12 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { makeStyles } from "@saleor/macaw-ui";
 import { sprinkles, vars } from "@saleor/macaw-ui-next";
+import { TextField } from "@material-ui/core";
 
 import { getUserInitials } from "@dashboard/business/misc";
 import useBoundStore from "@dashboard/stores";
-import { TextField } from "@material-ui/core";
 import { Button } from "@presentation/shared/Button";
 
 import { DashboardCard } from "../Card";

@@ -1,5 +1,4 @@
 import { IntlShape } from "react-intl";
-
 import { DefaultTheme } from "@saleor/macaw-ui-next";
 
 import { getStatusColor, getUserName } from "@dashboard/business/misc";

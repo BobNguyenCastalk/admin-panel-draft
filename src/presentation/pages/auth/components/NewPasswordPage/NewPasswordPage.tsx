@@ -1,12 +1,11 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { Box, Button, Text } from "@saleor/macaw-ui-next";
+import { TextField } from "@material-ui/core";
 
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
 import getAccountErrorMessage from "@dashboard/business/utils/shared/errors/account";
 import { AccountErrorFragment } from "@dashboard/graphql";
-import { TextField } from "@material-ui/core";
 import Form from "@presentation/shared/Form";
 import FormSpacer from "@presentation/shared/FormSpacer";
 

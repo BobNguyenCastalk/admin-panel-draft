@@ -1,8 +1,6 @@
 // @ts-strict-ignore
 import React from "react";
-
 import { Text } from "@saleor/macaw-ui-next";
-
 import { FormControlLabel, Switch } from "@material-ui/core";
 
 interface ControlledSwitchProps {

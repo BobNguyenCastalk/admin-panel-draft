@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
 import { DeleteIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
 import { Box, Skeleton, Text, vars } from "@saleor/macaw-ui-next";
+import { TableBody, TableCell } from "@material-ui/core";
 
 import { sortMembers } from "@business/utils/permissions/sort";
 import { MembersListUrlSortField } from "@business/utils/permissions/urls";
@@ -17,7 +17,6 @@ import { getArrowDirection } from "@dashboard/business/utils/shared/sort";
 import { commonStatusMessages } from "@dashboard/constants/common/intl";
 import { PermissionGroupMemberFragment } from "@dashboard/graphql";
 import { ListActions, SortPage } from "@dashboard/types";
-import { TableBody, TableCell } from "@material-ui/core";
 import { Button } from "@presentation/shared/Button";
 import { DashboardCard } from "@presentation/shared/Card";
 import Checkbox from "@presentation/shared/Checkbox";

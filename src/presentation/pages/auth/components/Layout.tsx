@@ -4,7 +4,6 @@ import saleorLightLogo from "@assets/images/logo-light.svg";
 
 import React from "react";
 import SVG from "react-inlinesvg";
-
 import { makeStyles, useTheme } from "@saleor/macaw-ui";
 
 const useStyles = makeStyles(

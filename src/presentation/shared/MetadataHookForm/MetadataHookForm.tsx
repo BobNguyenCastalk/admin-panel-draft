@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 import { FieldError, FieldErrors, UseFormReturn } from "react-hook-form";
-
 import { Box } from "@saleor/macaw-ui-next";
 
 import { flattenErrors } from "@dashboard/business/utils/shared/hook-form/errors";

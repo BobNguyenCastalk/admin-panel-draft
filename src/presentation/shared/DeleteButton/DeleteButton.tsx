@@ -1,6 +1,5 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
 import { Button } from "@saleor/macaw-ui-next";
 
 import { buttonMessages } from "@dashboard/constants/common/intl";
