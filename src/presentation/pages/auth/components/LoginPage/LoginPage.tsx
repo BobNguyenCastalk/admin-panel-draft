@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Link } from "react-router-dom";
 
 import { EyeIcon } from "@saleor/macaw-ui";
 import { Box, Button, Divider, Input, Text } from "@saleor/macaw-ui-next";
 
+import { passwordResetUrl } from "@business/utils/auth/urls";
 import { commonMessages } from "@constants/common/intl";
 import { UserContextError } from "@dashboard/auth/types";
 import { SubmitPromise } from "@dashboard/business/hooks/shared/useForm";
@@ -91,6 +93,15 @@ const LoginPage: React.FC<LoginCardProps> = props => {
             }
             required
           />
+          <Link to={passwordResetUrl}>
+            <Text className={classes.link} fontSize={3} data-test-id="reset-password-link">
+              <FormattedMessage
+                id="3tbL7x"
+                defaultMessage="Forgot password?"
+                description="description"
+              />
+            </Text>
+          </Link>
 
           <div className={classes.buttonContainer}>
             <ButtonWithLoader
