@@ -9,7 +9,6 @@ import {
   OperationVariables,
   QueryHookOptions as BaseQueryHookOptions,
   QueryResult,
-  useApolloClient,
   useQuery as useBaseQuery,
 } from "@apollo/client";
 
@@ -91,8 +90,7 @@ export function useQuery<TData, TVariables>(
   const [, dispatchAppState] = useAppState();
   const user = useBoundStore(state => state.user);
   const userPermissions = getUserPermissions(user?.userPermissions || []);
-  const apolloClient = useApolloClient();
-  const { logout } = useAuth({ apolloClient });
+  const { logout } = useAuth();
   const variablesWithPermissions = {
     ...variables,
     ...allPermissions,

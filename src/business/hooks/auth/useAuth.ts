@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 
-import { ApolloClient, ApolloError } from "@apollo/client";
+import { ApolloError, useApolloClient } from "@apollo/client";
 
 import { parseAuthError } from "@business/utils/auth/errors";
 import useNavigator from "@dashboard/business/hooks/shared/useNavigator";
@@ -16,12 +16,10 @@ import { useBoundStore } from "@dashboard/stores";
 import { UserContext, UserContextError } from "@dashboard/types/auth";
 import isEmpty from "lodash/isEmpty";
 
-export interface UseAuthOpts {
-  apolloClient: ApolloClient<any>;
-}
 type AuthErrorCodes = `${AccountErrorCode}`;
 
-export function useAuth({ apolloClient }: UseAuthOpts): UserContext {
+export function useAuth(): UserContext {
+  const client = useApolloClient();
   const navigate = useNavigator();
   const authenticated = useBoundStore(state => state.authenticated);
   const authenticating = useBoundStore(state => state.authenticating);
@@ -50,7 +48,7 @@ export function useAuth({ apolloClient }: UseAuthOpts): UserContext {
     setAuthenticated(false);
     setUser(null);
 
-    const result = await logout(apolloClient);
+    const result = await logout(client);
     // Clear credentials from browser's credential manager only when exist.
     // Chrome 115 crash when calling preventSilentAccess() when no credentials exist.
     const hasCredentials = await checkIfCredentialsExist();
@@ -61,7 +59,7 @@ export function useAuth({ apolloClient }: UseAuthOpts): UserContext {
 
     // Forget last logged in user data.
     // On next login, user details query will be refetched due to cache-and-network fetch policy.
-    apolloClient.clearStore();
+    client.clearStore();
 
     const errors = result?.errors || [];
     const externalLogoutUrl = result
@@ -75,7 +73,7 @@ export function useAuth({ apolloClient }: UseAuthOpts): UserContext {
         navigate("/");
       }
     }
-  }, [apolloClient, navigate, setAuthenticated, setUser]);
+  }, [client, navigate, setAuthenticated, setUser]);
 
   // TODO: remove this
   const logoutNonStaffUser = useCallback(
@@ -97,7 +95,7 @@ export function useAuth({ apolloClient }: UseAuthOpts): UserContext {
       try {
         setAuthenticating(true);
 
-        const result = await login(apolloClient, {
+        const result = await login(client, {
           email,
           password,
           includeDetails: false,
@@ -158,7 +156,7 @@ export function useAuth({ apolloClient }: UseAuthOpts): UserContext {
     },
     [
       setAuthenticating,
-      apolloClient,
+      client,
       logoutNonStaffUser,
       setAuthenticated,
       setUser,

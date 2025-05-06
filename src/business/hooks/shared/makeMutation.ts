@@ -6,7 +6,6 @@ import {
   MutationFunction,
   MutationHookOptions as BaseMutationHookOptions,
   MutationResult,
-  useApolloClient,
   useMutation as useBaseMutation,
 } from "@apollo/client";
 
@@ -41,8 +40,7 @@ export function useMutation<TData, TVariables>(
 ): UseMutation<TData, TVariables> {
   const notify = useNotifier();
   const intl = useIntl();
-  const apolloClient = useApolloClient();
-  const { logout } = useAuth({ apolloClient });
+  const { logout } = useAuth();
   const [mutateFn, result] = useBaseMutation(mutation, {
     ...opts,
     onCompleted: data => {

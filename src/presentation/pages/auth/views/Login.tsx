@@ -1,7 +1,5 @@
 import React from "react";
 
-import { useApolloClient } from "@apollo/client";
-
 import { useAuth } from "@dashboard/business/hooks/auth/useAuth";
 import { useBoundStore } from "@dashboard/stores";
 
@@ -9,12 +7,10 @@ import LoginPage from "../components/LoginPage";
 import { LoginFormData } from "../components/LoginPage/types";
 
 const LoginView: React.FC = () => {
-  const apolloClient = useApolloClient();
-
   const authErrors = useBoundStore(state => state.authErrors);
   const authenticating = useBoundStore(state => state.authenticating);
 
-  const { login } = useAuth({ apolloClient });
+  const { login } = useAuth();
 
   const handleSubmit = async (data: LoginFormData) => {
     if (!login) {
