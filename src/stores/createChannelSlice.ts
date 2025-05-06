@@ -1,9 +1,9 @@
-import { ChannelI } from "@dashboard/new-types";
+import { IChannelSlice } from "@dashboard/types/channel.types";
 
 // initiate selected channel state from local storage
 //   const [selectedChannel, setSelectedChannel] = useLocalStorage("channel", "");
 
-export const createChannelSlice = (set): ChannelI => ({
+export const createChannelSlice = (set): IChannelSlice => ({
   channels: [],
   selectedChannel: undefined,
   isPickerActive: false,

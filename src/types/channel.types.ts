@@ -1,4 +1,4 @@
-export interface ChannelI {
+export interface IChannelSlice {
   channels: string[];
   selectedChannel: string | undefined;
   isPickerActive: boolean;
@@ -6,5 +6,3 @@ export interface ChannelI {
   setSelectedChannel: (selected: string) => void;
   setPickerActive: (isActive: boolean) => void;
 }
-
-export type AuthSliceI = ChannelI;
