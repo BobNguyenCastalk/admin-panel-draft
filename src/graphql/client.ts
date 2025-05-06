@@ -2,20 +2,14 @@
 // These are separate clients and do not share configs between themselves
 import { ApolloClient, ApolloLink, FetchResult, InMemoryCache } from "@apollo/client";
 
-import { logout, refreshToken as getRefreshToken } from "@business/utils/auth/temp";
-import { getState } from "@business/utils/shared/state";
-import { createStorage, storage } from "@business/utils/shared/storage";
-import { DEVELOPMENT_MODE, WINDOW_EXISTS } from "@constants/common/app";
+import { logout } from "@business/utils/auth/temp";
+import { storage } from "@business/utils/shared/storage";
 import { ENABLED_SERVICE_NAME_HEADER, getApiUrl } from "@dashboard/configs";
 import { createUploadLink } from "apollo-upload-client";
 import jwtDecode from "jwt-decode";
 
 import introspectionQueryResultData from "./fragmentTypes.generated";
 import { TypedTypePolicies } from "./typePolicies.generated";
-
-interface SaleorClientOpts {
-  channel: string;
-}
 
 const attachVariablesLink = new ApolloLink((operation, forward) => {
   operation.setContext(({ headers = {} }) => {

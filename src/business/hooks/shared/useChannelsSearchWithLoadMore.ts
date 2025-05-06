@@ -15,6 +15,7 @@ export const useChannelsSearchWithLoadMore = (
   itemsPerPage: number = DEFAULT_ITEMS_PER_PAGE,
 ): ChannelsWithLoadMoreProps => {
   const { data, loading } = useBaseChannelsQuery({});
+
   const {
     query,
     onQueryChange: onSearchChange,

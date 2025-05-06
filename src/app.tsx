@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
 import { ApolloProvider } from "@apollo/client";
 
@@ -23,12 +23,15 @@ import { FeatureFlagsProviderWithUser } from "./featureFlags/FeatureFlagsProvide
 
 const App: React.FC = () => {
   // Get new refresh and access token if user reset browser
-  createStorage(true);
-  const refreshToken = storage.getRefreshToken();
 
-  if (refreshToken) {
-    getRefreshToken(apolloClient, true);
-  }
+  useEffect(() => {
+    createStorage(true);
+    const refreshToken = storage.getRefreshToken();
+
+    if (refreshToken) {
+      getRefreshToken(apolloClient, true);
+    }
+  }, []);
 
   return (
     <ApolloProvider client={apolloClient}>
