@@ -9,13 +9,16 @@ import {
   OperationVariables,
   QueryHookOptions as BaseQueryHookOptions,
   QueryResult,
+  useApolloClient,
   useQuery as useBaseQuery,
 } from "@apollo/client";
 
+import { useAuth } from "@business/hooks/auth/useAuth";
 import { RequireAtLeastOne } from "@dashboard/business/misc";
 import { PrefixedPermissions } from "@dashboard/graphql/extendedTypes";
 import { PermissionEnum, UserPermissionFragment } from "@dashboard/graphql/types.generated";
-import { handleQueryAuthError, useUser } from "@dashboard/presentation/pages/auth";
+import { handleQueryAuthError } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 import { DocumentNode } from "graphql";
 
 import useAppState from "./useAppState";
@@ -86,8 +89,10 @@ export function useQuery<TData, TVariables>(
   const notify = useNotifier();
   const intl = useIntl();
   const [, dispatchAppState] = useAppState();
-  const user = useUser();
-  const userPermissions = getUserPermissions(user.user?.userPermissions || []);
+  const user = useBoundStore(state => state.user);
+  const userPermissions = getUserPermissions(user?.userPermissions || []);
+  const apolloClient = useApolloClient();
+  const { logout } = useAuth({ apolloClient });
   const variablesWithPermissions = {
     ...variables,
     ...allPermissions,
@@ -104,7 +109,7 @@ export function useQuery<TData, TVariables>(
       if (handleError) {
         handleError(error);
       } else {
-        handleQueryAuthError(error, notify, user.logout, intl);
+        handleQueryAuthError(error, notify, logout, intl);
       }
     },
     skip,

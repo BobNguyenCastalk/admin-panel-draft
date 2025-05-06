@@ -1,11 +1,12 @@
 // @ts-strict-ignore
-import React from "react";
-import { IntlShape, useIntl } from "react-intl";
-
 import Channels from "@assets/icons/Channels";
 import PermissionGroups from "@assets/icons/PermissionGroups";
 import Plugins from "@assets/icons/Plugins";
 import StaffMembers from "@assets/icons/StaffMembers";
+
+import React from "react";
+import { IntlShape, useIntl } from "react-intl";
+
 import { permissionGroupListUrl } from "@business/utils/permissions/urls";
 import { pluginListUrl } from "@business/utils/plugins/urls";
 import { maybe } from "@dashboard/business/misc";
@@ -14,7 +15,7 @@ import { staffListUrl } from "@dashboard/business/utils/staffs/urls";
 import { APP_VERSION as dashboardVersion } from "@dashboard/configs";
 import { sectionNames } from "@dashboard/constants/common/intl";
 import { PermissionEnum } from "@dashboard/graphql";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 
 import { ConfigurationPage } from "./ConfigurationPage";
@@ -109,7 +110,7 @@ export const ConfigurationSection: React.FC = () => {
     dashboardVersion,
     coreVersion: "",
   };
-  const user = useUser();
+  const user = useBoundStore(state => state.user);
   const intl = useIntl();
 
   return (
@@ -117,7 +118,7 @@ export const ConfigurationSection: React.FC = () => {
       <WindowTitle title={intl.formatMessage(sectionNames.configuration)} />
       <ConfigurationPage
         menu={createConfigurationMenu(intl)}
-        user={maybe(() => user.user)}
+        user={maybe(() => user)}
         versionInfo={versions}
       />
     </>

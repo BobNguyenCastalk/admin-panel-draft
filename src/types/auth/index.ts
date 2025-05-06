@@ -4,7 +4,6 @@ export const UserContextError = {
   loginError: "loginError",
   serverError: "serverError",
   noPermissionsError: "noPermissionsError",
-  externalLoginError: "externalLoginError",
   loginAttemptDelay: "loginAttemptDelay",
   unknownLoginError: "unknownLoginError",
   invalidCredentials: "invalidCredentials",

@@ -6,18 +6,16 @@ import {
   MutationFunction,
   MutationHookOptions as BaseMutationHookOptions,
   MutationResult,
+  useApolloClient,
   useMutation as useBaseMutation,
 } from "@apollo/client";
 
+import { useAuth } from "@business/hooks/auth/useAuth";
 import { isJwtError } from "@business/utils/auth/errors";
 import { getMutationStatus } from "@dashboard/business/misc";
 import { GqlErrors, hasError } from "@dashboard/business/utils/shared/api";
 import { commonMessages } from "@dashboard/constants/common/intl";
-import {
-  handleNestedMutationErrors,
-  showAllErrors,
-  useUser,
-} from "@dashboard/presentation/pages/auth";
+import { handleNestedMutationErrors, showAllErrors } from "@dashboard/presentation/pages/auth";
 import { MutationResultAdditionalProps } from "@dashboard/types";
 import { DocumentNode } from "graphql";
 
@@ -43,7 +41,8 @@ export function useMutation<TData, TVariables>(
 ): UseMutation<TData, TVariables> {
   const notify = useNotifier();
   const intl = useIntl();
-  const user = useUser();
+  const apolloClient = useApolloClient();
+  const { logout } = useAuth({ apolloClient });
   const [mutateFn, result] = useBaseMutation(mutation, {
     ...opts,
     onCompleted: data => {
@@ -68,7 +67,7 @@ export function useMutation<TData, TVariables>(
               text: intl.formatMessage(commonMessages.readOnly),
             });
           } else if (err.graphQLErrors.some(isJwtError)) {
-            user.logout();
+            logout();
             notify({
               status: "error",
               text: intl.formatMessage(commonMessages.sessionExpired),

@@ -7,3 +7,5 @@ export const useBoundStore = create((...a) => ({
   ...createAuthSlice(...a),
   ...createChannelSlice(...a),
 }));
+
+export default useBoundStore;

@@ -3,10 +3,9 @@ import { RouteProps } from "react-router-dom";
 
 import { hasAllPermissions, hasAnyPermissions } from "@business/utils/auth/misc";
 import { PermissionEnum } from "@dashboard/graphql";
+import useBoundStore from "@dashboard/stores";
 import NotFound from "@presentation/shared/NotFound";
 import { Route } from "@presentation/shared/Router";
-
-import { useUser } from "..";
 
 type MatchPermissionType = "all" | "any";
 
@@ -22,13 +21,14 @@ export const SectionRoute: React.FC<SectionRouteProps> = ({
   matchPermission = "all",
   ...props
 }) => {
-  const { user } = useUser();
+  const user = useBoundStore(state => state.user);
 
   // Prevents race condition
   if (user === undefined) {
     return null;
   }
 
+  // TODO: check if use has section permission is carried out successfully
   const hasSectionPermissions = () => {
     if (!permissions) {
       return true;

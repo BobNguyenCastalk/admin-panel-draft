@@ -33,7 +33,6 @@ import {
   usePermissionGroupUpdateMutation,
 } from "@dashboard/graphql";
 import useStaffMemberSearch from "@dashboard/graphql/searches/useStaffMemberSearch";
-import { useUser } from "@dashboard/presentation/pages/auth";
 import { useBoundStore } from "@dashboard/stores";
 import MembersErrorDialog from "@presentation/pages/permissions/components/MembersErrorDialog";
 import PermissionGroupDeleteDialog from "@presentation/pages/permissions/components/PermissionGroupDeleteDialog";
@@ -57,10 +56,10 @@ export const PermissionGroupDetails: React.FC<PermissionGroupDetailsProps> = ({ 
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
-  const user = useUser();
+  const user = useBoundStore(state => state.user);
   const { data, loading, refetch } = usePermissionGroupDetailsQuery({
     displayLoader: true,
-    variables: { id, userId: user?.user?.id ?? "" },
+    variables: { id, userId: user?.id ?? "" },
   });
   const availableChannels = useBoundStore(state => state.channels);
   const [membersList, setMembersList] = useStateFromProps<Members>(
@@ -84,12 +83,13 @@ export const PermissionGroupDetails: React.FC<PermissionGroupDetailsProps> = ({ 
 
         // When user belong to editedd permission group refetch user details
         // as they are root of user accessible channels
-        if (
-          checkIfUserBelongToPermissionGroup(data?.permissionGroup, user?.user?.id ?? "") &&
-          user.refetchUser
-        ) {
-          user.refetchUser();
-        }
+        // if (
+        //   checkIfUserBelongToPermissionGroup(data?.permissionGroup, user?.user?.id ?? "") &&
+        //   user.refetchUser
+        // ) {
+        // user.refetchUser();
+        // TODO: to re-implement refetchUser
+        // }
 
         refetch();
         closeModal();

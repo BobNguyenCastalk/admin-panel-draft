@@ -1,8 +1,8 @@
-import { useUserPermissions } from "@business/hooks/auth/useUserPermissions";
 import { PermissionEnum } from "@dashboard/graphql";
+import { useBoundStore } from "@dashboard/stores";
 
 export const useHasManagedAppsPermission = () => {
-  const permissions = useUserPermissions();
+  const permissions = useBoundStore(state => state.user?.userPermissions ?? []);
   const hasManagedAppsPermission = !!permissions?.find(
     ({ code }) => code === PermissionEnum.MANAGE_APPS,
   );

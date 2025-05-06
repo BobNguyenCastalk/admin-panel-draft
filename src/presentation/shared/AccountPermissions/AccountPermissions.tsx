@@ -4,7 +4,7 @@ import { useIntl } from "react-intl";
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 
 import { Header } from "./components/Header";
 import { PermissionsExceeded } from "./components/PermissionExeeded";
@@ -39,7 +39,7 @@ const AccountPermissions: React.FC<AccountPermissionsProps> = props => {
     a.name.localeCompare(b.name),
   );
   const intl = useIntl();
-  const { user } = useUser();
+  const user = useBoundStore(state => state.user);
   const handleFullAccessChange = () => {
     onChange({
       target: {

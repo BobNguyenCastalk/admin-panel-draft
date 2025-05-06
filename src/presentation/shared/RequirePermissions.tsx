@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 import React from "react";
 
-import { useUserPermissions } from "@business/hooks/auth/useUserPermissions";
 import { PermissionEnum, UserPermissionFragment } from "@dashboard/graphql";
+import { useBoundStore } from "@dashboard/stores";
 
 const findPerm = (permList, perm) => permList.find(userPerm => userPerm.code === perm);
 
@@ -31,7 +31,7 @@ const RequirePermissions: React.FC<RequirePermissionsProps> = ({
   requiredPermissions,
   oneOfPermissions,
 }) => {
-  const userPermissions = useUserPermissions();
+  const userPermissions = useBoundStore(state => state.user?.userPermissions ?? []);
 
   if (!userPermissions) {
     return null;

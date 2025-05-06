@@ -13,8 +13,11 @@ import {
   Text,
 } from "@saleor/macaw-ui-next";
 
+import { useApolloClient } from "@apollo/client";
+
+import { useAuth } from "@business/hooks/auth/useAuth";
 import { staffMemberDetailsUrl } from "@dashboard/business/utils/staffs/urls";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import { useBoundStore } from "@dashboard/stores";
 import { useTheme } from "@dashboard/theme";
 
 import { FeatureFlagsModal } from "./FeatureFlagsModal";
@@ -48,7 +51,9 @@ export const useLegacyThemeHandler = () => {
 };
 
 export const UserControls = () => {
-  const { user, logout } = useUser();
+  const apolloClient = useApolloClient();
+  const user = useBoundStore(state => state.user);
+  const { logout } = useAuth({ apolloClient });
   const { changeTheme, theme } = useLegacyThemeHandler();
   const [open, setOpen] = useState(false);
   const [flagsModalOpen, setFlagsModalOpen] = useState(false);

@@ -34,8 +34,6 @@ export function getErrorMessage(err: UserContextError, intl: IntlShape): string 
   switch (err) {
     case "loginError":
       return intl.formatMessage(errorMessages.loginError);
-    case "externalLoginError":
-      return intl.formatMessage(errorMessages.unknownLoginError);
     case "unknownLoginError":
       return intl.formatMessage(errorMessages.unknownLoginError);
     case "serverError":

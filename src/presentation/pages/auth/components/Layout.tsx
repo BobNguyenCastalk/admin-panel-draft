@@ -1,14 +1,11 @@
-import React from "react";
-import SVG from "react-inlinesvg";
-
-import { makeStyles, useTheme } from "@saleor/macaw-ui";
-
 import backgroundArt from "@assets/images/login-background.svg";
 import saleorDarkLogo from "@assets/images/logo-dark.svg";
 import saleorLightLogo from "@assets/images/logo-light.svg";
 
-import { useUser } from "..";
-import LoginLoading from "./LoginLoading";
+import React from "react";
+import SVG from "react-inlinesvg";
+
+import { makeStyles, useTheme } from "@saleor/macaw-ui";
 
 const useStyles = makeStyles(
   theme => ({
@@ -76,15 +73,8 @@ const useStyles = makeStyles(
 );
 const Layout: React.FC = props => {
   const { children } = props;
-  const { errors } = useUser();
   const classes = useStyles(props);
   const { themeType } = useTheme();
-
-  // show fullscreen loading when there is externalLoginError - we will redirect and
-  // logout user in meantime
-  if (errors.some(item => item === "externalLoginError")) {
-    return <LoginLoading />;
-  }
 
   return (
     <div className={classes.root}>

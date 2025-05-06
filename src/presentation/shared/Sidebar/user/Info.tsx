@@ -3,13 +3,13 @@ import React from "react";
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 import { getUserInitials, getUserName } from "@dashboard/business/misc";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 import { UserAvatar } from "@presentation/shared/UserAvatar";
 
 import { UserControls } from "./Controls";
 
 export const UserInfo = () => {
-  const { user } = useUser();
+  const user = useBoundStore(state => state.user);
 
   return (
     <Box

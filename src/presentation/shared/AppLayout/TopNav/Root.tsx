@@ -2,7 +2,6 @@ import React, { PropsWithChildren } from "react";
 
 import { Box, Text } from "@saleor/macaw-ui-next";
 
-import { useUser } from "@dashboard/presentation/pages/auth";
 import { useBoundStore } from "@dashboard/stores";
 
 import AppChannelSelect from "../AppChannelSelect";
@@ -29,8 +28,8 @@ export const Root: React.FC<PropsWithChildren<TopNavProps>> = ({
   const channel = useBoundStore(state => state.selectedChannel);
   const isPickerActive = useBoundStore(state => state.isPickerActive);
   const setChannel = useBoundStore(state => state.setSelectedChannel);
-  const user = useUser();
-  const channels = user?.user?.accessibleChannels ?? [];
+  const user = useBoundStore(state => state.user);
+  const channels = user?.accessibleChannels ?? [];
 
   return (
     <TopNavWrapper withoutBorder={withoutBorder} hasSubtitle={!!subtitle}>

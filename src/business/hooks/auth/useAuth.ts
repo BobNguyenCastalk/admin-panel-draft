@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef } from "react";
-import { IntlShape } from "react-intl";
 
 import { ApolloClient, ApolloError } from "@apollo/client";
 
@@ -12,21 +11,17 @@ import {
   login as loginWithCredentialsManagementAPI,
   saveCredentials,
 } from "@dashboard/business/utils/shared/credentialsManagement";
-import { commonMessages } from "@dashboard/constants/common/intl";
 import { AccountErrorCode } from "@dashboard/graphql";
 import { useBoundStore } from "@dashboard/stores";
 import { UserContext, UserContextError } from "@dashboard/types/auth";
-import { IMessageContext } from "@presentation/shared/messages";
 import isEmpty from "lodash/isEmpty";
 
 export interface UseAuthOpts {
-  intl: IntlShape;
-  notify: IMessageContext;
   apolloClient: ApolloClient<any>;
 }
 type AuthErrorCodes = `${AccountErrorCode}`;
 
-export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContext {
+export function useAuth({ apolloClient }: UseAuthOpts): UserContext {
   const navigate = useNavigator();
   const authenticated = useBoundStore(state => state.authenticated);
   const authenticating = useBoundStore(state => state.authenticating);
@@ -82,18 +77,19 @@ export function useAuth({ intl, notify, apolloClient }: UseAuthOpts): UserContex
     }
   }, [apolloClient, navigate, setAuthenticated, setUser]);
 
+  // TODO: remove this
   const logoutNonStaffUser = useCallback(
     async data => {
       if (data?.user && !data.user.isStaff) {
-        notify({
-          status: "error",
-          text: intl.formatMessage(commonMessages.unauthorizedDashboardAccess),
-          title: intl.formatMessage(commonMessages.insufficientPermissions),
-        });
+        // notify({
+        //   status: "error",
+        //   text: intl.formatMessage(commonMessages.unauthorizedDashboardAccess),
+        //   title: intl.formatMessage(commonMessages.insufficientPermissions),
+        // });
         await handleLogout();
       }
     },
-    [handleLogout, intl, notify],
+    [handleLogout],
   );
 
   const handleLogin = useCallback(

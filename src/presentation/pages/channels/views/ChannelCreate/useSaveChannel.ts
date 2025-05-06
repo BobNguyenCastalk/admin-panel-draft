@@ -9,7 +9,6 @@ import {
   Exact,
   ReorderInput,
 } from "@dashboard/graphql";
-import { useUser } from "@dashboard/presentation/pages/auth";
 
 import { calculateItemsOrderMoves } from "../ChannelDetails/handlers";
 
@@ -25,7 +24,8 @@ interface SaveChannelConfig {
 }
 
 export const useSaveChannel = ({ createChannel, reorderChannelWarehouses }: SaveChannelConfig) => {
-  const { refetchUser } = useUser();
+  // const { refetchUser } = useUser();
+  // TODO: to re-implement refetchUser
 
   return async (input: ChannelCreateInput, warehousesToDisplay: ChannelWarehouses) => {
     const createChannelMutation = createChannel({
@@ -49,9 +49,9 @@ export const useSaveChannel = ({ createChannel, reorderChannelWarehouses }: Save
         });
       }
 
-      if (refetchUser) {
-        await refetchUser();
-      }
+      // if (refetchUser) {
+      //   await refetchUser();
+      // }
     }
 
     return errors;

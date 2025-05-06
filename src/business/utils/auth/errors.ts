@@ -38,8 +38,6 @@ export function getAuthErrorType(graphQLError: GraphQLError): UserContextError {
   switch (graphQLError.extensions?.exception?.code as AuthError) {
     case AuthError.PermissionDenied:
       return UserContextError.noPermissionsError;
-    case AuthError.OAuthError:
-      return UserContextError.externalLoginError;
     default:
       return UserContextError.unknownLoginError;
   }

@@ -6,7 +6,7 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { sprinkles, vars } from "@saleor/macaw-ui-next";
 
 import { getUserInitials } from "@dashboard/business/misc";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 import { TextField } from "@material-ui/core";
 import { Button } from "@presentation/shared/Button";
 
@@ -75,8 +75,8 @@ export const Timeline: React.FC<TimelineProps> = props => {
 export const TimelineAddNote: React.FC<TimelineAddNoteProps> = props => {
   const { message, onChange, onSubmit, reset, disabled } = props;
   const classes = useStyles(props);
-  const { user } = useUser();
   const intl = useIntl();
+  const user = useBoundStore(state => state.user);
   const submit = e => {
     reset();
     onSubmit(e);

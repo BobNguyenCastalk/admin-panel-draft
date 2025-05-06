@@ -3,15 +3,14 @@ import {
   MetadataItemFragment,
   useUserAccountUpdateMutation,
 } from "@dashboard/graphql";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 
 const extractGridRelatedMetadata = (metadata: MetadataItemFragment[], key: string) => {
   return metadata.find(meta => meta.key === `grid_${key}`);
 };
 
 export const useMetadata = (key: string) => {
-  const { user } = useUser();
-
+  const user = useBoundStore(state => state.user);
   const metadata = extractGridRelatedMetadata(user?.metadata ?? [], key);
 
   const [updateAccount] = useUserAccountUpdateMutation({

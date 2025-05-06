@@ -4,10 +4,10 @@ import { FormattedMessage } from "react-intl";
 import { Text } from "@saleor/macaw-ui-next";
 
 import { getUserName } from "@dashboard/business/misc";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 
 export const WelcomePageTitle = () => {
-  const { user } = useUser();
+  const user = useBoundStore(state => state.user);
   const userName = getUserName(user, true);
 
   return (

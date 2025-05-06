@@ -46,6 +46,7 @@
     "sort-imports": "off", // imports are handled by simple-import-sort/sort
     "simple-import-sort/imports": ["warn", { 
       "groups": [
+        ["^@assets"],
         ["^react"],
         ["^@saleor"],
         ["^@apollo"],

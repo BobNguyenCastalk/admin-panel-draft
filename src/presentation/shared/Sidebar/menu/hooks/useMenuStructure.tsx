@@ -1,30 +1,21 @@
+import { ConfigurationIcon } from "@assets/icons/Configuration";
+import { HomeIcon } from "@assets/icons/Home";
+
 import React from "react";
 import { useIntl } from "react-intl";
 
 import { Box } from "@saleor/macaw-ui-next";
 
-import { ConfigurationIcon } from "@assets/icons/Configuration";
-import { ContentsIcon } from "@assets/icons/Contents";
-import { HomeIcon } from "@assets/icons/Home";
-import { TranslationsIcon } from "@assets/icons/Translations";
 import { getConfigMenuItemsPermissions } from "@dashboard/business/utils/configuration/utils";
-import { commonMessages, sectionNames } from "@dashboard/constants/common/intl";
-import { useFlag } from "@dashboard/featureFlags";
-import { PermissionEnum } from "@dashboard/graphql";
-import { CustomersIcon } from "@dashboard/icons/Customers";
-import { DiscountsIcon } from "@dashboard/icons/Discounts";
-import { MarketplaceIcon } from "@dashboard/icons/Marketplace";
-import { OrdersIcon } from "@dashboard/icons/Orders";
-import { ProductsIcon } from "@dashboard/icons/Products";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import { sectionNames } from "@dashboard/constants/common/intl";
+import useBoundStore from "@dashboard/stores";
 import { configurationMenuUrl } from "@presentation/pages/configuration";
-import isEmpty from "lodash/isEmpty";
 
 import { SidebarMenuItem } from "../types";
 
 export function useMenuStructure() {
   const intl = useIntl();
-  const { user } = useUser();
+  const user = useBoundStore(state => state.user);
 
   const appExtensionsHeaderItem: SidebarMenuItem = {
     id: "extensions",

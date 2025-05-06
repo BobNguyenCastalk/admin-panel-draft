@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect, useState } from "react";
 
-import { useUser } from "@dashboard/presentation/pages/auth";
 import LoginLoading from "@dashboard/presentation/pages/auth/components/LoginLoading/LoginLoading";
+import useBoundStore from "@dashboard/stores";
 
 import { FlagList } from "./availableFlags";
 import { Provider } from "./context";
@@ -34,14 +34,14 @@ interface FeatureFlagsProviderWithUserProps {
 }
 
 export const FeatureFlagsProviderWithUser = ({ children }: FeatureFlagsProviderWithUserProps) => {
-  const user = useUser();
+  const user = useBoundStore(state => state.user);
 
   return (
     <FeatureFlagsProvider
       strategies={[
         new LocalStorageStrategy(),
         new EnvVarsStrategy(),
-        new MetadataStrategy(user.user?.metadata || []),
+        new MetadataStrategy(user?.metadata || []),
       ]}
     >
       {children}

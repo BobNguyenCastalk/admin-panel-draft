@@ -15,7 +15,7 @@ import { mapEdgesToItems } from "@dashboard/business/utils/shared/maps";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/configs";
 import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
 import usePermissionGroupSearch from "@dashboard/graphql/searches/usePermissionGroupSearch";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 import ActionDialog from "@presentation/shared/ActionDialog";
 import NotFoundPage from "@presentation/shared/NotFoundPage";
 import { hasPermissions } from "@presentation/shared/RequirePermissions";
@@ -33,7 +33,7 @@ interface OrderListProps {
 
 export const StaffDetails: React.FC<OrderListProps> = ({ id, params }) => {
   const navigate = useNavigator();
-  const user = useUser();
+  const user = useBoundStore(state => state.user);
   const intl = useIntl();
   const closeModal = () =>
     navigate(
@@ -42,7 +42,7 @@ export const StaffDetails: React.FC<OrderListProps> = ({ id, params }) => {
         action: undefined,
       }),
     );
-  const isUserSameAsViewer = user.user?.id === id;
+  const isUserSameAsViewer = user?.id === id;
   const { data, loading, refetch } = useStaffMemberDetailsQuery({
     displayLoader: true,
     variables: { id },
@@ -59,8 +59,8 @@ export const StaffDetails: React.FC<OrderListProps> = ({ id, params }) => {
     deleteUserAvatar,
     updateUserAvatar,
   } = useProfileOperations({ closeModal, id, refetch });
-  const staffMember = isUserSameAsViewer ? user.user : data?.user;
-  const hasManageStaffPermission = hasPermissions(user.user.userPermissions, [
+  const staffMember = isUserSameAsViewer ? user : data?.user;
+  const hasManageStaffPermission = hasPermissions(user.userPermissions, [
     PermissionEnum.MANAGE_STAFF,
   ]);
   const {

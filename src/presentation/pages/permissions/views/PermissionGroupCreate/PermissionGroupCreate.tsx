@@ -11,8 +11,7 @@ import useNotifier from "@dashboard/business/hooks/shared/useNotifier";
 import { extractMutationErrors } from "@dashboard/business/misc";
 import { usePermissionGroupCreateMutation } from "@dashboard/graphql";
 import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
-import { useUser } from "@dashboard/presentation/pages/auth";
-import { useBoundStore } from "@dashboard/stores";
+import useBoundStore from "@dashboard/stores";
 import { WindowTitle } from "@presentation/shared/WindowTitle";
 
 import {
@@ -24,12 +23,12 @@ export const PermissionGroupCreate: React.FC = () => {
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
-  const user = useUser();
+  const user = useBoundStore(state => state.user);
   const availableChannels = useBoundStore(state => state.channels);
-  const hasUserRestrictedAccessToChannels = checkIfUserHasRestictedAccessToChannels(user.user);
+  const hasUserRestrictedAccessToChannels = checkIfUserHasRestictedAccessToChannels(user);
   const userAccessibleChannelsOptions = useMemo(
-    () => getUserAccessibleChannelsOptions(availableChannels, user.user),
-    [availableChannels, user.user],
+    () => getUserAccessibleChannelsOptions(availableChannels, user),
+    [availableChannels, user],
   );
   const [createPermissionGroup, createPermissionGroupResult] = usePermissionGroupCreateMutation({
     onCompleted: data => {
@@ -67,7 +66,7 @@ export const PermissionGroupCreate: React.FC = () => {
       }),
     );
   };
-  const userPermissions = user?.user?.userPermissions?.map(p => p.code) || [];
+  const userPermissions = user?.userPermissions?.map(p => p.code) || [];
   const permissions: PermissionData[] =
     shop?.permissions.map(
       p =>

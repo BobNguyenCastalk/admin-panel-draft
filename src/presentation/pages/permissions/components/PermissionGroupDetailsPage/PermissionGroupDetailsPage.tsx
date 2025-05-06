@@ -24,7 +24,7 @@ import {
   PermissionGroupErrorFragment,
   UserPermissionFragment,
 } from "@dashboard/graphql";
-import { useUser } from "@dashboard/presentation/pages/auth";
+import useBoundStore from "@dashboard/stores";
 import { ListActions, SortPage } from "@dashboard/types";
 import AccountPermissions from "@presentation/shared/AccountPermissions";
 import { TopNav } from "@presentation/shared/AppLayout/TopNav";
@@ -86,9 +86,9 @@ export const PermissionGroupDetailsPage: React.FC<PermissonGroupDetailsPageProps
 }) => {
   const intl = useIntl();
   const navigate = useNavigator();
-  const user = useUser();
-  const channelsOptions = getUserAccessibleChannelsOptions(channels, user.user);
-  const hasUserRestrictedChannels = checkIfUserHasRestictedAccessToChannels(user.user);
+  const user = useBoundStore(state => state.user);
+  const channelsOptions = getUserAccessibleChannelsOptions(channels, user);
+  const hasUserRestrictedChannels = checkIfUserHasRestictedAccessToChannels(user);
   const initialForm: PermissionGroupDetailsPageFormData = {
     hasFullAccess: isGroupFullAccess(permissionGroup, permissions),
     hasAllChannels: !permissionGroup?.restrictedAccessToChannels ?? false,
