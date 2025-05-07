@@ -1,0 +1,151 @@
+
+import { Maybe, Scalars, Image, LanguageCodeEnum } from "./base.types";
+
+export declare type AccountErrorCode = 'ACTIVATE_OWN_ACCOUNT' | 'ACTIVATE_SUPERUSER_ACCOUNT' | 'DUPLICATED_INPUT_ITEM' | 'DEACTIVATE_OWN_ACCOUNT' | 'DEACTIVATE_SUPERUSER_ACCOUNT' | 'DELETE_NON_STAFF_USER' | 'DELETE_OWN_ACCOUNT' | 'DELETE_STAFF_ACCOUNT' | 'DELETE_SUPERUSER_ACCOUNT' | 'GRAPHQL_ERROR' | 'INACTIVE' | 'INVALID' | 'INVALID_PASSWORD' | 'LEFT_NOT_MANAGEABLE_PERMISSION' | 'INVALID_CREDENTIALS' | 'NOT_FOUND' | 'OUT_OF_SCOPE_USER' | 'OUT_OF_SCOPE_GROUP' | 'OUT_OF_SCOPE_PERMISSION' | 'PASSWORD_ENTIRELY_NUMERIC' | 'PASSWORD_TOO_COMMON' | 'PASSWORD_TOO_SHORT' | 'PASSWORD_TOO_SIMILAR' | 'REQUIRED' | 'UNIQUE' | 'JWT_SIGNATURE_EXPIRED' | 'JWT_INVALID_TOKEN' | 'JWT_DECODE_ERROR' | 'JWT_MISSING_TOKEN' | 'JWT_INVALID_CSRF_TOKEN' | 'CHANNEL_INACTIVE' | 'MISSING_CHANNEL_SLUG';
+
+export declare type PermissionEnum = 'MANAGE_USERS' | 'MANAGE_STAFF' | 'MANAGE_APPS' | 'MANAGE_CHANNELS' | 'MANAGE_DISCOUNTS' | 'MANAGE_PLUGINS' | 'MANAGE_GIFT_CARD' | 'MANAGE_MENUS' | 'MANAGE_ORDERS' | 'MANAGE_PAGES' | 'MANAGE_PAGE_TYPES_AND_ATTRIBUTES' | 'HANDLE_PAYMENTS' | 'MANAGE_PRODUCTS' | 'MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES' | 'MANAGE_SHIPPING' | 'MANAGE_SETTINGS' | 'MANAGE_TRANSLATIONS' | 'MANAGE_CHECKOUTS';
+
+export declare type UserBaseFragment = (Pick<User, 'id' | 'email' | 'firstName' | 'lastName' | 'isStaff'> & {
+    userPermissions: Maybe<Array<Maybe<Pick<UserPermission, 'code' | 'name'>>>>;
+});
+
+export declare type UserDetailsFragment = ({
+    metadata: Array<Maybe<Pick<MetadataItem, 'key' | 'value'>>>;
+} & UserBaseFragment);
+
+export const UserAuthError = {
+  loginError: "loginError",
+  serverError: "serverError",
+  noPermissionsError: "noPermissionsError",
+  loginAttemptDelay: "loginAttemptDelay",
+  unknownLoginError: "unknownLoginError",
+  invalidCredentials: "invalidCredentials",
+} as const;
+
+export type UserAuthError = (typeof UserAuthError)[keyof typeof UserAuthError];
+
+type AccountError = {
+    /** Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field. */
+    field: Maybe<Scalars['String']>;
+    /** The error message. */
+    message: Maybe<Scalars['String']>;
+    /** The error code. */
+    code: AccountErrorCode;
+};
+
+type CreateToken = {
+    /** JWT token, required to authenticate. */
+    token: Maybe<Scalars['String']>;
+    /** JWT refresh token, required to re-generate access token. */
+    refreshToken: Maybe<Scalars['String']>;
+    /** CSRF token required to re-generate access token. */
+    csrfToken: Maybe<Scalars['String']>;
+    /** A user instance. */
+    user: Maybe<User>;
+    /** @deprecated Use errors field instead. This field will be removed in Saleor 4.0. */
+    accountErrors: Array<AccountError>;
+    errors: Array<AccountError>;
+};
+
+export declare type MetadataItem = {
+    /** Key of a metadata item. */
+    key: Scalars['String'];
+    /** Value of a metadata item. */
+    value: Scalars['String'];
+};
+
+export declare type ObjectWithMetadata = {
+    /** List of private metadata items.Requires proper staff permissions to access. */
+    privateMetadata: Array<Maybe<MetadataItem>>;
+    /** List of public metadata items. Can be accessed without permissions. */
+    metadata: Array<Maybe<MetadataItem>>;
+};
+
+/** Represents a permission object in a friendly form. */
+export declare type Permission = {
+    /** Internal code for permission. */
+    code: PermissionEnum;
+    /** Describe action(s) allowed to do by permission. */
+    name: Scalars['String'];
+};
+
+/** Represents permission group data. */
+export declare type Group = Node & {
+    /** The ID of the object. */
+    id: Scalars['ID'];
+    name: Scalars['String'];
+    /** List of group permissions */
+    permissions: Maybe<Array<Maybe<Permission>>>;
+    /** List of group users */
+    users: Maybe<Array<Maybe<User>>>;
+    /** True, if the currently authenticated user has rights to manage a group. */
+    userCanManage: Scalars['Boolean'];
+};
+
+export declare type UserPermission = {
+    /** Internal code for permission. */
+    code: PermissionEnum;
+    /** Describe action(s) allowed to do by permission. */
+    name: Scalars['String'];
+    /** List of user permission groups which contains this permission. */
+    sourcePermissionGroups: Maybe<Array<Group>>;
+};
+
+export declare type AccountErrorFragment = Pick<AccountError, 'code' | 'field' | 'message'>;
+
+type User = Node & ObjectWithMetadata & {
+    /** The ID of the object. */
+    id: Scalars['ID'];
+    lastLogin: Maybe<Scalars['DateTime']>;
+    email: Scalars['String'];
+    firstName: Scalars['String'];
+    lastName: Scalars['String'];
+    isStaff: Scalars['Boolean'];
+    isActive: Scalars['Boolean'];
+    /** A note about the customer. */
+    note: Maybe<Scalars['String']>;
+    dateJoined: Scalars['DateTime'];
+    /** List of private metadata items.Requires proper staff permissions to access. */
+    privateMetadata: Array<Maybe<MetadataItem>>;
+    /** List of public metadata items. Can be accessed without permissions. */
+    metadata: Array<Maybe<MetadataItem>>;
+    /** List of user's permissions. */
+    userPermissions: Maybe<Array<Maybe<UserPermission>>>;
+    /** List of user's permission groups. */
+    permissionGroups: Maybe<Array<Maybe<Group>>>;
+    /** List of user's permission groups which user can manage. */
+    editableGroups: Maybe<Array<Maybe<Group>>>;
+    avatar: Maybe<Image>;
+    /** User language code. */
+    languageCode: LanguageCodeEnum;
+};
+
+type LoginData = {
+    tokenCreate: Maybe<(Pick<CreateToken, 'token' | 'refreshToken'> & {
+        errors: Array<AccountErrorFragment>;
+        user: Maybe<UserDetailsFragment>;
+    })>;
+};
+
+export interface IAuthContext {
+  login?: (username: string, password: string) => Promise<LoginData | undefined>;
+  logout?: () => Promise<void>;
+}
+
+export interface IUserSlice {
+  user: {
+    id: string;
+    email: string;
+    firstName: string;
+    lastName: string;
+  } | null;
+  authenticated: boolean;
+  authenticating: boolean;
+  authErrors: string[];
+  setAuthErrors: (authErrors: string[]) => void;
+  setAuthenticated: (authenticated: boolean) => void;
+  setAuthenticating: (authenticating: boolean) => void;
+  setUser: (user: IUserSlice) => void;
+}
+
+export interface AuthSliceI extends IUserSlice {}
